@@ -3,7 +3,7 @@ var xhr2;
 $( document ).ready(function() {
 
 	$.ajax({
-		url: '../json/functionalityflags.json',
+		url: 'assets/json/functionalityflags.json',
 		type: 'GET',
 		contentType: 'application/json',
 	}).done(function(data)
@@ -46,7 +46,7 @@ $( document ).ready(function() {
 		if (xhr2 != undefined)
 			xhr2.abort();
 		xhr2 = $.ajax({
-			url: '../json/search.json',
+			url: 'assets/json/search.json',
 			type: 'GET',
 			contentType: 'application/json',
 		}).done(function(data)

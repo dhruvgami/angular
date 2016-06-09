@@ -1,4 +1,4 @@
-var LEEDOnApp = angular.module('LEEDOnApp', ['ngRoute', 'routeStyles']);
+var LEEDOnApp = angular.module('LEEDOnApp', ['ngRoute', 'routeStyles', 'oc.lazyLoad']);
 
 // configure our routes
 LEEDOnApp.config(function($routeProvider) {
@@ -6,17 +6,17 @@ LEEDOnApp.config(function($routeProvider) {
     .when('/', {
         templateUrl : 'apps/components/home/homeView.html',
         controller  : 'homeController',
-        css         : ['assets/libs/css/bootstrap.min.css', 'assets/libs/css/font-awesome.css', 'assets/libs/css/zocial.css', 'assets/libs/css/venobox.css', 'assets/libs/css/og-component.css', 'assets/libs/css/animate.css', 'assets/css/home-style.css', 'assets/libs/css/scheme/light-green.css', 'assets/css/home-leedon.css', 'assets/css/home-popup_style.css']
+        css         : ['assets/libs/css/bootstrap.min.css?v=1', 'assets/libs/css/font-awesome.css?v=1', 'assets/libs/css/zocial.css?v=1', 'assets/libs/css/venobox.css?v=1', 'assets/libs/css/og-component.css?v=1', 'assets/libs/css/animate.css?v=1', 'assets/css/home-style.css?v=1', 'assets/libs/css/scheme/light-green.css?v=1', 'assets/css/home-leedon.css?v=1', 'assets/css/home-popup_style.css?v=1']
     })
     .when('/login', {
         templateUrl : 'apps/components/login/loginView.html',
         controller  : 'loginController',
-        css         : ['assets/css/leedstrap.css', 'assets/css/login-style.css', 'assets/libs/css/font-awesome.min_new.css']
+        css         : ['assets/css/leedstrap.css?v=1', 'assets/css/login-style.css?v=1', 'assets/libs/css/font-awesome.min_new.css?v=1']
     })
     .when('/dashboard', {
         templateUrl : 'apps/components/dashboard/dashboardView.html',
         controller  : 'dashboardController',
-        css         : ['assets/libs/css/bootstrap.min.css', 'assets/libs/css/font-awesome.css', 'assets/libs/css/jquery.timepicker.css', 'assets/css/dashboard-main.css', 'assets/libs/css/simplePagination.css', 'assets/libs/css/jquery-ui.css', 'assets/libs/css/dj.selectable.css', 'assets/libs/css/nprogressfoundation-datepicker.css', 'assets/libs/css/jquery.fullPage.css', 'assets/libs/css/multiple-select.css', 'assets/css/dashboard-elements.css', 'assets/libs/css/jquery.fullPage.css', 'assets/libs/css/jquery.qtip.min.css']
+        css         : ['assets/libs/css/bootstrap.min.css?v=1', 'assets/libs/css/font-awesome.css?v=1', 'assets/libs/css/jquery.timepicker.css?v=1', 'assets/css/dashboard-main.css?v=1', 'assets/libs/css/simplePagination.css?v=1', 'assets/libs/css/jquery-ui.css?v=1', 'assets/libs/css/dj.selectable.css?v=1', 'assets/libs/css/nprogressfoundation-datepicker.css?v=1', 'assets/libs/css/jquery.fullPage.css?v=1', 'assets/libs/css/multiple-select.css?v=1', 'assets/css/dashboard-elements.css?v=1', 'assets/libs/css/jquery.fullPage.css?v=1', 'assets/libs/css/jquery.qtip.min.css?v=1']
     }).otherwise({
         // default page
         redirectTo: '/'

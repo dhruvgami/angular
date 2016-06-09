@@ -1,12 +1,12 @@
 @font-face
 {
   font-family: Gotham;
-  src: url(../../fonts/GothamBook.otf);
+  src: url(../fonts/GothamBook.otf);
 }
 
 body {
     margin: 0px;
-    background: url(../../img/bg.jpg)#eee repeat-x;
+    background: url(../img/bg.jpg)#eee repeat-x;
 }
 .popupContainer{
 	width:100%

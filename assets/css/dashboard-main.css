@@ -5,44 +5,44 @@
 @font-face
 {
   font-family: Gotham;
-  src: url(../../fonts/GothamBook.otf);
+  src: url(../fonts/GothamBook.otf);
 }
 
 @font-face {
   font-family: Montserrat;
-  src: url(../../fonts/Montserrat-Regular.ttf);
+  src: url(../fonts/Montserrat-Regular.ttf);
 }
 
 @font-face {
   font-family: MontserratBold;
-  src: url(../../fonts/Montserrat-Bold.ttf);
+  src: url(../fonts/Montserrat-Bold.ttf);
 }
 
 @font-face {
   font-family: GothamBookBook;
-  src: url(../../fonts/GothamBookBook.otf);
+  src: url(../fonts/GothamBookBook.otf);
 }
 
 /** YA added for elements**/
 @font-face {
   font-family: GothamBook;
-  src: url(../../fonts/Gotham-Book.otf);
+  src: url(../fonts/Gotham-Book.otf);
 }
 
 @font-face {
   font-family: GothamLight;
-  src: url(../../fonts/Gotham-Light.otf);
+  src: url(../fonts/Gotham-Light.otf);
 }
 
 @font-face {
   font-family: GothamMedium;
-  src: url(../../fonts/Gotham-Medium.otf);
+  src: url(../fonts/Gotham-Medium.otf);
 }
 /** YA added for elements**/
 
 @font-face {
   font-family: DINEngschrift;
-  src: url(../../fonts/DINEngschrift.ttf);
+  src: url(../fonts/DINEngschrift.ttf);
 }
 
 .pointer
@@ -451,7 +451,7 @@ input[type="text"]
     border-color: #949EAB;
     background-size: 26px;
     background-position: 96%;
-    background-image: url("../../img/search.png");
+    background-image: url("../img/search.png");
     background-repeat: no-repeat;
 }
 
@@ -464,7 +464,7 @@ input[type="text"]
     cursor: pointer;
     background-size: 14px;
     background-position: 94%;
-    background-image: url("../../img/directional25.png");
+    background-image: url("../img/directional25.png");
     background-repeat: no-repeat;
 }
 .filterUpIcon {
@@ -943,12 +943,12 @@ table input
 
 .projects_nav:hover
 {
-    background-image: url(../../img/projects_on.png);
+    background-image: url(../img/projects_on.png);
 }
 
 .projects_nav.current
 {
-  background-image: url(../../img/projects_on.png);
+  background-image: url(../img/projects_on.png);
 }
 
 .score_nav
@@ -1013,12 +1013,12 @@ table input
 
 .help_nav
 {
-    background-image: url(../../img/help_off.png);
+    background-image: url(../img/help_off.png);
 }
 
 .help_nav:hover
 {
-    background-image: url(../../img/help_on.png);
+    background-image: url(../img/help_on.png);
 }
 
 .help_nav.current
@@ -1028,7 +1028,7 @@ table input
 
 .explore_nav
 {
-    background-image: url(../../img/explore_off.png);
+    background-image: url(../img/explore_off.png);
 }
 
 .explore_nav:hover
@@ -1756,7 +1756,7 @@ input#code
 .hamMenu
 {
     cursor: pointer;
-    background-image: url(../../img/menu.png);
+    background-image: url(../img/menu.png);
     background-size: 50px 50px;
     background-repeat: no-repeat;
     width: 50px;
@@ -2925,7 +2925,7 @@ span.labels
 @media (max-width: 320px){
   #drp_btn_header {
      top:0px !important;
-      background: url('../../dashboard/img/profile-mobile.png') no-repeat !important;
+      background: url('../dashboard/img/profile-mobile.png') no-repeat !important;
      background-size: 22px 22px !important;
      background-position: right top !important;
      color: rgba(255,255,255,0.0) !important;
@@ -2941,7 +2941,7 @@ span.labels
 @media (min-width: 320px) and (max-width: 550px){
   #drp_btn_header {
      top:0px !important;
-      background: url('../../dashboard/img/profile-mobile.png') no-repeat !important;
+      background: url('../dashboard/img/profile-mobile.png') no-repeat !important;
      background-size: 22px 22px !important;
      background-position: right !important;
      color: rgba(255,255,255,0.0) !important;
@@ -3527,7 +3527,7 @@ input.cmn-toggle-round-flat8:checked + label:after {
 }
 
 .meter_manual_ajax {
-   background: url('../../img/ajax-loader.gif') no-repeat right;
+   background: url('../img/ajax-loader.gif') no-repeat right;
 }
 
 .payment_ul{
@@ -4266,7 +4266,7 @@ button.other_bg {
     padding-top: 70px;
     height: 85px;
     width: 85px;
-    background: url("../../dashboard/img/smilies.png") -500px 0px no-repeat;
+    background: url("../dashboard/img/smilies.png") -500px 0px no-repeat;
     margin: 0px auto;
 }
 
@@ -4287,7 +4287,7 @@ button.other_bg {
   -webkit-appearance: none !important;
   -moz-appearance: none !important;
   -ms-user-select: none !important;
-  background: url("../../dashboard/img/handle.png");
+  background: url("../dashboard/img/handle.png");
   margin-top: -18px;
   height: 53px;
   width: 53px;
@@ -4355,13 +4355,13 @@ button.other_bg {
     background-color: #3bb34a;
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#FF3BB34A', endColorstr='#FF019146')";
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#FF3BB34A', endColorstr='#FF019146');
-    background: url('../../dashboard/img/triangle.png') no-repeat 90%;
-    background: url("../../dashboard/img/triangle.png") no-repeat 90%, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3bb34a), color-stop(100%, #019146));
-    background: url("../../dashboard/img/triangle.png") no-repeat 90%, -webkit-linear-gradient(top, #3bb34a 0%, #019146 100%);
-    background: url("../../dashboard/img/triangle.png") no-repeat 90%, -moz-linear-gradient(top, #3bb34a 0%, #019146 100%);
-    background: url("../../dashboard/img/triangle.png") no-repeat 90%, -ms-linear-gradient(top, #3bb34a 0%, #019146 100%);
-    background: url("../../dashboard/img/triangle.png") no-repeat 90%, -o-linear-gradient(top, #3bb34a 0%, #019146 100%);
-    background: url("../../dashboard/img/triangle.png") no-repeat 90%, linear-gradient(to bottom, #3bb34a 0%, #019146 100%);
+    background: url('../dashboard/img/triangle.png') no-repeat 90%;
+    background: url("../dashboard/img/triangle.png") no-repeat 90%, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3bb34a), color-stop(100%, #019146));
+    background: url("../dashboard/img/triangle.png") no-repeat 90%, -webkit-linear-gradient(top, #3bb34a 0%, #019146 100%);
+    background: url("../dashboard/img/triangle.png") no-repeat 90%, -moz-linear-gradient(top, #3bb34a 0%, #019146 100%);
+    background: url("../dashboard/img/triangle.png") no-repeat 90%, -ms-linear-gradient(top, #3bb34a 0%, #019146 100%);
+    background: url("../dashboard/img/triangle.png") no-repeat 90%, -o-linear-gradient(top, #3bb34a 0%, #019146 100%);
+    background: url("../dashboard/img/triangle.png") no-repeat 90%, linear-gradient(to bottom, #3bb34a 0%, #019146 100%);
     border-radius: 5px;
     border: 1px solid #989898;
     font-size: 14px;
@@ -4391,7 +4391,7 @@ button.other_bg {
 }
 
 .survey-sprite, .survey-bike, .survey-bike_on, .survey-bus, .survey-bus_on, .survey-car1, .survey-car1_on, .survey-car2, .survey-car2_on, .survey-car4, .survey-car4_on, .survey-heavy_rail, .survey-heavy_rail_on, .survey-light_rail, .survey-light_rail_on, .survey-motorcycle, .survey-motorcycle_on, .survey-box .checks input[type="checkbox"].walk + label, .survey-box .checks input[type="checkbox"].bus + label, .survey-box .checks input[type="checkbox"].light_rail + label, .survey-box .checks input[type="checkbox"].heavy_rail + label, .survey-box .checks input[type="checkbox"].motorcycle + label, .survey-box .checks input[type="checkbox"].car + label, .survey-box .checks input[type="checkbox"].car23 + label, .survey-box .checks input[type="checkbox"].cars4 + label, #mini-survey .options input[type="checkbox"].walk + label, #mini-survey .options input[type="checkbox"].bus + label, #mini-survey .options input[type="checkbox"].light_rail + label, #mini-survey .options input[type="checkbox"].heavy_rail + label, #mini-survey .options input[type="checkbox"].motorcycle + label, #mini-survey .options input[type="checkbox"].car + label, #mini-survey .options input[type="checkbox"].car23 + label, #mini-survey .options input[type="checkbox"].cars4 + label {
-  background: url('../../dashboard/img/survey-s400dfd7868.png') no-repeat;
+  background: url('../dashboard/img/survey-s400dfd7868.png') no-repeat;
 }
 
 .survey-bike {
@@ -4464,7 +4464,7 @@ button.other_bg {
 
 .add_route {
     position: relative;
-    background: url("../../dashboard/img/add-route.png") no-repeat;
+    background: url("../dashboard/img/add-route.png") no-repeat;
     height: 31px;
     padding-left: 40px;
     padding-top: 5px;
@@ -4557,7 +4557,7 @@ select.dist_select::-ms-expand {
 }
 
 .survey-box .route_label {
-  background: url("../../dashboard/img/route-label.png") no-repeat;
+  background: url("../dashboard/img/route-label.png") no-repeat;
   height: 38px;
   width: auto;
   color: white;
@@ -4723,7 +4723,7 @@ select.dist_select::-ms-expand {
     height: 35px;
     margin: -1px 4px 0 0;
     vertical-align: middle;
-    background: url("../../dashboard/img/checkbox.png") left top no-repeat;
+    background: url("../dashboard/img/checkbox.png") left top no-repeat;
     cursor: pointer;
     font-size: 12px;
 }
@@ -4741,7 +4741,7 @@ button.disabled, button[disabled], .button.disabled, .button[disabled]{
 }
 
 .survey_continue {
-    background: url("../../dashboard/img/triangle.png") no-repeat 90%, linear-gradient(to bottom, #3bb34a 0%, #019146 100%);
+    background: url("../dashboard/img/triangle.png") no-repeat 90%, linear-gradient(to bottom, #3bb34a 0%, #019146 100%);
     border-radius: 5px;
     border: 1px solid #989898;
     font-size: 14px;
@@ -4813,7 +4813,7 @@ button.disabled, button[disabled], .button.disabled, .button[disabled]{
 }
 
 .payment_loading_gif {
-    background: url('../../img/ajax-loader.gif') no-repeat center center;
+    background: url('../img/ajax-loader.gif') no-repeat center center;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -4840,7 +4840,7 @@ button.disabled, button[disabled], .button.disabled, .button[disabled]{
 {
 	background-size: 18px;
     background-position: 90%;
-    background-image: url("../../img/calendar.png");
+    background-image: url("../img/calendar.png");
     background-repeat: no-repeat;
     width: 100%;
 }
@@ -4993,7 +4993,7 @@ button.disabled, button[disabled], .button.disabled, .button[disabled]{
 }
 
 .back_to_all_img{
-    background-image: url('../../img/arrow_back.png');
+    background-image: url('../img/arrow_back.png');
     background-position: 1px 10px;
     background-size: 12px;
     background-repeat: no-repeat;
@@ -5733,7 +5733,7 @@ button.disabled, button[disabled], .button.disabled, .button[disabled]{
   -webkit-appearance: none !important;
   -moz-appearance: none !important;
   -ms-user-select: none !important;
-  background: url("../../img/icons/cloud-slider-white.png") no-repeat;
+  background: url("../img/icons/cloud-slider-white.png") no-repeat;
   margin-top: -53px;
   width: 60px;
   margin-left: -31px;
@@ -5751,7 +5751,7 @@ button.disabled, button[disabled], .button.disabled, .button[disabled]{
   -webkit-appearance: none !important;
   -moz-appearance: none !important;
   -ms-user-select: none !important;
-  background: url("../../img/icons/rectangular-slider.png") no-repeat;
+  background: url("../img/icons/rectangular-slider.png") no-repeat;
   margin-top: -51px;
   width: 76px;
   margin-left: -31px;
@@ -5972,7 +5972,7 @@ button.disabled, button[disabled], .button.disabled, .button[disabled]{
     height: 20px;
     bottom: 40px;
     right: 130px;
-    background: transparent url(../../img/ajax-loader.gif) no-repeat;
+    background: transparent url(../img/ajax-loader.gif) no-repeat;
     display: none;
 }
 .mt20 {
@@ -6000,7 +6000,7 @@ button.disabled, button[disabled], .button.disabled, .button[disabled]{
     color: #4a4a4a;
     display: inline-block;
     border: 1px solid #E1DEDE;
-    background-image: url('../../img/dropdown-arrow.png');
+    background-image: url('../img/dropdown-arrow.png');
     background-repeat: no-repeat !important;
     background-position: 96% !important;
     background-size: 9px !important;
@@ -6104,7 +6104,7 @@ button.disabled, button[disabled], .button.disabled, .button[disabled]{
 }
 
 .gbig_logo {
-    background-image: url(../../img/gbig_logo.png);
+    background-image: url(../img/gbig_logo.png);
     height: 27px;
     background-repeat: no-repeat;
     margin-top: 15px;
@@ -6113,14 +6113,14 @@ button.disabled, button[disabled], .button.disabled, .button[disabled]{
 
 #gbig_link: hover
 {
-    background-image: url(../../img/icons/gbig_hover.png);
+    background-image: url(../img/icons/gbig_hover.png);
 }
 
 
 #gbig_link
 {
     cursor: pointer;
-    background-image: url(../../img/icons/gbig.png);
+    background-image: url(../img/icons/gbig.png);
     /* background-size: 22px 27px; */
     height: 32px;
     width: 32px;
@@ -6184,7 +6184,7 @@ button.disabled, button[disabled], .button.disabled, .button[disabled]{
 .scorecard_check_img{
     height: 16px;
     width: 3%;
-    background: url(../../img/check-gray.png) no-repeat;
+    background: url(../img/check-gray.png) no-repeat;
     text-indent: -9999px;
     vertical-align: middle;
 }
@@ -6705,13 +6705,13 @@ div#incZoom {
     top: 0px;
     z-index: 1;
     cursor: pointer;
-    background-image:url(../../img/zoom_in.png);
+    background-image:url(../img/zoom_in.png);
 }
 
 div#decZoom {
     bottom: 0px;
     cursor: pointer;
-    background-image:url(../../img/zoom_out.png);
+    background-image:url(../img/zoom_out.png);
 }
 
 div.zoomBtn {
@@ -6843,7 +6843,7 @@ div.zoomBtn {
     height: 20px;
     top: 8px;
     left: 14px;
-    background: transparent url(../../img/ajax-loader.gif) no-repeat;
+    background: transparent url(../img/ajax-loader.gif) no-repeat;
     display: none;
 }
 .setup input[type="text"] {
@@ -7268,7 +7268,7 @@ div.settingsStatuses .ms-drop ul li label input {
     bottom: 1%;
     left: 50.5%;
     background-position: 4.5px 8px;
-    background-image: url("../../img/down-arrow.svg");
+    background-image: url("../img/down-arrow.svg");
     background-size: 28px 28px;
     background-repeat: no-repeat;
 }
@@ -7283,7 +7283,7 @@ div.settingsStatuses .ms-drop ul li label input {
     top: 21%;
     left: 50%;
     background-position: 3.5px 6px;
-    background-image: url("../../img/down-arrow.svg");
+    background-image: url("../img/down-arrow.svg");
     background-size: 28px 28px;
     background-repeat: no-repeat;
     -ms-transform: rotate(7deg);
@@ -7810,7 +7810,7 @@ div.settingsStatuses .ms-drop ul li label input {
     width: 30px;
     height: 30px;
     margin-left: 47.4%;
-    background-image: url("../../img/down-arrow.svg");
+    background-image: url("../img/down-arrow.svg");
     margin-top: -10px;
     border: 1px solid white;
     border-radius: 20px;

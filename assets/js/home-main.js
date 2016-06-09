@@ -167,7 +167,7 @@ else{
     main_host = ((location.hostname).split('www.'))[1]
 }
 
-var main_url = '../json/downtimeFlag.json';
+var main_url = 'assets/json/downtimeFlag.json';
 $.ajax({
       url: main_url,
       type: "GET",

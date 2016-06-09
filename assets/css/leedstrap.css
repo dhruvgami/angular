@@ -1,6 +1,6 @@
 body {
 	background: #fff;
-	font-family: "asstes/fonts/GothamLight";
+	font-family: "../fonts/GothamLight";
 	font-size: 16px;
 	line-height: 1.5;
 	color: #4a4a4a;
@@ -8,22 +8,22 @@ body {
 	
 @font-face {
   font-family: Montserrat;
-  src: url(asstes/fonts/Montserrat-Regular.ttf);
+  src: url(../fonts/Montserrat-Regular.ttf);
 }
 
 @font-face {
   font-family: MontserratBold;
-  src: url(asstes/fonts/Montserrat-Bold.ttf);
+  src: url(../fonts/Montserrat-Bold.ttf);
 }
 
 @font-face {
   font-family: GothamBook;
-  src: url(asstes/fonts/Gotham-Book.otf);
+  src: url(../fonts/Gotham-Book.otf);
 }
 
 @font-face {
   font-family: GothamLight;
-  src: url(asstes/fonts/Gotham-Light.otf);
+  src: url(../fonts/Gotham-Light.otf);
 }
 
 
@@ -431,7 +431,7 @@ ul {
 .step-complete {
 	width: 25px;
 	height: 25px;
-	background: url('asstes/img//Checkmark.svg') no-repeat;
+	background: url('../img//Checkmark.svg') no-repeat;
 	background-size: 20px 20px;
 	background-position: center;
 	}
@@ -439,7 +439,7 @@ ul {
 .step-complete:hover {
 	width: 25px;
 	height: 25px;
-	background: url('asstes/img//Checkmark.svg') no-repeat;
+	background: url('../img//Checkmark.svg') no-repeat;
 	background-size: 21px 21px;
 	background-position: center;
 	}
@@ -447,7 +447,7 @@ ul {
 .step-incomplete {
 	width: 20px;
 	height: 25px;
-	background: url('asstes/img//Emptystep.svg') no-repeat;
+	background: url('../img//Emptystep.svg') no-repeat;
 	background-size: 13px 13px;
 	background-position: center;
 	}
@@ -455,7 +455,7 @@ ul {
 .step-incomplete:hover {
 	width: 20px;
 	height: 25px;
-	background: url('asstes/img//Emptystep.svg') no-repeat;
+	background: url('../img//Emptystep.svg') no-repeat;
 	background-size: 14px 14px;
 	background-position: center;
 	}
@@ -463,7 +463,7 @@ ul {
 .leed-btnNext {
 	width: 42px;
 	height: 42px;
-	background: url('asstes/img//nextbtn.png') no-repeat;
+	background: url('../img//nextbtn.png') no-repeat;
 	background-size: 20px;
 	background-position: center;
 	background-color: #ccc;
@@ -476,7 +476,7 @@ ul {
 .leed-btnPrevious {
 	width: 42px;
 	height: 42px;
-	background: url('asstes/img//backbtn.png') no-repeat;
+	background: url('../img//backbtn.png') no-repeat;
 	background-size: 20px;
 	background-position: center;
 	background-color: #ccc;
@@ -754,7 +754,7 @@ a.button.leed-btnOutline {
     height: 30px;
     width: 30px;
     padding: 0px;
-    background-image: url('asstes/img//cancel.png');
+    background-image: url('../img//cancel.png');
     background-position: center;
 	background-size: 12px 13px;
 	background-repeat: no-repeat;
@@ -767,7 +767,7 @@ a.button.leed-btnOutline {
     height: 30px;
     width: 30px;
     padding: 0px;
-    background-image: url('asstes/img//cancel-hover.png');
+    background-image: url('../img//cancel-hover.png');
     background-position: center;
 	background-size: 12px 13px;
 	background-repeat: no-repeat;
@@ -860,7 +860,7 @@ select:focus
 	display: inline-block;
 	border: 1px solid #E1DEDE;
     -webkit-appearance:none;
-	background-image: url('asstes/img//dropdown-arrow.png') !important;	
+	background-image: url('../img//dropdown-arrow.png') !important;	
 	background-repeat: no-repeat !important;
 	background-position: 95% !important;
 	background-size: 9px !important;
@@ -876,7 +876,7 @@ select:focus
 	display: inline-block;
 	border: 1px solid #E1DEDE;
     -webkit-appearance:none;
-	background-image: url('asstes/img//dropdown-arrow.png') !important;	
+	background-image: url('../img//dropdown-arrow.png') !important;	
 	background-repeat: no-repeat !important;
 	background-position: 95% !important;
 	background-size: 9px !important;
@@ -930,7 +930,7 @@ input.cmn-toggle-round-flat + label:after {
   padding-top: 5px;
   padding-left: 10px;
   border-radius: 52px;
-  background-image: url('asstes/img//switch_off.svg');
+  background-image: url('../img//switch_off.svg');
   background-repeat: no-repeat;
   background-size: 20px;
   /*transition: margin 0.07s, background 0.07s;*/
@@ -941,7 +941,7 @@ input.cmn-toggle-round-flat:checked + label {
 }
 input.cmn-toggle-round-flat:checked + label:after {
   margin-left: 20px;
-  background-image: url('asstes/img//Checkmark.svg');
+  background-image: url('../img//Checkmark.svg');
   background-repeat: no-repeat;
   background-size: 20px;
 }
@@ -961,12 +961,12 @@ input[type="checkbox"] + label span {
     height:19px;
     margin:-1px 4px 0 0;
     vertical-align:middle;
-    background:url('asstes/img/checkboxEmpty.png') left top no-repeat;
+    background:url('../img/checkboxEmpty.png') left top no-repeat;
     cursor:pointer;
     background-size: 100%;
 }
 input[type="checkbox"]:checked + label span {
-    background:url('asstes/img/checkboxFull.png') left top no-repeat;
+    background:url('../img/checkboxFull.png') left top no-repeat;
     background-size: 100%;
 }
 
@@ -979,12 +979,12 @@ input[type="radio"] + label span {
     height:19px;
     margin:-1px 4px 0 0;
     vertical-align:middle;
-    background:url('asstes/img//radioEmpty.png') left top no-repeat;
+    background:url('../img//radioEmpty.png') left top no-repeat;
     cursor:pointer;
     background-size: 100%;
 }
 input[type="radio"]:checked + label span {
-    background:url('asstes/img//radioFull.png') left top no-repeat;
+    background:url('../img//radioFull.png') left top no-repeat;
     background-size: 100%;
 }
 
@@ -1114,19 +1114,19 @@ input[type="radio"]:checked + label span {
 	}
 
 .confidence-rating-low {
-	background: url('asstes/img/icons/confidence-low.svg') no-repeat;
+	background: url('../img/icons/confidence-low.svg') no-repeat;
 	background position: center;
 	background-size: contain;
 	}
 
 .confidence-rating-medium {
-	background: url('asstes/img//icons/confidence-medium.svg') no-repeat;
+	background: url('../img//icons/confidence-medium.svg') no-repeat;
 	background position: center;
 	background-size: contain;
 	}
 
 .confidence-rating-high {
-	background: url('asstes/img/icons/confidence-high.svg') no-repeat;
+	background: url('../img/icons/confidence-high.svg') no-repeat;
 	background position: center;
 	background-size: contain;
 	}

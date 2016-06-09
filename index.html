@@ -10,9 +10,8 @@
 	<link rel="stylesheet" type="text/css" href="assets/libs/css/fonts.css" />
 	<title ng-bind="header"></title>
 </head>
-<body>
-    <div ng-view>
-        
+<body ng-controller="homeController">
+    <div id="main_app" ng-view>
     </div>
     <script type="text/javascript" src="assets/libs/js/jquery-1.11.0.min.js"></script>
     <script src="assets/libs/js/modernizr-2.6.2.min.js"></script>
@@ -20,47 +19,49 @@
 	<script src="assets/libs/js/angular.min.js"></script>
 	<script src="assets/libs/js/angular-route.min.js"></script>
 	<script src="apps/shared/route-styles.js"></script>
-	<script src="app.route.js"></script>
-	<script src="apps/components/home/homeController.js"></script>
-	<script src="apps/components/login/loginController.js"></script>
-	<script src="apps/components/dashboard/dashboardController.js"></script>
+    <script src="assets/libs/js/ocLazyLoad.min.js"></script>
+	<script src="app.route.js?v=1.2"></script>
+	<script src="apps/components/home/homeController.js?v=2.0"></script>
+	<script src="apps/components/login/loginController.js?v=1.5"></script>
+	<script src="apps/components/dashboard/dashboardController.js?v=1.4"></script>
 
     <!-- ================== Home app =========================================== -->
     <!-- EXPANDING THUMBNAIL JS -->
-    <script src="assets/libs/js/grid.js"></script>
+    <!-- <script src="assets/libs/js/grid.js"></script> -->
     <!-- BOOTSTRAP JS -->
-    <script src="assets/libs/js/bootstrap.min.js"></script>
+    <!-- <script src="assets/libs/js/bootstrap.min.js"></script> -->
     <!-- SUPER SLIDES JS -->
-    <script src="assets/libs/js/jquery.superslides.min.js"></script>
+    <!-- <script src="assets/libs/js/jquery.superslides.min.js"></script> -->
     <!-- JQUERY BACK TO TOP -->
-    <script src="assets/libs/js/jquery.backtotop.js"></script>
+    <!-- <script src="assets/libs/js/jquery.backtotop.js"></script> -->
     <!-- JQUERY PARALLAX -->
-    <script src="assets/libs/js/jquery.parallax.js"></script>
+    <!-- <script src="assets/libs/js/jquery.parallax.js"></script> -->
     <!-- JQUERY BACKGROUND VIDEO -->
-    <script src="assets/libs/js/jquery.backgroundvideo.js"></script>
+    <!-- <script src="assets/libs/js/jquery.backgroundvideo.js"></script> -->
     <!-- JQUERY VENOBOX VIDEO -->
-    <script src="assets/libs/js/venobox.min.js"></script>
+    <!-- <script src="assets/libs/js/venobox.min.js"></script> -->
     <!-- JQUERY WAYPOINT -->
-    <script src="assets/libs/js/waypoints.js"></script>
+    <!-- <script src="assets/libs/js/waypoints.js"></script> -->
     <!-- JQUERY WAYPOINT -->
-    <script src="assets/libs/js/jquery.countTo.js"></script>
+    <!-- <script src="assets/libs/js/jquery.countTo.js"></script> -->
     <!-- JQUERY SMOOTH SCROLL -->
-    <script src="assets/libs/js/jquery.smooth-scroll.min.js"></script>
+    <!-- <script src="assets/libs/js/jquery.smooth-scroll.min.js"></script> -->
     <!-- JQUERY FITVID -->
-    <script src="assets/libs/js/jquery.fitvid.js"></script>
+    <!-- <script src="assets/libs/js/jquery.fitvid.js"></script> -->
     <!-- JQUERY MASONRY LAYOUT 
     <script src="js/lib/masonry.pkgd.min.js"></script>-->
     <!-- JQUERT SUDO SLIDER JS -->
-    <script src="assets/libs/js/jquery.sudoslider.min.js"></script>
+    <!-- <script src="assets/libs/js/jquery.sudoslider.min.js"></script> -->
     <!-- MAIN JS -->
-    <script src="assets/js/home-main.js?v=1"></script>
+    <!-- <script src="assets/js/home-main.js?v=1.1"></script> -->
     <!-- Changes for login popup -->
-    <script src="assets/libs/js/jquery.leanModal.min.js"></script>
-    <script src="assets/js/home-login_iFrame.js?v=1"></script>
-    <script src="assets/libs/js/skrollr.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.js"></script>    
-    <script src="assets/libs/js/jquery.dj.selectable.js"></script>
-    <script type="text/javascript">
+    <!-- <script src="assets/libs/js/jquery.leanModal.min.js"></script> -->
+    <!-- <script src="assets/js/home-login_iFrame.js?v=1.1"></script> -->
+    <!-- <script src="assets/libs/js/skrollr.min.js"></script> -->
+    <!-- <script src="assets/libs/js/jquery-ui.js"></script>     -->
+    <!-- <script src="assets/libs/js/jquery.dj.selectable.js"></script> -->
+    <!-- <script src="assets/js/home-skrollrInit.js"></script> -->
+    <!-- <script type="text/javascript">
         $(function () {
           // initialize skrollr if the window width is large enough
           if ($(window).width() > 767) {
@@ -77,9 +78,9 @@
             } 
           });*/
         });    
-    </script>
+    </script> -->
     <!-- ================== Login app =========================================== -->
-    <script src="assets/js/login-login_closeFrame.js?v=1.1"></script>
+    <!-- <script src="assets/js/login-login_closeFrame.js?v=1.4"></script> -->
 
 </body>
 </html>
