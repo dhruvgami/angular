@@ -1,0 +1,235 @@
+<!-- Start jQuery Notification Bar -->
+<div class="jquery-header-bar" style="display:none; background: #FFFFFF; width:100%; top: 0px; z-index: 9999999999; padding: 2px 0px 0px 0px; border-bottom:2px solid #CC0000; box-shadow: 0px 4px 5px #AAAAAA; font-size:14px; font-family: 'Lato Regular', Arial; text-transform:uppercase;position: relative;">
+    <span class="notification" style="display:block; width:auto; position: relative;">
+        <p class="font-style" style="color: #6B6969; width:95%; text-align: center; margin-top:10px; margin-bottom:10px; text-transform: none; font-size:14px; line-height:1.6;"></p> <p class="jquery-arrow down" style="position: absolute;top: 30%; right: 24px; width:13px;"><img src="assets/img/close.png" style="cursor:pointer;max-width: 100%;"></p>
+    </span>
+</div>
+<!-- End jQuery Notification Bar -->
+<!-- BEGIN OUTER -->
+<div class="outter" id="skrollr-body">
+    <!-- BEGIN NAVBAR -->
+    <nav class="navbar navbar-default navbar-fixed-top" style="z-index:1030000;" role="navigation" 
+        data-100="background:rgba(255,255,255,0.0); position:absolute; border-bottom:solid 0px rgb(0,0,0); top:0px;" 
+        data-121="background:rgba(255,255,255,1.0); border-bottom:solid 1px rgb(216,216,216); position:fixed; top:-100px;" 
+        data-150="top:0px;"
+        data-1880="top:0px;" 
+        data-1901="top:-100px;">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" 
+                data-0="color:rgba(255,255,255,1);" data-130="color:rgba(74,74,74,0);" data-131="color:rgba(74,74,74,1);" data-2170="color:rgba(74,74,74,1);" data-2200="color:rgba(0,0,0,0);">
+                <strong>LEED</strong><sup>®</sup> Dynamic Plaque<sup id="tm">TM</sup></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- <li><a class="sscroll" href="#about">VIDEO</a>
+                    </li> -->
+         <li id="modal_trigger_trial"><a data-0="color:rgba(255,255,255,1);" data-130="color:rgba(74,74,74,0);" data-131="color:rgba(74,74,74,1);" data-2170="color:rgba(74,74,74,
+1);display:block;" data-2200="color:rgba(0,0,0,0); display:none;" class="sscroll" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" href="#modal">START TRIAL</a>
+                    </li>
+                    <li><a data-0="color:rgba(255,255,255,1);" data-130="color:rgba(74,74,74,0);" data-131="color:rgba(74,74,74,1);" data-2170="color:rgba(74,74,74,1); display:block;" data-2200="color:rgba(0,0,0,0); display:none;" class="sscroll" href="#contact">LEARN MORE</a>
+                    </li>
+                    <li><a data-0="color:rgba(255,255,255,1);" data-130="color:rgba(74,74,74,0);" data-131="color:rgba(74,74,74,1);" data-2170="color:rgba(74,74,74,1); display:block;" data-2200="color:rgba(0,0,0,0); display:none;" class="sscroll" href="faq.html">FAQ</a>
+                    </li>
+                    <li id="modal_trigger" class='dashLogin'><a data-0="color:rgba(255,255,255,1);" data-130="color:rgba(74,74,74,0);" data-131="color:rgba(74,74,74,1);" data-2170="color:rgba(74,74,74,1);display:block;" data-2200="color:rgba(0,0,0,0); display:none;" class="sscroll" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" href="#/login">SIGN IN</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- END NAVBAR -->
+    <!-- BEGIN VIDEO PAGE -->
+    
+    <div class="home-wrapper">
+        <div class="content-home-wrapper text-center">
+            <div class="header-center">
+                <!--<h1>YOUR BUILDING IS<span>&nbsp;ALIVE<span></h1>-->
+                <h1 data-200="color:rgba(255,255,255,1.0);" data-300="color:rgba(255,255,255,0);">YOUR BUILDING IS<span>&nbsp;ALIVE<span></h1>
+                    
+                    <div id="the-basics">
+                        <div class="suggHolder">
+                            <input placeholder="Search for a building" id="id_building">
+                            <button id="building_search" class="btnGreen">Search</button>
+                        </div>
+                        <div id='searchRes'>
+                        </div>
+                    </div>
+                    
+                    <!--<div id="the-basics">
+                        <input name="building" id="id_building" name="id_building[query]" type="search" placeholder="Search" autocomplete="off" class="ui-autocomplete-input ui-widget ui-widget-content ui-corner-all typeahead" role="textbox" aria-haspopup="true">
+                        <button id="building_search" class="btnGreen">Search</button>
+                        
+                    </div>
+                    <div class="list_cont">
+                        <ul id="list_name">
+                        </ul>
+                    </div> -->
+                    
+                    <!--<p><a class="sscroll slider-more pulse" href="#plaque"><i class="fa fa-angle-down"></i></a>-->
+                <p><a data-200="background:rgba(255,255,255,0.4);" data-300="background:rgba(255,255,255,0);"class="sscroll slider-more pulse" href="#plaque_video"><i data-200="color:rgba(139,138,128,1.0);" data-300="color:rgba(139,138,128,0);" class="fa fa-angle-down"></i></a>
+                </p>
+            </div>
+        </div>
+        <div class="fullfilter" data-700="opacity:1;" data-701="opacity:0;"></div>
+        <div class="home-video" data-700="opacity:1;" data-701="opacity:0;"></div>
+    </div>
+    <!-- END VIDEO PAGE -->
+    <!-- BEGIN PLAQUE  -->
+        <section id="plaque_video">
+            <div id="sec2" class="section-wrapper">
+            
+                <div class="section-inner">
+                    <div class="container video_wrapper">
+                      <div class="spacer medium"></div>
+                      <div class="plaquediv">
+                          <video class="plaquevideo js-background_video" autoplay muted loop>
+                            <source src="assets/videos/PlaqueVideo.mp4" type="video/mp4" media="screen" style="width: 80%; height: auto;">
+                            <source src="assets/videos/PlaqueVideo.webm" type="video/webm" media="screen" style="width: 80%; height: auto;">
+                          </video>
+                          <div id="plaque_img" style="display:none">
+                            <img src="assets/img/racetrack.png" style="width:100%" />
+                          </div>​
+                        </div>
+                      <div class="spacer medium"></div>
+                    </div>
+                    <div id="alive">
+                        <!--<h2 class="title" data-600="color:rgba(74,74,74,0);" data-700="color:rgba(74,74,74,1);" data-1000="color:rgba(74,74,74,1);" data-1100="color:rgba(74,74,74,0);" data-1000="color:rgba(0,0,0,0.0);">LEED DYNAMIC PLAQUE</h2> </div>-->
+                        <h2 class="title">LEED DYNAMIC PLAQUE</h2>
+                        <h4 class="subhead"> Measure, monitor and score your building’s performance. </h4>
+                    </div>
+                      <div class="spacer medium"></div>
+
+               
+            </div>
+        </section>
+        <!-- END PLAQUE -->
+    <!-- BEGIN SLIDER ONE -->
+    <div id="slides">
+        <ul class="slides-container text-center">
+            
+            <li>
+            <div id="slide1">
+                <div class="fullscreen-image"></div>
+                <div class="description"><h4>Powerful software that measures five building performance categories</h4></div>
+            </div>
+            </li>
+            
+            <li>
+            <div id="slide2">
+                <div class="fullscreen-image"></div>
+                <div class="description"><h4>Award-winning display unit to showcase your up-to-date performance score</h4></div>
+            </div>
+            </li>    
+            
+            <li>
+            <div id="slide3">               
+                <div class="fullscreen-image"></div>
+                <div class="description"><h4>Gain insights to make meaningful improvements that save money and resources</h4></div>
+            </div>
+            </li>  
+            
+            <li>
+            <div id="slide4">
+                <div class="fullscreen-image"></div>
+                <div class="description"><h4> See how your building stacks up to your historic performance, and local and global buildings </h4></div>
+            </div>
+            </li>
+
+            <li>
+            <div id="slide5">
+                <div class="fullscreen-image"></div>
+                <div class="description"><h4> Utilize your data and tracking to help you achieve LEED certification or recertification </h4></div>
+            </div>
+            </li>
+                         
+           
+        </ul>
+        <nav class="slides-navigation">
+            <a href="javascript:;" class="prev"><i class="fa fa-angle-left"></i></a>
+            <a href="javascript:;" class="next"><i class="fa fa-angle-right"></i></a>
+        </nav>
+        
+        <nav class="slides-pagination" id="thumbnails">
+            <a href="#1" id="thumb1" class=""></a>
+            <a href="#2" id="thumb2" class=""></a>
+            <a href="#3" id="thumb3" class=""></a>
+            <a href="#4" id="thumb4" class=""></a>
+            <a href="#5" id="thumb5" class=""></a>
+
+            
+        </nav>
+     
+    </div>
+    <!-- END SLIDER ONE -->
+
+    <!-- BEGIN CONTENT SECTION -->
+    <div class="section-outter">
+   
+        <!-- BEGIN ABOUT  -->
+        <section id="about">       
+            <div id="sec1" class="section-wrapper">
+                <div class="section-inner">
+                    <div id="responsive-container">
+                      <iframe src="https://player.vimeo.com/video/131558158" width="960" height="540" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+                </div>
+                </div>
+            </div>
+        </section>
+        <!-- END ABOUT -->
+        <!--<section>
+            <div id="invis">
+            </div>
+        </section>-->
+        
+        <!-- BEGIN CONTACT -->
+        <section id="contact">
+            <div class="section-wrapper" id="sec3">
+                <div class="section-title">
+                    <h2 class="title">WATCH THE DEMO</h2>
+                </div>
+                <div class="spacer medium"></div>
+                <div id="marketo-form">
+                  <script src="//app-ab03.marketo.com/js/forms2/js/forms2.js"></script>
+                  <form id="mktoForm_1169"></form>
+                  <script>MktoForms2.loadForm("//app-ab03.marketo.com", "562-CSP-589", 1169);</script>
+                </div>
+                <div>
+                <form class="demo-form">
+                    <input type="text" placeholder="First Name" class="demo-field firstname" required>
+                    <input type="text" placeholder="Last Name" class="demo-field lastname" required>
+                    <input type="email" placeholder="E-mail" class="email-field email" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required>
+                    <input type="text" placeholder="Company Name" class="demo-field company" required>
+                    <input type="button" class="leed-btnWater leed-btn-lg demo-btn" value="ACCESS NOW">
+                </form>
+                </div>
+                <div class="guidebook">
+                    <p>Or, view the <a href="gettingstarted.html" target="_blank"><img src="assets/img/guide.png" height="21px">Getting Started Guide</a> to learn more.<p>
+                </div>
+            </div>
+        </section>
+        <!-- END CONTACT -->
+
+    </div>
+    <!-- END CONTENT SECTION -->
+
+</div><!-- END OUTTER -->
+
+<!-- LOGIN POPUP -->
+<div id="modal" class="popupContainer" style="display:none;">
+    <!-- <button class="close_login" type="button">×</button> -->
+    <iframe id="login_iFrame" src="about:blank">
+    </iframe>
+</div>
+<!-- END LOGIN POPUP -->
+ 

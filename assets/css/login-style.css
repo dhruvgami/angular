@@ -1,0 +1,253 @@
+@font-face
+{
+  font-family: Gotham;
+  src: url(../../fonts/GothamBook.otf);
+}
+
+body {
+    margin: 0px;
+    background: url(../../img/bg.jpg)#eee repeat-x;
+}
+.popupContainer{
+	width:100%
+	height: 100%;
+	background: #FFF;
+    -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
+}
+#submit_btn, #click_sign_up { font-family: 'Montserrat', sans-serif; cursor: pointer; border-width: 2px; float: none; border: 1px solid rgb(136,193,88); -webkit-border-radius : 5px; -moz-border-radius: 5px; border-radius: 5px; width: 100%; font-size: 15px; height: 44px; appearance: none; -moz-appearance:none; -webkit-appearance:none; }
+
+#modal_trigger {margin:100px auto; width:100px; display:block;}
+
+.btn {padding:10px 20px; background: rgb(118,191,214);}
+.btn_red {background: rgb(136,193,88); color: #FFF; font-size: 14px;}
+-webkit-border-radius : 5px; -moz-border-radius: 5px; border-radius: 5px;
+.btn:hover {background: rgb(136,193,100);}
+.btn_red:hover {background-color : rgb(136,193,100);}
+
+a.btn {color:#666; text-align: center; text-decoration: none;}
+a.btn_red {color: #FFF;}
+
+.one_half {}
+.one_half.last {font-family: 'Source Sans Pro', sans-serif; font-size: 14px; color: #666;}
+
+/* Popup Styles*/
+.popupHeader {font-size:16px; text-transform: uppercase;}
+.popupHeader { position:relative; padding:36px 32px; font-weight:bold; font-size: 18px; -webkit-border-radius : 5px 5px 0px 0px; -moz-border-radius: 5px 5px 0px 0px; border-radius: 5px 5px 0px 0px;}
+.popupHeader .modal_close {position: absolute; right: 0; top:0; padding:22px 32px; cursor: pointer; color:#aaa; font-size:16px;  -webkit-border-radius : 0px 5px 0px 0px; -moz-border-radius: 0px 5px 0px 0px; border-radius: 0px 5px 0px 0px;}
+
+.popupBody {padding:32px; padding-bottom: 0px; padding-top: 0px;}
+
+.centeredText {text-align: center; margin: 20px 0; clear: both; overflow: hidden; text-transform: uppercase;}
+
+.action_btns {clear:both; overflow: hidden; -webkit-border-radius : 5px; -moz-border-radius: 5px; border-radius: 5px; text-align: center;}
+.action_btns a {display: block;}
+
+/* User Login Form */
+.user_login {display: block;}
+.user_login label {display: block; margin-bottom:5px; margin-top: 5px;}
+.user_login input[type="text"], .user_login input[type="email"], .user_login input[type="password"] {display: block; width:89%; padding: 10px; border:1px solid #DDD; color:#666;}
+.user_login input[type="checkbox"] {float:left; margin-right:5px; margin-left: 0px;}
+.user_login input[type="checkbox"]+label {float:left; cursor: pointer; font-size: 13px;}
+
+.user_login .checkbox {margin-bottom: 20px; clear: both; overflow: hidden;}
+.forgot_password {display:block; margin: 20px 0 10px; clear: both; overflow: hidden; text-decoration: none; color:#ED6347;}
+
+#error_msz {
+  color: #FF6E66;
+  font-size: 15px;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-top: -36px;
+  margin-bottom: 5px;
+  line-height: 23px;
+  display: none;
+}
+.new_user {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
+  color: #666;
+  margin-top: 18px;
+}
+
+#create_account {
+    text-decoration: none;
+    color: #428bca;
+    font-weight: normal;
+    font-family: Gotham;
+}
+
+#login_signup {
+    text-decoration: none;
+    color: #428bca;
+    cursor: pointer;
+    font-family: Gotham;
+}
+
+.loader 
+{
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url('/static/payment/images/ajax_loader_circle.svg') no-repeat 50% 50%;
+    -webkit-animation-name:             rotate; 
+    -webkit-animation-duration:         1.0s; 
+    -webkit-animation-iteration-count:  infinite;
+    -webkit-animation-timing-function:  linear;
+	-moz-animation-name: rotate; 
+    -moz-animation-duration: 1s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+}
+
+.loader_bg
+{
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: rgba(0,0,0,0.7);
+    display: none;
+}
+
+#login_user_name, #login_user_name_last{
+	width: 37%; display: none; background-color: rgb(242,241,239);margin: 0px 0px 15px 0px; font-size: 14px; float: left; height: 30px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 6px 15px; outline: none;
+}
+
+#login_user_name
+{
+    margin-right: 7px !important;
+}
+
+#login_user{
+  background-color: white;font-size: 14px; float: left; height: 30px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 6px 15px; outline: none;
+}
+
+#login_pass{
+  background-color: white;margin: 15px 0px 15px 0px; font-size: 14px; float: left; height: 30px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 6px 15px; outline: none;
+}
+
+.remember_label{
+  font-family: 'Source Sans Pro', sans-serif; font-size: 13px; color: #666;
+}
+
+.header_title{
+  font-family: 'Montserrat', sans-serif; font-size: 20px;
+}
+
+.mr8 {
+  margin-right: 8px !important;
+}
+
+.h420{
+  height: 420px !important;
+}
+
+.ml10{
+  margin-left: 10px;
+}
+
+.align-center{
+  text-align: center;
+}
+
+.float-none{
+  float: none !important;
+}
+
+.float-right{
+  float: right !important;
+}
+
+.pt0{
+  padding-top: 0px !important;
+}
+
+.not-active {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.grey-border{
+  border: 1px solid #DDD !important;
+}
+
+.red-border{
+  border: 1px solid #FF6E66 !important;
+}
+
+.green-color{
+  color: #88C158 !important;
+}
+
+.red-color{
+  color: #FF6E66 !important;
+}
+
+.mt25{
+  margin-top: 25px !important;
+}
+
+.mb25{
+  margin-bottom: 25px !important;
+}
+
+.mt28{
+  margin-top: 28px !important;
+}
+
+.mtm25{
+  margin-top: -25px !important;
+}
+
+@-webkit-keyframes rotate 
+{
+  from 
+  {
+    -webkit-transform: rotate(360deg);
+  }
+  to
+  { 
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+
+@-moz-keyframes rotate 
+{
+  from 
+  {
+    -moz-transform: rotate(360deg);
+  }
+  to
+  { 
+    -moz-transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 420px){
+    #login_user_name, #login_user_name_last{
+      width: 36%;
+  }
+}
+.checkBox_tick
+{
+    border: 2px solid #428bca;
+    float: left;
+    height: 14px;
+    width: 14px;
+    margin-right: 10px;
+    border-radius: 4px;
+    color: white;
+    padding-top: 1px;
+    padding-left: 1.5px;
+    background-color: white;
+}
+
+.checkBox_tick_selected
+{
+    background-color: #428bca;
+}

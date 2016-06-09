@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html ng-app="LEEDOnApp" lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LEEDOn - LEED Dynamic Plaque and LEED Performance Score">
+    <meta name="author" content="USGBC">
+    <link rel="shortcut icon" href="assets/img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/749962/734906/css/fonts.css" />
+	<title ng-bind="header"></title>
+</head>
+<body>
+    <div ng-view>
+        
+    </div>
+    <script type="text/javascript" src="assets/libs/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/libs/js/modernizr-2.6.2.min.js"></script>
+    <script src="assets/js/home-countries3.js"></script>
+	<script src="assets/libs/js/angular.min.js"></script>
+	<script src="assets/libs/js/angular-route.min.js"></script>
+	<script src="apps/shared/route-styles.js"></script>
+	<script src="app.route.js"></script>
+	<script src="apps/components/home/homeController.js"></script>
+	<script src="apps/components/login/loginController.js"></script>
+	<script src="apps/components/dashboard/dashboardController.js"></script>
+
+    <!-- ================== Home app =========================================== -->
+    <!-- EXPANDING THUMBNAIL JS -->
+    <script src="assets/libs/js/grid.js"></script>
+    <!-- BOOTSTRAP JS -->
+    <script src="assets/libs/js/bootstrap.min.js"></script>
+    <!-- SUPER SLIDES JS -->
+    <script src="assets/libs/js/jquery.superslides.min.js"></script>
+    <!-- JQUERY BACK TO TOP -->
+    <script src="assets/libs/js/jquery.backtotop.js"></script>
+    <!-- JQUERY PARALLAX -->
+    <script src="assets/libs/js/jquery.parallax.js"></script>
+    <!-- JQUERY BACKGROUND VIDEO -->
+    <script src="assets/libs/js/jquery.backgroundvideo.js"></script>
+    <!-- JQUERY VENOBOX VIDEO -->
+    <script src="assets/libs/js/venobox.min.js"></script>
+    <!-- JQUERY WAYPOINT -->
+    <script src="assets/libs/js/waypoints.js"></script>
+    <!-- JQUERY WAYPOINT -->
+    <script src="assets/libs/js/jquery.countTo.js"></script>
+    <!-- JQUERY SMOOTH SCROLL -->
+    <script src="assets/libs/js/jquery.smooth-scroll.min.js"></script>
+    <!-- JQUERY FITVID -->
+    <script src="assets/libs/js/jquery.fitvid.js"></script>
+    <!-- JQUERY MASONRY LAYOUT 
+    <script src="js/lib/masonry.pkgd.min.js"></script>-->
+    <!-- JQUERT SUDO SLIDER JS -->
+    <script src="assets/libs/js/jquery.sudoslider.min.js"></script>
+    <!-- MAIN JS -->
+    <script src="assets/js/home-main.js?v=1"></script>
+    <!-- Changes for login popup -->
+    <script src="assets/libs/js/jquery.leanModal.min.js"></script>
+    <script src="assets/js/home-login_iFrame.js?v=1"></script>
+    <script src="assets/libs/js/skrollr.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.js"></script>    
+    <script src="assets/libs/js/jquery.dj.selectable.js"></script>
+    <script type="text/javascript">
+        $(function () {
+          // initialize skrollr if the window width is large enough
+          if ($(window).width() > 767) {
+            skrollr.init();
+          }
+
+         /* // disable skrollr if the window is resized below 768px wide
+          $(window).on('resize', function () {
+            if ($(window).width() <= 767) {
+              skrollr.init().destroy(); // skrollr.init() returns the singleton created above
+            }
+            else {
+            skrollr.init();
+            } 
+          });*/
+        });    
+    </script>
+    <!-- ================== Login app =========================================== -->
+    <script src="assets/js/login-login_closeFrame.js?v=1.1"></script>
+
+</body>
+</html>
