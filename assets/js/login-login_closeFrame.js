@@ -1,5 +1,23 @@
 $( document ).ready(function() {
 
+	var LEED_Online_status ='';
+	var name_send = '';
+
+	if ('False'=="True"){
+		intimate_downtime = true;
+	}
+	else{
+		intimate_downtime = false;
+	}
+
+	var mobile_view = false;
+	if ('False'=="True"){
+		mobile_view = true;
+	}
+	else{
+		mobile_view = false;
+	}
+
 	if (LEED_Online_status == "User DoesNotExist"){
 		$('.checkbox').hide();
 		$('#submit_btn').remove();
@@ -308,35 +326,35 @@ $( document ).ready(function() {
 	if (!(Modernizr.touchEvents || Modernizr.touch) && !inIframe()) {
 		$('.user_login').on('click', '#submit_btn', function() {
 
-			$('#error_msz').hide();
-			$('.new_user').addClass('mt28');
+			// $('#error_msz').hide();
+			// $('.new_user').addClass('mt28');
 
-			var email_field = true;
-			var pass_field  = true;
+			// var email_field = true;
+			// var pass_field  = true;
 
-			if (($('#login_user').val()).trim() == ""){
-				email_field = false;
-		        $('#login_user').removeClass('grey-border').addClass('red-border');
-			}
-			else{
-				$('#login_user').removeClass('red-border').addClass('grey-border');
-			}
+			// if (($('#login_user').val()).trim() == ""){
+			// 	email_field = false;
+		 //        $('#login_user').removeClass('grey-border').addClass('red-border');
+			// }
+			// else{
+			// 	$('#login_user').removeClass('red-border').addClass('grey-border');
+			// }
 
-			if (($('#login_pass').val()).trim() == ""){
-				pass_field  = false;
-				$('#login_pass').removeClass('grey-border').addClass('red-border');
-			}
-			else{
-				$('#login_pass').removeClass('red-border').addClass('grey-border');
-			}
+			// if (($('#login_pass').val()).trim() == ""){
+			// 	pass_field  = false;
+			// 	$('#login_pass').removeClass('grey-border').addClass('red-border');
+			// }
+			// else{
+			// 	$('#login_pass').removeClass('red-border').addClass('grey-border');
+			// }
 
-			if (email_field && pass_field){
-				$(".loader").show();
-	            $(".loader_bg").show();
-			}
-			else{
-				return false;
-			}
+			// if (email_field && pass_field){
+			// 	$(".loader").show();
+	  //           $(".loader_bg").show();
+			// }
+			// else{
+			// 	return false;
+			// }
             
 		  });
 	}
@@ -345,35 +363,35 @@ $( document ).ready(function() {
 		$('body').css('background', 'none');
         $('.user_login').on('click', '#submit_btn', function() {
 
-        	$('#error_msz').hide();
-        	$('.new_user').addClass('mt28');
+   //      	$('#error_msz').hide();
+   //      	$('.new_user').addClass('mt28');
 
-			var email_field = true;
-			var pass_field  = true;
+			// var email_field = true;
+			// var pass_field  = true;
 
-			if (($('#login_user').val()).trim() == ""){
-				email_field = false;
-		        $('#login_user').removeClass('grey-border').addClass('red-border');
-			}
-			else{
-				$('#login_user').removeClass('red-border').addClass('grey-border');
-			}
+			// if (($('#login_user').val()).trim() == ""){
+			// 	email_field = false;
+		 //        $('#login_user').removeClass('grey-border').addClass('red-border');
+			// }
+			// else{
+			// 	$('#login_user').removeClass('red-border').addClass('grey-border');
+			// }
 
-			if (($('#login_pass').val()).trim() == ""){
-				pass_field  = false;
-				$('#login_pass').removeClass('grey-border').addClass('red-border');
-			}
-			else{
-				$('#login_pass').removeClass('red-border').addClass('grey-border');
-			}
+			// if (($('#login_pass').val()).trim() == ""){
+			// 	pass_field  = false;
+			// 	$('#login_pass').removeClass('grey-border').addClass('red-border');
+			// }
+			// else{
+			// 	$('#login_pass').removeClass('red-border').addClass('grey-border');
+			// }
 
-			if (email_field && pass_field){
-				$(".loader").show();
-	            $(".loader_bg").show();
-			}
-			else{
-				return false;
-			}
+			// if (email_field && pass_field){
+			// 	$(".loader").show();
+	  //           $(".loader_bg").show();
+			// }
+			// else{
+			// 	return false;
+			// }
         });
 	}
 	else{

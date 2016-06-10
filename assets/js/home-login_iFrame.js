@@ -22,10 +22,10 @@ $( document ).ready(function() {
 	$("#modal_trigger").leanModal({top : 200, overlay : 0.6, closeButton: ".modal_close" });
 	$("#modal_trigger_trial").leanModal({top : 200, overlay : 0.6, closeButton: ".modal_close" });
 
-	$("#modal_trigger, #modal_trigger_trial").click(function(){
-      $("#login_iFrame").attr('src','//plaque.sbx.leedon.io/auth/login/');
-      var login_iframe = $("#login_iFrame");
-	});
+	// $("#modal_trigger, #modal_trigger_trial").click(function(){
+ //      $("#login_iFrame").attr('src','//plaque.dev.leedon.io/auth/login/');
+ //      var login_iframe = $("#login_iFrame");
+	// });
 		
 	$("#responsive-container").fitVids();
 

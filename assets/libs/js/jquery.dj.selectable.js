@@ -13,8 +13,29 @@
  *
 */
 (function ($) {
-
-	$.widget("ui.djselectable", {
+    
+    
+    function sort(arr) 
+    {
+        var a = [], b = [], prev;
+        arr.sort();
+        for ( var i = 0; i < arr.length; i++ ) 
+        {
+            if ( arr[i] !== prev )
+            {
+                a.push(arr[i]);
+                b.push(1);
+            }
+            else 
+            {
+                b[b.length-1]++;
+            }
+            prev = arr[i];
+        }
+        return [a, b];
+    }
+    
+    $.widget("ui.djselectable", {
 
         options: {
             removeIcon: "ui-icon-close",
@@ -130,7 +151,6 @@
                 Adds hook for adjusting query parameters.
                 Includes timestamp to prevent browser caching the lookup. */
                 var url = data.selectableUrl || data['selectable-url'];
-                url = window.location.protocol + '//plaque.' + window.location.host + url;
                 var now = new Date().getTime();
                 var query = {term: request.term, timestamp: now};
                 if (self.options.prepareQuery) {
@@ -140,16 +160,29 @@
                 if (page) {
                     query.page = page;
                 }
+                var leed_id = "";
                 function unwrapResponse(data) {
+                    $('#loading').hide();
                     var results = data.data;
                     if(results.length == 0)
                     {
                         $('#id_building').css('border-color', 'red');
-                        getSelectedId.length = 0;
+                        $('.cards').hide();
+                        $('#search_val').html($('#id_building').val());
+                        $('.not_found').show();
                         $('.ui-menu-item').hide();
                         return 'No Building'; 
                     }
+                    else if(results.length < 50)
+                    {
+                        limit = 1;    
+                    }
+                    else
+                    {
+                        limit = 0;    
+                    }
                     $('#id_building').css('border-color', 'darkgray');
+                    $('.not_found').hide();
                     getSelectedId = results;
                     var meta = data.meta;
                     if (meta.next_page && meta.more) {
@@ -160,6 +193,124 @@
                             page: meta.next_page
                         });
                     }
+                    
+                    if(append == 0)
+                        $('.buildingCards').html('');
+                    append = 0;
+                    //$.each(getSelectedId, function(i, obj) 
+                    //{
+                       /*if(getSelectedId.length == 26)
+                       {
+                           if(i == (getSelectedId.length - 1))
+                           {
+                             leed_id = leed_id + obj.id
+                             leed_id = leed_id.replace(getSelectedId[getSelectedId.length - 2].id + "&ID=", getSelectedId[getSelectedId.length - 2].id);
+                           }
+                           else
+                           {
+                                leed_id = leed_id + obj.id +'&ID=';
+                           }    
+                       }
+                       else
+                       {
+                           if(i == (getSelectedId.length - 1))
+                           {
+                             leed_id = leed_id + obj.id
+                           }
+                           else
+                           {
+                                leed_id = leed_id + obj.id +'&ID=';
+                           } 
+                       }*/
+						
+						/*if (obj.building_status == 'activated')
+						{
+							labelP = '<img src="/static/dashboard/img/plaque.png" id="plaque" auto_renewal_chk">'
+						}
+						else
+						{
+							labelP = ''
+						}
+						if (obj.certificatio != '')
+						{
+							labelU = '<img src="/static/dashboard/img/usgbc.png" id="certification" auto_renewal_chk">'
+						}
+						else
+						{
+							labelU = ''
+						}
+						
+                        if(obj.label != 'Show more results')
+                        {
+                        $('.buildingCards').append('<div id="card"  class="'+obj.id+' cards " country = '+obj.country+' cert = "'+obj.certification+'" lid="'+obj.leed_id+'"><paper-ripple fit></paper-ripple><div class="bInfo"><p id="bName">'+obj.label+'</p><p id="address">'+obj.street+'</p></div><div class="bScore"><div class="cert"><div>'+labelP+'</div><div>'+labelU+'</div></div><div class="scoreDiv"><h1 id="score">'+obj.points+'</h1></div></div></div>');
+                        }
+                    });*/
+                    
+                    /*countries = new Array();
+                    certification = new Array();
+                    var showCard = [];
+                    var showCert = [];
+                    var url = 'http://'+location.hostname+'/dashboard/public/?INPUT='+$('#id_building').val();
+                    window.history.pushState({}, "New Search", url);
+
+                    $.each($('.buildingCards').find('.cards'), function(i, obj) 
+                    {
+                       countries[i] = $(obj).attr('country');
+                       certification[i] = $(obj).attr('cert');
+                    });
+
+                    initPage(1);
+                    
+                    $('li.ui-menu-item').on('click', function()
+                    {
+                        x = $(this).find('a.ui-corner-all').text();
+                        $('.cards').hide();
+                        $('.cards').each(function()
+                        {
+                            if($(this).find('#bName').text() == x)
+                            {
+                                $(this).show();
+                            }
+                        });
+                    });
+                    
+                    /*var url = 'http://'+location.hostname+'/dashboard/public/?INPUT='+$('#id_building').val();
+                    $.ajax({
+                    url: url,
+                    cache: true,
+                    type: "GET"
+                  }).done(function(data)
+                    {
+                        countries = new Array();
+                        certification = new Array();
+                        var showCard = [];
+                        var showCert = [];
+                        cardnew = data;
+                        cardnew = $.parseHTML(cardnew);
+                        window.history.pushState({}, "New Search", url);
+                        
+                        $.each($(cardnew).find('.cards'), function(i, obj) 
+                        {
+                           countries[i] = $(obj).attr('country');
+                           certification[i] = $(obj).attr('cert');
+                        });
+                        
+                        initPage(0);
+                        
+                        $('li.ui-menu-item').on('click', function()
+                        {
+                            x = $(this).find('a.ui-corner-all').text();
+                            $('.cards').hide();
+                            $('.cards').each(function()
+                            {
+                                if($(this).find('#bName').text() == x)
+                                {
+                                    $(this).show();
+                                }
+                            });
+                        });
+
+                    });*/
                     return response(results);
                 }
                 $.getJSON(url, query, unwrapResponse);
@@ -231,18 +382,6 @@
                 this.menu.refresh();
                 // size and position menu
                 ul.show();
-                $('ul.ui-corner-all').append('<li id="createNew" class="ui-menu-item" role="menuitem"><a class="ui-corner-all" tabindex="-1">Create Project </a><span id="hint"></span></li>');
-                $('#hint').html($('#id_building').val());  
-                $('#id_building').keypress(function()
-                {
-                    $('#hint').html($('#id_building').val());    
-                });
-                $('#createNew').on('click', function()
-                {
-                    $('.addNewBuilding').modal('toggle');   
-                    $('.ui-menu-item').hide();
-                    $('#id_building').val("");
-                });
                 this._resizeMenu();
                 ul.position($.extend({of: this.element}, this.options.position));
                 if (this.options.autoFocus) {
