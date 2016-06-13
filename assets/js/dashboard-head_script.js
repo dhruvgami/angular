@@ -119,5 +119,76 @@ function formatBName(rawname){
     return str.match( RegExp(regex, 'g') ).join( brk );
   }
 if (!window.location.origin) {
-       window.location.origin = window.location.protocol + "//" + window.location.hostname;
- }
+     window.location.origin = window.location.protocol + "//" + window.location.hostname;
+}
+
+$(document).ready(function(){
+    var activate_gresb = "";
+    if (activate_gresb == "True") {
+        window.ActivateGresbFlag = true;
+        $('.gresb-elem').removeClass('display_none');
+    } else {
+        window.ActivateGresbFlag = false;
+    }
+    $("#wasteDetailModal").on('shown.bs.modal', function(){
+        $('body').css('overflow', 'hidden');
+    });
+    $("#wasteDetailModal").on('hidden.bs.modal', function(){
+        $('body').css('overflow', 'visible');
+    });
+    window.closeWasteDetailModal = function() {
+        $('#wasteDetailModal').modal('hide');
+    }
+    function getParameterByName(url, name) {
+        if (!url) {
+            url = window.location.href.toLowerCase();
+        }
+        if (name != 'LEED') {
+            name = name.replace(/[\[\]]/g, "\\$&").toLowerCase();
+        }
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+    $('#gresbModal').on('shown.bs.modal', function(){
+        $('#id_gresb_iframe').attr('src', "/gresb/upload/LEED:"+getParameterByName(window.location.href, 'LEED'));
+    });
+    window.closeModal = function(){
+      $('#gresbModal').modal('hide');
+      $('#id_gresb_module').hide();
+      $('#gresb_upload_iframe').show();
+      $('#gresb_upload_iframe').attr('src', "/gresb/form/");
+    };
+    window.openAssetModal = function(status) {
+        if (status == 'found') {
+            $('#assetExistModal').modal('toggle');
+        }
+    }
+    window.openNotFoundModal = function() {
+        $('#notfoundModal').modal('toggle');
+    }
+    window.openPortfolioSuccess = function(status) {
+        $('#openPortSuccess').modal('toggle');
+    }
+    window.hidePortfolio = function() {
+        console.log("inside the success");
+        $('#id_gresb_module').show();
+        $('#gresb_upload_iframe').hide();
+    }
+});
+// Google Analytics: change UA-XXXXX-X to be your site's ID.
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ 
+  if (ENV_FLAG == "PRD"){
+    ga('create', 'UA-45190319-2', 'leedon.io');
+    ga('send', 'pageview');
+  }
+  else{
+    ga('create', 'UA-45190319-1', 'leedon.io');
+    ga('send', 'pageview');
+}
