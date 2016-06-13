@@ -326,35 +326,7 @@ $( document ).ready(function() {
 	if (!(Modernizr.touchEvents || Modernizr.touch) && !inIframe()) {
 		$('.user_login').on('click', '#submit_btn', function() {
 
-			// $('#error_msz').hide();
-			// $('.new_user').addClass('mt28');
-
-			// var email_field = true;
-			// var pass_field  = true;
-
-			// if (($('#login_user').val()).trim() == ""){
-			// 	email_field = false;
-		 //        $('#login_user').removeClass('grey-border').addClass('red-border');
-			// }
-			// else{
-			// 	$('#login_user').removeClass('red-border').addClass('grey-border');
-			// }
-
-			// if (($('#login_pass').val()).trim() == ""){
-			// 	pass_field  = false;
-			// 	$('#login_pass').removeClass('grey-border').addClass('red-border');
-			// }
-			// else{
-			// 	$('#login_pass').removeClass('red-border').addClass('grey-border');
-			// }
-
-			// if (email_field && pass_field){
-			// 	$(".loader").show();
-	  //           $(".loader_bg").show();
-			// }
-			// else{
-			// 	return false;
-			// }
+			window.location.href = window.location.protocol + '//' + window.location.host + "/v3/#/dashboard";
             
 		  });
 	}
@@ -362,36 +334,7 @@ $( document ).ready(function() {
 		// $('.popupHeader').css('padding-top', '20px');
 		$('body').css('background', 'none');
         $('.user_login').on('click', '#submit_btn', function() {
-
-   //      	$('#error_msz').hide();
-   //      	$('.new_user').addClass('mt28');
-
-			// var email_field = true;
-			// var pass_field  = true;
-
-			// if (($('#login_user').val()).trim() == ""){
-			// 	email_field = false;
-		 //        $('#login_user').removeClass('grey-border').addClass('red-border');
-			// }
-			// else{
-			// 	$('#login_user').removeClass('red-border').addClass('grey-border');
-			// }
-
-			// if (($('#login_pass').val()).trim() == ""){
-			// 	pass_field  = false;
-			// 	$('#login_pass').removeClass('grey-border').addClass('red-border');
-			// }
-			// else{
-			// 	$('#login_pass').removeClass('red-border').addClass('grey-border');
-			// }
-
-			// if (email_field && pass_field){
-			// 	$(".loader").show();
-	  //           $(".loader_bg").show();
-			// }
-			// else{
-			// 	return false;
-			// }
+        	window.location.href = window.location.protocol + '//' + window.location.host + "/v3/#/dashboard";
         });
 	}
 	else{

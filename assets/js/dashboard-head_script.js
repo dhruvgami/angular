@@ -192,3 +192,9 @@ $(document).ready(function(){
     ga('create', 'UA-45190319-1', 'leedon.io');
     ga('send', 'pageview');
 }
+
+$('body').on('click', '#search_private', function() {
+
+window.location.href = window.location.protocol + '//' + window.location.host + "/v3/#/score";
+
+});
