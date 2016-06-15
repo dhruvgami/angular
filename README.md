@@ -12,7 +12,6 @@ Structure for the app
 ---------- dashboard/
 --------------- dashboardController.js
 --------------- dashboardView.html
------ app.module.js   // will handle the setup of your app, load in AngularJS dependencies and so on
 ----- app.routes.js   // will handle all the routes and the route configuration
 assets/
 ----- img/      // Images and icons for your app
