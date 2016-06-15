@@ -1,0 +1,144 @@
+
+
+
+/*@media (max-width: 500px){
+	.plaquevideo {
+		width: 35%;
+		height: auto;
+	}
+}*/
+
+@media (max-width: 767px){
+
+.plaquevideo {
+    /* min-height: 100%;
+    min-width: 100%; */
+    width: 60%;
+    max-height: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    /* align: center;
+    opacity: .9;
+    z-index: -100; */
+    /* background: url("https://s3.amazonaws.com/leedon/LDP_Poster2_big.png") no-repeat; */
+    
+    /* background-size: cover;
+    webkit-transition: opacity 1500ms linear;
+    moz-transition: opacity 1500ms linear;
+    transition: opacity 1500ms linear; */
+}
+
+.plaquediv {
+	display: table-cell;
+    vertical-align: middle;
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	background: black;
+	overflow: hidden;
+	-webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+	}
+	
+.video_wrapper {
+    /* background: #000; */
+    /*background-size: 40%;*/
+    width: 250px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    /* max-height: 715px; */
+    /* position: absolute; */
+    /* top: 10px;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;*/
+	}
+}
+
+@media (min-width: 767px){
+
+.plaquevideo {
+    /* min-height: 100%;
+    min-width: 100%; */
+    width: 60%;
+    max-height: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    /* align: center;
+    opacity: .9;
+    z-index: -100; */
+    /* background: url("https://s3.amazonaws.com/leedon/LDP_Poster2_big.png") no-repeat; */
+    
+    /* background-size: cover;
+    webkit-transition: opacity 1500ms linear;
+    moz-transition: opacity 1500ms linear;
+    transition: opacity 1500ms linear; */
+}
+
+.plaquediv {
+	display: table-cell;
+    vertical-align: middle;
+	width: 350px;
+	height: 350px;
+	border-radius: 50%;
+	background: black;
+	overflow: hidden;
+	-webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+	}
+	
+.video_wrapper {
+    /* background: #000; */
+    /*background-size: 40%;*/
+    width: 350px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    padding-bottom: 25px;
+    /* max-height: 715px; */
+    /* position: absolute; */
+    /* top: 10px;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;*/
+	}
+}
+
+/*	.video_wrapper {
+		background-size: 75%;
+	}
+}*/
+
+#responsive-container{
+    width: 71%;
+    margin: 0px auto;
+}
+
+#plaque_img{
+    width: 50%;
+    margin: 0px auto;
+    margin-top: 27px;
+}
+
+/*Media query for mobile device*/
+@media (min-width: 320px) and (max-width: 480px) {
+    .navbar .navbar-brand {
+        font-size:1em;
+        padding-right: 40px;
+        letter-spacing: 0px;
+   }
+   #alive {
+    font-size: 16px;
+    padding-left: 0px;
+    padding-bottom: 5px;
+   }
+}
+
+@media (min-width: 320px) and (max-width: 720px) {
+    .spacer.big {
+        height: 50px;
+    }
+}
