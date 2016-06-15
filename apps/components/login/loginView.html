@@ -1,65 +1,55 @@
-<!-- Start jQuery Notification Bar -->
+<link rel="stylesheet" type="text/css" href="assets/libs/css/leedstrap.css?v-1.4">
+<link rel="stylesheet" type="text/css" href="assets/css/login-style.css?v-1.4">
+<link rel="stylesheet" type="text/css" href="assets/libs/css/font-awesome.min_new.css?v-1.4">
+<link rel="stylesheet" type="text/css" href="assets/libs/css/font-awesome.min.css?v-1.4">
 
-<div id="DIV_2">
-    <span id="SPAN_3"></span>
-    <p id="P_4">
-    </p>
-    <p id="P_5">
-        <img src="assets/img/close.png" id="IMG_6" alt='' />
-    </p>
+
+<div class="jquery-header-bar" style="display:none; background: #FFFFFF; width:100%; top: 0px; z-index: 10000; padding: 2px 0px 0px 0px; border-bottom:2px solid #CC0000; box-shadow: 0px 4px 5px #AAAAAA; font-size:14px; font-family: &#39;Lato Regular&#39;, Arial; text-transform:uppercase; position: absolute;">
+    <span class="notification" style="display:block; width:auto; position: relative;">
+        <p class="font-style" style="color: #6B6969; width:95%; text-align: center; margin-top:10px; margin-bottom:10px; text-transform: none; font-size:14px; line-height:1.6;"></p>
+        <p class="jquery-arrow down" style="position: absolute;top: 30%; right: 24px; width:13px;"><img src="assets/images/close.png" style="cursor:pointer;max-width: 100%;"></p>
+    </span>
 </div>
 <!-- End jQuery Notification Bar -->
-
-<div id="DIV_7">
-    <div id="DIV_8">
-    </div>
+<div class="loader_bg">
+    <div class="loader"></div>
 </div>
-<div id="DIV_9">
-    <header id="HEADER_10">
-         <span id="SPAN_11">SIGN IN</span>
+<div id="modal" class="popupContainer" style="position: absolute; left: 47%; margin-left: -170px; top: 150px; margin-bottom: 150px; border: 1px solid rgb(209, 209, 209); width: 400px; box-shadow: rgba(180, 180, 180, 0.74902) 0px 0px 5px 0px;">
+    <header class="popupHeader">
+        <span class="header_title">SIGN IN</span>
         <!-- <span class="modal_close" style="display:none;"><i class="icon-remove"></i></span> -->
-
     </header>
-    <section id="SECTION_12">
+    <section class="popupBody">
         <!-- Username & Password Login form -->
-
-        <div id="DIV_13">
-            <form method="post" id="FORM_14">
-                <div id="DIV_15">
-                </div>
-                <input id="INPUT_16" placeholder="E-mail" type="text" name="username" />
-                <input id="INPUT_17" placeholder="Password" type="password" name="password" />
-                <div id="DIV_18">
-                    <input type="checkbox" id="INPUT_19" name="cc" checked="True" />
-                    <label for="remember" id="LABEL_20">
-                    </label>
-                    <div id="DIV_21">
-                    </div>Remember me <!--
-                    <input id="remember" checked="True" type="checkbox" /> 
-                    <label for="remember">
+        <div class="user_login">
+            <form method="post">
+                <div id="error_msz" style="display: none;"></div>
+                <input id="login_user" placeholder="E-mail" type="text" autocorrect="off" autocapitalize="off" name="username" value="" onfocus="this.placeholder = &#39;&#39;" onblur="this.placeholder = &#39;E-mail&#39;">
+                <input id="login_pass" placeholder="Password" type="password" autocorrect="off" autocapitalize="off" name="password" value="" onfocus="this.placeholder = &#39;&#39;" onblur="this.placeholder = &#39;Password&#39;">
+                <div class="checkbox">
+                    <input type="checkbox" id="remember" name="cc" checked="True">
+                    <label for="remember" class="remember_label" style="font-family: Gotham;">
+                        <div class="checkBox_tick fa fa-check"></div>
                         Remember me
-                    </label> -->
+                    </label>
+                    <!-- <input id="remember" checked="True" type="checkbox" />
+                        <label for="remember" style="font-family: 'Source Sans Pro', sans-serif; font-size: 13px; color: #666;">Remember me</label> -->
                 </div>
-                <div id="DIV_22">
-                    <div id="DIV_23">
-                        <input type="hidden" name="csrfmiddlewaretoken" value="ziYHgsfAky9M59JGvA7spMBBoUB60qJQ" id="INPUT_24" />
-                    </div>
-                    <div id="DIV_25">
-                        <!-- <input class="btn btn_red" id="submit_btn" type="submit" value="LOG IN" /> -->
-
-                        <input id="INPUT_26" type="submit" value="LOG IN" />
+                <div class="action_btns">
+                    <div style="display:none"><input type="hidden" name="csrfmiddlewaretoken" value="jFi0ZOFXlh1QxVNhSjAyLQkuiVP4qNr8"></div>
+                    <div class="one_half last login_user_button">
+                        <a class="btn btn_red" id="submit_btn" type="submit" href="#/dashboard">LOG IN</a>
                     </div>
                 </div>
             </form>
-            <div id="DIV_27">
-                <div id="DIV_28">
-                    <!-- <input class="btn btn_red" id="click_sign_up" type="submit" value="CREATE ACCOUNT" /> -->
-
+            <div class="action_btns_create_user">
+                <div class="one_half last create_account_button">
                 </div>
             </div>
         </div>
-        <p id="P_29">
-             <a id="A_30" href="http://www.usgbc.org/user/password">Forgot your password?</a> <span id="SPAN_31">Sign Up</span>
+        <p class="new_user mb25 mt28">
+            <a id="create_account" href="http://www.usgbc.org/user/password" target="_blank">Forgot your password?</a>
+            <span id="login_signup" class="float-right">Sign Up</span>
         </p>
     </section>
 </div>
