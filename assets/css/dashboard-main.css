@@ -2925,7 +2925,7 @@ span.labels
 @media (max-width: 320px){
   #drp_btn_header {
      top:0px !important;
-      background: url('../../dashboard/img/profile-mobile.png') no-repeat !important;
+      background: url('../images/profile-mobile.png') no-repeat !important;
      background-size: 22px 22px !important;
      background-position: right top !important;
      color: rgba(255,255,255,0.0) !important;
@@ -2941,7 +2941,7 @@ span.labels
 @media (min-width: 320px) and (max-width: 550px){
   #drp_btn_header {
      top:0px !important;
-      background: url('../../dashboard/img/profile-mobile.png') no-repeat !important;
+      background: url('../images/profile-mobile.png') no-repeat !important;
      background-size: 22px 22px !important;
      background-position: right !important;
      color: rgba(255,255,255,0.0) !important;
@@ -4266,7 +4266,7 @@ button.other_bg {
     padding-top: 70px;
     height: 85px;
     width: 85px;
-    background: url("../../dashboard/img/smilies.png") -500px 0px no-repeat;
+    background: url("../images/smilies.png") -500px 0px no-repeat;
     margin: 0px auto;
 }
 
@@ -4287,7 +4287,7 @@ button.other_bg {
   -webkit-appearance: none !important;
   -moz-appearance: none !important;
   -ms-user-select: none !important;
-  background: url("../../dashboard/img/handle.png");
+  background: url("../images/handle.png");
   margin-top: -18px;
   height: 53px;
   width: 53px;
@@ -4355,13 +4355,13 @@ button.other_bg {
     background-color: #3bb34a;
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#FF3BB34A', endColorstr='#FF019146')";
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#FF3BB34A', endColorstr='#FF019146');
-    background: url('../../dashboard/img/triangle.png') no-repeat 90%;
-    background: url("../../dashboard/img/triangle.png") no-repeat 90%, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3bb34a), color-stop(100%, #019146));
-    background: url("../../dashboard/img/triangle.png") no-repeat 90%, -webkit-linear-gradient(top, #3bb34a 0%, #019146 100%);
-    background: url("../../dashboard/img/triangle.png") no-repeat 90%, -moz-linear-gradient(top, #3bb34a 0%, #019146 100%);
-    background: url("../../dashboard/img/triangle.png") no-repeat 90%, -ms-linear-gradient(top, #3bb34a 0%, #019146 100%);
-    background: url("../../dashboard/img/triangle.png") no-repeat 90%, -o-linear-gradient(top, #3bb34a 0%, #019146 100%);
-    background: url("../../dashboard/img/triangle.png") no-repeat 90%, linear-gradient(to bottom, #3bb34a 0%, #019146 100%);
+    background: url('../images/triangle.png') no-repeat 90%;
+    background: url("../images/triangle.png") no-repeat 90%, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3bb34a), color-stop(100%, #019146));
+    background: url("../images/triangle.png") no-repeat 90%, -webkit-linear-gradient(top, #3bb34a 0%, #019146 100%);
+    background: url("../images/triangle.png") no-repeat 90%, -moz-linear-gradient(top, #3bb34a 0%, #019146 100%);
+    background: url("../images/triangle.png") no-repeat 90%, -ms-linear-gradient(top, #3bb34a 0%, #019146 100%);
+    background: url("../images/triangle.png") no-repeat 90%, -o-linear-gradient(top, #3bb34a 0%, #019146 100%);
+    background: url("../images/triangle.png") no-repeat 90%, linear-gradient(to bottom, #3bb34a 0%, #019146 100%);
     border-radius: 5px;
     border: 1px solid #989898;
     font-size: 14px;
@@ -4391,7 +4391,7 @@ button.other_bg {
 }
 
 .survey-sprite, .survey-bike, .survey-bike_on, .survey-bus, .survey-bus_on, .survey-car1, .survey-car1_on, .survey-car2, .survey-car2_on, .survey-car4, .survey-car4_on, .survey-heavy_rail, .survey-heavy_rail_on, .survey-light_rail, .survey-light_rail_on, .survey-motorcycle, .survey-motorcycle_on, .survey-box .checks input[type="checkbox"].walk + label, .survey-box .checks input[type="checkbox"].bus + label, .survey-box .checks input[type="checkbox"].light_rail + label, .survey-box .checks input[type="checkbox"].heavy_rail + label, .survey-box .checks input[type="checkbox"].motorcycle + label, .survey-box .checks input[type="checkbox"].car + label, .survey-box .checks input[type="checkbox"].car23 + label, .survey-box .checks input[type="checkbox"].cars4 + label, #mini-survey .options input[type="checkbox"].walk + label, #mini-survey .options input[type="checkbox"].bus + label, #mini-survey .options input[type="checkbox"].light_rail + label, #mini-survey .options input[type="checkbox"].heavy_rail + label, #mini-survey .options input[type="checkbox"].motorcycle + label, #mini-survey .options input[type="checkbox"].car + label, #mini-survey .options input[type="checkbox"].car23 + label, #mini-survey .options input[type="checkbox"].cars4 + label {
-  background: url('../../dashboard/img/survey-s400dfd7868.png') no-repeat;
+  background: url('../images/survey-s400dfd7868.png') no-repeat;
 }
 
 .survey-bike {
@@ -4464,7 +4464,7 @@ button.other_bg {
 
 .add_route {
     position: relative;
-    background: url("../../dashboard/img/add-route.png") no-repeat;
+    background: url("../images/add-route.png") no-repeat;
     height: 31px;
     padding-left: 40px;
     padding-top: 5px;
@@ -4557,7 +4557,7 @@ select.dist_select::-ms-expand {
 }
 
 .survey-box .route_label {
-  background: url("../../dashboard/img/route-label.png") no-repeat;
+  background: url("../images/route-label.png") no-repeat;
   height: 38px;
   width: auto;
   color: white;
@@ -4723,7 +4723,7 @@ select.dist_select::-ms-expand {
     height: 35px;
     margin: -1px 4px 0 0;
     vertical-align: middle;
-    background: url("../../dashboard/img/checkbox.png") left top no-repeat;
+    background: url("../images/checkbox.png") left top no-repeat;
     cursor: pointer;
     font-size: 12px;
 }
@@ -4741,7 +4741,7 @@ button.disabled, button[disabled], .button.disabled, .button[disabled]{
 }
 
 .survey_continue {
-    background: url("../../dashboard/img/triangle.png") no-repeat 90%, linear-gradient(to bottom, #3bb34a 0%, #019146 100%);
+    background: url("../images/triangle.png") no-repeat 90%, linear-gradient(to bottom, #3bb34a 0%, #019146 100%);
     border-radius: 5px;
     border: 1px solid #989898;
     font-size: 14px;

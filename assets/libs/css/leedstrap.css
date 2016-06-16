@@ -8,22 +8,22 @@ body {
 	
 @font-face {
   font-family: Montserrat;
-  src: url(../font/Montserrat-Regular.ttf);
+  src: url(../../fonts/Montserrat-Regular.ttf);
 }
 
 @font-face {
   font-family: MontserratBold;
-  src: url(../font/Montserrat-Bold.ttf);
+  src: url(../../fonts/Montserrat-Bold.ttf);
 }
 
 @font-face {
   font-family: GothamBook;
-  src: url(../font/Gotham-Book.otf);
+  src: url(../../fonts/Gotham-Book.otf);
 }
 
 @font-face {
   font-family: GothamLight;
-  src: url(../font/Gotham-Light.otf);
+  src: url(../../fonts/Gotham-Light.otf);
 }
 
 
