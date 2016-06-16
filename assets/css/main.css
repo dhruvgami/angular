@@ -1,3 +1,7 @@
 .h600{
   height: 600px;
 }
+
+.overflow_y_scroll{
+	overflow-y: scroll;
+}

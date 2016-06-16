@@ -11,6 +11,10 @@ LEEDOnApp.config(function($routeProvider) {
         templateUrl : 'apps/components/login/loginView.html',
         controller  : 'loginController'
     })
+    .when('/dashboard', {
+        templateUrl : 'apps/components/dashboard/dashboardView.html',
+        controller  : 'dashboardController'
+    })
     .otherwise({
         // default page
         redirectTo: '/'
