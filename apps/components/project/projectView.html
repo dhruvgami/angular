@@ -1,18 +1,18 @@
-<link rel="stylesheet" property="stylesheet" href="assets/libs/css/bootstrap.css?v-1.4">
-<link rel="stylesheet" property="stylesheet" href="assets/libs/css/font-awesome.min.css?v-1.4">
-<link rel="stylesheet" property="stylesheet" href="assets/libs/css/jquery.timepicker.css?v-1.4">
-<link rel="stylesheet" property="stylesheet" href="assets/css/dashboard-main.css?v-1.4">
-<link rel="stylesheet" property="stylesheet" href="assets/libs/css/simplePagination.css?v-1.4">
-<link rel="stylesheet" property="stylesheet" href="assets/libs/css/jquery-ui.css?v-1.4">
-<link rel="stylesheet" property="stylesheet" href="assets/libs/css/dj.selectable.css?v-1.4">
-<link rel="stylesheet" property="stylesheet" href="assets/libs/css/nprogress.css?v-1.4">
-<link rel="stylesheet" property="stylesheet" href="assets/libs/css/foundation-datepicker.css?v-1.4">
-<link rel="stylesheet" property="stylesheet" href="assets/libs/css/alertify.core.css?v-1.4">
-<link rel="stylesheet" property="stylesheet" href="assets/libs/css/alertify.bootstrap.css?v-1.4">
-<link rel="stylesheet" property="stylesheet" href="assets/libs/css/jquery.fullPage.css?v-1.4">
-<link rel="stylesheet" property="stylesheet" href="assets/libs/css/multiple-select.css?v-1.4">
-<link rel="stylesheet" property="stylesheet" href="assets/css/dashboard-elements.css?v-1.4">
-<link rel="stylesheet" property="stylesheet" href="assets/libs/css/jquery.qtip.min.css?v-1.4">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/bootstrap.css?v-1.2">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/font-awesome.min.css?v-1.2">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/jquery.timepicker.css?v-1.2">
+<link rel="stylesheet" property="stylesheet" href="assets/css/dashboard-main.css?v-1.2">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/simplePagination.css?v-1.2">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/jquery-ui.css?v-1.2">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/dj.selectable.css?v-1.2">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/nprogress.css?v-1.2">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/foundation-datepicker.css?v-1.2">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/alertify.core.css?v-1.2">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/alertify.bootstrap.css?v-1.2">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/jquery.fullPage.css?v-1.2">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/multiple-select.css?v-1.2">
+<link rel="stylesheet" property="stylesheet" href="assets/css/dashboard-elements.css?v-1.2">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/jquery.qtip.min.css?v-1.2">
 
 <!-- Start jQuery Notification Bar -->
 <div class="jquery-header-bar" style="display:none; background: #FFFFFF; width:100%; top: 0px; z-index: 10000; position: fixed; padding: 2px 0px 0px 0px; border-bottom:2px solid #CC0000; box-shadow: 0px 4px 5px #AAAAAA; font-size:14px; font-family: &#39;Lato Regular&#39;, Arial; text-transform:uppercase;">
@@ -33,7 +33,7 @@
     </span>
 </div>
 <div class="nav">
-    <div class="relative nav_item projects_nav" data-page="projects">
+    <div class="relative nav_item projects_nav current nav_item_active" data-page="projects">
         <paper-ripple fit=""></paper-ripple>
         <span class="nav_text" style="margin-left:9px;">Projects</span>
     </div>
@@ -61,11 +61,11 @@
             <span class="nav_text" style="margin-left:10px;">Manage</span>
         </div>
         -->
-    <div class="relative nav_item help_nav" data-page="help">
+    <div class="relative nav_item help_nav disabled" data-page="help">
         <paper-ripple fit=""></paper-ripple>
         <span class="nav_text" style="margin-left:19px;">Help</span>
     </div>
-    <div class="relative nav_item explore_nav display_none" data-page="explore" style="display: block;">
+    <div class="relative nav_item explore_nav display_none disabled" data-page="explore">
         <paper-ripple fit=""></paper-ripple>
         <span class="nav_text" style="margin-left:11px;">Explore</span>
     </div>
@@ -84,27 +84,27 @@
                 <div class="UI_option" style="top:66px;" option="v3">Version 3</div>
             </div>
         </div>
-        <div class="btn_header_group">
+        <div class="btn_header_group open">
             <button id="drp_btn_header" class="btn_header btn_header-default dropdown-toggle" data-toggle="dropdown">
             Usgbc 
             <span class="caret"></span>
             </button>
-            <ul class="dropdown_menu dropdown_menu_usermenu pull-right mont" id="drp_btn_header_black" style="display: none;">
+            <ul class="dropdown_menu dropdown_menu_usermenu pull-right mont" id="drp_btn_header_black">
                 <li><a style="color:#4a4a4a;" id="dash_btn_header" href="http://plaque.dev.leedon.io/v3/dashboard/"><i class="icon-home"></i> Projects</a></li>
                 <li class="all_logout"><a class="all_logout" style="color:#4a4a4a;" id="dash_btn_header_logout" href="http://plaque.dev.leedon.io/auth/logout"><i class="all_logout icon-signout"></i> Log Out</a></li>
             </ul>
         </div>
-        <div class="meterInfo mont buildingInfo" style="display: block;">
+        <div class="meterInfo mont buildingInfo" style="display: none;">
             <p class="meterInfoNumber">0</p>
         </div>
         <div class="notification_module mont">
         </div>
     </div>
     <div>
-        <div class="floatl inputDiv searchFields" style="display: none;">
-            <input name="building" type="text" id="id_building" placeholder="Search Projects" class="search">
+        <div class="floatl inputDiv searchFields">
+            <input name="building" type="text" id="id_building" placeholder="Search Projects" class="search" ng-model="searchText">
         </div>
-        <div class="filterDiv searchFields" style="float: left; margin-right: 15px; display: none;">
+        <div class="filterDiv searchFields" style="float: left;margin-right: 15px;">
             <input name="filters" type="text" id="id_filters" placeholder="Filters" readonly="">
             <div id="filterSelectDiv">
                 <div class="certification_filter">
@@ -143,7 +143,260 @@
                 <div class="country_filter">
                     <div class="dropdown">COUNTRY<span class="second_plus" style="display:none;"></span></div>
                     <div>
-                        <select name="filters" type="text" id="id_country" placeholder="Select Country"></select>
+                        <select name="filters" type="text" id="id_country" placeholder="Select Country">
+                            <option value="none">Select country</option>
+                            <option value="AF">Afghanistan</option>
+                            <option value="AX">Aland Islands</option>
+                            <option value="AL">Albania</option>
+                            <option value="DZ">Algeria</option>
+                            <option value="AS">American Samoa</option>
+                            <option value="AD">Andorra</option>
+                            <option value="AO">Angola</option>
+                            <option value="AI">Anguilla</option>
+                            <option value="AQ">Antarctica</option>
+                            <option value="AG">Antigua and Barbuda</option>
+                            <option value="AR">Argentina</option>
+                            <option value="AM">Armenia</option>
+                            <option value="AW">Aruba</option>
+                            <option value="AU">Australia</option>
+                            <option value="AT">Austria</option>
+                            <option value="AZ">Azerbaijan</option>
+                            <option value="BS">Bahamas</option>
+                            <option value="BH">Bahrain</option>
+                            <option value="BD">Bangladesh</option>
+                            <option value="BB">Barbados</option>
+                            <option value="BY">Belarus</option>
+                            <option value="BE">Belgium</option>
+                            <option value="BZ">Belize</option>
+                            <option value="BJ">Benin</option>
+                            <option value="BM">Bermuda</option>
+                            <option value="BT">Bhutan</option>
+                            <option value="BO">Bolivia</option>
+                            <option value="BQ">Bonaire, Saint Eustatius and Saba</option>
+                            <option value="BA">Bosnia and Herzegovina</option>
+                            <option value="BW">Botswana</option>
+                            <option value="BV">Bouvet Island</option>
+                            <option value="BR">Brazil</option>
+                            <option value="IO">British Indian Ocean Territory</option>
+                            <option value="VG">British Virgin Islands</option>
+                            <option value="BN">Brunei</option>
+                            <option value="BG">Bulgaria</option>
+                            <option value="BF">Burkina Faso</option>
+                            <option value="BI">Burundi</option>
+                            <option value="KH">Cambodia</option>
+                            <option value="CM">Cameroon</option>
+                            <option value="CA">Canada</option>
+                            <option value="CV">Cape Verde</option>
+                            <option value="KY">Cayman Islands</option>
+                            <option value="CF">Central African Republic</option>
+                            <option value="TD">Chad</option>
+                            <option value="CL">Chile</option>
+                            <option value="CN">China</option>
+                            <option value="CX">Christmas Island</option>
+                            <option value="CC">Cocos Islands</option>
+                            <option value="CO">Colombia</option>
+                            <option value="KM">Comoros</option>
+                            <option value="CK">Cook Islands</option>
+                            <option value="CR">Costa Rica</option>
+                            <option value="HR">Croatia</option>
+                            <option value="CU">Cuba</option>
+                            <option value="CW">Curaçao</option>
+                            <option value="CY">Cyprus</option>
+                            <option value="CZ">Czech Republic</option>
+                            <option value="CD">Democratic Republic of the Congo</option>
+                            <option value="DK">Denmark</option>
+                            <option value="DJ">Djibouti</option>
+                            <option value="DM">Dominica</option>
+                            <option value="DO">Dominican Republic</option>
+                            <option value="TL">East Timor</option>
+                            <option value="EC">Ecuador</option>
+                            <option value="EG">Egypt</option>
+                            <option value="SV">El Salvador</option>
+                            <option value="GQ">Equatorial Guinea</option>
+                            <option value="ER">Eritrea</option>
+                            <option value="EE">Estonia</option>
+                            <option value="ET">Ethiopia</option>
+                            <option value="FK">Falkland Islands</option>
+                            <option value="FO">Faroe Islands</option>
+                            <option value="FJ">Fiji</option>
+                            <option value="FI">Finland</option>
+                            <option value="FR">France</option>
+                            <option value="GF">French Guiana</option>
+                            <option value="PF">French Polynesia</option>
+                            <option value="TF">French Southern Territories</option>
+                            <option value="GA">Gabon</option>
+                            <option value="GM">Gambia</option>
+                            <option value="GE">Georgia</option>
+                            <option value="DE">Germany</option>
+                            <option value="GH">Ghana</option>
+                            <option value="GI">Gibraltar</option>
+                            <option value="GR">Greece</option>
+                            <option value="GL">Greenland</option>
+                            <option value="GD">Grenada</option>
+                            <option value="GP">Guadeloupe</option>
+                            <option value="GU">Guam</option>
+                            <option value="GT">Guatemala</option>
+                            <option value="GG">Guernsey</option>
+                            <option value="GN">Guinea</option>
+                            <option value="GW">Guinea-Bissau</option>
+                            <option value="GY">Guyana</option>
+                            <option value="HT">Haiti</option>
+                            <option value="HM">Heard Island and McDonald Islands</option>
+                            <option value="HN">Honduras</option>
+                            <option value="HK">Hong Kong</option>
+                            <option value="HU">Hungary</option>
+                            <option value="IS">Iceland</option>
+                            <option value="IN">India</option>
+                            <option value="ID">Indonesia</option>
+                            <option value="IR">Iran</option>
+                            <option value="IQ">Iraq</option>
+                            <option value="IE">Ireland</option>
+                            <option value="IM">Isle of Man</option>
+                            <option value="IL">Israel</option>
+                            <option value="IT">Italy</option>
+                            <option value="CI">Ivory Coast</option>
+                            <option value="JM">Jamaica</option>
+                            <option value="JP">Japan</option>
+                            <option value="JE">Jersey</option>
+                            <option value="JO">Jordan</option>
+                            <option value="KZ">Kazakhstan</option>
+                            <option value="KE">Kenya</option>
+                            <option value="KI">Kiribati</option>
+                            <option value="XK">Kosovo</option>
+                            <option value="KW">Kuwait</option>
+                            <option value="KG">Kyrgyzstan</option>
+                            <option value="LA">Laos</option>
+                            <option value="LV">Latvia</option>
+                            <option value="LB">Lebanon</option>
+                            <option value="LS">Lesotho</option>
+                            <option value="LR">Liberia</option>
+                            <option value="LY">Libya</option>
+                            <option value="LI">Liechtenstein</option>
+                            <option value="LT">Lithuania</option>
+                            <option value="LU">Luxembourg</option>
+                            <option value="MO">Macao</option>
+                            <option value="MK">Macedonia</option>
+                            <option value="MG">Madagascar</option>
+                            <option value="MW">Malawi</option>
+                            <option value="MY">Malaysia</option>
+                            <option value="MV">Maldives</option>
+                            <option value="ML">Mali</option>
+                            <option value="MT">Malta</option>
+                            <option value="MH">Marshall Islands</option>
+                            <option value="MQ">Martinique</option>
+                            <option value="MR">Mauritania</option>
+                            <option value="MU">Mauritius</option>
+                            <option value="YT">Mayotte</option>
+                            <option value="MX">Mexico</option>
+                            <option value="FM">Micronesia</option>
+                            <option value="MD">Moldova</option>
+                            <option value="MC">Monaco</option>
+                            <option value="MN">Mongolia</option>
+                            <option value="ME">Montenegro</option>
+                            <option value="MS">Montserrat</option>
+                            <option value="MA">Morocco</option>
+                            <option value="MZ">Mozambique</option>
+                            <option value="MM">Myanmar</option>
+                            <option value="NA">Namibia</option>
+                            <option value="NR">Nauru</option>
+                            <option value="NP">Nepal</option>
+                            <option value="NL">Netherlands</option>
+                            <option value="AN">Netherlands Antilles</option>
+                            <option value="NC">New Caledonia</option>
+                            <option value="NZ">New Zealand</option>
+                            <option value="NI">Nicaragua</option>
+                            <option value="NE">Niger</option>
+                            <option value="NG">Nigeria</option>
+                            <option value="NU">Niue</option>
+                            <option value="NF">Norfolk Island</option>
+                            <option value="KP">North Korea</option>
+                            <option value="MP">Northern Mariana Islands</option>
+                            <option value="NO">Norway</option>
+                            <option value="OM">Oman</option>
+                            <option value="PK">Pakistan</option>
+                            <option value="PW">Palau</option>
+                            <option value="PS">Palestinian Territory</option>
+                            <option value="PA">Panama</option>
+                            <option value="PG">Papua New Guinea</option>
+                            <option value="PY">Paraguay</option>
+                            <option value="PE">Peru</option>
+                            <option value="PH">Philippines</option>
+                            <option value="PN">Pitcairn</option>
+                            <option value="PL">Poland</option>
+                            <option value="PT">Portugal</option>
+                            <option value="PR">Puerto Rico</option>
+                            <option value="QA">Qatar</option>
+                            <option value="CG">Republic of the Congo</option>
+                            <option value="RE">Reunion</option>
+                            <option value="RO">Romania</option>
+                            <option value="RU">Russia</option>
+                            <option value="RW">Rwanda</option>
+                            <option value="BL">Saint Barthélemy</option>
+                            <option value="SH">Saint Helena</option>
+                            <option value="KN">Saint Kitts and Nevis</option>
+                            <option value="LC">Saint Lucia</option>
+                            <option value="MF">Saint Martin</option>
+                            <option value="PM">Saint Pierre and Miquelon</option>
+                            <option value="VC">Saint Vincent and the Grenadines</option>
+                            <option value="WS">Samoa</option>
+                            <option value="SM">San Marino</option>
+                            <option value="ST">Sao Tome and Principe</option>
+                            <option value="SA">Saudi Arabia</option>
+                            <option value="SN">Senegal</option>
+                            <option value="RS">Serbia</option>
+                            <option value="CS">Serbia and Montenegro</option>
+                            <option value="SC">Seychelles</option>
+                            <option value="SL">Sierra Leone</option>
+                            <option value="SG">Singapore</option>
+                            <option value="SX">Sint Maarten</option>
+                            <option value="SK">Slovakia</option>
+                            <option value="SI">Slovenia</option>
+                            <option value="SB">Solomon Islands</option>
+                            <option value="SO">Somalia</option>
+                            <option value="ZA">South Africa</option>
+                            <option value="GS">South Georgia and the South Sandwich Islands</option>
+                            <option value="KR">South Korea</option>
+                            <option value="SS">South Sudan</option>
+                            <option value="ES">Spain</option>
+                            <option value="LK">Sri Lanka</option>
+                            <option value="SR">Suriname</option>
+                            <option value="SJ">Svalbard and Jan Mayen</option>
+                            <option value="SZ">Swaziland</option>
+                            <option value="SE">Sweden</option>
+                            <option value="CH">Switzerland</option>
+                            <option value="SY">Syria</option>
+                            <option value="TW">Taiwan</option>
+                            <option value="TJ">Tajikistan</option>
+                            <option value="TZ">Tanzania</option>
+                            <option value="TH">Thailand</option>
+                            <option value="TG">Togo</option>
+                            <option value="TK">Tokelau</option>
+                            <option value="TO">Tonga</option>
+                            <option value="TT">Trinidad and Tobago</option>
+                            <option value="TN">Tunisia</option>
+                            <option value="TR">Turkey</option>
+                            <option value="TM">Turkmenistan</option>
+                            <option value="TC">Turks and Caicos Islands</option>
+                            <option value="TV">Tuvalu</option>
+                            <option value="VI">U.S. Virgin Islands</option>
+                            <option value="UG">Uganda</option>
+                            <option value="UA">Ukraine</option>
+                            <option value="AE">United Arab Emirates</option>
+                            <option value="GB">United Kingdom</option>
+                            <option value="US">United States</option>
+                            <option value="UM">United States Minor Outlying Islands</option>
+                            <option value="UY">Uruguay</option>
+                            <option value="UZ">Uzbekistan</option>
+                            <option value="VU">Vanuatu</option>
+                            <option value="VA">Vatican</option>
+                            <option value="VE">Venezuela</option>
+                            <option value="VN">Vietnam</option>
+                            <option value="WF">Wallis and Futuna</option>
+                            <option value="EH">Western Sahara</option>
+                            <option value="YE">Yemen</option>
+                            <option value="ZM">Zambia</option>
+                            <option value="ZW">Zimbabwe</option>
+                        </select>
                     </div>
                     <div class="selectedCountries gotham">
                     </div>
@@ -151,15 +404,15 @@
             </div>
         </div>
         <ul id="listC" class="country_list" style=""></ul>
-        <div style="text-align: center; display: none;" id="searchButtonDiv" class="searchFields">
+        <div style="text-align: center;" id="searchButtonDiv" class="searchFields">
             <button id="searchButton" class="btn action-button btnGreen floatl mt35p">SEARCH</button>
         </div>
-        <div class="buildingInfo" style="display: block;">
+        <div class="buildingInfo" style="display: none;">
             <div class="gotham buildingHeaderName">
-                <span id="building_name">USGBC Headquarters</span>
+                <span id="building_name"></span>
             </div>
             <div class="gotham buildingHeaderAddress">
-                <span id="building_address">Washington, DC, US</span>
+                <span id="building_address"></span>
             </div>
         </div>
         <div class="hoverOverview showOverview" id="hoverMenu">
@@ -167,12 +420,11 @@
         <!-- YA: LEED certification modal window -->
         <!-- //////////////////////////////////// -->
         <!-- //////////////////////////////////// -->
-        <!--LEED Online reg button
-            <div id="building_per_data_link_dashboard" class="display_none buildingInfo">
-                <div></div>
-            </div>
-            -->
-        <div class="gotham" id="building_per_data_modal" style="">
+        <div id="building_per_data_link_dashboard" class="display_none buildingInfo" style="display: none;">
+            <canvas width="46" height="46"></canvas>
+            <div></div>
+        </div>
+        <div class="gotham" id="building_per_data_modal">
             <div id="building_per_data_heading">
                 <div id="building_per_title">You're steps away from LEED Certification</div>
                 <div class="floatl">
@@ -187,10 +439,10 @@
                 <div class="building_per_body" id="building_per_score">
                     <div class="building_per_title">Performance Score</div>
                     <div class="building_per_score">                                
-                        <img class="ajax_loader_leed_cert display_none" alt="" src="assets/images/ajax_loader_40x40.gif">
-                        <span class="current-score display_inline complete">76</span>
-                        <span class="current-divider display_inline">/</span>
-                        <span class="total-score display_inline">40</span>
+                        <img class="ajax_loader_leed_cert display_inline" alt="" src="assets/images/ajax_loader_40x40.gif">
+                        <span class="current-score display_none">0</span>
+                        <span class="current-divider display_none">/</span>
+                        <span class="total-score display_none">40</span>
                     </div>
                     <a class="building_per_status btn">Review</a>
                 </div>
@@ -229,8 +481,8 @@
         <!-- //////////////////////////////////// -->
         <!-- YA: LEED certification modal window -->
         <!-- //////////////////////////////////// -->
-        <div class="buildingInfo" id="gbig_link" leed_id="1000000117" style="display: block;"></div>
-        <div class="gotham" id="gbig_module" style="">
+        <div class="buildingInfo" id="gbig_link" style="display: none;"></div>
+        <div class="gotham" id="gbig_module">
             <div class="sourceContainer">
                 <div style="color: darkgrey;">View on:</div>
                 <div>
@@ -244,11 +496,11 @@
         </div>
     </div>
 </div>
-<div class="navigation-tab-header buildingInfo showOverview" style="display: block;">
-    <div class="navigation-tab input_nav input_nav_active" data-page="score">Overview</div>
+<div class="navigation-tab-header buildingInfo showOverview" style="display: none;">
+    <div class="navigation-tab input_nav" data-page="score">Overview</div>
     <div class="navigation-tab input_nav" data-page="data_input">Data</div>
     <div class="navigation-tab input_nav" data-page="strategy_input">Strategies</div>
-    <div class="navigation-tab input_nav" data-page="data_scorecard" style="display: none;">Scorecard</div>
+    <div class="navigation-tab input_nav" data-page="data_scorecard">Scorecard</div>
     <div class="navigation-tab input_nav" data-page="data_analysis">Analysis</div>
     <div class="navigation-tab input_nav" data-page="manage">Manage</div>
 </div>
@@ -299,155 +551,52 @@
 <!-- Adding LEED Certication ends -->
 <div class="manage_category_nav category_nav gotham" style="display: none;">
     <!--            <div class="color_bar project_plaque_cat_color"></div>-->
-    <div class="relative manage_category manage_cat_active" category-type="project_plaque">Project Plaque</div>
+    <div class="relative manage_category  manage_cat_active" category-type="project_plaque">Project Plaque</div>
     <!--            <div class="color_bar team_cat_color"></div>-->
-    <div class="relative manage_category" category-type="team">Team</div>
+    <div class="relative manage_category " category-type="team">Team</div>
     <!--            <div class="color_bar account_cat_color"></div>-->
-    <div class="relative manage_category" category-type="account">Account</div>
+    <div class="relative manage_category " category-type="account">Account</div>
     <!--            <div class="color_bar billing_cat_color"></div>-->
-    <div class="relative manage_category" category-type="billing">Billing</div>
+    <div class="relative manage_category " category-type="billing">Billing</div>
     <!--            <div class="color_bar setup_cat_color"></div>-->
-    <div class="relative manage_category" category-type="setup">Setup</div>
+    <div class="relative manage_category " category-type="setup">Setup</div>
     <!--            <div class="color_bar gresb_cat_color gresb-elem display_none"></div>-->
-    <div class="relative manage_category  gresb-elem" category-type="gresb">GRESB</div>
+    <div class="relative manage_category  gresb-elem display_none" category-type="gresb">GRESB</div>
     <!--            <div class="color_bar strategies_cat_color"></div>-->
-    <div class="relative manage_category" category-type="strategies">Strategies</div>
+    <div class="relative manage_category " category-type="strategies">Strategies</div>
     <!--            <div class="color_bar connected_apps_cat_color"></div>-->
-    <div class="relative manage_category  display_none" category-type="connected_apps" style="display: block;">Connected Apps</div>
+    <div class="relative manage_category  display_none" category-type="connected_apps">Connected Apps</div>
 </div>
-<div class="hideLabel"></div>
-<div class="main_container" ui-view>
-    <div class="scoreUpButton pointer"></div>
-    <div class="controlBtns_betterScroll">
-        <a class="controlBtns_betterScroll_a controlBtns_overview active" index="-1" style="background-color: rgb(130, 167, 78);"></a>
-        <a class="controlBtns_betterScroll_a controlBtns_energy" index="0" style="background-color: rgb(204, 204, 204);"></a><a class="controlBtns_betterScroll_a controlBtns_water" index="1" style="background-color: rgb(204, 204, 204);"></a><a class="controlBtns_betterScroll_a controlBtns_waste" index="2" style="background-color: rgb(204, 204, 204);"></a><a class="controlBtns_betterScroll_a controlBtns_transportation" index="3" style="background-color: rgb(204, 204, 204);"></a><a class="controlBtns_betterScroll_a controlBtns_humanexperience" index="4" style="background-color: rgb(204, 204, 204);"></a>
+<div class="hideLabel" style="display: none;"></div>
+<div class="main_container">
+    <div id="srchStatus" class="mont">300 Projects</div>
+    <div>
+        <button id="addNew" class="btnGrey floatr gotham"><span class="floatl" style="margin-top: 6px;font-weight:bold;">Add New Project</span> <span style="margin-top: -3px;font-size: 26px;font-weight: bold;" class="floatr">+</span></button>
     </div>
-    <div id="fullpage" class="main_track_container fullpage-wrapper" style="height: 100%; position: relative; touch-action: none; transform: translate3d(0px, 0px, 0px); transition: all 1000ms ease;">
-        <div class="racetrack_design section fp-section fp-table active completely" style="height: 965px;">
-            <div class="fp-tableCell" style="height: 965px;">
-                <div id="racetrack_overview" class="div_center" style="transform: scale(1);">
-                    <svg height="750" version="1.1" width="750" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative; left: -0.5px;">
-                        <path fill="none" stroke="#dddddd" d="M104,119H375M375,119A256,256,0,1,1,119,375.00000000000006M119,375.00000000000006V290" stroke-width="30" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></path>
-                        <text x="119" y="306" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: Arial; opacity: 1;" opacity="1" class="arc-label max">
-                            <tspan dy="3.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">33</tspan>
-                        </text>
-                        <path fill="none" stroke="#d0dd3d" d="M104,119H375M375,119A256,256,0,1,1,119,375.00000000000006M119,375.00000000000006V294" stroke-width="30" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></path>
-                        <path fill="none" stroke="#dddddd" d="M104,156H375M375,156A219,219,0,1,1,156,375M156,375V290" stroke-width="30" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></path>
-                        <text x="156" y="306" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: Arial; opacity: 1;" opacity="1" class="arc-label max">
-                            <tspan dy="3.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">15</tspan>
-                        </text>
-                        <path fill="none" stroke="#55caf5" d="M104,156H375M375,156A219,219,0,1,1,156,375M156,375V293.99999999999983" stroke-width="30" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></path>
-                        <path fill="none" stroke="#dddddd" d="M104,193H375M375,193A182,182,0,1,1,193,375M193,375V290" stroke-width="30" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></path>
-                        <text x="193" y="306" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: Arial; opacity: 1;" opacity="1" class="arc-label max">
-                            <tspan dy="3.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">8</tspan>
-                        </text>
-                        <path fill="none" stroke="#84ccaf" d="M104,193H375M375,193A182,182,0,1,1,193,375M193,375V294" stroke-width="30" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></path>
-                        <path fill="none" stroke="#dddddd" d="M104,230H375M375,230A145,145,0,1,1,230,375M230,375V290" stroke-width="30" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></path>
-                        <text x="230" y="306" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: Arial; opacity: 1;" opacity="1" class="arc-label max">
-                            <tspan dy="3.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">14</tspan>
-                        </text>
-                        <path fill="none" stroke="#a39f92" d="M104,230H375M375,230A145,145,0,1,1,231.38505929921268,394.99371920152277" stroke-width="30" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></path>
-                        <path fill="none" stroke="#dddddd" d="M104,267H375M375,267A108,108,0,1,1,267,375M267,375V290" stroke-width="30" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></path>
-                        <text x="267" y="306" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: Arial; opacity: 1;" opacity="1" class="arc-label max">
-                            <tspan dy="3.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">20</tspan>
-                        </text>
-                        <path fill="none" stroke="#f2ac41" d="M104,267H375M375,267A108,108,0,0,1,439.97539882829165,288.7318277282726" stroke-width="30" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></path>
-                        <desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.0</desc>
-                        <defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs>
-                        <image x="109" y="257" width="20" height="20" preserveAspectRatio="none" href="assets/images/icon_human.png" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></image>
-                        <path fill="#f2ac41" stroke="none" d="M439.1774720030337,273.13658598737726L444.1774720030337,273.13658598737726L459.1774720030337,288.13658598737726L444.1774720030337,303.13658598737726L439.1774720030337,303.13658598737726Z" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;" transform="matrix(0.8043,0.5942,-0.5942,0.8043,257.1721,-204.584)"></path>
-                        <text x="140" y="269" text-anchor="start" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: start; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: Arial; opacity: 1;" opacity="1" class="arc-label name">
-                            <tspan dy="3.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Human Experience</tspan>
-                        </text>
-                        <text x="439.1774720030337" y="288.13658598737726" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: Arial; opacity: 1;" opacity="1" class="arc-label value">
-                            <tspan dy="5.011585987377259" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2</tspan>
-                        </text>
-                        <image x="109" y="220" width="20" height="20" preserveAspectRatio="none" href="assets/images/icon_transportation.png" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></image>
-                        <path fill="#a39f92" stroke="none" d="M231.58407700047582,381.3745917629151L236.58407700047582,381.3745917629151L251.58407700047582,396.3745917629151L236.58407700047582,411.3745917629151L231.58407700047582,411.3745917629151Z" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;" transform="matrix(-0.1474,-0.9891,0.9891,-0.1474,-126.3222,683.8587)"></path>
-                        <text x="140" y="232" text-anchor="start" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: start; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: Arial; opacity: 1;" opacity="1" class="arc-label name">
-                            <tspan dy="3.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Transportation</tspan>
-                        </text>
-                        <text x="231.58407700047582" y="396.3745917629151" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: Arial; opacity: 1;" opacity="1" class="arc-label value">
-                            <tspan dy="5.015216762915088" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">13</tspan>
-                        </text>
-                        <image x="109" y="183" width="20" height="20" preserveAspectRatio="none" href="assets/images/icon_waste.png" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></image>
-                        <path fill="#84ccaf" stroke="none" d="M193,280.47505174577236L198,280.47505174577236L197.49985878914595,295.47505174577236L198,310.47505174577236L193,310.47505174577236Z" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;" transform="matrix(0,-1,1,0,-102.4751,488.4751)"></path>
-                        <text x="140" y="195" text-anchor="start" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: start; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: Arial; opacity: 1;" opacity="1" class="arc-label name">
-                            <tspan dy="3.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Waste</tspan>
-                        </text>
-                        <text x="193" y="305" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: Arial; opacity: 1;" opacity="1" class="arc-label value">
-                            <tspan dy="5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">8</tspan>
-                        </text>
-                        <image x="109" y="146" width="20" height="20" preserveAspectRatio="none" href="assets/images/icon_water.png" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></image>
-                        <path fill="#55caf5" stroke="none" d="M156,280.5816865023224L161,280.5816865023224L160.49844984151414,295.5816865023224L161,310.5816865023224L156,310.5816865023224Z" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;" transform="matrix(0,-1,1,0,-139.5817,451.5817)"></path>
-                        <text x="140" y="158" text-anchor="start" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: start; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: Arial; opacity: 1;" opacity="1" class="arc-label name">
-                            <tspan dy="3.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Water</tspan>
-                        </text>
-                        <text x="156" y="305" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: Arial; opacity: 1;" opacity="1" class="arc-label value">
-                            <tspan dy="5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">15</tspan>
-                        </text>
-                        <image x="109" y="109" width="20" height="20" preserveAspectRatio="none" href="assets/images/icon_energy.png" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></image>
-                        <path fill="#d0dd3d" stroke="none" d="M119,280.673207298154L124,280.673207298154L123.49720354564488,295.673207298154L124,310.673207298154L119,310.673207298154Z" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;" transform="matrix(0,-1,1,0,-176.6732,414.6732)"></path>
-                        <text x="140" y="121" text-anchor="start" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: start; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: Arial; opacity: 1;" opacity="1" class="arc-label name">
-                            <tspan dy="3.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Energy</tspan>
-                        </text>
-                        <text x="119" y="305" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: Arial; opacity: 1;" opacity="1" class="arc-label value">
-                            <tspan dy="5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">33</tspan>
-                        </text>
-                    </svg>
-                    <div id="score-puck" class="score-puck-overview" style="display: block; background-image: url(&quot;assets/images/score-puck.svg&quot;);">
-                        <div class="text line_height">76</div>
-                    </div>
-                </div>
-            </div>
+    <div class="search_results">
+        <div class="searchLabels mont">
+            <div class="labelName">Project</div>
+            <div class="labelName">Location</div>
+            <div class="labelName">Project ID</div>
+            <div class="labelName">Certification</div>
         </div>
-        <div class="racetrack_design section fp-section fp-table" style="height: 965px;">
-            <div class="fp-tableCell" style="height: 965px;">
-                <div class="div_center" id="racetrack_energy" style="height: 750px; transform: scale(1);">
-                    <div class="name-puck" id="name-puck-energy" style="display: none;">
-                        <div class="text">CURRENT ENERGY</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="racetrack_design section fp-section fp-table" style="height: 965px;">
-            <div class="fp-tableCell" style="height: 965px;">
-                <div class="div_center" id="racetrack_water" style="height: 750px; transform: scale(1);">
-                    <div class="name-puck" id="name-puck-water" style="display: none;">
-                        <div class="text"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="racetrack_design section fp-section fp-table" style="height: 965px;">
-            <div class="fp-tableCell" style="height: 965px;">
-                <div class="div_center" id="racetrack_waste" style="height: 750px; transform: scale(1);">
-                    <div class="name-puck" id="name-puck-waste" style="display: none;">
-                        <div class="text"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="racetrack_design section fp-section fp-table" style="height: 965px;">
-            <div class="fp-tableCell" style="height: 965px;">
-                <div class="div_center" id="racetrack_transportation" style="height: 750px; transform: scale(1);">
-                    <div class="name-puck" id="name-puck-transportation" style="display: none;">
-                        <div class="text"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="racetrack_design section fp-section fp-table" style="height: 965px;">
-            <div class="fp-tableCell" style="height: 965px;">
-                <div class="div_center" id="racetrack_humanexperience" style="height: 750px; transform: scale(1);">
-                    <div class="name-puck" id="name-puck-humanexperience" style="display: none;">
-                        <div class="text"></div>
+        <div>
+            <div id="search_private" class="mb60">
+                <div ng-repeat="building in buildings | filter:searchText">
+                    <div ui-sref="dashboardState" leedon_activated="True" class="39065 list project_row mont" country="US" cert="" lid="1000004022" source="LEED" trial_expire_date="null" trial_status="false" building_status="activated">
+                        <div class="listAttr" style="color: rgb(88, 150, 211);font-weight:bold;">{{building.name}}</div>
+                        <div class="listAttr">{{building.location}}</div>
+                        <div class="listAttr">{{building.leed_id}}</div>
+                        <div class="listAttr">{{building.certification}}</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="scoreDownButton pointer"></div>
+    <div class="pageLoader" style="text-align: center;display:none;">
+        <img src="assets/images/pageLoader.png" id="loaderIcon">
+        <span class="mont" style="margin-left: 10px;color: grey;font-size: 16px;">Loading More . . .</span>
+    </div>
 </div>
 <!-- ------------------------------Modal Windows----------------------------- -->
 <div class="modal fade" id="view_bill_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -534,7 +683,7 @@
                 </div>
                 <div class="add_new_meter_footer center_align" style="font-family: &#39;GothamBook&#39;;height:50px;">
                     <button type="button" class="btnOutline close_receipt mb0 floatl" data-dismiss="modal">CLOSE</button>
-                    <div class="btnGreen print_receipt mb0 floatr pdt9" id="download_receipt"><a href="http://plaque.dev.leedon.io/v3/dashboard/?page=score&amp;LEED=1000000117">PRINT</a></div>
+                    <div class="btnGreen print_receipt mb0 floatr pdt9" id="download_receipt"><a href="http://plaque.dev.leedon.io/v3/dashboard/">PRINT</a></div>
                 </div>
             </div>
         </div>
@@ -655,7 +804,125 @@
                                     <div>
                                         <h6 class="heading4">Year Built</h6>
                                         <div>
-                                            <select id="bYear" class="form_field_modal_input inblock fixwidth_input   form-control valid year_built inblock_sel pressEnter" name="year_constructed" placeholder="Select year" tabindex="2"></select>
+                                            <select id="bYear" class="form_field_modal_input inblock fixwidth_input   form-control valid year_built inblock_sel pressEnter" name="year_constructed" placeholder="Select year" tabindex="2">
+                                                <option value="2016">2016</option>
+                                                <option value="2015">2015</option>
+                                                <option value="2014">2014</option>
+                                                <option value="2013">2013</option>
+                                                <option value="2012">2012</option>
+                                                <option value="2011">2011</option>
+                                                <option value="2010">2010</option>
+                                                <option value="2009">2009</option>
+                                                <option value="2008">2008</option>
+                                                <option value="2007">2007</option>
+                                                <option value="2006">2006</option>
+                                                <option value="2005">2005</option>
+                                                <option value="2004">2004</option>
+                                                <option value="2003">2003</option>
+                                                <option value="2002">2002</option>
+                                                <option value="2001">2001</option>
+                                                <option value="2000">2000</option>
+                                                <option value="1999">1999</option>
+                                                <option value="1998">1998</option>
+                                                <option value="1997">1997</option>
+                                                <option value="1996">1996</option>
+                                                <option value="1995">1995</option>
+                                                <option value="1994">1994</option>
+                                                <option value="1993">1993</option>
+                                                <option value="1992">1992</option>
+                                                <option value="1991">1991</option>
+                                                <option value="1990">1990</option>
+                                                <option value="1989">1989</option>
+                                                <option value="1988">1988</option>
+                                                <option value="1987">1987</option>
+                                                <option value="1986">1986</option>
+                                                <option value="1985">1985</option>
+                                                <option value="1984">1984</option>
+                                                <option value="1983">1983</option>
+                                                <option value="1982">1982</option>
+                                                <option value="1981">1981</option>
+                                                <option value="1980">1980</option>
+                                                <option value="1979">1979</option>
+                                                <option value="1978">1978</option>
+                                                <option value="1977">1977</option>
+                                                <option value="1976">1976</option>
+                                                <option value="1975">1975</option>
+                                                <option value="1974">1974</option>
+                                                <option value="1973">1973</option>
+                                                <option value="1972">1972</option>
+                                                <option value="1971">1971</option>
+                                                <option value="1970">1970</option>
+                                                <option value="1969">1969</option>
+                                                <option value="1968">1968</option>
+                                                <option value="1967">1967</option>
+                                                <option value="1966">1966</option>
+                                                <option value="1965">1965</option>
+                                                <option value="1964">1964</option>
+                                                <option value="1963">1963</option>
+                                                <option value="1962">1962</option>
+                                                <option value="1961">1961</option>
+                                                <option value="1960">1960</option>
+                                                <option value="1959">1959</option>
+                                                <option value="1958">1958</option>
+                                                <option value="1957">1957</option>
+                                                <option value="1956">1956</option>
+                                                <option value="1955">1955</option>
+                                                <option value="1954">1954</option>
+                                                <option value="1953">1953</option>
+                                                <option value="1952">1952</option>
+                                                <option value="1951">1951</option>
+                                                <option value="1950">1950</option>
+                                                <option value="1949">1949</option>
+                                                <option value="1948">1948</option>
+                                                <option value="1947">1947</option>
+                                                <option value="1946">1946</option>
+                                                <option value="1945">1945</option>
+                                                <option value="1944">1944</option>
+                                                <option value="1943">1943</option>
+                                                <option value="1942">1942</option>
+                                                <option value="1941">1941</option>
+                                                <option value="1940">1940</option>
+                                                <option value="1939">1939</option>
+                                                <option value="1938">1938</option>
+                                                <option value="1937">1937</option>
+                                                <option value="1936">1936</option>
+                                                <option value="1935">1935</option>
+                                                <option value="1934">1934</option>
+                                                <option value="1933">1933</option>
+                                                <option value="1932">1932</option>
+                                                <option value="1931">1931</option>
+                                                <option value="1930">1930</option>
+                                                <option value="1929">1929</option>
+                                                <option value="1928">1928</option>
+                                                <option value="1927">1927</option>
+                                                <option value="1926">1926</option>
+                                                <option value="1925">1925</option>
+                                                <option value="1924">1924</option>
+                                                <option value="1923">1923</option>
+                                                <option value="1922">1922</option>
+                                                <option value="1921">1921</option>
+                                                <option value="1920">1920</option>
+                                                <option value="1919">1919</option>
+                                                <option value="1918">1918</option>
+                                                <option value="1917">1917</option>
+                                                <option value="1916">1916</option>
+                                                <option value="1915">1915</option>
+                                                <option value="1914">1914</option>
+                                                <option value="1913">1913</option>
+                                                <option value="1912">1912</option>
+                                                <option value="1911">1911</option>
+                                                <option value="1910">1910</option>
+                                                <option value="1909">1909</option>
+                                                <option value="1908">1908</option>
+                                                <option value="1907">1907</option>
+                                                <option value="1906">1906</option>
+                                                <option value="1905">1905</option>
+                                                <option value="1904">1904</option>
+                                                <option value="1903">1903</option>
+                                                <option value="1902">1902</option>
+                                                <option value="1901">1901</option>
+                                                <option value="1900">1900</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </td>
@@ -693,7 +960,260 @@
                                     <div>
                                         <h6 class="heading4">Country</h6>
                                         <div>
-                                            <select id="bCountry" class="form_field_modal_input publicForm inblock fixwidth_input form-control valid country inblock_sel pressEnter" name="submitted_country" placeholder="Country" onchange="print_state(&#39;bState&#39;, this.value);" tabindex="5"></select>
+                                            <select id="bCountry" class="form_field_modal_input publicForm inblock fixwidth_input form-control valid country inblock_sel pressEnter" name="submitted_country" placeholder="Country" onchange="print_state(&#39;bState&#39;, this.value);" tabindex="5">
+                                                <option value="">Select Country</option>
+                                                <option value="AF">Afghanistan</option>
+                                                <option value="AX">Aland Islands</option>
+                                                <option value="AL">Albania</option>
+                                                <option value="DZ">Algeria</option>
+                                                <option value="AS">American Samoa</option>
+                                                <option value="AD">Andorra</option>
+                                                <option value="AO">Angola</option>
+                                                <option value="AI">Anguilla</option>
+                                                <option value="AQ">Antarctica</option>
+                                                <option value="AG">Antigua and Barbuda</option>
+                                                <option value="AR">Argentina</option>
+                                                <option value="AM">Armenia</option>
+                                                <option value="AW">Aruba</option>
+                                                <option value="AU">Australia</option>
+                                                <option value="AT">Austria</option>
+                                                <option value="AZ">Azerbaijan</option>
+                                                <option value="BS">Bahamas</option>
+                                                <option value="BH">Bahrain</option>
+                                                <option value="BD">Bangladesh</option>
+                                                <option value="BB">Barbados</option>
+                                                <option value="BY">Belarus</option>
+                                                <option value="BE">Belgium</option>
+                                                <option value="BZ">Belize</option>
+                                                <option value="BJ">Benin</option>
+                                                <option value="BM">Bermuda</option>
+                                                <option value="BT">Bhutan</option>
+                                                <option value="BO">Bolivia</option>
+                                                <option value="BQ">Bonaire, Saint Eustatius and Saba</option>
+                                                <option value="BA">Bosnia and Herzegovina</option>
+                                                <option value="BW">Botswana</option>
+                                                <option value="BV">Bouvet Island</option>
+                                                <option value="BR">Brazil</option>
+                                                <option value="IO">British Indian Ocean Territory</option>
+                                                <option value="VG">British Virgin Islands</option>
+                                                <option value="BN">Brunei</option>
+                                                <option value="BG">Bulgaria</option>
+                                                <option value="BF">Burkina Faso</option>
+                                                <option value="BI">Burundi</option>
+                                                <option value="KH">Cambodia</option>
+                                                <option value="CM">Cameroon</option>
+                                                <option value="CA">Canada</option>
+                                                <option value="CV">Cape Verde</option>
+                                                <option value="KY">Cayman Islands</option>
+                                                <option value="CF">Central African Republic</option>
+                                                <option value="TD">Chad</option>
+                                                <option value="CL">Chile</option>
+                                                <option value="CN">China</option>
+                                                <option value="CX">Christmas Island</option>
+                                                <option value="CC">Cocos Islands</option>
+                                                <option value="CO">Colombia</option>
+                                                <option value="KM">Comoros</option>
+                                                <option value="CK">Cook Islands</option>
+                                                <option value="CR">Costa Rica</option>
+                                                <option value="HR">Croatia</option>
+                                                <option value="CU">Cuba</option>
+                                                <option value="CW">Curaçao</option>
+                                                <option value="CY">Cyprus</option>
+                                                <option value="CZ">Czech Republic</option>
+                                                <option value="CD">Democratic Republic of the Congo</option>
+                                                <option value="DK">Denmark</option>
+                                                <option value="DJ">Djibouti</option>
+                                                <option value="DM">Dominica</option>
+                                                <option value="DO">Dominican Republic</option>
+                                                <option value="TL">East Timor</option>
+                                                <option value="EC">Ecuador</option>
+                                                <option value="EG">Egypt</option>
+                                                <option value="SV">El Salvador</option>
+                                                <option value="GQ">Equatorial Guinea</option>
+                                                <option value="ER">Eritrea</option>
+                                                <option value="EE">Estonia</option>
+                                                <option value="ET">Ethiopia</option>
+                                                <option value="FK">Falkland Islands</option>
+                                                <option value="FO">Faroe Islands</option>
+                                                <option value="FJ">Fiji</option>
+                                                <option value="FI">Finland</option>
+                                                <option value="FR">France</option>
+                                                <option value="GF">French Guiana</option>
+                                                <option value="PF">French Polynesia</option>
+                                                <option value="TF">French Southern Territories</option>
+                                                <option value="GA">Gabon</option>
+                                                <option value="GM">Gambia</option>
+                                                <option value="GE">Georgia</option>
+                                                <option value="DE">Germany</option>
+                                                <option value="GH">Ghana</option>
+                                                <option value="GI">Gibraltar</option>
+                                                <option value="GR">Greece</option>
+                                                <option value="GL">Greenland</option>
+                                                <option value="GD">Grenada</option>
+                                                <option value="GP">Guadeloupe</option>
+                                                <option value="GU">Guam</option>
+                                                <option value="GT">Guatemala</option>
+                                                <option value="GG">Guernsey</option>
+                                                <option value="GN">Guinea</option>
+                                                <option value="GW">Guinea-Bissau</option>
+                                                <option value="GY">Guyana</option>
+                                                <option value="HT">Haiti</option>
+                                                <option value="HM">Heard Island and McDonald Islands</option>
+                                                <option value="HN">Honduras</option>
+                                                <option value="HK">Hong Kong</option>
+                                                <option value="HU">Hungary</option>
+                                                <option value="IS">Iceland</option>
+                                                <option value="IN">India</option>
+                                                <option value="ID">Indonesia</option>
+                                                <option value="IR">Iran</option>
+                                                <option value="IQ">Iraq</option>
+                                                <option value="IE">Ireland</option>
+                                                <option value="IM">Isle of Man</option>
+                                                <option value="IL">Israel</option>
+                                                <option value="IT">Italy</option>
+                                                <option value="CI">Ivory Coast</option>
+                                                <option value="JM">Jamaica</option>
+                                                <option value="JP">Japan</option>
+                                                <option value="JE">Jersey</option>
+                                                <option value="JO">Jordan</option>
+                                                <option value="KZ">Kazakhstan</option>
+                                                <option value="KE">Kenya</option>
+                                                <option value="KI">Kiribati</option>
+                                                <option value="XK">Kosovo</option>
+                                                <option value="KW">Kuwait</option>
+                                                <option value="KG">Kyrgyzstan</option>
+                                                <option value="LA">Laos</option>
+                                                <option value="LV">Latvia</option>
+                                                <option value="LB">Lebanon</option>
+                                                <option value="LS">Lesotho</option>
+                                                <option value="LR">Liberia</option>
+                                                <option value="LY">Libya</option>
+                                                <option value="LI">Liechtenstein</option>
+                                                <option value="LT">Lithuania</option>
+                                                <option value="LU">Luxembourg</option>
+                                                <option value="MO">Macao</option>
+                                                <option value="MK">Macedonia</option>
+                                                <option value="MG">Madagascar</option>
+                                                <option value="MW">Malawi</option>
+                                                <option value="MY">Malaysia</option>
+                                                <option value="MV">Maldives</option>
+                                                <option value="ML">Mali</option>
+                                                <option value="MT">Malta</option>
+                                                <option value="MH">Marshall Islands</option>
+                                                <option value="MQ">Martinique</option>
+                                                <option value="MR">Mauritania</option>
+                                                <option value="MU">Mauritius</option>
+                                                <option value="YT">Mayotte</option>
+                                                <option value="MX">Mexico</option>
+                                                <option value="FM">Micronesia</option>
+                                                <option value="MD">Moldova</option>
+                                                <option value="MC">Monaco</option>
+                                                <option value="MN">Mongolia</option>
+                                                <option value="ME">Montenegro</option>
+                                                <option value="MS">Montserrat</option>
+                                                <option value="MA">Morocco</option>
+                                                <option value="MZ">Mozambique</option>
+                                                <option value="MM">Myanmar</option>
+                                                <option value="NA">Namibia</option>
+                                                <option value="NR">Nauru</option>
+                                                <option value="NP">Nepal</option>
+                                                <option value="NL">Netherlands</option>
+                                                <option value="AN">Netherlands Antilles</option>
+                                                <option value="NC">New Caledonia</option>
+                                                <option value="NZ">New Zealand</option>
+                                                <option value="NI">Nicaragua</option>
+                                                <option value="NE">Niger</option>
+                                                <option value="NG">Nigeria</option>
+                                                <option value="NU">Niue</option>
+                                                <option value="NF">Norfolk Island</option>
+                                                <option value="KP">North Korea</option>
+                                                <option value="MP">Northern Mariana Islands</option>
+                                                <option value="NO">Norway</option>
+                                                <option value="OM">Oman</option>
+                                                <option value="PK">Pakistan</option>
+                                                <option value="PW">Palau</option>
+                                                <option value="PS">Palestinian Territory</option>
+                                                <option value="PA">Panama</option>
+                                                <option value="PG">Papua New Guinea</option>
+                                                <option value="PY">Paraguay</option>
+                                                <option value="PE">Peru</option>
+                                                <option value="PH">Philippines</option>
+                                                <option value="PN">Pitcairn</option>
+                                                <option value="PL">Poland</option>
+                                                <option value="PT">Portugal</option>
+                                                <option value="PR">Puerto Rico</option>
+                                                <option value="QA">Qatar</option>
+                                                <option value="CG">Republic of the Congo</option>
+                                                <option value="RE">Reunion</option>
+                                                <option value="RO">Romania</option>
+                                                <option value="RU">Russia</option>
+                                                <option value="RW">Rwanda</option>
+                                                <option value="BL">Saint Barthélemy</option>
+                                                <option value="SH">Saint Helena</option>
+                                                <option value="KN">Saint Kitts and Nevis</option>
+                                                <option value="LC">Saint Lucia</option>
+                                                <option value="MF">Saint Martin</option>
+                                                <option value="PM">Saint Pierre and Miquelon</option>
+                                                <option value="VC">Saint Vincent and the Grenadines</option>
+                                                <option value="WS">Samoa</option>
+                                                <option value="SM">San Marino</option>
+                                                <option value="ST">Sao Tome and Principe</option>
+                                                <option value="SA">Saudi Arabia</option>
+                                                <option value="SN">Senegal</option>
+                                                <option value="RS">Serbia</option>
+                                                <option value="CS">Serbia and Montenegro</option>
+                                                <option value="SC">Seychelles</option>
+                                                <option value="SL">Sierra Leone</option>
+                                                <option value="SG">Singapore</option>
+                                                <option value="SX">Sint Maarten</option>
+                                                <option value="SK">Slovakia</option>
+                                                <option value="SI">Slovenia</option>
+                                                <option value="SB">Solomon Islands</option>
+                                                <option value="SO">Somalia</option>
+                                                <option value="ZA">South Africa</option>
+                                                <option value="GS">South Georgia and the South Sandwich Islands</option>
+                                                <option value="KR">South Korea</option>
+                                                <option value="SS">South Sudan</option>
+                                                <option value="ES">Spain</option>
+                                                <option value="LK">Sri Lanka</option>
+                                                <option value="SR">Suriname</option>
+                                                <option value="SJ">Svalbard and Jan Mayen</option>
+                                                <option value="SZ">Swaziland</option>
+                                                <option value="SE">Sweden</option>
+                                                <option value="CH">Switzerland</option>
+                                                <option value="SY">Syria</option>
+                                                <option value="TW">Taiwan</option>
+                                                <option value="TJ">Tajikistan</option>
+                                                <option value="TZ">Tanzania</option>
+                                                <option value="TH">Thailand</option>
+                                                <option value="TG">Togo</option>
+                                                <option value="TK">Tokelau</option>
+                                                <option value="TO">Tonga</option>
+                                                <option value="TT">Trinidad and Tobago</option>
+                                                <option value="TN">Tunisia</option>
+                                                <option value="TR">Turkey</option>
+                                                <option value="TM">Turkmenistan</option>
+                                                <option value="TC">Turks and Caicos Islands</option>
+                                                <option value="TV">Tuvalu</option>
+                                                <option value="VI">U.S. Virgin Islands</option>
+                                                <option value="UG">Uganda</option>
+                                                <option value="UA">Ukraine</option>
+                                                <option value="AE">United Arab Emirates</option>
+                                                <option value="GB">United Kingdom</option>
+                                                <option value="US">United States</option>
+                                                <option value="UM">United States Minor Outlying Islands</option>
+                                                <option value="UY">Uruguay</option>
+                                                <option value="UZ">Uzbekistan</option>
+                                                <option value="VU">Vanuatu</option>
+                                                <option value="VA">Vatican</option>
+                                                <option value="VE">Venezuela</option>
+                                                <option value="VN">Vietnam</option>
+                                                <option value="WF">Wallis and Futuna</option>
+                                                <option value="EH">Western Sahara</option>
+                                                <option value="YE">Yemen</option>
+                                                <option value="ZM">Zambia</option>
+                                                <option value="ZW">Zimbabwe</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </td>
@@ -701,7 +1221,9 @@
                                     <div>
                                         <h6 class="heading4">State</h6>
                                         <div>
-                                            <select id="bState" class="form_field_modal_input inblock fixwidth_input publicForm form-control valid state inblock_sel pressEnter" name="submitted_state" placeholder="State" tabindex="6"></select>
+                                            <select id="bState" class="form_field_modal_input inblock fixwidth_input publicForm form-control valid state inblock_sel pressEnter" name="submitted_state" placeholder="State" tabindex="6">
+                                                <option value="">Select State</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </td>
@@ -915,11 +1437,11 @@
                         <!--</div>-->
                     </div>
                 </div>
-                <div class="form-group gresb-elem">
+                <div class="form-group gresb-elem display_none">
                     <h4 class="text-left">Data Coverage Area (sq. ft)</h4>
                     <input class="form-control build_setup_input height45 mb25" id="id_data_coverage_area" type="text" placeholder="Enter Data Coverage Area">
                 </div>
-                <div class="form-group gresb-elem">
+                <div class="form-group gresb-elem display_none">
                     <h4 class="text-left">Maximum Coverage Area (sq. ft)</h4>
                     <input class="form-control build_setup_input height45 mb25" id="id_max_coverage_area" type="text" placeholder="Enter Maximum Coverage Area">
                 </div>
@@ -930,8 +1452,6 @@
                         <div class="input-group-addon border_none width100p of_drp nopadding">
                             <button class="btn dropdown-toggle height45 width100p energy_manual_drp radius3" data-toggle="dropdown"><span class="energy_manual_txt" id="get_energy_type" data-id="25" value="25">Purchased from grid</span><span class="caret pull-right mt8"></span></button>
                             <ul class="dropdown-menu textalign_left energy_manual_ul cursor_pointer width100p" role="menu">
-                                <li class="other_fuel_unit"><a class="fuel_type_name" value="25">Purchased from grid</a></li>
-                                <li class="other_fuel_unit"><a class="fuel_type_name" value="46">Generated onsite - solar</a></li>
                             </ul>
                         </div>
                     </div>
@@ -943,9 +1463,6 @@
                         <div class="input-group-addon border_none width100p of_drp nopadding">
                             <button class="btn dropdown-toggle height45 width100p water_manual_drp radius3" data-toggle="dropdown"><span class="water_manual_txt" id="get_water_type" data-id="47" value="47">Municipality supplied potable water</span><span class="caret pull-right mt8"></span></button>
                             <ul class="dropdown-menu textalign_left water_manual_drp_ul cursor_pointer width100p" role="menu">
-                                <li class="other_fuel_unit"><a class="fuel_type_name" value="47">Municipality supplied potable water</a></li>
-                                <li class="other_fuel_unit"><a class="fuel_type_name" value="54">Municipality supplied reclaimed water</a></li>
-                                <li class="other_fuel_unit"><a class="fuel_type_name" value="57">Reclaimed onsite</a></li>
                             </ul>
                         </div>
                     </div>
@@ -976,30 +1493,12 @@
                                 <li class="other_fuel_unit"><a class="fuel_type_name" value="42">District Chilled Water <br> (Electric Driven Chiller)</a></li>
                                 <li class="other_fuel_unit"><a class="fuel_type_name" value="43">District Chilled Water <br>(Absorption Chiller using Natural Gas)</a></li>
                                 <li class="other_fuel_unit"><a class="fuel_type_name" value="44">District Chilled Water  <br> (Engine-Driven Chiller using Natural Gas)</a></li>
-                                <li class="other_fuel_unit"><a class="fuel_type_name" value="40">District Steam</a></li>
-                                <li class="other_fuel_unit"><a class="fuel_type_name" value="41">District Hot Water</a></li>
-                                <li class="other_fuel_unit"><a class="fuel_type_name" value="42">District Chilled Water (Electric Driven Chiller)</a></li>
-                                <li class="other_fuel_unit"><a class="fuel_type_name" value="43">District Chilled Water (Absorption Chiller using Natural Gas)</a></li>
-                                <li class="other_fuel_unit"><a class="fuel_type_name" value="44">District Chilled Water (Engine-Driven Chiller using Natural Gas)</a></li>
-                                <li class="other_fuel_unit"><a class="fuel_type_name" value="1">Natural Gas</a></li>
-                                <li class="other_fuel_unit"><a class="fuel_type_name" value="2">Fuel Oil (No. 2)</a></li>
-                                <li class="other_fuel_unit"><a class="fuel_type_name" value="3">Wood</a></li>
-                                <li class="other_fuel_unit"><a class="fuel_type_name" value="4">Propane</a></li>
-                                <li class="other_fuel_unit"><a class="fuel_type_name" value="5">Liquid Propane</a></li>
-                                <li class="other_fuel_unit"><a class="fuel_type_name" value="6">Kerosene</a></li>
-                                <li class="other_fuel_unit"><a class="fuel_type_name" value="7">Fuel Oil (No. 1)</a></li>
-                                <li class="other_fuel_unit"><a class="fuel_type_name" value="8">Fuel Oil (No. 5 &amp; No. 6)</a></li>
-                                <li class="other_fuel_unit"><a class="fuel_type_name" value="9">Coal (anthracite)</a></li>
-                                <li class="other_fuel_unit"><a class="fuel_type_name" value="10">Coal (bituminous)</a></li>
-                                <li class="other_fuel_unit"><a class="fuel_type_name" value="11">Coke</a></li>
-                                <li class="other_fuel_unit"><a class="fuel_type_name" value="12">Fuel Oil (No. 4)</a></li>
-                                <li class="other_fuel_unit"><a class="fuel_type_name" value="13">Diesel</a></li>
                             </ul>
                         </div>
                         <!--</span>-->
                     </div>
                 </div>
-                <div class="form-group gresb-elem">
+                <div class="form-group gresb-elem display_none">
                     <h4 class="text-left"> Meter Area Type </h4>
                     <div class="input-group block radius3">
                         <div class="dropdown">
@@ -1019,7 +1518,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-group gresb-elem">
+                <div class="form-group gresb-elem display_none">
                     <h4 class="text-left">Asset Responsbility</h4>
                     <div class="input-group block radius3">
                         <div class="dropdown">
@@ -1236,62 +1735,18 @@
                     <div class="custom-strategy-description">Type</div>
                     <div class="btn-group" id="categoryList-dropdown">
                         <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        <span class="category-selected-text">Energy and Atmosphere</span>
+                        <span class="category-selected-text"></span>
                         <span class="fa fa-angle-down"></span>
                         </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li data-category-value="ea" class="selected-category">Energy and Atmosphere</li>
-                            <li data-category-value="ss">Sustainable Sites</li>
-                            <li data-category-value="we">Water Efficiency</li>
-                            <li data-category-value="mr">Materials and Resources</li>
-                            <li data-category-value="iq">Indoor Environmental Quality</li>
-                            <li data-category-value="lt">Location and Transportation</li>
-                            <li data-category-value="ea">Energy and Atmosphere</li>
-                            <li data-category-value="ss">Sustainable Sites</li>
-                            <li data-category-value="we">Water Efficiency</li>
-                            <li data-category-value="mr">Materials and Resources</li>
-                            <li data-category-value="iq">Indoor Environmental Quality</li>
-                            <li data-category-value="lt">Location and Transportation</li>
-                        </ul>
+                        <ul class="dropdown-menu" role="menu"></ul>
                     </div>
                     <div class="custom-strategy-description">Intent</div>
                     <div class="btn-group" id="intentList-dropdown">
                         <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        <span class="intent-selected-text">Energy Management Best Practices</span>
+                        <span class="intent-selected-text"></span>
                         <span class="fa fa-angle-down"></span>
                         </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li data-intent-value="115" class="selected-intent">Energy Management Best Practices</li>
-                            <li data-intent-value="116">Establish Energy Performance</li>
-                            <li data-intent-value="117">Refrigerant strategies that cause less harm to the atmosphere</li>
-                            <li data-intent-value="118">Reducing greenhouse gas emissions with renewable energy and carbon offsets</li>
-                            <li data-intent-value="119">Establish Energy Metering</li>
-                            <li data-intent-value="120">At building level reduce energy consumed during peak to support of electric grid with Demand Response</li>
-                            <li data-intent-value="121">Improve building operations, energy and resource efficiency</li>
-                            <li data-intent-value="1723">Energy Management Best Practices</li>
-                            <li data-intent-value="1752">Energy Management Best Practices</li>
-                            <li data-intent-value="1753">Establish Energy Performance</li>
-                            <li data-intent-value="1724">Establish Energy Performance</li>
-                            <li data-intent-value="1754">Refrigerant strategies that cause less harm to the atmosphere</li>
-                            <li data-intent-value="1725">Refrigerant strategies that cause less harm to the atmosphere</li>
-                            <li data-intent-value="1755">Establish Energy Metering</li>
-                            <li data-intent-value="1726">Establish Energy Metering</li>
-                            <li data-intent-value="115">Energy Management Best Practices</li>
-                            <li data-intent-value="116">Establish Energy Performance</li>
-                            <li data-intent-value="117">Refrigerant strategies that cause less harm to the atmosphere</li>
-                            <li data-intent-value="118">Reducing greenhouse gas emissions with renewable energy and carbon offsets</li>
-                            <li data-intent-value="119">Establish Energy Metering</li>
-                            <li data-intent-value="120">At building level reduce energy consumed during peak to support of electric grid with Demand Response</li>
-                            <li data-intent-value="121">Improve building operations, energy and resource efficiency</li>
-                            <li data-intent-value="1723">Energy Management Best Practices</li>
-                            <li data-intent-value="1752">Energy Management Best Practices</li>
-                            <li data-intent-value="1753">Establish Energy Performance</li>
-                            <li data-intent-value="1724">Establish Energy Performance</li>
-                            <li data-intent-value="1754">Refrigerant strategies that cause less harm to the atmosphere</li>
-                            <li data-intent-value="1725">Refrigerant strategies that cause less harm to the atmosphere</li>
-                            <li data-intent-value="1755">Establish Energy Metering</li>
-                            <li data-intent-value="1726">Establish Energy Metering</li>
-                        </ul>
+                        <ul class="dropdown-menu" role="menu"></ul>
                     </div>
                     <!-- New changes: select dropdown issue -->
                     <div class="custom-strategy-title">Title</div>
@@ -1382,10 +1837,10 @@
             </div>
             <div class="modal-body modal_padding">
                 <ul class="nav1 nav-tabs">
-                    <li class="active performance-score"><a data-toggle="tab" href="http://plaque.dev.leedon.io/v3/dashboard/?page=score&amp;LEED=1000000117#performance-score">Performance Score</a></li>
-                    <li class="performance-data"><a data-toggle="tab" href="http://plaque.dev.leedon.io/v3/dashboard/?page=score&amp;LEED=1000000117#performance-data">Performance Data</a></li>
-                    <li class="leed-prerequisites"><a data-toggle="tab" href="http://plaque.dev.leedon.io/v3/dashboard/?page=score&amp;LEED=1000000117#leed-prerequisites">LEED Prerequisites</a></li>
-                    <li class="leed-base-points"><a data-toggle="tab" href="http://plaque.dev.leedon.io/v3/dashboard/?page=score&amp;LEED=1000000117#leed-base-points">LEED Base Points</a></li>
+                    <li class="active performance-score"><a data-toggle="tab" href="http://plaque.dev.leedon.io/v3/dashboard/#performance-score">Performance Score</a></li>
+                    <li class="performance-data"><a data-toggle="tab" href="http://plaque.dev.leedon.io/v3/dashboard/#performance-data">Performance Data</a></li>
+                    <li class="leed-prerequisites"><a data-toggle="tab" href="http://plaque.dev.leedon.io/v3/dashboard/#leed-prerequisites">LEED Prerequisites</a></li>
+                    <li class="leed-base-points"><a data-toggle="tab" href="http://plaque.dev.leedon.io/v3/dashboard/#leed-base-points">LEED Base Points</a></li>
                 </ul>
                 <hr style="width: 97%;">
                 <div class="tab-content">
@@ -1394,41 +1849,41 @@
                             <p class="tab-content-title">Performance Score</p>
                             <div class="energy_icon category_type" category-type="energy">
                                 <p class="energy_cat_title">Energy</p>
-                                <p class="energy_cat_points">33</p>
+                                <p class="energy_cat_points"></p>
                             </div>
                             <hr class="performance-score-divider">
                             <div class="water_icon category_type" category-type="water">
                                 <p class="water_cat_title">Water</p>
-                                <p class="water_cat_points">15</p>
+                                <p class="water_cat_points"></p>
                             </div>
                             <hr class="performance-score-divider">
                             <div class="waste_icon category_type" category-type="waste">
                                 <p class="waste_cat_title">Waste</p>
-                                <p class="waste_cat_points">8</p>
+                                <p class="waste_cat_points"></p>
                             </div>
                             <hr class="performance-score-divider">
                             <div class="transportation_icon category_type" category-type="transportation">
                                 <p class="transportation_cat_title">Transportation</p>
-                                <p class="transportation_cat_points">13</p>
+                                <p class="transportation_cat_points"></p>
                             </div>
                             <hr class="performance-score-divider">
                             <div class="humanexperience_icon category_type" category-type="humanexperience">
                                 <p class="humanexperience_cat_title">Humanexperience</p>
-                                <p class="humanexperience_cat_points">2</p>
+                                <p class="humanexperience_cat_points"></p>
                             </div>
                             <hr class="performance-score-divider">
                             <div class="total_points_cat_div">
                                 <p class="total_points_cat_title">TOTAL</p>
-                                <p class="total_points_cat_points complete">76</p>
+                                <p class="total_points_cat_points"></p>
                             </div>
                         </div>
                         <div class="pull-right performance-notifications">
                             <div class="performance-status">
-                                <i class="fa fa-check"></i>
+                                <i></i>
                                 <p style="margin-left: 22px;">
-                                    <span class="performance-status-title points-needed complete">Completed</span>
-                                    <span class="performance-status-title points-needed-text" style="display: none;"> points away</span>
-                                    <span class="performance-status-title acp-eligibility-text" style="display: none;"> from LEED ACP eligibility</span>
+                                    <span class="performance-status-title points-needed">40</span>
+                                    <span class="performance-status-title points-needed-text"> points away</span>
+                                    <span class="performance-status-title acp-eligibility-text"> from LEED ACP eligibility</span>
                                 </p>
                             </div>
                             <div class="performance-message-div">
@@ -1449,7 +1904,7 @@
                                     <p class="req-steps-title">Steps you can take:</p>
                                     <p class="req-steps-body">
                                         <span class="req-steps-counter">1.</span>
-                                        Encourage occupants to respond to the <a href="http://plaque.dev.leedon.io/v3/dashboard/?page=score&amp;LEED=1000000117">survey</a>. 
+                                        Encourage occupants to respond to the <a href="http://plaque.dev.leedon.io/v3/dashboard/">survey</a>. 
                                     </p>
                                     <p class="req-steps-body">
                                         <span class="req-steps-counter">2.</span> 
@@ -1535,7 +1990,7 @@
                                     <p class="req-steps-title">Steps you can take:</p>
                                     <p class="req-steps-body">
                                         <span class="req-steps-counter">1.</span>
-                                        Encourage occupants to respond to the <a href="http://plaque.dev.leedon.io/v3/dashboard/?page=score&amp;LEED=1000000117">survey</a>. 
+                                        Encourage occupants to respond to the <a href="http://plaque.dev.leedon.io/v3/dashboard/">survey</a>. 
                                     </p>
                                     <p class="req-steps-body">
                                         <span class="req-steps-counter">2.</span> 
@@ -1555,7 +2010,7 @@
                             <!--
                                 <div class="prereq-category">
                                     <div class="prereq-category-header">
-                                        <img src="assets/images/leed/ss-border.png" class="prereq-img">
+                                        <img src="/static/dashboard/img/leed/ss-border.png" class="prereq-img">
                                         <p class="prereq-category-title">Sustainabale Sites</p>
                                         <div class="prereq-score">
                                             <span class="current-score">0</span>
@@ -1609,9 +2064,9 @@
                         <div class="pull-left performance-score" style="padding-left: 12px;width: 380px;">
                             <p class="tab-content-title">LEED Base Points</p>
                             <!--
-                                <div class="prereq-category"><div class="prereq-category-header"><img class="prereq-img" alt="" src="assets/images/leed/ss-border.png"><p class="prereq-category-title">Sustainable Sites</p><div class="prereq-score"><span class="current-score">1</span><span class="current-divider">/</span><span class="total-score">1</span></div></div><div class="prereq-category-body"><div class="prereq-intent-body"><i class="fa fa-check complete"></i><p class="prereq-intent-title">Site Management Best Practices</p></div></div></div>
-                                <div class="prereq-category"><div class="prereq-category-header"><img class="prereq-img" alt="" src="assets/images/leed/we-border.png"><p class="prereq-category-title">Water Efficiency</p><div class="prereq-score"><span class="current-score">0</span><span class="current-divider">/</span><span class="total-score">2</span></div></div><div class="prereq-category-body"><div class="prereq-intent-body"><i class="fa fa-times incomplete"></i><p class="prereq-intent-title">Indoor water use reduction</p></div></div><div class="prereq-category-body"><div class="prereq-intent-body"><i class="fa fa-times incomplete"></i><p class="prereq-intent-title">Building level water metering</p></div></div></div>
-                                <div class="prereq-category"><div class="prereq-category-header"><img class="prereq-img" alt="" src="assets/images/leed/mr-border.png"><p class="prereq-category-title">Materials and Resources</p><div class="prereq-score"><span class="current-score">0</span><span class="current-divider">/</span><span class="total-score">2</span></div></div><div class="prereq-category-body"><div class="prereq-intent-body"><i class="fa fa-times incomplete"></i><p class="prereq-intent-title">Waste &amp; Purchasing Policy</p></div></div><div class="prereq-category-body"><div class="prereq-intent-body"><i class="fa fa-times incomplete"></i><p class="prereq-intent-title">Renovation Policy</p></div></div></div>
+                                <div class="prereq-category"><div class="prereq-category-header"><img class="prereq-img" alt="" src="/static/dashboard/img/leed/ss-border.png"><p class="prereq-category-title">Sustainable Sites</p><div class="prereq-score"><span class="current-score">1</span><span class="current-divider">/</span><span class="total-score">1</span></div></div><div class="prereq-category-body"><div class="prereq-intent-body"><i class="fa fa-check complete"></i><p class="prereq-intent-title">Site Management Best Practices</p></div></div></div>
+                                <div class="prereq-category"><div class="prereq-category-header"><img class="prereq-img" alt="" src="/static/dashboard/img/leed/we-border.png"><p class="prereq-category-title">Water Efficiency</p><div class="prereq-score"><span class="current-score">0</span><span class="current-divider">/</span><span class="total-score">2</span></div></div><div class="prereq-category-body"><div class="prereq-intent-body"><i class="fa fa-times incomplete"></i><p class="prereq-intent-title">Indoor water use reduction</p></div></div><div class="prereq-category-body"><div class="prereq-intent-body"><i class="fa fa-times incomplete"></i><p class="prereq-intent-title">Building level water metering</p></div></div></div>
+                                <div class="prereq-category"><div class="prereq-category-header"><img class="prereq-img" alt="" src="/static/dashboard/img/leed/mr-border.png"><p class="prereq-category-title">Materials and Resources</p><div class="prereq-score"><span class="current-score">0</span><span class="current-divider">/</span><span class="total-score">2</span></div></div><div class="prereq-category-body"><div class="prereq-intent-body"><i class="fa fa-times incomplete"></i><p class="prereq-intent-title">Waste &amp; Purchasing Policy</p></div></div><div class="prereq-category-body"><div class="prereq-intent-body"><i class="fa fa-times incomplete"></i><p class="prereq-intent-title">Renovation Policy</p></div></div></div>
                                 -->
                         </div>
                         <div class="pull-right performance-notifications">
