@@ -1,14 +1,30 @@
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/bootstrap.css?v-1.4">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/font-awesome.min.css?v-1.4">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/jquery.timepicker.css?v-1.4">
+<link rel="stylesheet" property="stylesheet" href="assets/css/dashboard-main.css?v-1.4">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/simplePagination.css?v-1.4">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/jquery-ui.css?v-1.4">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/dj.selectable.css?v-1.4">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/nprogress.css?v-1.4">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/foundation-datepicker.css?v-1.4">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/alertify.core.css?v-1.4">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/alertify.bootstrap.css?v-1.4">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/jquery.fullPage.css?v-1.4">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/multiple-select.css?v-1.4">
+<link rel="stylesheet" property="stylesheet" href="assets/css/dashboard-elements.css?v-1.4">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/jquery.qtip.min.css?v-1.4">
+
 <!-- Start jQuery Notification Bar -->
-<div class="jquery-header-bar" style="display:none; background: #FFFFFF; width:100%; top: 0px; z-index: 10000; position: fixed; padding: 2px 0px 0px 0px; border-bottom:2px solid #CC0000; box-shadow: 0px 4px 5px #AAAAAA; font-size:14px; font-family: 'Lato Regular', Arial; text-transform:uppercase;">
+<div class="jquery-header-bar" style="display:none; background: #FFFFFF; width:100%; top: 0px; z-index: 10000; position: fixed; padding: 2px 0px 0px 0px; border-bottom:2px solid #CC0000; box-shadow: 0px 4px 5px #AAAAAA; font-size:14px; font-family: &#39;Lato Regular&#39;, Arial; text-transform:uppercase;">
     <span class="notification" style="display:block; width:auto;">
         <p class="font-style" id="notification_header_val" style="width:95%; text-align: center; margin-top:10px; margin-bottom:10px; text-transform: none; font-size:14px;"></p>
-        <p class="jquery-arrow down" style="position: absolute;top: 15px; right: 24px;"><img src="assets/img/close.png" style="cursor:pointer;width:13px;"></p>
+        <p class="jquery-arrow down" style="position: absolute;top: 15px; right: 24px;"><img src="assets/images/close.png" style="cursor:pointer;width:13px;"></p>
     </span>
 </div>
 <!-- End jQuery Notification Bar -->
 <div class="headerNotification">
     <span id="notificationDes">Invalid Option</span>
-    <span class="closeHeader floatr"><img class="closeImg" src="assets/img/close.png" style="cursor: pointer;height: 15px;margin-right: 20px;margin-top: 7px;"></span>
+    <span class="closeHeader floatr"><img class="closeImg" src="assets/images/close.png" style="cursor: pointer;height: 15px;margin-right: 20px;margin-top: 7px;"></span>
 </div>
 <div class="headerStatus">
     <span id="notificationStat">
@@ -68,14 +84,14 @@
                 <div class="UI_option" style="top:66px;" option="v3">Version 3</div>
             </div>
         </div>
-        <div class="btn_header_group open">
+        <div class="btn_header_group">
             <button id="drp_btn_header" class="btn_header btn_header-default dropdown-toggle" data-toggle="dropdown">
             Usgbc 
             <span class="caret"></span>
             </button>
-            <ul class="dropdown_menu dropdown_menu_usermenu pull-right mont" id="drp_btn_header_black">
-                <li><a style="color:#4a4a4a;" id="dash_btn_header" href="/v3/dashboard/"><i class="icon-home"></i> Projects</a></li>
-                <li class="all_logout"><a class="all_logout" style="color:#4a4a4a;" id="dash_btn_header_logout" href="/auth/logout"><i class="all_logout icon-signout"></i> Log Out</a></li>
+            <ul class="dropdown_menu dropdown_menu_usermenu pull-right mont" id="drp_btn_header_black" style="display: none;">
+                <li><a style="color:#4a4a4a;" id="dash_btn_header" href="http://plaque.dev.leedon.io/v3/dashboard/"><i class="icon-home"></i> Projects</a></li>
+                <li class="all_logout"><a class="all_logout" style="color:#4a4a4a;" id="dash_btn_header_logout" href="http://plaque.dev.leedon.io/auth/logout"><i class="all_logout icon-signout"></i> Log Out</a></li>
             </ul>
         </div>
         <div class="meterInfo mont buildingInfo" style="display: block;">
@@ -93,7 +109,7 @@
             <div id="filterSelectDiv">
                 <div class="certification_filter">
                     <div class="dropdown">LEED SCORE</div>
-                    <form class="certification_list form" role="form" method="get" action="/buildings/" name="building_filter" id="building_filter">
+                    <form class="certification_list form" role="form" method="get" action="http://plaque.dev.leedon.io/buildings/" name="building_filter" id="building_filter">
                         <div class="certification_item dropdown_active">
                             <div>
                                 <input type="checkbox" class="checkboxCert" name="cert" value="Platinum">
@@ -151,11 +167,12 @@
         <!-- YA: LEED certification modal window -->
         <!-- //////////////////////////////////// -->
         <!-- //////////////////////////////////// -->
-        <div id="building_per_data_link_dashboard" class="display_none buildingInfo" style="display: none;">
-            <canvas width="46" height="46"></canvas>
-            <div>76</div>
-        </div>
-        <div class="gotham" id="building_per_data_modal">
+        <!--LEED Online reg button
+            <div id="building_per_data_link_dashboard" class="display_none buildingInfo">
+                <div></div>
+            </div>
+            -->
+        <div class="gotham" id="building_per_data_modal" style="">
             <div id="building_per_data_heading">
                 <div id="building_per_title">You're steps away from LEED Certification</div>
                 <div class="floatl">
@@ -170,7 +187,7 @@
                 <div class="building_per_body" id="building_per_score">
                     <div class="building_per_title">Performance Score</div>
                     <div class="building_per_score">                                
-                        <img class="ajax_loader_leed_cert display_none" alt="" src="assets/img/ajax_loader_40x40.gif">
+                        <img class="ajax_loader_leed_cert display_none" alt="" src="assets/images/ajax_loader_40x40.gif">
                         <span class="current-score display_inline complete">76</span>
                         <span class="current-divider display_inline">/</span>
                         <span class="total-score display_inline">40</span>
@@ -180,7 +197,7 @@
                 <div class="building_per_body" id="building_per_data">
                     <div class="building_per_title">Performance Data</div>
                     <div class="building_per_score">
-                        <img class="ajax_loader_leed_cert display_inline" alt="" src="assets/img/ajax_loader_40x40.gif">
+                        <img class="ajax_loader_leed_cert display_inline" alt="" src="assets/images/ajax_loader_40x40.gif">
                         <span class="current-score display_none">0</span>
                         <span class="current-divider display_none">/</span>
                         <span class="total-score display_none">5</span>
@@ -190,7 +207,7 @@
                 <div class="building_per_body" id="building_per_prereq">
                     <div class="building_per_title">LEED Prerequisites</div>
                     <div class="building_per_score">
-                        <img class="ajax_loader_leed_cert display_inline" alt="" src="assets/img/ajax_loader_40x40.gif">
+                        <img class="ajax_loader_leed_cert display_inline" alt="" src="assets/images/ajax_loader_40x40.gif">
                         <span class="current-score display_none">0</span>
                         <span class="current-divider display_none">/</span>
                         <span class="total-score display_none">0</span>
@@ -200,7 +217,7 @@
                 <div class="building_per_body" id="building_per_basepoints">
                     <div class="building_per_title">LEED Base Points</div>
                     <div class="building_per_score">
-                        <img class="ajax_loader_leed_cert display_inline" alt="" src="assets/img/ajax_loader_40x40.gif">
+                        <img class="ajax_loader_leed_cert display_inline" alt="" src="assets/images/ajax_loader_40x40.gif">
                         <span class="current-score display_none">0</span>
                         <span class="current-divider display_none">/</span>
                         <span class="total-score display_none">0</span>
@@ -213,7 +230,7 @@
         <!-- YA: LEED certification modal window -->
         <!-- //////////////////////////////////// -->
         <div class="buildingInfo" id="gbig_link" leed_id="1000000117" style="display: block;"></div>
-        <div class="gotham" id="gbig_module">
+        <div class="gotham" id="gbig_module" style="">
             <div class="sourceContainer">
                 <div style="color: darkgrey;">View on:</div>
                 <div>
@@ -282,34 +299,34 @@
 <!-- Adding LEED Certication ends -->
 <div class="manage_category_nav category_nav gotham" style="display: none;">
     <!--            <div class="color_bar project_plaque_cat_color"></div>-->
-    <div class="relative manage_category  manage_cat_active" category-type="project_plaque">Project Plaque</div>
+    <div class="relative manage_category manage_cat_active" category-type="project_plaque">Project Plaque</div>
     <!--            <div class="color_bar team_cat_color"></div>-->
-    <div class="relative manage_category " category-type="team">Team</div>
+    <div class="relative manage_category" category-type="team">Team</div>
     <!--            <div class="color_bar account_cat_color"></div>-->
-    <div class="relative manage_category " category-type="account">Account</div>
+    <div class="relative manage_category" category-type="account">Account</div>
     <!--            <div class="color_bar billing_cat_color"></div>-->
-    <div class="relative manage_category " category-type="billing">Billing</div>
+    <div class="relative manage_category" category-type="billing">Billing</div>
     <!--            <div class="color_bar setup_cat_color"></div>-->
-    <div class="relative manage_category " category-type="setup">Setup</div>
+    <div class="relative manage_category" category-type="setup">Setup</div>
     <!--            <div class="color_bar gresb_cat_color gresb-elem display_none"></div>-->
     <div class="relative manage_category  gresb-elem" category-type="gresb">GRESB</div>
     <!--            <div class="color_bar strategies_cat_color"></div>-->
-    <div class="relative manage_category " category-type="strategies">Strategies</div>
+    <div class="relative manage_category" category-type="strategies">Strategies</div>
     <!--            <div class="color_bar connected_apps_cat_color"></div>-->
-    <div class="relative manage_category  display_none" category-type="connected_apps">Connected Apps</div>
+    <div class="relative manage_category  display_none" category-type="connected_apps" style="display: block;">Connected Apps</div>
 </div>
 <div class="hideLabel"></div>
 <div class="main_container">
     <div class="scoreUpButton pointer"></div>
     <div class="controlBtns_betterScroll">
         <a class="controlBtns_betterScroll_a controlBtns_overview active" index="-1" style="background-color: rgb(130, 167, 78);"></a>
-        <a class="controlBtns_betterScroll_a controlBtns_energy" index="0"></a><a class="controlBtns_betterScroll_a controlBtns_water" index="1"></a><a class="controlBtns_betterScroll_a controlBtns_waste" index="2"></a><a class="controlBtns_betterScroll_a controlBtns_transportation" index="3"></a><a class="controlBtns_betterScroll_a controlBtns_humanexperience" index="4"></a>
+        <a class="controlBtns_betterScroll_a controlBtns_energy" index="0" style="background-color: rgb(204, 204, 204);"></a><a class="controlBtns_betterScroll_a controlBtns_water" index="1" style="background-color: rgb(204, 204, 204);"></a><a class="controlBtns_betterScroll_a controlBtns_waste" index="2" style="background-color: rgb(204, 204, 204);"></a><a class="controlBtns_betterScroll_a controlBtns_transportation" index="3" style="background-color: rgb(204, 204, 204);"></a><a class="controlBtns_betterScroll_a controlBtns_humanexperience" index="4" style="background-color: rgb(204, 204, 204);"></a>
     </div>
-    <div id="fullpage" class="main_track_container fullpage-wrapper" style="height: 100%; position: relative; touch-action: none; transform: translate3d(0px, 0px, 0px);">
-        <div class="racetrack_design section active fp-section fp-table completely" style="height: 237px;">
-            <div class="fp-tableCell" style="height: 237px;">
+    <div id="fullpage" class="main_track_container fullpage-wrapper" style="height: 100%; position: relative; touch-action: none; transform: translate3d(0px, 0px, 0px); transition: all 1000ms ease;">
+        <div class="racetrack_design section fp-section fp-table active completely" style="height: 965px;">
+            <div class="fp-tableCell" style="height: 965px;">
                 <div id="racetrack_overview" class="div_center" style="transform: scale(1);">
-                    <svg height="750" version="1.1" width="750" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative; left: -0.765625px; top: 0.5px;">
+                    <svg height="750" version="1.1" width="750" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative; left: -0.5px;">
                         <path fill="none" stroke="#dddddd" d="M104,119H375M375,119A256,256,0,1,1,119,375.00000000000006M119,375.00000000000006V290" stroke-width="30" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></path>
                         <text x="119" y="306" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: Arial; opacity: 1;" opacity="1" class="arc-label max">
                             <tspan dy="3.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">33</tspan>
@@ -337,7 +354,7 @@
                         <path fill="none" stroke="#f2ac41" d="M104,267H375M375,267A108,108,0,0,1,439.97539882829165,288.7318277282726" stroke-width="30" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></path>
                         <desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.0</desc>
                         <defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs>
-                        <image x="109" y="257" width="20" height="20" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/img/icon_human.png" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></image>
+                        <image x="109" y="257" width="20" height="20" preserveAspectRatio="none" href="assets/images/icon_human.png" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></image>
                         <path fill="#f2ac41" stroke="none" d="M439.1774720030337,273.13658598737726L444.1774720030337,273.13658598737726L459.1774720030337,288.13658598737726L444.1774720030337,303.13658598737726L439.1774720030337,303.13658598737726Z" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;" transform="matrix(0.8043,0.5942,-0.5942,0.8043,257.1721,-204.584)"></path>
                         <text x="140" y="269" text-anchor="start" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: start; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: Arial; opacity: 1;" opacity="1" class="arc-label name">
                             <tspan dy="3.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Human Experience</tspan>
@@ -345,7 +362,7 @@
                         <text x="439.1774720030337" y="288.13658598737726" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: Arial; opacity: 1;" opacity="1" class="arc-label value">
                             <tspan dy="5.011585987377259" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2</tspan>
                         </text>
-                        <image x="109" y="220" width="20" height="20" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/img/icon_transportation.png" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></image>
+                        <image x="109" y="220" width="20" height="20" preserveAspectRatio="none" href="assets/images/icon_transportation.png" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></image>
                         <path fill="#a39f92" stroke="none" d="M231.58407700047582,381.3745917629151L236.58407700047582,381.3745917629151L251.58407700047582,396.3745917629151L236.58407700047582,411.3745917629151L231.58407700047582,411.3745917629151Z" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;" transform="matrix(-0.1474,-0.9891,0.9891,-0.1474,-126.3222,683.8587)"></path>
                         <text x="140" y="232" text-anchor="start" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: start; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: Arial; opacity: 1;" opacity="1" class="arc-label name">
                             <tspan dy="3.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Transportation</tspan>
@@ -353,7 +370,7 @@
                         <text x="231.58407700047582" y="396.3745917629151" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: Arial; opacity: 1;" opacity="1" class="arc-label value">
                             <tspan dy="5.015216762915088" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">13</tspan>
                         </text>
-                        <image x="109" y="183" width="20" height="20" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/img/icon_waste.png" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></image>
+                        <image x="109" y="183" width="20" height="20" preserveAspectRatio="none" href="assets/images/icon_waste.png" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></image>
                         <path fill="#84ccaf" stroke="none" d="M193,280.47505174577236L198,280.47505174577236L197.49985878914595,295.47505174577236L198,310.47505174577236L193,310.47505174577236Z" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;" transform="matrix(0,-1,1,0,-102.4751,488.4751)"></path>
                         <text x="140" y="195" text-anchor="start" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: start; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: Arial; opacity: 1;" opacity="1" class="arc-label name">
                             <tspan dy="3.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Waste</tspan>
@@ -361,7 +378,7 @@
                         <text x="193" y="305" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: Arial; opacity: 1;" opacity="1" class="arc-label value">
                             <tspan dy="5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">8</tspan>
                         </text>
-                        <image x="109" y="146" width="20" height="20" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/img/icon_water.png" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></image>
+                        <image x="109" y="146" width="20" height="20" preserveAspectRatio="none" href="assets/images/icon_water.png" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></image>
                         <path fill="#55caf5" stroke="none" d="M156,280.5816865023224L161,280.5816865023224L160.49844984151414,295.5816865023224L161,310.5816865023224L156,310.5816865023224Z" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;" transform="matrix(0,-1,1,0,-139.5817,451.5817)"></path>
                         <text x="140" y="158" text-anchor="start" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: start; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: Arial; opacity: 1;" opacity="1" class="arc-label name">
                             <tspan dy="3.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Water</tspan>
@@ -369,7 +386,7 @@
                         <text x="156" y="305" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: Arial; opacity: 1;" opacity="1" class="arc-label value">
                             <tspan dy="5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">15</tspan>
                         </text>
-                        <image x="109" y="109" width="20" height="20" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/img/icon_energy.png" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></image>
+                        <image x="109" y="109" width="20" height="20" preserveAspectRatio="none" href="assets/images/icon_energy.png" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></image>
                         <path fill="#d0dd3d" stroke="none" d="M119,280.673207298154L124,280.673207298154L123.49720354564488,295.673207298154L124,310.673207298154L119,310.673207298154Z" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;" transform="matrix(0,-1,1,0,-176.6732,414.6732)"></path>
                         <text x="140" y="121" text-anchor="start" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: start; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: Arial; opacity: 1;" opacity="1" class="arc-label name">
                             <tspan dy="3.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Energy</tspan>
@@ -378,52 +395,52 @@
                             <tspan dy="5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">33</tspan>
                         </text>
                     </svg>
-                    <div id="score-puck" class="score-puck-overview" style="display: block; background-image: url(&quot;assets/img/score-puck.svg&quot;);">
+                    <div id="score-puck" class="score-puck-overview" style="display: block; background-image: url(&quot;assets/images/score-puck.svg&quot;);">
                         <div class="text line_height">76</div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="racetrack_design section fp-section fp-table" style="height: 237px;">
-            <div class="fp-tableCell" style="height: 237px;">
+        <div class="racetrack_design section fp-section fp-table" style="height: 965px;">
+            <div class="fp-tableCell" style="height: 965px;">
                 <div class="div_center" id="racetrack_energy" style="height: 750px; transform: scale(1);">
-                    <div class="name-puck" id="name-puck-energy">
-                        <div class="text"></div>
+                    <div class="name-puck" id="name-puck-energy" style="display: none;">
+                        <div class="text">CURRENT ENERGY</div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="racetrack_design section fp-section fp-table" style="height: 237px;">
-            <div class="fp-tableCell" style="height: 237px;">
+        <div class="racetrack_design section fp-section fp-table" style="height: 965px;">
+            <div class="fp-tableCell" style="height: 965px;">
                 <div class="div_center" id="racetrack_water" style="height: 750px; transform: scale(1);">
-                    <div class="name-puck" id="name-puck-water">
+                    <div class="name-puck" id="name-puck-water" style="display: none;">
                         <div class="text"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="racetrack_design section fp-section fp-table" style="height: 237px;">
-            <div class="fp-tableCell" style="height: 237px;">
+        <div class="racetrack_design section fp-section fp-table" style="height: 965px;">
+            <div class="fp-tableCell" style="height: 965px;">
                 <div class="div_center" id="racetrack_waste" style="height: 750px; transform: scale(1);">
-                    <div class="name-puck" id="name-puck-waste">
+                    <div class="name-puck" id="name-puck-waste" style="display: none;">
                         <div class="text"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="racetrack_design section fp-section fp-table" style="height: 237px;">
-            <div class="fp-tableCell" style="height: 237px;">
+        <div class="racetrack_design section fp-section fp-table" style="height: 965px;">
+            <div class="fp-tableCell" style="height: 965px;">
                 <div class="div_center" id="racetrack_transportation" style="height: 750px; transform: scale(1);">
-                    <div class="name-puck" id="name-puck-transportation">
+                    <div class="name-puck" id="name-puck-transportation" style="display: none;">
                         <div class="text"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="racetrack_design section fp-section fp-table" style="height: 237px;">
-            <div class="fp-tableCell" style="height: 237px;">
+        <div class="racetrack_design section fp-section fp-table" style="height: 965px;">
+            <div class="fp-tableCell" style="height: 965px;">
                 <div class="div_center" id="racetrack_humanexperience" style="height: 750px; transform: scale(1);">
-                    <div class="name-puck" id="name-puck-humanexperience">
+                    <div class="name-puck" id="name-puck-humanexperience" style="display: none;">
                         <div class="text"></div>
                     </div>
                 </div>
@@ -515,9 +532,9 @@
                     </div>
                     <br>
                 </div>
-                <div class="add_new_meter_footer center_align" style="font-family: 'GothamBook';height:50px;">
+                <div class="add_new_meter_footer center_align" style="font-family: &#39;GothamBook&#39;;height:50px;">
                     <button type="button" class="btnOutline close_receipt mb0 floatl" data-dismiss="modal">CLOSE</button>
-                    <div class="btnGreen print_receipt mb0 floatr pdt9" id="download_receipt"><a href="">PRINT</a></div>
+                    <div class="btnGreen print_receipt mb0 floatr pdt9" id="download_receipt"><a href="http://plaque.dev.leedon.io/v3/dashboard/?page=score&amp;LEED=1000000117">PRINT</a></div>
                 </div>
             </div>
         </div>
@@ -601,7 +618,7 @@
 <div class="modal fade login_modal modal_radius mont" id="login_modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog modal-sm modalMain">
         <div id="cont2" class="modal-content modal_radius">
-            <iframe id="login_iFrame" src="about:blank">
+            <iframe id="login_iFrame" src="">
             </iframe>
         </div>
     </div>
@@ -676,7 +693,7 @@
                                     <div>
                                         <h6 class="heading4">Country</h6>
                                         <div>
-                                            <select id="bCountry" class="form_field_modal_input publicForm inblock fixwidth_input form-control valid country inblock_sel pressEnter" name="submitted_country" placeholder="Country" onchange="print_state('bState', this.value);" tabindex="5"></select>
+                                            <select id="bCountry" class="form_field_modal_input publicForm inblock fixwidth_input form-control valid country inblock_sel pressEnter" name="submitted_country" placeholder="Country" onchange="print_state(&#39;bState&#39;, this.value);" tabindex="5"></select>
                                         </div>
                                     </div>
                                 </td>
@@ -724,7 +741,7 @@
             </div>
             <div class="modal-body pt25 pl50 modal_padding pb50">
                 <div class="upload_meter_data_heading mont">UPLOAD METER DATA</div>
-                <div class="mt25 font-color">In order to upload data, please download the <a href="/static//dashboard/LEED_Dynamic_Plaque_Data_Template_v02.xlsm" download=""> Excel Template</a>.</div>
+                <div class="mt25 font-color">In order to upload data, please download the <a href="http://plaque.dev.leedon.io/static//dashboard/LEED_Dynamic_Plaque_Data_Template_v02.xlsm" download=""> Excel Template</a>.</div>
                 <div class="mt25 mb25 font-color">Once you have filled out the template, please return to this window and upload the file in the form below.</div>
                 <div class="mt25 font-color">Please remove Protected View before uploading the file by following below steps. These steps are only required when you download a file</div>
                 <div class="mb25">
@@ -734,7 +751,7 @@
                     <div class="mt10 font-color">4) Save the file to your local system. Don't change extension of the file. Once all the data is filled in, upload it using 'Browse' button below.</div>
                 </div>
                 <form name="Fileform" id="upload_form">
-                    <div style="display:none"><input type="hidden" name="csrfmiddlewaretoken" value="2Z8X4NgwP2MNKLfk2lCtKpUVGh8JbIlJ"></div>
+                    <div style="display:none"><input type="hidden" name="csrfmiddlewaretoken" value="ziYHgsfAky9M59JGvA7spMBBoUB60qJQ"></div>
                     <div class="row display1">
                         <div class="mb20 nopadding display2">
                             <input type="file" name="template_data" id="template_data" style="display:none;">
@@ -913,6 +930,8 @@
                         <div class="input-group-addon border_none width100p of_drp nopadding">
                             <button class="btn dropdown-toggle height45 width100p energy_manual_drp radius3" data-toggle="dropdown"><span class="energy_manual_txt" id="get_energy_type" data-id="25" value="25">Purchased from grid</span><span class="caret pull-right mt8"></span></button>
                             <ul class="dropdown-menu textalign_left energy_manual_ul cursor_pointer width100p" role="menu">
+                                <li class="other_fuel_unit"><a class="fuel_type_name" value="25">Purchased from grid</a></li>
+                                <li class="other_fuel_unit"><a class="fuel_type_name" value="46">Generated onsite - solar</a></li>
                             </ul>
                         </div>
                     </div>
@@ -924,6 +943,9 @@
                         <div class="input-group-addon border_none width100p of_drp nopadding">
                             <button class="btn dropdown-toggle height45 width100p water_manual_drp radius3" data-toggle="dropdown"><span class="water_manual_txt" id="get_water_type" data-id="47" value="47">Municipality supplied potable water</span><span class="caret pull-right mt8"></span></button>
                             <ul class="dropdown-menu textalign_left water_manual_drp_ul cursor_pointer width100p" role="menu">
+                                <li class="other_fuel_unit"><a class="fuel_type_name" value="47">Municipality supplied potable water</a></li>
+                                <li class="other_fuel_unit"><a class="fuel_type_name" value="54">Municipality supplied reclaimed water</a></li>
+                                <li class="other_fuel_unit"><a class="fuel_type_name" value="57">Reclaimed onsite</a></li>
                             </ul>
                         </div>
                     </div>
@@ -954,6 +976,24 @@
                                 <li class="other_fuel_unit"><a class="fuel_type_name" value="42">District Chilled Water <br> (Electric Driven Chiller)</a></li>
                                 <li class="other_fuel_unit"><a class="fuel_type_name" value="43">District Chilled Water <br>(Absorption Chiller using Natural Gas)</a></li>
                                 <li class="other_fuel_unit"><a class="fuel_type_name" value="44">District Chilled Water  <br> (Engine-Driven Chiller using Natural Gas)</a></li>
+                                <li class="other_fuel_unit"><a class="fuel_type_name" value="40">District Steam</a></li>
+                                <li class="other_fuel_unit"><a class="fuel_type_name" value="41">District Hot Water</a></li>
+                                <li class="other_fuel_unit"><a class="fuel_type_name" value="42">District Chilled Water (Electric Driven Chiller)</a></li>
+                                <li class="other_fuel_unit"><a class="fuel_type_name" value="43">District Chilled Water (Absorption Chiller using Natural Gas)</a></li>
+                                <li class="other_fuel_unit"><a class="fuel_type_name" value="44">District Chilled Water (Engine-Driven Chiller using Natural Gas)</a></li>
+                                <li class="other_fuel_unit"><a class="fuel_type_name" value="1">Natural Gas</a></li>
+                                <li class="other_fuel_unit"><a class="fuel_type_name" value="2">Fuel Oil (No. 2)</a></li>
+                                <li class="other_fuel_unit"><a class="fuel_type_name" value="3">Wood</a></li>
+                                <li class="other_fuel_unit"><a class="fuel_type_name" value="4">Propane</a></li>
+                                <li class="other_fuel_unit"><a class="fuel_type_name" value="5">Liquid Propane</a></li>
+                                <li class="other_fuel_unit"><a class="fuel_type_name" value="6">Kerosene</a></li>
+                                <li class="other_fuel_unit"><a class="fuel_type_name" value="7">Fuel Oil (No. 1)</a></li>
+                                <li class="other_fuel_unit"><a class="fuel_type_name" value="8">Fuel Oil (No. 5 &amp; No. 6)</a></li>
+                                <li class="other_fuel_unit"><a class="fuel_type_name" value="9">Coal (anthracite)</a></li>
+                                <li class="other_fuel_unit"><a class="fuel_type_name" value="10">Coal (bituminous)</a></li>
+                                <li class="other_fuel_unit"><a class="fuel_type_name" value="11">Coke</a></li>
+                                <li class="other_fuel_unit"><a class="fuel_type_name" value="12">Fuel Oil (No. 4)</a></li>
+                                <li class="other_fuel_unit"><a class="fuel_type_name" value="13">Diesel</a></li>
                             </ul>
                         </div>
                         <!--</span>-->
@@ -1137,7 +1177,7 @@
                 </div>
                 <div class="overflow_hidden mt50 mb35 align_center permission_needed_header">
                     <input type="button" class="btn btn-default btn_Blue fs15" id="permission_needed_request2" value="REQUEST ACCESS">
-                    <input type="button" class="btn btnOutline no_outline fs15 mt10 w100p" value="< BACK" onclick="location.href = '/v3/dashboard/';" aria-hidden="true" data-dismiss="modal">
+                    <input type="button" class="btn btnOutline no_outline fs15 mt10 w100p" value="&lt; BACK" onclick="location.href = &#39;/v3/dashboard/&#39;;" aria-hidden="true" data-dismiss="modal">
                 </div>
             </div>
         </div>
@@ -1196,18 +1236,62 @@
                     <div class="custom-strategy-description">Type</div>
                     <div class="btn-group" id="categoryList-dropdown">
                         <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        <span class="category-selected-text"></span>
+                        <span class="category-selected-text">Energy and Atmosphere</span>
                         <span class="fa fa-angle-down"></span>
                         </button>
-                        <ul class="dropdown-menu" role="menu"></ul>
+                        <ul class="dropdown-menu" role="menu">
+                            <li data-category-value="ea" class="selected-category">Energy and Atmosphere</li>
+                            <li data-category-value="ss">Sustainable Sites</li>
+                            <li data-category-value="we">Water Efficiency</li>
+                            <li data-category-value="mr">Materials and Resources</li>
+                            <li data-category-value="iq">Indoor Environmental Quality</li>
+                            <li data-category-value="lt">Location and Transportation</li>
+                            <li data-category-value="ea">Energy and Atmosphere</li>
+                            <li data-category-value="ss">Sustainable Sites</li>
+                            <li data-category-value="we">Water Efficiency</li>
+                            <li data-category-value="mr">Materials and Resources</li>
+                            <li data-category-value="iq">Indoor Environmental Quality</li>
+                            <li data-category-value="lt">Location and Transportation</li>
+                        </ul>
                     </div>
                     <div class="custom-strategy-description">Intent</div>
                     <div class="btn-group" id="intentList-dropdown">
                         <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        <span class="intent-selected-text"></span>
+                        <span class="intent-selected-text">Energy Management Best Practices</span>
                         <span class="fa fa-angle-down"></span>
                         </button>
-                        <ul class="dropdown-menu" role="menu"></ul>
+                        <ul class="dropdown-menu" role="menu">
+                            <li data-intent-value="115" class="selected-intent">Energy Management Best Practices</li>
+                            <li data-intent-value="116">Establish Energy Performance</li>
+                            <li data-intent-value="117">Refrigerant strategies that cause less harm to the atmosphere</li>
+                            <li data-intent-value="118">Reducing greenhouse gas emissions with renewable energy and carbon offsets</li>
+                            <li data-intent-value="119">Establish Energy Metering</li>
+                            <li data-intent-value="120">At building level reduce energy consumed during peak to support of electric grid with Demand Response</li>
+                            <li data-intent-value="121">Improve building operations, energy and resource efficiency</li>
+                            <li data-intent-value="1723">Energy Management Best Practices</li>
+                            <li data-intent-value="1752">Energy Management Best Practices</li>
+                            <li data-intent-value="1753">Establish Energy Performance</li>
+                            <li data-intent-value="1724">Establish Energy Performance</li>
+                            <li data-intent-value="1754">Refrigerant strategies that cause less harm to the atmosphere</li>
+                            <li data-intent-value="1725">Refrigerant strategies that cause less harm to the atmosphere</li>
+                            <li data-intent-value="1755">Establish Energy Metering</li>
+                            <li data-intent-value="1726">Establish Energy Metering</li>
+                            <li data-intent-value="115">Energy Management Best Practices</li>
+                            <li data-intent-value="116">Establish Energy Performance</li>
+                            <li data-intent-value="117">Refrigerant strategies that cause less harm to the atmosphere</li>
+                            <li data-intent-value="118">Reducing greenhouse gas emissions with renewable energy and carbon offsets</li>
+                            <li data-intent-value="119">Establish Energy Metering</li>
+                            <li data-intent-value="120">At building level reduce energy consumed during peak to support of electric grid with Demand Response</li>
+                            <li data-intent-value="121">Improve building operations, energy and resource efficiency</li>
+                            <li data-intent-value="1723">Energy Management Best Practices</li>
+                            <li data-intent-value="1752">Energy Management Best Practices</li>
+                            <li data-intent-value="1753">Establish Energy Performance</li>
+                            <li data-intent-value="1724">Establish Energy Performance</li>
+                            <li data-intent-value="1754">Refrigerant strategies that cause less harm to the atmosphere</li>
+                            <li data-intent-value="1725">Refrigerant strategies that cause less harm to the atmosphere</li>
+                            <li data-intent-value="1755">Establish Energy Metering</li>
+                            <li data-intent-value="1726">Establish Energy Metering</li>
+                        </ul>
                     </div>
                     <!-- New changes: select dropdown issue -->
                     <div class="custom-strategy-title">Title</div>
@@ -1252,7 +1336,7 @@
                     <button id="upload_data" class="uploadButton">Upload Data</button>
                     <div class="processing_icon" id="upload_status" data-toggle="modal" data-target="#upload_status_modal" style="visibility: hidden;">
                         <span class="details mont">Check Status </span>
-                        <img src="assets/img/ajax-loader.gif" class="mb5 loader_gif" style="opacity: 0;">
+                        <img src="assets/images/ajax-loader.gif" class="mb5 loader_gif" style="opacity: 0;">
                     </div>
                 </div>
                 <div class="add_reading_wrapper">
@@ -1298,10 +1382,10 @@
             </div>
             <div class="modal-body modal_padding">
                 <ul class="nav1 nav-tabs">
-                    <li class="active performance-score"><a data-toggle="tab" href="#performance-score">Performance Score</a></li>
-                    <li class="performance-data"><a data-toggle="tab" href="#performance-data">Performance Data</a></li>
-                    <li class="leed-prerequisites"><a data-toggle="tab" href="#leed-prerequisites">LEED Prerequisites</a></li>
-                    <li class="leed-base-points"><a data-toggle="tab" href="#leed-base-points">LEED Base Points</a></li>
+                    <li class="active performance-score"><a data-toggle="tab" href="http://plaque.dev.leedon.io/v3/dashboard/?page=score&amp;LEED=1000000117#performance-score">Performance Score</a></li>
+                    <li class="performance-data"><a data-toggle="tab" href="http://plaque.dev.leedon.io/v3/dashboard/?page=score&amp;LEED=1000000117#performance-data">Performance Data</a></li>
+                    <li class="leed-prerequisites"><a data-toggle="tab" href="http://plaque.dev.leedon.io/v3/dashboard/?page=score&amp;LEED=1000000117#leed-prerequisites">LEED Prerequisites</a></li>
+                    <li class="leed-base-points"><a data-toggle="tab" href="http://plaque.dev.leedon.io/v3/dashboard/?page=score&amp;LEED=1000000117#leed-base-points">LEED Base Points</a></li>
                 </ul>
                 <hr style="width: 97%;">
                 <div class="tab-content">
@@ -1365,7 +1449,7 @@
                                     <p class="req-steps-title">Steps you can take:</p>
                                     <p class="req-steps-body">
                                         <span class="req-steps-counter">1.</span>
-                                        Encourage occupants to respond to the <a href="">survey</a>. 
+                                        Encourage occupants to respond to the <a href="http://plaque.dev.leedon.io/v3/dashboard/?page=score&amp;LEED=1000000117">survey</a>. 
                                     </p>
                                     <p class="req-steps-body">
                                         <span class="req-steps-counter">2.</span> 
@@ -1451,7 +1535,7 @@
                                     <p class="req-steps-title">Steps you can take:</p>
                                     <p class="req-steps-body">
                                         <span class="req-steps-counter">1.</span>
-                                        Encourage occupants to respond to the <a href="">survey</a>. 
+                                        Encourage occupants to respond to the <a href="http://plaque.dev.leedon.io/v3/dashboard/?page=score&amp;LEED=1000000117">survey</a>. 
                                     </p>
                                     <p class="req-steps-body">
                                         <span class="req-steps-counter">2.</span> 
@@ -1471,7 +1555,7 @@
                             <!--
                                 <div class="prereq-category">
                                     <div class="prereq-category-header">
-                                        <img src="assets/img/leed/ss-border.png" class="prereq-img">
+                                        <img src="assets/images/leed/ss-border.png" class="prereq-img">
                                         <p class="prereq-category-title">Sustainabale Sites</p>
                                         <div class="prereq-score">
                                             <span class="current-score">0</span>
@@ -1525,9 +1609,9 @@
                         <div class="pull-left performance-score" style="padding-left: 12px;width: 380px;">
                             <p class="tab-content-title">LEED Base Points</p>
                             <!--
-                                <div class="prereq-category"><div class="prereq-category-header"><img class="prereq-img" alt="" src="assets/img/leed/ss-border.png"><p class="prereq-category-title">Sustainable Sites</p><div class="prereq-score"><span class="current-score">1</span><span class="current-divider">/</span><span class="total-score">1</span></div></div><div class="prereq-category-body"><div class="prereq-intent-body"><i class="fa fa-check complete"></i><p class="prereq-intent-title">Site Management Best Practices</p></div></div></div>
-                                <div class="prereq-category"><div class="prereq-category-header"><img class="prereq-img" alt="" src="assets/img/leed/we-border.png"><p class="prereq-category-title">Water Efficiency</p><div class="prereq-score"><span class="current-score">0</span><span class="current-divider">/</span><span class="total-score">2</span></div></div><div class="prereq-category-body"><div class="prereq-intent-body"><i class="fa fa-times incomplete"></i><p class="prereq-intent-title">Indoor water use reduction</p></div></div><div class="prereq-category-body"><div class="prereq-intent-body"><i class="fa fa-times incomplete"></i><p class="prereq-intent-title">Building level water metering</p></div></div></div>
-                                <div class="prereq-category"><div class="prereq-category-header"><img class="prereq-img" alt="" src="assets/img/leed/mr-border.png"><p class="prereq-category-title">Materials and Resources</p><div class="prereq-score"><span class="current-score">0</span><span class="current-divider">/</span><span class="total-score">2</span></div></div><div class="prereq-category-body"><div class="prereq-intent-body"><i class="fa fa-times incomplete"></i><p class="prereq-intent-title">Waste &amp; Purchasing Policy</p></div></div><div class="prereq-category-body"><div class="prereq-intent-body"><i class="fa fa-times incomplete"></i><p class="prereq-intent-title">Renovation Policy</p></div></div></div>
+                                <div class="prereq-category"><div class="prereq-category-header"><img class="prereq-img" alt="" src="assets/images/leed/ss-border.png"><p class="prereq-category-title">Sustainable Sites</p><div class="prereq-score"><span class="current-score">1</span><span class="current-divider">/</span><span class="total-score">1</span></div></div><div class="prereq-category-body"><div class="prereq-intent-body"><i class="fa fa-check complete"></i><p class="prereq-intent-title">Site Management Best Practices</p></div></div></div>
+                                <div class="prereq-category"><div class="prereq-category-header"><img class="prereq-img" alt="" src="assets/images/leed/we-border.png"><p class="prereq-category-title">Water Efficiency</p><div class="prereq-score"><span class="current-score">0</span><span class="current-divider">/</span><span class="total-score">2</span></div></div><div class="prereq-category-body"><div class="prereq-intent-body"><i class="fa fa-times incomplete"></i><p class="prereq-intent-title">Indoor water use reduction</p></div></div><div class="prereq-category-body"><div class="prereq-intent-body"><i class="fa fa-times incomplete"></i><p class="prereq-intent-title">Building level water metering</p></div></div></div>
+                                <div class="prereq-category"><div class="prereq-category-header"><img class="prereq-img" alt="" src="assets/images/leed/mr-border.png"><p class="prereq-category-title">Materials and Resources</p><div class="prereq-score"><span class="current-score">0</span><span class="current-divider">/</span><span class="total-score">2</span></div></div><div class="prereq-category-body"><div class="prereq-intent-body"><i class="fa fa-times incomplete"></i><p class="prereq-intent-title">Waste &amp; Purchasing Policy</p></div></div><div class="prereq-category-body"><div class="prereq-intent-body"><i class="fa fa-times incomplete"></i><p class="prereq-intent-title">Renovation Policy</p></div></div></div>
                                 -->
                         </div>
                         <div class="pull-right performance-notifications">
@@ -1620,3 +1704,4 @@
         </div>
     </div>
 </div>
+<div class="hiddendiv common"></div>
