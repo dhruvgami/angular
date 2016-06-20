@@ -647,7 +647,7 @@ li.add-custom-strategy .fa-plus{
     z-index:    1000;
     height:     15px;
     width:      15px;
-    background: url('../dashboard/img/loading-spin.gif') 
+    background: url('../images/loading-spin.gif') 
                 50% 50% 
                 no-repeat;
 }
@@ -817,7 +817,7 @@ li.add-custom-strategy .fa-plus{
   background-size: 35px 35px;
   width: 35px;
   position: absolute;
-  background-image: url('../../dashboard/img/elements/file_icon_off.png');
+  background-image: url('../images/file_icon_off.png');
 }
 
 .collapsible.popout {
@@ -1566,7 +1566,7 @@ li.active .hover-apply-strategy .starStrategy
 
 .parent-accordion-section-title p {
   background-color: #E1E1E1;
-  background-image: url("../../dashboard/img/elements/arrowRight_icon_off.png");
+  background-image: url("../images/arrowRight_icon_off.png");
   background-position: 15px center;
   background-repeat: no-repeat;
   border-radius: 4px 4px 4px 4px;
@@ -1597,7 +1597,7 @@ li.active .hover-apply-strategy .starStrategy
 }
 
 .parent-accordion-section-title.active p {
-    background-image: url("../../dashboard/img/elements/arrowDown_credit_white_icon_on.png");
+    background-image: url("../images/arrowDown_credit_white_icon_on.png");
   background-position: 10px center;
 }
 
@@ -1692,7 +1692,7 @@ li.active .hover-apply-strategy .starStrategy
 }
 
 #section-mr .collapsible-body .strategy-success .strategy-question .category-icon{
-    background-image: url('../../dashboard/img/leed/mr-border.png');
+    background-image: url('../images/leed/mr-border.png');
 }
 
 #section-ss .parent-accordion-section-title.active p{
@@ -1731,7 +1731,7 @@ li.active .hover-apply-strategy .starStrategy
 }
 
 #section-ss .collapsible-body .strategy-success .strategy-question .category-icon{
-  background-image: url('../../dashboard/img/leed/ss-border.png');
+  background-image: url('../images/leed/ss-border.png');
 }
 
 #section-iq .parent-accordion-section-title.active p{
@@ -1770,7 +1770,7 @@ li.active .hover-apply-strategy .starStrategy
 }
 
 #section-iq .collapsible-body .strategy-success .strategy-question .category-icon{
-  background-image: url('../../dashboard/img/leed/iq-border.png');
+  background-image: url('../images/leed/iq-border.png');
 }
 
 #section-ea .parent-accordion-section-title.active p{
@@ -1811,7 +1811,7 @@ li.active .hover-apply-strategy .starStrategy
 /* setting color when star is clicked */
 
 #section-ea .collapsible-body .strategy-success .strategy-question .category-icon{
-  background-image: url('../../dashboard/img/leed/ea-border.png');
+  background-image: url('../images/leed/ea-border.png');
 }
 
 #section-we .parent-accordion-section-title.active p{
@@ -1850,7 +1850,7 @@ li.active .hover-apply-strategy .starStrategy
 }
 
 #section-we .collapsible-body .strategy-success .strategy-question .category-icon{
-  background-image: url('../../dashboard/img/leed/we-border.png');
+  background-image: url('../images/leed/we-border.png');
 }
 
 #section-in .parent-accordion-section-title.active p{
@@ -1889,7 +1889,7 @@ li.active .hover-apply-strategy .starStrategy
 }
 
 #section-in .collapsible-body .strategy-success .strategy-question .category-icon{
-    background-image: url('../../dashboard/img/leed/in-border.png');
+    background-image: url('../images/leed/in-border.png');
 }
 
 #section-rp .parent-accordion-section-title.active p{
@@ -1928,7 +1928,7 @@ li.active .hover-apply-strategy .starStrategy
 }
 
 #section-rp .collapsible-body .strategy-success .strategy-question .category-icon{
-    background-image: url('../../dashboard/img/leed/rp-border.png');
+    background-image: url('../images/leed/rp-border.png');
 }
 
 #section-el .parent-accordion-section-title.active p{
@@ -1967,7 +1967,7 @@ li.active .hover-apply-strategy .starStrategy
 }
 
 #section-el .collapsible-body .strategy-success .strategy-question .category-icon{
-    background-image: url('../../dashboard/img/leed/el-border.png');
+    background-image: url('../images/leed/el-border.png');
 }
 
 #section-lt .parent-accordion-section-title.active p{
@@ -2006,7 +2006,7 @@ li.active .hover-apply-strategy .starStrategy
 }
 
 #section-lt .collapsible-body .strategy-success .strategy-question .category-icon{
-  background-image: url('../../dashboard/img/leed/lt-border.png');
+  background-image: url('../images/leed/lt-border.png');
 }
  
 /*----- Section Content -----*/
@@ -2127,7 +2127,7 @@ li.active .hover-apply-strategy .starStrategy
   width: 120%;
   height: 40px;
   overflow: hidden;
-  background: url(../../dashboard/img/elements/arrowDown_icon_on.png) no-repeat 97.5%;
+  background: url(../images/arrowDown_icon_on.png) no-repeat 97.5%;
   border: 1px solid #ccc;
   margin-bottom: 15px;
 }
@@ -2488,7 +2488,7 @@ li.not-applicable .collapsible-header{
 }
 
 #section-sl .collapsible-body .strategy-success .strategy-question .category-icon{
-  background-image: url('../../dashboard/img/leed/sl-border.png');
+  background-image: url('../images/leed/sl-border.png');
 }
 
 #section-np .parent-accordion-section-title.active p{
@@ -2532,7 +2532,7 @@ li.not-applicable .collapsible-header{
 }
 
 #section-np .collapsible-body .strategy-success .strategy-question .category-icon{
-  background-image: url('../../dashboard/img/leed/np-border.png');
+  background-image: url('../images/leed/np-border.png');
 }
 
 #section-gi .parent-accordion-section-title.active p{
@@ -2576,7 +2576,7 @@ li.not-applicable .collapsible-header{
 }
 
 #section-gi .collapsible-body .strategy-success .strategy-question .category-icon{
-  background-image: url('../../dashboard/img/leed/gi-border.png');
+  background-image: url('../images/leed/gi-border.png');
 }
 
 #section-id .parent-accordion-section-title.active p{
@@ -2620,7 +2620,7 @@ li.not-applicable .collapsible-header{
 }
 
 #section-id .collapsible-body .strategy-success .strategy-question .category-icon{
-  background-image: url('../../dashboard/img/leed/id-border.png');
+  background-image: url('../images/leed/id-border.png');
 }
 /* ND styling ends */
 
@@ -2851,7 +2851,7 @@ li.not-applicable .collapsible-header{
 #leed_certification_modal .energy_icon{
     background-repeat: no-repeat;
     height: 22px;
-    background-image: url("../../dashboard/img/energy_icon.png");
+    background-image: url("../images/energy_icon.png");
     background-size: 15px 21px;
     margin-left: 10px;
     margin-top: 35px;
@@ -2860,7 +2860,7 @@ li.not-applicable .collapsible-header{
 #leed_certification_modal .water_icon{
     background-repeat: no-repeat;
     height: 22px;
-    background-image: url("../../dashboard/img/water_icon.png");
+    background-image: url("../images/water_icon.png");
     background-size: 15px 21px;
     margin-left: 10px;
 }
@@ -2868,7 +2868,7 @@ li.not-applicable .collapsible-header{
 #leed_certification_modal .waste_icon{
     background-repeat: no-repeat;
     height: 22px;
-    background-image: url("../../dashboard/img/waste_icon.png");
+    background-image: url("../images/waste_icon.png");
     background-size: 20px 22px;
     margin-left: 10px;
 }
@@ -2876,7 +2876,7 @@ li.not-applicable .collapsible-header{
 #leed_certification_modal .transportation_icon{
     background-repeat: no-repeat;
     height: 22px;
-    background-image: url("../../dashboard/img/transportation_icon.png");
+    background-image: url("../images/transportation_icon.png");
     background-size: 20px 21px;
     margin-left: 10px;
 }
@@ -2884,7 +2884,7 @@ li.not-applicable .collapsible-header{
 #leed_certification_modal .humanexperience_icon{
     background-repeat: no-repeat;
     height: 22px;
-    background-image: url("../../dashboard/img/human_icon.png");
+    background-image: url("../images/human_icon.png");
     background-size: 20px 21px;
     margin-left: 10px;
 }
