@@ -1,18 +1,18 @@
-<link rel="stylesheet" property="stylesheet" href="assets/libs/css/bootstrap.css?v-1.8">
-<link rel="stylesheet" property="stylesheet" href="assets/libs/css/font-awesome.min.css?v-1.8">
-<link rel="stylesheet" property="stylesheet" href="assets/libs/css/jquery.timepicker.css?v-1.8">
-<link rel="stylesheet" property="stylesheet" href="assets/css/dashboard-main.css?v-1.8">
-<link rel="stylesheet" property="stylesheet" href="assets/libs/css/simplePagination.css?v-1.8">
-<link rel="stylesheet" property="stylesheet" href="assets/libs/css/jquery-ui.css?v-1.8">
-<link rel="stylesheet" property="stylesheet" href="assets/libs/css/dj.selectable.css?v-1.8">
-<link rel="stylesheet" property="stylesheet" href="assets/libs/css/nprogress.css?v-1.8">
-<link rel="stylesheet" property="stylesheet" href="assets/libs/css/foundation-datepicker.css?v-1.8">
-<link rel="stylesheet" property="stylesheet" href="assets/libs/css/alertify.core.css?v-1.8">
-<link rel="stylesheet" property="stylesheet" href="assets/libs/css/alertify.bootstrap.css?v-1.8">
-<link rel="stylesheet" property="stylesheet" href="assets/libs/css/jquery.fullPage.css?v-1.8">
-<link rel="stylesheet" property="stylesheet" href="assets/libs/css/multiple-select.css?v-1.8">
-<link rel="stylesheet" property="stylesheet" href="assets/css/dashboard-elements.css?v-1.8">
-<link rel="stylesheet" property="stylesheet" href="assets/libs/css/jquery.qtip.min.css?v-1.8">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/bootstrap.css?v-2.3">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/font-awesome.min.css?v-2.3">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/jquery.timepicker.css?v-2.3">
+<link rel="stylesheet" property="stylesheet" href="assets/css/dashboard-main.css?v-2.3">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/simplePagination.css?v-2.3">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/jquery-ui.css?v-2.3">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/dj.selectable.css?v-2.3">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/nprogress.css?v-2.3">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/foundation-datepicker.css?v-2.3">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/alertify.core.css?v-2.3">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/alertify.bootstrap.css?v-2.3">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/jquery.fullPage.css?v-2.3">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/multiple-select.css?v-2.3">
+<link rel="stylesheet" property="stylesheet" href="assets/css/dashboard-elements.css?v-2.3">
+<link rel="stylesheet" property="stylesheet" href="assets/libs/css/jquery.qtip.min.css?v-2.3">
 
 <!-- Start jQuery Notification Bar -->
 <div class="jquery-header-bar" style="display:none; background: #FFFFFF; width:100%; top: 0px; z-index: 10000; position: fixed; padding: 2px 0px 0px 0px; border-bottom:2px solid #CC0000; box-shadow: 0px 4px 5px #AAAAAA; font-size:14px; font-family: &#39;Lato Regular&#39;, Arial; text-transform:uppercase;">
@@ -33,7 +33,7 @@
     </span>
 </div>
 <div class="nav">
-    <div class="relative nav_item projects_nav" data-page="projects">
+    <div class="relative nav_item projects_nav" data-page="projects" ui-sref="projectState">
         <paper-ripple fit=""></paper-ripple>
         <span class="nav_text" style="margin-left:9px;">Projects</span>
     </div>
@@ -297,24 +297,6 @@
     </div>
     -->
 <!-- Adding LEED Certication ends -->
-<div class="manage_category_nav category_nav gotham" style="display: none;">
-    <!--            <div class="color_bar project_plaque_cat_color"></div>-->
-    <div class="relative manage_category manage_cat_active" category-type="project_plaque">Project Plaque</div>
-    <!--            <div class="color_bar team_cat_color"></div>-->
-    <div class="relative manage_category" category-type="team">Team</div>
-    <!--            <div class="color_bar account_cat_color"></div>-->
-    <div class="relative manage_category" category-type="account">Account</div>
-    <!--            <div class="color_bar billing_cat_color"></div>-->
-    <div class="relative manage_category" category-type="billing">Billing</div>
-    <!--            <div class="color_bar setup_cat_color"></div>-->
-    <div class="relative manage_category" category-type="setup">Setup</div>
-    <!--            <div class="color_bar gresb_cat_color gresb-elem display_none"></div>-->
-    <div class="relative manage_category  gresb-elem" category-type="gresb">GRESB</div>
-    <!--            <div class="color_bar strategies_cat_color"></div>-->
-    <div class="relative manage_category" category-type="strategies">Strategies</div>
-    <!--            <div class="color_bar connected_apps_cat_color"></div>-->
-    <div class="relative manage_category  display_none" category-type="connected_apps" style="display: block;">Connected Apps</div>
-</div>
 <div class="hideLabel"></div>
 <div class="main_container" ui-view>
 </div>

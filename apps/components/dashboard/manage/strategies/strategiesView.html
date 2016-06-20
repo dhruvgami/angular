@@ -1,0 +1,98 @@
+<div class="lobby_survey_container manage_block">
+    <div class="create-snapshot-div" id="create-snapshot-body">
+        <div class="pull-left">
+            <div class="pull-left-body">
+                <p class="select-label">Manage your LEED Dynamic Plaque Strategies.</p>
+                <div class="select-system-label">Select LEED System</div>
+                <div class="selected-system-dropdown-grp">
+                    <div class="btn-group select-system-dropdown" style="border: 2px solid rgba(153, 153, 153, 0.82);">
+                        <button style="font-weight: bold;" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="selected-system-text">LEED v4 O+M: Existing Buildings</span><span class="fa fa-angle-down"></span></button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="already-selected-rs" data-ratingsystem-key="LEED v4 O+M: EB ACP">Alternate Compliance Path</li>
+                            <li class="" data-ratingsystem-key="LEED v4 ND">LEED v4 Neighborhood Development</li>
+                            <li class="already-selected-rs" data-ratingsystem-key="LEED v4 O+M: EB">LEED v4 O+M: Existing Buildings</li>
+                        </ul>
+                    </div>
+                    <div class="delete-building-system" data-ratingsystem-key="LEED v4 O+M: EB"><img src="assets/images/fa-times-thin.png"><span style="margin-left: 5px;">Delete</span></div>
+                </div>
+                <div class="selected-system-dropdown-grp">
+                    <div class="btn-group select-system-dropdown" style="border: 2px solid rgba(153, 153, 153, 0.82);">
+                        <button style="font-weight: bold;" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="selected-system-text">Alternate Compliance Path</span><span class="fa fa-angle-down"></span></button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="already-selected-rs" data-ratingsystem-key="LEED v4 O+M: EB ACP">Alternate Compliance Path</li>
+                            <li class="" data-ratingsystem-key="LEED v4 ND">LEED v4 Neighborhood Development</li>
+                            <li class="already-selected-rs" data-ratingsystem-key="LEED v4 O+M: EB">LEED v4 O+M: Existing Buildings</li>
+                        </ul>
+                    </div>
+                    <div class="delete-building-system" data-ratingsystem-key="LEED v4 O+M: EB ACP"><img src="assets/images/fa-times-thin.png"><span style="margin-left: 5px;">Delete</span></div>
+                </div>
+                <div class="selected-system-dropdown-grp">
+                    <div class="btn-group select-system-dropdown" style="border: 2px solid rgba(153, 153, 153, 0.82);">
+                        <button style="font-weight: bold;" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="selected-system-text">Alternate Compliance Path</span><span class="fa fa-angle-down"></span></button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="already-selected-rs" data-ratingsystem-key="LEED v4 O+M: EB ACP">Alternate Compliance Path</li>
+                            <li class="" data-ratingsystem-key="LEED v4 ND">LEED v4 Neighborhood Development</li>
+                            <li class="already-selected-rs" data-ratingsystem-key="LEED v4 O+M: EB">LEED v4 O+M: Existing Buildings</li>
+                        </ul>
+                    </div>
+                    <div class="delete-building-system" data-ratingsystem-key="LEED v4 O+M: EB ACP"><img src="assets/images/fa-times-thin.png"><span style="margin-left: 5px;">Delete</span></div>
+                </div>
+                <div class="select-system-dropdown-grp">
+                    <div class="btn-group select-system-dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <span class="selected-system-text">Select a LEED System</span>
+                        <span class="fa fa-angle-down"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li data-ratingsystem-key="LEED v4 O+M: EB ACP">Alternate Compliance Path</li>
+                            <li data-ratingsystem-key="LEED v4 ND">LEED v4 Neighborhood Development</li>
+                            <li data-ratingsystem-key="LEED v4 O+M: EB">LEED v4 O+M: Existing Buildings</li>
+                        </ul>
+                    </div>
+                    <div class="delete-selected-system">
+                        <img src="assets/images/fa-times-thin.png">
+                        <span>Delete</span>
+                    </div>
+                </div>
+                <div id="add-multiple-rating-div">
+                    <p>Need to use multiple rating systems?</p>
+                    <div id="add-multiple-rating-body">
+                        <span class="plus-icon-label">+</span>
+                        <span class="add-rating-system-label">Add another rating system</span>                        
+                    </div>
+                </div>
+                <div class="button-group createSnapshotDiv">
+                    <a class="btn" id="updateSnapshot">Save</a>
+                </div>
+            </div>
+        </div>
+        <div class="pull-right">
+            <p>Dont know which LEED system to pick?</p>
+            <a href="">Discover which LEED rating systems applies to your project.</a>
+        </div>
+    </div>
+    <!--
+        <div class="header_lobby pl25 pr25 pt25">
+            <div class="heading6 gotham bold">Select Rating System</div>
+            <div class="floatr">
+                <button id="expand_lobby" class="btnExpand gotham outline_zero w83"><span style="font-weight:bold;">Expand</span></button>
+            </div>
+        </div>
+        <div class="header_content gotham bold pl25 pr25">
+            <div><p>Manage your LEED Dynamic Plaue Strategies</p></div>
+        </div>
+        <div class="header_content gotham bold pl25 pr25 display_none expand_lobby_slide">
+            <div class="display_inlineb">
+                <div>
+                    <div class="btn-group" id="ratingSystemList-dropdown">
+                        <div class="controls custom-styled-select">
+                            <select class="ratingsystemList">
+                                <option value="">Select rating system</option>
+                            </select>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        -->           
+</div>

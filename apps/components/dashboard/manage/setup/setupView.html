@@ -1,0 +1,334 @@
+<div id="buildingSetup">
+    <div class="page_type data_input required_section">Basics</div>
+    <form class="data_input required_form setup setup_form" id="form">
+        <div class="data_input required_content">
+            <!----------------------------- Basics -------------------------->
+            <div class="row marginleft0">
+                <p class="highlight small-12 columns ">Basics</p>
+            </div>
+            <div class="row marginleft0">
+                <div class="small-6 columns ">
+                    <div class="small-5 columns field_label nopadding">
+                        Facility Name
+                    </div>
+                    <div class="small-7 columns">
+                        <input required="" type="text" disabled="disabled" placeholder="Building name" name="buildingname" id="buildingname">
+                    </div>
+                </div>
+                <div class="small-6 columns">
+                    <div class="small-5 columns field_label">
+                        Project ID
+                    </div>
+                    <div class="small-7 columns">
+                        <input required="" type="number" disabled="disabled" placeholder="N/A" name="projectid" id="projectid">
+                    </div>
+                </div>
+            </div>
+            <div class="row marginleft0">
+                <div class="small-6 columns ">
+                    <div class="small-5 columns field_label nopadding">
+                        Year Built
+                    </div>
+                    <div class="small-7 columns">
+                        <input required="" type="number" min="1000" placeholder="e.g. 1985" name="year_constructed" id="yearbuilt">
+                    </div>
+                </div>
+                <!--            <div class="small-6 columns">
+                    <div class="small-5 columns field_label">
+                        Property Type
+                    </div>
+                    <div class="small-7 columns">
+                        <input required type="text" placeholder="E.g. Commercial" name="propertytype" id="propertytype" />
+                    </div>
+                    </div> -->
+            </div>
+            <!----------------------------- Address -------------------------->
+            <div class="row marginleft0">
+                <p class="highlight small-12 columns ">Address</p>
+            </div>
+            <div class="row marginleft0">
+                <div class="small-6 columns ">
+                    <div class="small-5 columns field_label nopadding has_sub">
+                        Street Address
+                    </div>
+                    <div class="small-7 columns" style="position: relative;">
+                        <div class="ajax_loader" style="display: none;"></div>
+                        <div class="ajax_loader" style="display: none;"></div>
+                        <div class="ajax_loader" style="display: none;"></div>
+                        <div class="ajax_loader" style="display: none;"></div>
+                        <div class="ajax_loader" style="display: none;"></div>
+                        <input required="" type="text" disabled="disabled" placeholder="e.g. 123 Camino Street" name="streetaddress1" id="streetaddress1" style="border-color: rgb(57, 180, 70);">
+                    </div>
+                </div>
+            </div>
+            <!--        <div class="row">
+                <div class="small-6 columns ">
+                    <div class="small-5 columns field_label nopadding has_sub">
+                        Street Address
+                        <div class="sub">Line 2</div>
+                    </div>
+                    <div class="small-7 columns">
+                        <input type="text" placeholder="e.g. Building G" name="streetaddress2" id="streetaddress2" />
+                    </div>
+                </div>
+                </div> -->
+            <div class="row marginleft0">
+                <div class="small-6 columns ">
+                    <div class="small-5 columns field_label nopadding has_sub">
+                        City
+                        <div class="sub">Or Nearest City</div>
+                    </div>
+                    <div class="small-7 columns">
+                        <input required="" type="text" disabled="disabled" placeholder="e.g. Seattle" name="city" id="city">
+                    </div>
+                </div>
+                <div class="small-6 columns">
+                    <div class="small-5 columns field_label nopadding">
+                        County
+                    </div>
+                    <div class="small-7 columns">
+                        <input type="text" disabled="disabled" name="county" id="county">
+                    </div>
+                </div>
+            </div>
+            <div class="row marginleft0">
+                <div class="small-6 columns ">
+                    <div class="small-5 columns field_label nopadding">
+                        ZIP Code
+                    </div>
+                    <div class="small-7 columns">
+                        <input required="" type="text" min="0" placeholder="e.g. 98101" name="zip_code" id="zipcode">
+                    </div>
+                </div>
+                <div class="small-6 columns">
+                    <div class="small-5 columns field_label nopadding">
+                        State/Province
+                    </div>
+                    <div class="small-7 columns">
+                        <input type="text" disabled="disabled" required="" name="state" id="state">
+                    </div>
+                </div>
+            </div>
+            <div class="row marginleft0">
+                <div class="small-6 columns ">
+                    <div class="small-5 columns field_label nopadding">
+                        Country
+                    </div>
+                    <div class="small-7 columns">
+                        <input type="text" disabled="disabled" required="" placeholder="USA" name="country" id="country">
+                    </div>
+                </div>
+            </div>
+            <!--
+                <div>
+                        <button type="button" id="plan_selection" class="btnGreen"> SELECT A PLAN > </button>
+                </div>
+                -->
+            <!----------------------------- Building Setup -------------------------->
+            <div class="page_type data_input required_section">Building Setup</div>
+            <div class="row marginleft0">
+                <p class="highlight small-12 columns ">Gross floor area</p>
+            </div>
+            <div class="row marginleft0">
+                <div class="small-6 columns ">
+                    <div class="small-5 columns field_label nopadding">
+                        Floor Area
+                    </div>
+                    <div class="small-7 columns" style="position: relative;">
+                        <div class="ajax_loader" style="display: none;"></div>
+                        <input required="" type="number" placeholder="e.g. 87,500" name="gross_area" pattern="\d+(\.\d{2})?" id="floorarea" style="border-color: rgb(57, 180, 70);">
+                    </div>
+                </div>
+                <!--            <div class="small-6 columns ">
+                    <div class="small-7 columns nopadding">
+                        <select style="width:60px">
+                          <option value="squarefeet">ft&sup2;</option>
+                          <option value="squaremeter">m&sup2;</option>
+                        </select>
+                    </div>
+                    </div> -->
+            </div>
+            <div class="row marginleft0">
+                <p class="highlight small-12 columns " id="operatingHours">Typical Operating Hours (24-hour format)</p>
+            </div>
+            <div class="row marginleft0">
+                <div class="small-6 columns ">
+                    <div class="small-5 columns field_label nopadding">
+                        Week Total
+                    </div>
+                    <div class="small-7 columns">
+                        <input required="" type="number" placeholder="e.g. 40" name="operating_hours" pattern="\d+(\.\d{2})?" id="totalHours">
+                    </div>
+                </div>
+                <div class="small-6 columns field_label nopadding">
+                    <div class="sub">
+                        <div class="show_calculator">
+                            Help me Calculate
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Start of Calculator -->
+            <div id="hours_calculator">
+                <div class="row marginleft0">
+                    <div class="small-6 columns ">
+                        <div class="small-5 columns field_label nopadding">
+                            Monday
+                        </div>
+                        <div class="small-7 columns nopadding day">
+                            <div class="small-5 columns">
+                                <input type="text" class="time from ui-timepicker-input" placeholder="07:00" name="monday_from" id="monday_from" autocomplete="off">
+                            </div>
+                            <div class="small-2 columns dash">—</div>
+                            <div class="small-5 columns">
+                                <input type="text" class="time to ui-timepicker-input" placeholder="18:00" name="monday_to" id="monday_to" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="small-6 columns">
+                        <div class="small-5 columns field_label">
+                            Saturday
+                        </div>
+                        <div class="small-7 columns nopadding day">
+                            <div class="small-5 columns">
+                                <input type="text" class="time from ui-timepicker-input" placeholder="07:00" name="saturday_from" id="saturday_from" autocomplete="off">
+                            </div>
+                            <div class="small-2 columns dash">—</div>
+                            <div class="small-5 columns">
+                                <input type="text" class="time to ui-timepicker-input" placeholder="18:00" name="saturday_to" id="saturday_to" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row marginleft0">
+                    <div class="small-6 columns ">
+                        <div class="small-5 columns field_label nopadding">
+                            Tuesday
+                        </div>
+                        <div class="small-7 columns nopadding day">
+                            <div class="small-5 columns">
+                                <input type="text" class="time from ui-timepicker-input" placeholder="07:00" name="tuesday_form" id="tuesday_form" autocomplete="off">
+                            </div>
+                            <div class="small-2 columns dash">—</div>
+                            <div class="small-5 columns">
+                                <input type="text" class="time to ui-timepicker-input" placeholder="18:00" name="tuesday_to" id="tuesday_to" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="small-6 columns">
+                        <div class="small-5 columns field_label">
+                            Sunday
+                        </div>
+                        <div class="small-7 columns nopadding day">
+                            <div class="small-5 columns">
+                                <input type="text" class="time from ui-timepicker-input" placeholder="07:00" name="sunday_from" id="sunday_from" autocomplete="off">
+                            </div>
+                            <div class="small-2 columns dash">—</div>
+                            <div class="small-5 columns">
+                                <input type="text" class="time to ui-timepicker-input" placeholder="18:00" name="sunday_to" id="sunday_to" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row marginleft0">
+                    <div class="small-6 columns ">
+                        <div class="small-5 columns field_label nopadding">
+                            Wednesday
+                        </div>
+                        <div class="small-7 columns nopadding day">
+                            <div class="small-5 columns">
+                                <input type="text" class="time from ui-timepicker-input" placeholder="07:00" name="wednesday_form" id="wednesday_form" autocomplete="off">
+                            </div>
+                            <div class="small-2 columns dash">—</div>
+                            <div class="small-5 columns">
+                                <input type="text" class="time to ui-timepicker-input" placeholder="18:00" name="wednesday_to" id="wednesday_to" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row marginleft0">
+                    <div class="small-6 columns ">
+                        <div class="small-5 columns field_label nopadding">
+                            Thursday
+                        </div>
+                        <div class="small-7 columns nopadding day">
+                            <div class="small-5 columns">
+                                <input type="text" class="time from ui-timepicker-input" placeholder="07:00" name="thursday_form" id="thursday_form" autocomplete="off">
+                            </div>
+                            <div class="small-2 columns dash">—</div>
+                            <div class="small-5 columns">
+                                <input type="text" class="time to ui-timepicker-input" placeholder="18:00" name="thursday_to" id="thursday_to" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row marginleft0">
+                    <div class="small-6 columns ">
+                        <div class="small-5 columns field_label nopadding">
+                            Friday
+                        </div>
+                        <div class="small-7 columns nopadding day">
+                            <div class="small-5 columns">
+                                <input type="text" class="time from ui-timepicker-input" placeholder="07:00" name="friday_form" id="friday_form" autocomplete="off">
+                            </div>
+                            <div class="small-2 columns dash">—</div>
+                            <div class="small-5 columns">
+                                <input type="text" class="time to ui-timepicker-input" placeholder="18:00" name="friday_to" id="friday_to" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of calculator -->
+            <div class="row marginleft0">
+                <p class="highlight small-12 columns ">Building Occupancy</p>
+            </div>
+            <div class="row marginleft0">
+                <div class="small-6 columns ">
+                    <div class="small-5 columns field_label nopadding">
+                        Occupancy
+                    </div>
+                    <div class="small-7 columns" style="position: relative;">
+                        <div class="ajax_loader" style="display: none;"></div>
+                        <div class="ajax_loader" style="display: none;"></div>
+                        <div class="ajax_loader" style="display: none;"></div>
+                        <div class="ajax_loader" style="display: none;"></div>
+                        <input required="" type="number" min="0" placeholder="e.g. 500" name="occupancy" id="occupancy" style="border-color: rgb(57, 180, 70);">
+                    </div>
+                </div>
+                <div class="small-6 columns columns field_label nopadding">
+                    <!--<div class="sub">
+                        Includes both permanent occupants and visitors.
+                        </div>-->
+                </div>
+            </div>
+            <div class="page_type data_input required_section">Links</div>
+            <br><br>
+            <div class="surveyCont">
+                <div class="setupbtn_div">
+                    <div class="setupbtn_desc">View LEED Dynamic Plaque and access Dashboard</div>
+                    <button id="plaque_link" class="btn_display relative" value="/plaque/LEED:1000000117/?key=1960ea90d643eb54e19be82b">
+                        <paper-ripple fit=""></paper-ripple>
+                        View Plaque
+                    </button>
+                </div>
+                <br><br>
+                <div class="setupbtn_div">
+                    <div class="setupbtn_desc">Access User Manual</div>
+                    <button id="survey_link" class="btn_display relative" download="">
+                        <paper-ripple fit=""></paper-ripple>
+                        Download
+                    </button>
+                </div>
+                <br><br>
+                <div class="setupbtn_div mt7p" style="margin-right: -1%">
+                    <div class="setupbtn_desc" style="padding-top: 7px;">Email survey to all building occupants</div>
+                    <button id="survey_link_email" class="btn_display relative" style="margin-right: 16px;" value="/dashboard/?page=survey&amp;LEED=1000000117&amp;language=en&amp;key=1960ea90d643eb54e19be82b">
+                        <paper-ripple fit=""></paper-ripple>
+                        Email Survey
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
