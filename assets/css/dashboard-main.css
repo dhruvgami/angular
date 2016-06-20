@@ -4907,7 +4907,7 @@ button.disabled, button[disabled], .button.disabled, .button[disabled]{
     padding-left: 30px;
 }
 
-.input_nav_active, .input_nav:hover
+.input_nav:hover, .navigation-tab.input_nav.active
 {
     color: black;
     border-bottom: 3px solid black;
