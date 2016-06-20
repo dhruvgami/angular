@@ -4,6 +4,7 @@ var LEEDOnApp = angular.module('LEEDOnApp', ['ui.router']);
 LEEDOnApp.config(function($stateProvider, $urlRouterProvider) {
     
     $urlRouterProvider.otherwise("/home");
+    $urlRouterProvider.when('/dashboard','/dashboard/score');
 
     $stateProvider
     .state("homeState", {
@@ -22,13 +23,33 @@ LEEDOnApp.config(function($stateProvider, $urlRouterProvider) {
         controller : "projectController"
      })
     .state("dashboardState", {
-        url: "/dashboard/score",
+        url: "/dashboard",
         templateUrl: "apps/components/dashboard/dashboardView.html",
         controller : "dashboardController"
-     });
-    // .state("dashboardState.scoreState", {
-    //     url: "/score",
-    //     templateUrl: "apps/components/score/scoreView.html",
-    //     controller : "scoreController"
-    // });
+     })
+    .state("dashboardState.scoreState", {
+        url: "/score",
+        templateUrl: "apps/components/dashboard/score/scoreView.html",
+        controller : "scoreController"
+    })
+    .state("dashboardState.dataState", {
+        url: "/data",
+        templateUrl: "apps/components/dashboard/data/dataView.html",
+        controller : "dataController"
+    })
+    .state("dashboardState.strategiesState", {
+        url: "/strategies",
+        templateUrl: "apps/components/dashboard/strategies/strategiesView.html",
+        controller : "strategiesController"
+    })
+    .state("dashboardState.analysisState", {
+        url: "/analysis",
+        templateUrl: "apps/components/dashboard/analysis/analysisView.html",
+        controller : "analysisController"
+    })
+    .state("dashboardState.manageState", {
+        url: "/manage",
+        templateUrl: "apps/components/dashboard/manage/manageView.html",
+        controller : "manageController"
+    });
 });
