@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="9px" height="33px" viewBox="0 0 9 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="ProjectAnalysisOverview-Copy" sketch:type="MSArtboardGroup" transform="translate(-669.000000, -561.000000)">
+            <g id="Group" sketch:type="MSLayerGroup" transform="translate(667.855437, 561.348547)">
+                <g transform="translate(1.000000, 0.000000)" sketch:type="MSShapeGroup">
+                    <rect id="Rectangle-99" fill="#9B9B9B" x="1.00350877" y="0" width="8.02807018" height="32" rx="1"></rect>
+                    <path d="M0.994757164,28.5 L3.00177471,28.5" id="Line-6" stroke="#FFFFFF" stroke-linecap="round"></path>
+                    <path d="M0.994757164,23.5 L4.00528348,23.5" id="Line-5" stroke="#FFFFFF" stroke-linecap="round"></path>
+                    <path d="M0.994757164,18.5 L3.00177471,18.5" id="Line-4" stroke="#FFFFFF" stroke-linecap="round"></path>
+                    <path d="M0.994757164,13.5 L4.00528348,13.5" id="Line-3" stroke="#FFFFFF" stroke-linecap="round"></path>
+                    <path d="M0.994757164,8.5 L3.00177471,8.5" id="Line-2" stroke="#FFFFFF" stroke-linecap="round"></path>
+                    <path d="M0.994757164,3.5 L4.00528348,3.5" id="Line-Copy-3" stroke="#FFFFFF" stroke-linecap="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

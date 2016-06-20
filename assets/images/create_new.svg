@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="84px" height="90px" viewBox="0 0 84 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g id="Payment-Flow-v7-(USGBC)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-76">
+            <g id="Group-+-Oval-24-+-Line-+-Line-Copy" transform="translate(10.000000, 0.000000)">
+                <g id="Group" transform="translate(0.000000, 10.000000)" stroke="#979797">
+                    <rect id="Rectangle-760" x="0" y="0.76" width="64" height="79" rx="3"></rect>
+                    <rect id="Rectangle-760-Copy" x="0" y="64.76" width="64" height="15" rx="3"></rect>
+                    <rect id="Rectangle-761" x="9" y="10.76" width="46" height="5"></rect>
+                    <rect id="Rectangle-761-Copy" x="9" y="19.76" width="46" height="5"></rect>
+                    <rect id="Rectangle-761-Copy-2" x="9" y="28.76" width="46" height="5"></rect>
+                    <rect id="Rectangle-761-Copy-3" x="33" y="40.76" width="22" height="17"></rect>
+                </g>
+                <g id="Oval-24-+-Line-+-Line-Copy" transform="translate(53.000000, 0.760000)">
+                    <circle id="Oval-24" fill="#95BF58" cx="10.5" cy="10.5" r="10.5"></circle>
+                    <path d="M10.5,6.5 L10.5,14.5" id="Line" stroke="#FFFFFF" stroke-linecap="square"></path>
+                    <path d="M14.5,10.5 L6.5,10.5" id="Line-Copy" stroke="#FFFFFF" stroke-linecap="square"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
