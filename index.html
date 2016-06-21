@@ -6,30 +6,42 @@
     <meta name="description" content="LEEDOn - LEED Dynamic Plaque and LEED Performance Score">
     <meta name="author" content="USGBC">
 	<title ng-bind="header"></title>
-	<link rel="stylesheet" type="text/css" href="assets/css/main.css?v-10.41">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css?v-10.57">
 </head>
 <body>
+	<div id="main_preloader">
+		<div id="main_status">
+			<i id="main_payment_loading_gif"></i>
+		</div>
+	</div>
     <div id="main_app" ui-view class="{{main_appClass}}">
     </div>
 	<script src="assets/libs/js/angular.min.js"></script>
 	<script src="assets/libs/js/angular-ui-router.min.js"></script>
-	<script src="app.route.js?v-10.41"></script>
-	<script src="apps/components/home/homeController.js?v-10.41"></script>
-	<script src="apps/components/login/loginController.js?v-10.41"></script>
-	<script src="apps/components/project/projectController.js?v-10.41"></script>
-	<script src="apps/components/dashboard/dashboardController.js?v-10.41"></script>
-	<script src="apps/components/dashboard/score/scoreController.js?v-10.41"></script>
-	<script src="apps/components/dashboard/data/dataController.js?v-10.41"></script>
-	<script src="apps/components/dashboard/strategies/strategiesController.js?v-10.41"></script>
-	<script src="apps/components/dashboard/analysis/analysisController.js?v-10.41"></script>
-	<script src="apps/components/dashboard/manage/manageController.js?v-10.41"></script>
-	<script src="apps/components/dashboard/manage/projectplaque/projectplaqueController.js?v-10.41"></script>
-	<script src="apps/components/dashboard/manage/team/teamController.js?v-10.41"></script>
-	<script src="apps/components/dashboard/manage/account/accountController.js?v-10.41"></script>
-	<script src="apps/components/dashboard/manage/billing/billingController.js?v-10.41"></script>
-	<script src="apps/components/dashboard/manage/setup/setupController.js?v-10.41"></script>
-	<script src="apps/components/dashboard/manage/gresb/gresbController.js?v-10.41"></script>
-	<script src="apps/components/dashboard/manage/strategies/strategiesController.js?v-10.41"></script>
-	<script src="apps/components/dashboard/manage/connectedapps/connectedappsController.js?v-10.41"></script>
+	<script src="app.route.js?v-10.57"></script>
+	<script src="apps/components/home/homeController.js?v-10.57"></script>
+	<script src="apps/components/login/loginController.js?v-10.57"></script>
+	<script src="apps/components/project/projectController.js?v-10.57"></script>
+	<script src="apps/components/dashboard/dashboardController.js?v-10.57"></script>
+	<script src="apps/components/dashboard/score/scoreController.js?v-10.57"></script>
+	<script src="apps/components/dashboard/data/dataController.js?v-10.57"></script>
+	<script src="apps/components/dashboard/data/input/inputController.js?v-10.57"></script>
+	<script src="apps/components/dashboard/data/input/energy/energyController.js?v-10.57"></script>
+	<script src="apps/components/dashboard/data/input/water/waterController.js?v-10.57"></script>
+	<script src="apps/components/dashboard/data/input/waste/wasteController.js?v-10.57"></script>
+	<script src="apps/components/dashboard/data/input/transport/transportController.js?v-10.57"></script>
+	<script src="apps/components/dashboard/data/input/human/humanController.js?v-10.57"></script>
+	<script src="apps/components/dashboard/data/survey/surveyController.js?v-10.57"></script>
+	<script src="apps/components/dashboard/strategies/strategiesController.js?v-10.57"></script>
+	<script src="apps/components/dashboard/analysis/analysisController.js?v-10.57"></script>
+	<script src="apps/components/dashboard/manage/manageController.js?v-10.57"></script>
+	<script src="apps/components/dashboard/manage/projectplaque/projectplaqueController.js?v-10.57"></script>
+	<script src="apps/components/dashboard/manage/team/teamController.js?v-10.57"></script>
+	<script src="apps/components/dashboard/manage/account/accountController.js?v-10.57"></script>
+	<script src="apps/components/dashboard/manage/billing/billingController.js?v-10.57"></script>
+	<script src="apps/components/dashboard/manage/setup/setupController.js?v-10.57"></script>
+	<script src="apps/components/dashboard/manage/gresb/gresbController.js?v-10.57"></script>
+	<script src="apps/components/dashboard/manage/strategies/strategiesController.js?v-10.57"></script>
+	<script src="apps/components/dashboard/manage/connectedapps/connectedappsController.js?v-10.57"></script>
 </body>
 </html>

@@ -1,0 +1,38 @@
+
+<div class="meterListHolder">
+    <div class="data_input_category_nav category_nav gotham meter_types_nav">
+        <div class="navHeader">Inputs</div>
+        <div class="color_bar energy_cat_color" id="energy_cat_color_angular"></div>
+        <div class="data_input_category energy_cat" category-type="energy" ui-sref-active="active" ui-sref=".energyState">
+            <!--                <paper-ripple fit></paper-ripple>-->
+            <div class="icon_category energy_icon"></div>
+            <span class="category_text">Energy</span>
+        </div>
+        <div class="color_bar water_cat_color" id="water_cat_color_angular"></div>
+        <div class="data_input_category water_cat" category-type="water" ui-sref-active="active" ui-sref=".waterState">
+            <!--                <paper-ripple fit></paper-ripple>-->
+            <div class="icon_category water_icon"></div>
+            <span class="category_text">Water</span>
+        </div>
+        <div class="color_bar waste_cat_color" id="waste_cat_color_angular"></div>
+        <div class="data_input_category waste_cat" category-type="waste" ui-sref-active="active" ui-sref=".wasteState">
+            <!--                <paper-ripple fit></paper-ripple>-->
+            <div class="icon_category waste_icon"></div>
+            <span class="category_text">Waste</span>
+        </div>
+        <div class="color_bar transportation_cat_color" id="transport_cat_color_angular"></div>
+        <div class="data_input_category transportation_cat" category-type="transportation" ui-sref-active="active" ui-sref=".transportState">
+            <!--                <paper-ripple fit></paper-ripple>-->
+            <div class="icon_category transportation_icon"></div>
+            <span class="category_text">Transportation</span>
+        </div>
+        <div class="color_bar humanexperience_cat_color" id="human_cat_color_angular"></div>
+        <div class="data_input_category humanexperience_cat" category-type="humanexperience" ui-sref-active="active" ui-sref=".humanState">
+            <!--                <paper-ripple fit></paper-ripple>-->
+            <div class="icon_category humanexperience_icon"></div>
+            <span class="category_text">Human Experience</span>
+        </div>
+    </div>
+    <div class="meterList" ui-view>
+    </div>
+</div>

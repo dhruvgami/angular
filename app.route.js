@@ -5,6 +5,8 @@ LEEDOnApp.config(function($stateProvider, $urlRouterProvider) {
     
     $urlRouterProvider.otherwise("/home");
     $urlRouterProvider.when('/dashboard','/dashboard/score');
+    $urlRouterProvider.when('/dashboard/data','/dashboard/data/input');
+    $urlRouterProvider.when('/dashboard/data/input','/dashboard/data/input/energy');
     $urlRouterProvider.when('/dashboard/manage','/dashboard/manage/projectplaque');
 
     $stateProvider
@@ -37,6 +39,41 @@ LEEDOnApp.config(function($stateProvider, $urlRouterProvider) {
         url: "/data",
         templateUrl: "apps/components/dashboard/data/dataView.html",
         controller : "dataController"
+    })
+    .state("dashboardState.dataState.inputState", {
+        url: "/input",
+        templateUrl: "apps/components/dashboard/data/input/inputView.html",
+        controller : "inputController"
+    })
+    .state("dashboardState.dataState.inputState.energyState", {
+        url: "/energy",
+        templateUrl: "apps/components/dashboard/data/input/energy/energyView.html",
+        controller : "energyController"
+    })
+    .state("dashboardState.dataState.inputState.waterState", {
+        url: "/water",
+        templateUrl: "apps/components/dashboard/data/input/water/waterView.html",
+        controller : "waterController"
+    })
+    .state("dashboardState.dataState.inputState.wasteState", {
+        url: "/waste",
+        templateUrl: "apps/components/dashboard/data/input/waste/wasteView.html",
+        controller : "wasteController"
+    })
+    .state("dashboardState.dataState.inputState.transportState", {
+        url: "/transport",
+        templateUrl: "apps/components/dashboard/data/input/transport/transportView.html",
+        controller : "transportController"
+    })
+    .state("dashboardState.dataState.inputState.humanState", {
+        url: "/human",
+        templateUrl: "apps/components/dashboard/data/input/human/humanView.html",
+        controller : "humanController"
+    })
+    .state("dashboardState.dataState.surveyState", {
+        url: "/survey",
+        templateUrl: "apps/components/dashboard/data/survey/surveyView.html",
+        controller : "surveyController"
     })
     .state("dashboardState.strategiesState", {
         url: "/strategies",

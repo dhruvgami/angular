@@ -104,31 +104,31 @@
     padding-top: 6px !important;
 }
 
-.energy_cat_active
+.energy_cat_active, .energy_cat.active
 {
     background-image: url("../images/energy_icon_active.png");    
     background-color: #E2E5E8;
     color: black !important;
 }
-.water_cat_active
+.water_cat_active, .water_cat.active
 {
     background-image: url("../images/water_icon_active.png");  
     background-color: #E2E5E8;
     color: black !important;
 }
-.waste_cat_active
+.waste_cat_active, .waste_cat.active
 {
     background-image: url("../images/waste_icon_active.png");  
     background-color: #E2E5E8;
     color: black !important;
 }
-.transportation_cat_active
+.transportation_cat_active, .transportation_cat.active
 {
     background-image: url("../images/transportation_icon_active.png");  
     background-color: #E2E5E8;
     color: black !important;
 }
-.humanexperience_cat_active
+.humanexperience_cat_active, .humanexperience_cat.active
 {
     background-image: url("../images/human_icon_active.png");
     background-color: #E2E5E8;

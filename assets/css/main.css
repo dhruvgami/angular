@@ -5,3 +5,35 @@
 .overflow_y_scroll{
 	overflow-y: scroll;
 }
+
+#main_preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e4e7ea;
+    z-index: 99999999;
+    display: block;
+}
+
+#main_status {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -15px 0 0 -15px;
+    font-size: 32px;
+    z-index: 99999999;
+}
+
+#main_payment_loading_gif {
+    background: url('../images/ajax_loader.gif') no-repeat center center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 99999999;
+}

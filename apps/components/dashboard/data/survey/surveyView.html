@@ -1,0 +1,142 @@
+<div class="survey_main">
+    <div class="page_type no_margin">Transport</div>
+    <div class="highlight align-center">On a typical day, how do you get to work?<br> "one day, one way"</div>
+    <form data-type="survey" id="survey-form">
+        <div class="survey-box" data-number-of-routes="1">
+            <div id="route-original" class="route-box mt70">
+                <div class="row marginleft0 mb20 max_width100">
+                    <div class="small-2 transport_left">
+                        <div class="route_label">Route 1</div>
+                    </div>
+                    <div class="small-10 checks nopadding transport_right">
+                        <input disabled="" type="checkbox" value="walk" class="walk" id="walk">
+                        <label for="walk" class="survey_fontsize">Walk, bike, telecommute</label>
+                        <input disabled="" type="checkbox" value="bus" class="bus" id="bus">
+                        <label for="bus" class="survey_fontsize">Bus</label>
+                        <input disabled="" type="checkbox" value="light_rail" class="light_rail" id="light_rail">
+                        <label for="light_rail" class="survey_fontsize">Tram or light rail</label>
+                        <input disabled="" type="checkbox" value="heavy_rail" class="heavy_rail" id="heavy_rail">
+                        <label for="heavy_rail" class="survey_fontsize">Heavy rail</label>
+                        <input disabled="" type="checkbox" value="motorcycle" class="motorcycle" id="motorcycle">
+                        <label for="motorcycle" class="survey_fontsize">Motorcycle or scooter</label>
+                        <input disabled="" type="checkbox" value="car" class="car" id="car">
+                        <label for="car" class="survey_fontsize">Car: solo</label>
+                        <input disabled="" type="checkbox" value="car23" class="car23" id="car23">
+                        <label for="car23" class="survey_fontsize">Carpool: 2-3 people</label>
+                        <input disabled="" type="checkbox" value="car4" class="cars4" id="cars4">
+                        <label for="cars4" class="survey_fontsize">Car: alternative fuel</label>
+                    </div>
+                </div>
+                <div class="row marginleft0 max_width100">
+                    <div class="small-2 transport_left">
+                        <select class="dist_select">
+                            <option>Miles</option>
+                            <option>Kilometers</option>
+                        </select>
+                    </div>
+                    <div class="small-10 checks distance nopadding transport_right">
+                        <input type="text" step="any" min="0" max="10000" class="small_dist outline_zero" name="walk">
+                        <input type="text" step="any" min="0" max="10000" class="small_dist outline_zero" name="bus">
+                        <input type="text" step="any" min="0" max="10000" class="small_dist outline_zero" name="light_rail">
+                        <input type="text" step="any" min="0" max="10000" class="small_dist outline_zero" name="heavy_rail">
+                        <input type="text" step="any" min="0" max="10000" class="small_dist outline_zero" name="motorcycle">
+                        <input type="text" step="any" min="0" max="10000" class="small_dist outline_zero" name="car">
+                        <input type="text" step="any" min="0" max="10000" class="small_dist outline_zero" name="car23">
+                        <input type="text" step="any" min="0" max="10000" class="small_dist outline_zero" name="cars4">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row margin0">
+            <div class="small-12 add_route_parent">
+                <div class="add_route">Add another route</div>
+            </div>
+        </div>
+        <div class="page_type bordertop pt70">Satisfaction</div>
+        <div class="highlight align-center">How satisfied are you with the environment in this building?</div>
+        <div class="mood">
+            <div class="smiley"></div>
+            <div class="mt40">
+                <div class="low">Extremely<br>Unsatisfied</div>
+                <div id="slider_jquery" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false"><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 50%;"></a></div>
+                <div class="high">Extremely<br>Satisfied</div>
+            </div>
+        </div>
+        <div class="were_sorry">
+            <div class="content_sorry">
+                <div>We’re sorry to hear that. Please select the options below that significantly reduce your satisfaction:</div>
+                <div class="row checkboxes nopadding display_inlineb">
+                    <div class="small-12 w100p nopadding display_inlineb">
+                        <div class="small-3 w24p nopadding display_inlineb">
+                            <input type="checkbox" id="dirty" name="dirty">
+                            <label class="survey_label" for="dirty"><span></span>Dirty</label>
+                        </div>
+                        <div class="small-3 w24p nopadding display_inlineb">
+                            <input type="checkbox" id="smelly" name="smelly">
+                            <label class="survey_label" for="smelly"><span></span>Smelly</label>
+                        </div>
+                        <div class="small-3 w24p nopadding display_inlineb">
+                            <input type="checkbox" id="stuffy" name="stuffy">
+                            <label class="survey_label" for="stuffy"><span></span>Stuffy</label>
+                        </div>
+                        <div class="small-3 w24p nopadding display_inlineb">
+                            <input type="checkbox" id="loud" name="loud">
+                            <label class="survey_label" for="loud"><span></span>Loud</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row checkboxes nopadding display_inlineb">
+                    <div class="small-12 w100p nopadding display_inlineb">
+                        <div class="small-3 w24p nopadding display_inlineb">
+                            <input type="checkbox" id="hot" name="hot">
+                            <label class="survey_label" for="hot"><span></span>Hot</label>
+                        </div>
+                        <div class="small-3 w24p nopadding display_inlineb">
+                            <input type="checkbox" id="cold" name="cold">
+                            <label class="survey_label" for="cold"><span></span>Cold</label>
+                        </div>
+                        <div class="small-3 w24p nopadding display_inlineb">
+                            <input type="checkbox" id="dark" name="dark">
+                            <label class="survey_label" for="dark"><span></span>Dark</label>
+                        </div>
+                        <div class="small-3 w24p nopadding display_inlineb">
+                            <input type="checkbox" id="glare" name="glare">
+                            <label class="survey_label" for="glare"><span></span>Glare</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row checkboxes nopadding display_inlineb">
+                    <div class="small-12 w100p nopadding display_inlineb">
+                        <div class="small-3 w24p nopadding display_inlineb">
+                            <input type="checkbox" id="privacy" name="privacy">
+                            <label class="survey_label" for="privacy"><span></span>Privacy</label>
+                        </div>
+                        <div class="small-6 w50p nopadding display_inlineb">
+                            <input type="text" class="outline_zero" id="other" name="other" placeholder="Other">
+                        </div>
+                        <div class="small-3 w24p nopadding display_inlineb">&nbsp;</div>
+                    </div>
+                </div>
+                <div class="row checkboxes nopadding display_inlineb">
+                    <div class="small-12 w100p nopadding display_inlineb">
+                        <div class="small-3 w24p locationlbl display_inlineb">           
+                            <label class="survey_label" for="location"><span></span>Location : </label>
+                        </div>
+                        <div class="small-6 w50p nopadding display_inlineb">
+                            <input type="text" id="location_field" class="outline_zero" name="location_field" placeholder="e.g. Lobby or other identification">
+                        </div>
+                        <div class="small-3 w24p nopadding display_inlineb">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tenant nopadding">
+            <input type="text" id="tenant_name" class="outline_zero" placeholder="Name (Optional)">
+        </div>
+        <div class="submit_button">
+            <!-- <div class="highlight centered centered small confirmation">Thank you for taking the time.</div> -->
+            <button type="submit" id="survey_submit" class="basic"><span id="survey_submit_txt">Submit</span></button>
+            <!-- <img id="survey_loader" class="display_none" src="/static/dashboard/img/ajax-loader.gif"> -->
+        </div>
+    </form>
+</div>
