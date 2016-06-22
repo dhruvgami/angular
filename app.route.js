@@ -8,7 +8,7 @@ LEEDOnApp.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.when('/dashboard/data','/dashboard/data/input');
     $urlRouterProvider.when('/dashboard/data/input','/dashboard/data/input/energy');
     $urlRouterProvider.when('/dashboard/analysis','/dashboard/analysis/energy');
-    $urlRouterProvider.when('/dashboard/manage','/dashboard/manage/projectplaque');
+    $urlRouterProvider.when('/dashboard/manage','/dashboard/manage/setup');
 
     $stateProvider
     .state("homeState", {
@@ -116,10 +116,10 @@ LEEDOnApp.config(function($stateProvider, $urlRouterProvider) {
         templateUrl: "apps/components/dashboard/manage/manageView.html",
         controller : "manageController"
     })
-    .state("dashboardState.manageState.projectplaqueState", {
-        url: "/projectplaque",
-        templateUrl: "apps/components/dashboard/manage/projectplaque/projectplaqueView.html",
-        controller : "projectplaqueController"
+    .state("dashboardState.manageState.setupState", {
+        url: "/setup",
+        templateUrl: "apps/components/dashboard/manage/setup/setupView.html",
+        controller : "setupController"
     })
     .state("dashboardState.manageState.teamState", {
         url: "/team",
@@ -130,26 +130,6 @@ LEEDOnApp.config(function($stateProvider, $urlRouterProvider) {
         url: "/account",
         templateUrl: "apps/components/dashboard/manage/account/accountView.html",
         controller : "accountController"
-    })
-    .state("dashboardState.manageState.billingState", {
-        url: "/billing",
-        templateUrl: "apps/components/dashboard/manage/billing/billingView.html",
-        controller : "billingController"
-    })
-    .state("dashboardState.manageState.setupState", {
-        url: "/setup",
-        templateUrl: "apps/components/dashboard/manage/setup/setupView.html",
-        controller : "setupController"
-    })
-    .state("dashboardState.manageState.gresbState", {
-        url: "/gresb",
-        templateUrl: "apps/components/dashboard/manage/gresb/gresbView.html",
-        controller : "gresbController"
-    })
-    .state("dashboardState.manageState.strategiesState", {
-        url: "/strategies",
-        templateUrl: "apps/components/dashboard/manage/strategies/strategiesView.html",
-        controller : "strategiesController"
     })
     .state("dashboardState.manageState.connectedappsState", {
         url: "/connectedapps",

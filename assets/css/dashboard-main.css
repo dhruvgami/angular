@@ -329,8 +329,7 @@ body
     background-repeat: no-repeat;
     background-size: 24px;
     padding-top: 50px;
-    background-position-x: 21px;
-    background-position-y: 17px;
+    background-position: 21px 17px;
     font-family: 'Gotham';
 }
 
@@ -2018,7 +2017,7 @@ input#code
     font-weight: bold;
     background-size: 22px;
     margin-left: 14px;
-    background-position-y: 2px;
+    background-position: 0px 2px;
     margin-top: 14px; 
     cursor: pointer;
 }
@@ -3165,7 +3164,7 @@ span.labels
   margin-bottom: 25px !important;
 }
 .mb50 {
-  margin-bottom: 50px;
+  /*margin-bottom: 50px;*/
 }
 .ml3 {
   margin-left: 3px;
@@ -5892,7 +5891,7 @@ button.disabled, button[disabled], .button.disabled, .button[disabled]{
     /* text-align: left; */
     font-family: Gotham;
     margin-top: 30px;
-    padding-left: 30px;
+    padding-left: 25px;
 }
 .pb40 {
     padding-bottom: 40px;
@@ -6404,7 +6403,7 @@ select#country1, select#country2, select#state1, select#state2 {
 #billinginformation
 {
     background-color: white;
-    padding: 0px 30px 5px 30px;
+    padding: 0px 30px 5px 35px;
     margin-bottom: 40px;
     font-family: Gotham;
     font-weight: bold;
@@ -6501,13 +6500,13 @@ table.table-condensed.table-pos {
     /* text-align: center; */
     /* text-align: left; */
     font-family: 'Gotham';
-    padding-left: 30px;
+    padding-left: 25px;
 }
 
 .billingDiv
 {
     background-color: white;
-    padding: 0px 30px 20px 26px;
+    padding: 0px 30px 20px 35px;
     margin-bottom: 40px;
     margin-left: initial !important;
     margin-right: initial !important;
@@ -6523,7 +6522,7 @@ table.table-condensed.table-pos {
     font-weight: bold;
     /* text-align: center; */
     /* text-align: left; */
-    margin-left: 30px;
+    margin-left: 25px;
     font-family: Gotham;
 }
 
@@ -6912,7 +6911,7 @@ div.zoomBtn {
 }
 .column, .columns {
     position: relative;
-    padding-left: 0.9375em;
+    /*padding-left: 0.9375em;*/
     padding-right: 0.9375em;
     width: 100%;
     float: left;
@@ -6943,8 +6942,8 @@ div.zoomBtn {
 }
 #buildingSetup {
     background-color: white;
-    padding: 1px 20px 20px 20px;
-    margin-bottom: 40px;
+    padding: 1px 20px 0px 25px;
+    /* margin-bottom: 40px; */
     margin-top: 10px;
 }
 .setup .time {
@@ -6977,12 +6976,16 @@ div.zoomBtn {
 }
 
 .surveyCont {
-    width: 100%;
+    padding-left: 25px;
+    margin-top: 20px;
 }
 
 .setupbtn_div {
     text-align: center;
-    padding-left: 7%;
+    float: left;
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 20px;
 }
 .setupbtn_desc {
     width: 55%;
@@ -7488,8 +7491,8 @@ div.settingsStatuses .ms-drop ul li label input {
 }
 .gresb_container {
     background-color: white;
-    padding: 30px 25px;
-    margin-bottom: 40px;
+    padding: 25px 25px;
+/*    margin-bottom: 40px;*/
     margin-top: 10px;
 }
 .left-21 {
@@ -7649,6 +7652,8 @@ div.settingsStatuses .ms-drop ul li label input {
     border-bottom: 1px solid lightgrey;
     width: 95.5%;
     margin-left: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .teamManagementWrapper
@@ -7862,3 +7867,102 @@ div.settingsStatuses .ms-drop ul li label input {
     color: #666666;
     cursor: pointer;
 }
+
+.app_list 
+{
+    margin-left: 100px;
+    float: left;
+    width: 90%;
+}
+
+.app_card 
+{
+    float: left;
+    width: 230px;
+    height: 307px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid rgb(225,225,225);
+}
+
+.app_badge 
+{
+    font-size: 11px;
+    color: darkgrey;
+    height: 10%;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.app_detail
+{
+    height: 78%;
+}
+
+.app_card.installed .app_button
+{
+    height: 12%;
+    border-radius: 0px 0px 5px 5px;
+    cursor: pointer;
+    color: rgb(80,174,84);
+    font-size: 11px;
+    padding-top: 10px;
+    padding-left: 15px;
+    border-top: 1px solid rgb(225,225,225);
+}
+
+.app_card.installed .app_button:hover
+{
+    color: rgb(243, 54, 59);
+}
+
+.app_card .app_button
+{
+    height: 12%;
+    border-radius: 0px 0px 5px 5px;
+    cursor: pointer;
+    color: darkgrey;
+    font-size: 11px;
+    padding-top: 10px;
+    padding-left: 15px;
+    border-top: 1px solid rgb(225,225,225);
+}
+
+.app_card .app_button:hover
+{
+    color: rgb(80,174,84);
+}
+
+.app_name 
+{
+    font-size: 17px;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+.app_info
+{
+    padding-left: 15px;
+    padding-top: 5px;
+    color: darkgrey;
+}
+
+/*
+.app_status
+{
+    font-size: 11px;
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+.app_card.installed .app_status
+{
+    color: white;
+}
+
+.app_card .app_status
+{
+    color: darkgrey;
+}
+*/
+

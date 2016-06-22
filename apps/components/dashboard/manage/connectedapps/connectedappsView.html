@@ -1,102 +1,148 @@
-<div class="manage_block">
-    <div class="header_lobby pl25 pr25 pt25">
-        <div class="heading6 gotham bold">Scorecard</div>
-        <div class="floatr">
-            <button id="manage_expand_scorecard" class="btnExpand connected_apps_expand gotham outline_zero w83"><span style="font-weight:bold;">Expand</span></button>
+
+<div class="gresb_container">
+    <div class="gresb-logo gresb-dom mb30">
+        <a href="https://gresb.com/" target="_blank">
+        <img src="assets/images/gresblogo.svg" style="width: 40px;float: left;">
+        </a>
+        <a href="https://gresb.com/" target="_blank">
+        <img src="assets/images/gresbtext.svg" style="width: 125px;text-align: left;padding-left: 8px;">
+        </a>
+    </div>
+    <div id="id_gresb_module" class="display_none">
+        <div class="gresb-dom gotham mb30">
+            <h4 style="text-align: left;">Submitting to GRESB?</h4>
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#gresbModal" style="padding: 10px 30px;">Get Started <i class="fa fa-arrow-circle-right" style="margin-left: 15px;font-size: 22px;vertical-align: bottom;"></i></button>
+        </div>
+        <div class="gresb-dom mb30">
+            <h4 style="text-align: left;">How does submission work?</h4>
+            <ol class="pdl-18 gotham">
+                <li>Connect to your GRESB account</li>
+                <li>Select your GRESB portfolio and Asset</li>
+                <li>Add your GRESB data</li>
+                <li>Submit</li>
+            </ol>
+        </div>
+        <div class="gresb-dom">
+            <h4 style="text-align: left;">What is GRESB?</h4>
+            <p style="font-family: 'Gotham';">GRESB is an industry-driven organization committed to assessing the ESG performance of real assets globally.</p>
+            <p style="font-family: 'Gotham';"><a href="https://gresb.com/" target="_blank">Learn More</a></p>
         </div>
     </div>
-    <div class="header_content gotham bold pl25 pr25">
-        <div>
-            <p>Allow members to see scorecard section</p>
+    <iframe src="http://plaque.dev.leedon.io/gresb/form/" id="gresb_upload_iframe" class="" style="width: 102%;height: 450px;border: none;"></iframe>
+</div>
+<div class="app_list gotham">
+    <div class="app_card" app="ACTIVATE_SCORECARD" status="False">
+        <div class="app_badge">APP</div>
+        <div class="app_detail">
+            <div class="app_name">Scorecard</div>
+            <div class="app_info">Allow members to see scorecard section</div>
         </div>
-    </div>
-    <div class="header_content gotham bold pl25 pr25 display_none expand_connected_apps">
-        <div class="display_inlineb">
-            <div>
-                <input id="checkbox-scorecard" class="checkbox-custom manage-connected-app-button" name="lobbySurvey-1" type="checkbox" checked="checked">
-                <label for="checkbox-scorecard" class="checkbox-custom-label pb25">Enable scorecard section</label>
-            </div>
-        </div>
-        <div class="cursor_pointer blue_color display_inlineb connected_apps_learn" data-toggle="modal" data-target="#connected_app_modal">Learn More</div>
+        <div class="app_button">Install</div>
     </div>
 </div>
-<div class="manage_block">
-    <div class="header_lobby pl25 pr25 pt25">
-        <div class="heading6 gotham bold">Elements</div>
-        <div class="floatr">
-            <button id="manage_expand_elements" class="btnExpand connected_apps_expand gotham outline_zero w83"><span style="font-weight:bold;">Expand</span></button>
-        </div>
-    </div>
-    <div class="header_content gotham bold pl25 pr25">
-        <div><p>Allow members to see elements section</p></div>
-    </div>
-    <div class="header_content gotham bold pl25 pr25 display_none expand_connected_apps">
-        <div class="display_inlineb">
-            <div>
-                <input id="checkbox-elements" class="checkbox-custom manage-connected-app-button" name="lobbySurvey-1" type="checkbox" checked="checked">
-                <label for="checkbox-elements" class="checkbox-custom-label pb25">Enable elements section</label>
+<!--
+    <div class="manage_block">
+        <div class="header_lobby pl25 pr25 pt25">
+            <div class="heading6 gotham bold">Scorecard</div>
+            <div class="floatr">
+                <button id="manage_expand_scorecard" class="btnExpand connected_apps_expand gotham outline_zero w83"><span style="font-weight:bold;">Expand</span></button>
             </div>
         </div>
-        <div class="cursor_pointer blue_color display_inlineb connected_apps_learn" data-toggle="modal" data-target="#connected_app_modal">Learn More</div>
-    </div>
-</div>
-<div class="manage_block">
-    <div class="header_lobby pl25 pr25 pt25">
-        <div class="heading6 gotham bold">Analysis</div>
-        <div class="floatr">
-            <button id="manage_expand_analysis" class="btnExpand connected_apps_expand gotham outline_zero w83"><span style="font-weight:bold;">Expand</span></button>
+        <div class="header_content gotham bold pl25 pr25">
+            <div><p>Allow members to see scorecard section</p></div>
+        </div>
+        <div class="header_content gotham bold pl25 pr25 display_none expand_connected_apps">
+            <div class="display_inlineb">
+                <div>
+                    <input id="checkbox-scorecard" class="checkbox-custom manage-connected-app-button" name="lobbySurvey-1" type="checkbox" checked="checked">
+                    <label for="checkbox-scorecard" class="checkbox-custom-label pb25">Enable scorecard section</label>
+                </div>
+            </div>
+            <div class="cursor_pointer blue_color display_inlineb connected_apps_learn" data-toggle="modal" data-target="#connected_app_modal" >Learn More</div>
         </div>
     </div>
-    <div class="header_content gotham bold pl25 pr25">
-        <div><p>Allow members to see analysis section</p></div>
-    </div>
-    <div class="header_content gotham bold pl25 pr25 display_none expand_connected_apps">
-        <div class="display_inlineb">
-            <div>
-                <input id="checkbox-analysis" class="checkbox-custom manage-connected-app-button" name="lobbySurvey-1" type="checkbox" checked="checked">
-                <label for="checkbox-analysis" class="checkbox-custom-label pb25">Enable analysis section</label>
+    
+    <div class="manage_block">
+        <div class="header_lobby pl25 pr25 pt25">
+            <div class="heading6 gotham bold">Elements</div>
+            <div class="floatr">
+                <button id="manage_expand_elements" class="btnExpand connected_apps_expand gotham outline_zero w83"><span style="font-weight:bold;">Expand</span></button>
             </div>
         </div>
-        <div class="cursor_pointer blue_color display_inlineb connected_apps_learn" data-toggle="modal" data-target="#connected_app_modal">Learn More</div>
-    </div>
-</div>
-<div class="manage_block">
-    <div class="header_lobby pl25 pr25 pt25">
-        <div class="heading6 gotham bold">Alternative Compliance Paths</div>
-        <div class="floatr">
-            <button id="member_expand_ACP" class="btnExpand connected_apps_expand gotham outline_zero w83"><span style="font-weight:bold;">Expand</span></button>
+        <div class="header_content gotham bold pl25 pr25">
+            <div><p>Allow members to see elements section</p></div>
+        </div>
+        <div class="header_content gotham bold pl25 pr25 display_none expand_connected_apps">
+            <div class="display_inlineb">
+                <div>
+                    <input id="checkbox-elements" class="checkbox-custom manage-connected-app-button" name="lobbySurvey-1" type="checkbox" checked="checked">
+                    <label for="checkbox-elements" class="checkbox-custom-label pb25">Enable elements section</label>
+                </div>
+            </div>
+            <div class="cursor_pointer blue_color display_inlineb connected_apps_learn" data-toggle="modal" data-target="#connected_app_modal" >Learn More</div>
         </div>
     </div>
-    <div class="header_content gotham bold pl25 pr25">
-        <div><p>Allow members to see Alternative Compliance Paths section</p></div>
-    </div>
-    <div class="header_content gotham bold pl25 pr25 display_none expand_connected_apps">
-        <div class="display_inlineb">
-            <div>
-                <input id="checkbox-ACP" class="checkbox-custom manage-connected-app-button" name="lobbySurvey-1" type="checkbox" checked="checked">
-                <label for="checkbox-ACP" class="checkbox-custom-label pb25">Enable Alternative Compliance Paths section</label>
+    
+    <div class="manage_block">
+        <div class="header_lobby pl25 pr25 pt25">
+            <div class="heading6 gotham bold">Analysis</div>
+            <div class="floatr">
+                <button id="manage_expand_analysis" class="btnExpand connected_apps_expand gotham outline_zero w83"><span style="font-weight:bold;">Expand</span></button>
             </div>
         </div>
-        <div class="cursor_pointer blue_color display_inlineb connected_apps_learn" data-toggle="modal" data-target="#connected_app_modal">Learn More</div>
-    </div>
-</div>
-<div class="manage_block">
-    <div class="header_lobby pl25 pr25 pt25">
-        <div class="heading6 gotham bold">Explore</div>
-        <div class="floatr">
-            <button id="manage_expand_explore" class="btnExpand connected_apps_expand gotham outline_zero w83"><span style="font-weight:bold;">Expand</span></button>
+        <div class="header_content gotham bold pl25 pr25">
+            <div><p>Allow members to see analysis section</p></div>
+        </div>
+        <div class="header_content gotham bold pl25 pr25 display_none expand_connected_apps">
+            <div class="display_inlineb">
+                <div>
+                    <input id="checkbox-analysis" class="checkbox-custom manage-connected-app-button" name="lobbySurvey-1" type="checkbox" checked="checked">
+                    <label for="checkbox-analysis" class="checkbox-custom-label pb25">Enable analysis section</label>
+                </div>
+            </div>
+            <div class="cursor_pointer blue_color display_inlineb connected_apps_learn" data-toggle="modal" data-target="#connected_app_modal" >Learn More</div>
         </div>
     </div>
-    <div class="header_content gotham bold pl25 pr25">
-        <div><p>Allow members to see explore section</p></div>
-    </div>
-    <div class="header_content gotham bold pl25 pr25 display_none expand_connected_apps">
-        <div class="display_inlineb">
-            <div>
-                <input id="checkbox-explore" class="checkbox-custom manage-connected-app-button" name="lobbySurvey-1" type="checkbox" checked="checked">
-                <label for="checkbox-explore" class="checkbox-custom-label pb25">Enable explore section</label>
+    
+    <div class="manage_block">
+        <div class="header_lobby pl25 pr25 pt25">
+            <div class="heading6 gotham bold">Alternative Compliance Paths</div>
+            <div class="floatr">
+                <button id="member_expand_ACP" class="btnExpand connected_apps_expand gotham outline_zero w83"><span style="font-weight:bold;">Expand</span></button>
             </div>
         </div>
-        <div class="cursor_pointer blue_color display_inlineb connected_apps_learn" data-toggle="modal" data-target="#connected_app_modal">Learn More</div>
+        <div class="header_content gotham bold pl25 pr25">
+            <div><p>Allow members to see Alternative Compliance Paths section</p></div>
+        </div>
+        <div class="header_content gotham bold pl25 pr25 display_none expand_connected_apps">
+            <div class="display_inlineb">
+                <div>
+                    <input id="checkbox-ACP" class="checkbox-custom manage-connected-app-button" name="lobbySurvey-1" type="checkbox" checked="checked">
+                    <label for="checkbox-ACP" class="checkbox-custom-label pb25">Enable Alternative Compliance Paths section</label>
+                </div>
+            </div>
+            <div class="cursor_pointer blue_color display_inlineb connected_apps_learn" data-toggle="modal" data-target="#connected_app_modal" >Learn More</div>
+        </div>
     </div>
-</div>
+    
+    <div class="manage_block">
+        <div class="header_lobby pl25 pr25 pt25">
+            <div class="heading6 gotham bold">Explore</div>
+            <div class="floatr">
+                <button id="manage_expand_explore" class="btnExpand connected_apps_expand gotham outline_zero w83"><span style="font-weight:bold;">Expand</span></button>
+            </div>
+        </div>
+        <div class="header_content gotham bold pl25 pr25">
+            <div><p>Allow members to see explore section</p></div>
+        </div>
+        <div class="header_content gotham bold pl25 pr25 display_none expand_connected_apps">
+            <div class="display_inlineb">
+                <div>
+                    <input id="checkbox-explore" class="checkbox-custom manage-connected-app-button" name="lobbySurvey-1" type="checkbox" checked="checked">
+                    <label for="checkbox-explore" class="checkbox-custom-label pb25">Enable explore section</label>
+                </div>
+            </div>
+            <div class="cursor_pointer blue_color display_inlineb connected_apps_learn" data-toggle="modal" data-target="#connected_app_modal" >Learn More</div>
+        </div>
+    </div>
+    -->

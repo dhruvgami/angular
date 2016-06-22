@@ -1,10 +1,71 @@
-<div id="buildingSetup">
-    <div class="page_type data_input required_section">Basics</div>
+<div class="width100p floatl lobby_survey_container manage_block">
+    <div class="header_lobby pl25 pr25 pt25">
+        <div class="heading6 gotham bold">Lobby Survey</div>
+        <div class="floatr">
+            <button id="expand_lobby" class="btnExpand gotham outline_zero w83"><span style="font-weight:bold;">Expand</span></button>
+        </div>
+    </div>
+    <div class="header_content gotham bold pl25 pr25">
+        <div><p>Conduct a Lobby Survey to gather Human Experience data from people in your building.</p></div>
+    </div>
+    <div class="header_content gotham bold pl25 pr25 display_none expand_lobby_slide">
+        <div class="display_inlineb">
+            <div>
+                <input id="checkbox-lobbySurvey" class="checkbox-custom" name="lobbySurvey-1" type="checkbox" checked="checked">
+                <label for="checkbox-lobbySurvey" class="checkbox-custom-label">Conduct a Lobby Survey</label>
+            </div>
+        </div>
+        <div class="cursor_pointer blue_color display_inlineb" data-toggle="modal" data-target="#lobby_survey_modal">Learn More</div>
+        <div id="survey_expire_date" class="mont" style="display: none;">
+        
+    </div>
+    </div>
+    
+</div>
+ 
+<div class="floatl dividerManageSection"></div>
+ 
+<div class="width100p floatl LDP_visibility_container manage_block">
+    <div class="header_lobby pl25 pr25 pt25">
+        <div class="heading6 gotham bold">Visibility of your LEED Dynamic Plaque</div>
+        <div class="floatr">
+            <button id="expand_LDP_visibility" class="btnExpand gotham outline_zero w83"><span style="font-weight:bold;">Expand</span></button>
+        </div>
+    </div>
+    <div class="header_content gotham bold pl25 pr25">
+        <div><p>Manage which parts of your LEED Dynamic Plaque people can see.</p></div>
+    </div>
+    <div class="header_content gotham bold pl25 pr25 display_none LDP_slide">
+
+        <div>
+            <div class="display_inlineb">
+                <input id="checkbox-LDP-confidential" class="checkbox-custom" name="LDP-1" type="checkbox" checked="checked">
+                <label for="checkbox-LDP-confidential" class="checkbox-custom-label">Make Confidential (Hide project from public view)</label>
+            </div>
+            <div class="cursor_pointer blue_color display_inlineb" data-toggle="modal" data-target="#leed_make_public_modal">Learn More</div>
+        </div>
+        
+        <div>
+            <div class="display_inlineb">
+                <input id="checkbox-LDP-showRacetrack" class="checkbox-custom" name="LDP-2" type="checkbox" checked="checked">
+                <label for="checkbox-LDP-showRacetrack" class="checkbox-custom-label">Show racetracks to survey takers</label>
+            </div>
+            <div class="cursor_pointer blue_color display_inlineb" data-toggle="modal" data-target="#view_survey_modal">Learn More</div>
+        </div>
+    
+    </div>
+</div>
+ 
+ <div class="floatl dividerManageSection"></div>
+ 
+ <div class="width100p floatl" id="buildingSetup">
+    <div class="heading6 gotham bold data_input required_section">Basics</div>
     <form class="data_input required_form setup setup_form" id="form">
         <div class="data_input required_content">
+
             <!----------------------------- Basics -------------------------->
             <div class="row marginleft0">
-                <p class="highlight small-12 columns ">Basics</p>
+                <p class="highlight small-12 columns ">Project Info</p>
             </div>
             <div class="row marginleft0">
                 <div class="small-6 columns ">
@@ -33,15 +94,16 @@
                         <input required="" type="number" min="1000" placeholder="e.g. 1985" name="year_constructed" id="yearbuilt">
                     </div>
                 </div>
-                <!--            <div class="small-6 columns">
+    <!--            <div class="small-6 columns">
                     <div class="small-5 columns field_label">
                         Property Type
                     </div>
                     <div class="small-7 columns">
                         <input required type="text" placeholder="E.g. Commercial" name="propertytype" id="propertytype" />
                     </div>
-                    </div> -->
+                </div> -->
             </div>
+
             <!----------------------------- Address -------------------------->
             <div class="row marginleft0">
                 <p class="highlight small-12 columns ">Address</p>
@@ -51,27 +113,11 @@
                     <div class="small-5 columns field_label nopadding has_sub">
                         Street Address
                     </div>
-                    <div class="small-7 columns" style="position: relative;">
-                        <div class="ajax_loader" style="display: none;"></div>
-                        <div class="ajax_loader" style="display: none;"></div>
-                        <div class="ajax_loader" style="display: none;"></div>
-                        <div class="ajax_loader" style="display: none;"></div>
-                        <div class="ajax_loader" style="display: none;"></div>
-                        <input required="" type="text" disabled="disabled" placeholder="e.g. 123 Camino Street" name="streetaddress1" id="streetaddress1" style="border-color: rgb(57, 180, 70);">
+                    <div class="small-7 columns">
+                        <input required="" type="text" disabled="disabled" placeholder="e.g. 123 Camino Street" name="streetaddress1" id="streetaddress1">
                     </div>
                 </div>
             </div>
-            <!--        <div class="row">
-                <div class="small-6 columns ">
-                    <div class="small-5 columns field_label nopadding has_sub">
-                        Street Address
-                        <div class="sub">Line 2</div>
-                    </div>
-                    <div class="small-7 columns">
-                        <input type="text" placeholder="e.g. Building G" name="streetaddress2" id="streetaddress2" />
-                    </div>
-                </div>
-                </div> -->
             <div class="row marginleft0">
                 <div class="small-6 columns ">
                     <div class="small-5 columns field_label nopadding has_sub">
@@ -119,13 +165,11 @@
                     </div>
                 </div>
             </div>
-            <!--
-                <div>
-                        <button type="button" id="plan_selection" class="btnGreen"> SELECT A PLAN > </button>
-                </div>
-                -->
+
+            <div style="width: 100%;margin-left: 0px;margin-top: 40px;margin-bottom: 40px;" class="floatl dividerManageSection"></div>
+            
             <!----------------------------- Building Setup -------------------------->
-            <div class="page_type data_input required_section">Building Setup</div>
+            <div class="heading6 gotham bold data_input required_section">Building Setup</div>
             <div class="row marginleft0">
                 <p class="highlight small-12 columns ">Gross floor area</p>
             </div>
@@ -134,20 +178,12 @@
                     <div class="small-5 columns field_label nopadding">
                         Floor Area
                     </div>
-                    <div class="small-7 columns" style="position: relative;">
-                        <div class="ajax_loader" style="display: none;"></div>
-                        <input required="" type="number" placeholder="e.g. 87,500" name="gross_area" pattern="\d+(\.\d{2})?" id="floorarea" style="border-color: rgb(57, 180, 70);">
+                    <div class="small-7 columns">
+                        <input required="" type="number" placeholder="e.g. 87,500" name="gross_area" pattern="\d+(\.\d{2})?" id="floorarea">
                     </div>
                 </div>
-                <!--            <div class="small-6 columns ">
-                    <div class="small-7 columns nopadding">
-                        <select style="width:60px">
-                          <option value="squarefeet">ft&sup2;</option>
-                          <option value="squaremeter">m&sup2;</option>
-                        </select>
-                    </div>
-                    </div> -->
             </div>
+
             <div class="row marginleft0">
                 <p class="highlight small-12 columns " id="operatingHours">Typical Operating Hours (24-hour format)</p>
             </div>
@@ -163,7 +199,7 @@
                 <div class="small-6 columns field_label nopadding">
                     <div class="sub">
                         <div class="show_calculator">
-                            Help me Calculate
+                          Help me Calculate
                         </div>
                     </div>
                 </div>
@@ -177,11 +213,11 @@
                         </div>
                         <div class="small-7 columns nopadding day">
                             <div class="small-5 columns">
-                                <input type="text" class="time from ui-timepicker-input" placeholder="07:00" name="monday_from" id="monday_from" autocomplete="off">
+                                <input type="text" class="time from" placeholder="07:00" name="monday_from" id="monday_from">
                             </div>
                             <div class="small-2 columns dash">—</div>
                             <div class="small-5 columns">
-                                <input type="text" class="time to ui-timepicker-input" placeholder="18:00" name="monday_to" id="monday_to" autocomplete="off">
+                                <input type="text" class="time to" placeholder="18:00" name="monday_to" id="monday_to">
                             </div>
                         </div>
                     </div>
@@ -191,11 +227,11 @@
                         </div>
                         <div class="small-7 columns nopadding day">
                             <div class="small-5 columns">
-                                <input type="text" class="time from ui-timepicker-input" placeholder="07:00" name="saturday_from" id="saturday_from" autocomplete="off">
+                                <input type="text" class="time from" placeholder="07:00" name="saturday_from" id="saturday_from">
                             </div>
                             <div class="small-2 columns dash">—</div>
                             <div class="small-5 columns">
-                                <input type="text" class="time to ui-timepicker-input" placeholder="18:00" name="saturday_to" id="saturday_to" autocomplete="off">
+                                <input type="text" class="time to" placeholder="18:00" name="saturday_to" id="saturday_to">
                             </div>
                         </div>
                     </div>
@@ -207,11 +243,11 @@
                         </div>
                         <div class="small-7 columns nopadding day">
                             <div class="small-5 columns">
-                                <input type="text" class="time from ui-timepicker-input" placeholder="07:00" name="tuesday_form" id="tuesday_form" autocomplete="off">
+                                <input type="text" class="time from" placeholder="07:00" name="tuesday_form" id="tuesday_form">
                             </div>
                             <div class="small-2 columns dash">—</div>
                             <div class="small-5 columns">
-                                <input type="text" class="time to ui-timepicker-input" placeholder="18:00" name="tuesday_to" id="tuesday_to" autocomplete="off">
+                                <input type="text" class="time to" placeholder="18:00" name="tuesday_to" id="tuesday_to">
                             </div>
                         </div>
                     </div>
@@ -221,11 +257,11 @@
                         </div>
                         <div class="small-7 columns nopadding day">
                             <div class="small-5 columns">
-                                <input type="text" class="time from ui-timepicker-input" placeholder="07:00" name="sunday_from" id="sunday_from" autocomplete="off">
+                                <input type="text" class="time from" placeholder="07:00" name="sunday_from" id="sunday_from">
                             </div>
                             <div class="small-2 columns dash">—</div>
                             <div class="small-5 columns">
-                                <input type="text" class="time to ui-timepicker-input" placeholder="18:00" name="sunday_to" id="sunday_to" autocomplete="off">
+                                <input type="text" class="time to" placeholder="18:00" name="sunday_to" id="sunday_to">
                             </div>
                         </div>
                     </div>
@@ -237,11 +273,11 @@
                         </div>
                         <div class="small-7 columns nopadding day">
                             <div class="small-5 columns">
-                                <input type="text" class="time from ui-timepicker-input" placeholder="07:00" name="wednesday_form" id="wednesday_form" autocomplete="off">
+                                <input type="text" class="time from" placeholder="07:00" name="wednesday_form" id="wednesday_form">
                             </div>
                             <div class="small-2 columns dash">—</div>
                             <div class="small-5 columns">
-                                <input type="text" class="time to ui-timepicker-input" placeholder="18:00" name="wednesday_to" id="wednesday_to" autocomplete="off">
+                                <input type="text" class="time to" placeholder="18:00" name="wednesday_to" id="wednesday_to">
                             </div>
                         </div>
                     </div>
@@ -253,11 +289,11 @@
                         </div>
                         <div class="small-7 columns nopadding day">
                             <div class="small-5 columns">
-                                <input type="text" class="time from ui-timepicker-input" placeholder="07:00" name="thursday_form" id="thursday_form" autocomplete="off">
+                                <input type="text" class="time from" placeholder="07:00" name="thursday_form" id="thursday_form">
                             </div>
                             <div class="small-2 columns dash">—</div>
                             <div class="small-5 columns">
-                                <input type="text" class="time to ui-timepicker-input" placeholder="18:00" name="thursday_to" id="thursday_to" autocomplete="off">
+                                <input type="text" class="time to" placeholder="18:00" name="thursday_to" id="thursday_to">
                             </div>
                         </div>
                     </div>
@@ -269,11 +305,11 @@
                         </div>
                         <div class="small-7 columns nopadding day">
                             <div class="small-5 columns">
-                                <input type="text" class="time from ui-timepicker-input" placeholder="07:00" name="friday_form" id="friday_form" autocomplete="off">
+                                <input type="text" class="time from" placeholder="07:00" name="friday_form" id="friday_form">
                             </div>
                             <div class="small-2 columns dash">—</div>
                             <div class="small-5 columns">
-                                <input type="text" class="time to ui-timepicker-input" placeholder="18:00" name="friday_to" id="friday_to" autocomplete="off">
+                                <input type="text" class="time to" placeholder="18:00" name="friday_to" id="friday_to">
                             </div>
                         </div>
                     </div>
@@ -288,47 +324,88 @@
                     <div class="small-5 columns field_label nopadding">
                         Occupancy
                     </div>
-                    <div class="small-7 columns" style="position: relative;">
-                        <div class="ajax_loader" style="display: none;"></div>
-                        <div class="ajax_loader" style="display: none;"></div>
-                        <div class="ajax_loader" style="display: none;"></div>
-                        <div class="ajax_loader" style="display: none;"></div>
-                        <input required="" type="number" min="0" placeholder="e.g. 500" name="occupancy" id="occupancy" style="border-color: rgb(57, 180, 70);">
+                    <div class="small-7 columns">
+                        <input required="" type="number" min="0" placeholder="e.g. 500" name="occupancy" id="occupancy">
                     </div>
                 </div>
                 <div class="small-6 columns columns field_label nopadding">
                     <!--<div class="sub">
                         Includes both permanent occupants and visitors.
-                        </div>-->
+                    </div>-->
                 </div>
             </div>
-            <div class="page_type data_input required_section">Links</div>
-            <br><br>
-            <div class="surveyCont">
-                <div class="setupbtn_div">
-                    <div class="setupbtn_desc">View LEED Dynamic Plaque and access Dashboard</div>
-                    <button id="plaque_link" class="btn_display relative" value="/plaque/LEED:1000000117/?key=1960ea90d643eb54e19be82b">
-                        <paper-ripple fit=""></paper-ripple>
-                        View Plaque
-                    </button>
-                </div>
-                <br><br>
-                <div class="setupbtn_div">
-                    <div class="setupbtn_desc">Access User Manual</div>
-                    <button id="survey_link" class="btn_display relative" download="">
-                        <paper-ripple fit=""></paper-ripple>
-                        Download
-                    </button>
-                </div>
-                <br><br>
-                <div class="setupbtn_div mt7p" style="margin-right: -1%">
-                    <div class="setupbtn_desc" style="padding-top: 7px;">Email survey to all building occupants</div>
-                    <button id="survey_link_email" class="btn_display relative" style="margin-right: 16px;" value="/dashboard/?page=survey&amp;LEED=1000000117&amp;language=en&amp;key=1960ea90d643eb54e19be82b">
-                        <paper-ripple fit=""></paper-ripple>
-                        Email Survey
-                    </button>
-                </div>
-            </div>
-        </div>
+         </div>
     </form>
+ 
+</div> 
+ 
+
+ 
+<div class="floatl dividerManageSection"></div>
+            
+<div class="width100p floatl manage_block surveyCont">
+    <div class="heading6 gotham bold data_input required_section">Links</div><br><br>
+    <div class="setupbtn_div">
+        <div class="setupbtn_desc">View LEED Dynamic Plaque and access Dashboard</div>
+        <button id="plaque_link" class="btn_display relative" value="/plaque/LEED:1000000117/?key=1960ea90d643eb54e19be82b"><paper-ripple fit=""></paper-ripple>View Plaque</button>
+    </div><br><br>
+    <div class="setupbtn_div">
+        <div class="setupbtn_desc">Access User Manual</div>
+        <button id="survey_link" class="btn_display relative" download=""><paper-ripple fit=""></paper-ripple>Download</button>
+    </div><br><br>
+    <div class="setupbtn_div mt7p" style="margin-right: -1%">
+        <div class="setupbtn_desc" style="padding-top: 7px;">Email survey to all building occupants</div>
+        <button id="survey_link_email" class="btn_display relative" style="margin-right: 16px;" value="/dashboard/?page=survey&amp;LEED=1000000117&amp;language=en&amp;key=1960ea90d643eb54e19be82b"><paper-ripple fit=""></paper-ripple>Email Survey</button>
+    </div>
+</div>
+
+<div class="floatl dividerManageSection"></div>
+
+<div class="width100p floatl strategies_container manage_block pl25 mt15">
+    <div class="heading6 gotham bold data_input required_section width100p">Strategies</div>
+    <div class="create-snapshot-div" id="create-snapshot-body">
+        <div class="pull-left">
+            <div class="pull-left-body">
+                <p class="select-label">Manage your LEED Dynamic Plaque Strategies.</p>
+
+                <div class="select-system-label">Select LEED System</div><div class="selected-system-dropdown-grp"><div class="btn-group select-system-dropdown" style="border: 2px solid rgba(153, 153, 153, 0.82);"><button style="font-weight: bold;" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="selected-system-text">LEED v4 O+M: Existing Buildings</span><span class="fa fa-angle-down"></span></button><ul class="dropdown-menu" role="menu"><li class="already-selected-rs" data-ratingsystem-key="LEED v4 O+M: EB ACP">Alternate Compliance Path</li><li class="" data-ratingsystem-key="LEED v4 ND">LEED v4 Neighborhood Development</li><li class="already-selected-rs" data-ratingsystem-key="LEED v4 O+M: EB">LEED v4 O+M: Existing Buildings</li></ul></div><div class="delete-building-system" data-ratingsystem-key="LEED v4 O+M: EB"><img src="assets/images/fa-times-thin.png"><span style="margin-left: 5px;">Delete</span></div></div><div class="selected-system-dropdown-grp"><div class="btn-group select-system-dropdown" style="border: 2px solid rgba(153, 153, 153, 0.82);"><button style="font-weight: bold;" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="selected-system-text">Alternate Compliance Path</span><span class="fa fa-angle-down"></span></button><ul class="dropdown-menu" role="menu"><li class="already-selected-rs" data-ratingsystem-key="LEED v4 O+M: EB ACP">Alternate Compliance Path</li><li class="" data-ratingsystem-key="LEED v4 ND">LEED v4 Neighborhood Development</li><li class="already-selected-rs" data-ratingsystem-key="LEED v4 O+M: EB">LEED v4 O+M: Existing Buildings</li></ul></div><div class="delete-building-system" data-ratingsystem-key="LEED v4 O+M: EB ACP"><img src="assets/images/fa-times-thin.png"><span style="margin-left: 5px;">Delete</span></div></div><div class="selected-system-dropdown-grp"><div class="btn-group select-system-dropdown" style="border: 2px solid rgba(153, 153, 153, 0.82);"><button style="font-weight: bold;" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="selected-system-text">Alternate Compliance Path</span><span class="fa fa-angle-down"></span></button><ul class="dropdown-menu" role="menu"><li class="already-selected-rs" data-ratingsystem-key="LEED v4 O+M: EB ACP">Alternate Compliance Path</li><li class="" data-ratingsystem-key="LEED v4 ND">LEED v4 Neighborhood Development</li><li class="already-selected-rs" data-ratingsystem-key="LEED v4 O+M: EB">LEED v4 O+M: Existing Buildings</li></ul></div><div class="delete-building-system" data-ratingsystem-key="LEED v4 O+M: EB ACP"><img src="assets/images/fa-times-thin.png"><span style="margin-left: 5px;">Delete</span></div></div>
+                
+                
+                <div class="select-system-dropdown-grp">
+                    <div class="btn-group select-system-dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <span class="selected-system-text">Select a LEED System</span>
+                            <span class="fa fa-angle-down"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu"><li data-ratingsystem-key="LEED v4 O+M: EB ACP">Alternate Compliance Path</li><li data-ratingsystem-key="LEED v4 ND">LEED v4 Neighborhood Development</li><li data-ratingsystem-key="LEED v4 O+M: EB">LEED v4 O+M: Existing Buildings</li></ul>
+                    </div>
+
+                    <div class="delete-selected-system">
+                        <img src="assets/images/fa-times-thin.png">
+                        <span>Delete</span>
+                    </div>
+                </div>
+                
+
+                <div id="add-multiple-rating-div">
+                    <p>Need to use multiple rating systems?</p>
+                    <div id="add-multiple-rating-body">
+                        <span class="plus-icon-label">+</span>
+                        <span class="add-rating-system-label">Add another rating system</span>                        
+                    </div>
+                </div>
+
+                <div class="button-group createSnapshotDiv">
+                    <a class="btn" id="updateSnapshot">Save</a>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="pull-right">
+            <p>Dont know which LEED system to pick?</p>
+            <a href="">Discover which LEED rating systems applies to your project.</a>
+        </div>
+
+    </div>          
 </div>
