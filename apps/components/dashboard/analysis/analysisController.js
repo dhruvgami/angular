@@ -1,4 +1,4 @@
 LEEDOnApp.controller('analysisController', function($rootScope, $scope) {
-	$rootScope.header = 'Analysis';
+	$rootScope.header = 'Data Analysis';
 	$rootScope.main_appClass = '';
 });

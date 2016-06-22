@@ -7,6 +7,7 @@ LEEDOnApp.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.when('/dashboard','/dashboard/score');
     $urlRouterProvider.when('/dashboard/data','/dashboard/data/input');
     $urlRouterProvider.when('/dashboard/data/input','/dashboard/data/input/energy');
+    $urlRouterProvider.when('/dashboard/analysis','/dashboard/analysis/energy');
     $urlRouterProvider.when('/dashboard/manage','/dashboard/manage/projectplaque');
 
     $stateProvider
@@ -84,6 +85,31 @@ LEEDOnApp.config(function($stateProvider, $urlRouterProvider) {
         url: "/analysis",
         templateUrl: "apps/components/dashboard/analysis/analysisView.html",
         controller : "analysisController"
+    })
+    .state("dashboardState.analysisState.energyAnalysisState", {
+        url: "/energy",
+        templateUrl: "apps/components/dashboard/analysis/energy/energyView.html",
+        controller : "energyAnalysisController"
+    })
+    .state("dashboardState.analysisState.waterAnalysisState", {
+        url: "/water",
+        templateUrl: "apps/components/dashboard/analysis/water/waterView.html",
+        controller : "waterAnalysisController"
+    })
+    .state("dashboardState.analysisState.wasteAnalysisState", {
+        url: "/waste",
+        templateUrl: "apps/components/dashboard/analysis/waste/wasteView.html",
+        controller : "wasteAnalysisController"
+    })
+    .state("dashboardState.analysisState.transportAnalysisState", {
+        url: "/transport",
+        templateUrl: "apps/components/dashboard/analysis/transport/transportView.html",
+        controller : "transportAnalysisController"
+    })
+    .state("dashboardState.analysisState.humanAnalysisState", {
+        url: "/human",
+        templateUrl: "apps/components/dashboard/analysis/human/humanView.html",
+        controller : "humanAnalysisController"
     })
     .state("dashboardState.manageState", {
         url: "/manage",
