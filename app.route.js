@@ -3,18 +3,18 @@ var LEEDOnApp = angular.module('LEEDOnApp', ['ui.router']);
 // configure our routes
 LEEDOnApp.config(function($stateProvider, $urlRouterProvider) {
     
-    $urlRouterProvider.otherwise("/home");
+    $urlRouterProvider.otherwise("/login");
     $urlRouterProvider.when('/dashboard','/dashboard/score');
     $urlRouterProvider.when('/dashboard/data','/dashboard/data/input');
     $urlRouterProvider.when('/dashboard/analysis','/dashboard/analysis/energy');
     $urlRouterProvider.when('/dashboard/manage','/dashboard/manage/setup');
 
     $stateProvider
-    .state("homeState", {
-        url: "/home",
-        templateUrl: "apps/components/home/homeView.html",
-        controller : "homeController"
-    })
+    // .state("homeState", {
+    //     url: "/home",
+    //     templateUrl: "apps/components/home/homeView.html",
+    //     controller : "homeController"
+    // })
     .state("loginState", {
         url: "/login",
         templateUrl: "apps/components/login/loginView.html",
