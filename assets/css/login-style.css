@@ -4,9 +4,8 @@
   src: url(../fonts/GothamBook.otf);
 }
 
-body {
-    margin: 0px;
-    background: url(../images/bg.jpg)#eee repeat-x;
+.login_background_img {
+    background: url(../images/bg.jpg)#eee repeat-x !important;
 }
 .popupContainer{
 	width:100%
@@ -45,7 +44,7 @@ a.btn_red {color: #FFF;}
 /* User Login Form */
 .user_login {display: block;}
 .user_login label {display: block; margin-bottom:5px; margin-top: 5px;}
-.user_login input[type="text"], .user_login input[type="email"], .user_login input[type="password"] {display: block; width:89%; padding: 10px; border:1px solid #DDD; color:#666;}
+.user_login input[type="text"], .user_login input[type="email"], .user_login input[type="password"] {display: block; width:100%; padding: 10px; border:1px solid #DDD; color:#666;}
 .user_login input[type="checkbox"] {float:left; margin-right:5px; margin-left: 0px;}
 .user_login input[type="checkbox"]+label {float:left; cursor: pointer; font-size: 13px;}
 
@@ -114,7 +113,7 @@ a.btn_red {color: #FFF;}
 }
 
 #login_user_name, #login_user_name_last{
-	width: 37%; display: none; background-color: rgb(242,241,239);margin: 0px 0px 15px 0px; font-size: 14px; float: left; height: 30px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 6px 15px; outline: none;
+	width: 37%; display: none; background-color: rgb(242,241,239);margin: 0px 0px 15px 0px; font-size: 14px; float: left; height: 40px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 6px 15px; outline: none;
 }
 
 #login_user_name
@@ -123,11 +122,11 @@ a.btn_red {color: #FFF;}
 }
 
 #login_user{
-  background-color: white;font-size: 14px; float: left; height: 30px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 6px 15px; outline: none;
+  background-color: white;font-size: 14px; float: left; height: 40px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 6px 15px; outline: none;
 }
 
 #login_pass{
-  background-color: white;margin: 15px 0px 15px 0px; font-size: 14px; float: left; height: 30px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 6px 15px; outline: none;
+  background-color: white;margin: 15px 0px 15px 0px; font-size: 14px; float: left; height: 40px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 6px 15px; outline: none;
 }
 
 .remember_label{

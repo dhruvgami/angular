@@ -1,6 +1,7 @@
 LEEDOnApp.controller('projectController', function($rootScope, $scope, $http) {
 	$rootScope.header = 'Projects';
 	$rootScope.main_appClass = 'overflow_y_scroll';
+	$rootScope.bodyLayout = '';
 	$rootScope.htmlLayout = 'js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths';
 	$http.get('assets/json/countriesstates.json').success(function(csJson) {
 		$http.get('assets/json/building_data.json').success(function(data) {
