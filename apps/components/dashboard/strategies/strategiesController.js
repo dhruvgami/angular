@@ -1,6 +1,5 @@
 LEEDOnApp.controller('strategiesController', function($rootScope, $scope) {
 	$rootScope.header = 'Strategies';
-	$rootScope.main_appClass = '';
 	$scope.isActive_ea = false;
 	$scope.isActive_ss = false;
 	$scope.isActive_we = false;

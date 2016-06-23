@@ -1,6 +1,5 @@
 LEEDOnApp.controller('accountController', function($rootScope, $scope, $http) {
 	$rootScope.header = 'Account';
-	$rootScope.main_appClass = '';
 	$http.get('assets/json/building_1000000117_billing.json').success(function(data) {
 		document.getElementById("first_name").value      = data.CC_first_name;
 		document.getElementById("last_name").value       = data.CC_last_name;

@@ -1,6 +1,5 @@
 LEEDOnApp.controller('setupController', function($rootScope, $scope, $http) {
 	$rootScope.header = 'Setup';
-	$rootScope.main_appClass = '';
 	$http.get('assets/json/building_1000000117.json').success(function(data) {
 		document.getElementById("buildingname").value   = data.name;
 		document.getElementById("projectid").value      = data.leed_id;
