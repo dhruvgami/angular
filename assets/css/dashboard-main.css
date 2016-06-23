@@ -1966,6 +1966,7 @@ input#code
     font-family: 'Gotham';
     margin-top: 20px;
     margin-bottom: 20px;
+    display: none;
 }
 
 .meterType a {
@@ -1991,6 +1992,7 @@ input#code
     height: 440px;
     background: rgb(250, 250, 250);
     margin-bottom: 50px;
+    display: none;
 }
 
 .header_manage{
