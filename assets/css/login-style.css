@@ -130,7 +130,7 @@ a.btn_red {color: #FFF;}
 }
 
 .remember_label{
-  font-family: 'Source Sans Pro', sans-serif; font-size: 13px; color: #666;
+  font-family: 'Source Sans Pro', sans-serif; font-size: 13px; color: #666; padding-left: 0px !important;
 }
 
 .header_title{
