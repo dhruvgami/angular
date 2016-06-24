@@ -1,8 +1,9 @@
 var LEEDOnApp = angular.module('LEEDOnApp', ['ui.router']);
 
 // configure our routes
-LEEDOnApp.config(function($stateProvider, $urlRouterProvider) {
+LEEDOnApp.config(function($stateProvider, $compileProvider, $urlRouterProvider) {
     
+    $compileProvider.debugInfoEnabled(false);
     $urlRouterProvider.otherwise("/login");
     $urlRouterProvider.when('/dashboard','/dashboard/score');
     $urlRouterProvider.when('/dashboard/data','/dashboard/data/input');
