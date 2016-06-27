@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths skrollr skrollr-desktop">
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LEEDOn - LEED Dynamic Plaque and LEED Performance Score">
+    <meta name="author" content="USGBC">
+    <link rel="stylesheet" property="stylesheet" href="../assets/css/home-dashboard.css?v=1">
+    <link rel="stylesheet" property="stylesheet" href="../assets/libs/css/bootstrap.min.css?v=1">
+    <link rel="stylesheet" property="stylesheet" href="../assets/libs/css/font-awesome.css?v=1">
+    <link rel="stylesheet" property="stylesheet" href="../assets/libs/css/zocial.css?v=1">
+    <link rel="stylesheet" property="stylesheet" href="../assets/libs/css/venobox.css?v=1">
+    <link rel="stylesheet" property="stylesheet" href="../assets/libs/css/og-component.css?v=1">
+    <link rel="stylesheet" property="stylesheet" href="../assets/libs/css/animate.css?v=1">
+    <link rel="stylesheet" property="stylesheet" href="../assets/css/home-style.css?v=1">
+    <link rel="stylesheet" property="stylesheet" href="../assets/libs/css/light-green.css?v=1">
+    <link rel="stylesheet" property="stylesheet" href="../assets/css/home-leedon.css?v=1">
+    <link rel="stylesheet" property="stylesheet" href="../assets/css/home-style_1.css?v=1">
+    <title>LEED Dynamic Plaque</title>
+  
+</head>
+<body class="h600">
+    <div class="jquery-header-bar" style="display:none; background: #FFFFFF; width:100%; top: 0px; z-index: 9999999999; padding: 2px 0px 0px 0px; border-bottom:2px solid #CC0000; box-shadow: 0px 4px 5px #AAAAAA; font-size:14px; font-family: &#39;Lato Regular&#39;, Arial; text-transform:uppercase;position: relative;">
+        <span class="notification" style="display:block; width:auto; position: relative;">
+            <p class="font-style" style="color: #6B6969; width:95%; text-align: center; margin-top:10px; margin-bottom:10px; text-transform: none; font-size:14px; line-height:1.6;"></p>
+            <p class="jquery-arrow down" style="position: absolute;top: 30%; right: 24px; width:13px;"><img src="../assets/images/close.png" style="cursor:pointer;max-width: 100%;"></p>
+        </span>
+    </div>
+    <div class="outter" id="skrollr-body">
+        <!-- BEGIN NAVBAR -->
+        <nav class="navbar navbar-default navbar-fixed-top skrollable skrollable-before" style="z-index: 1030000; position: absolute; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: rgb(0, 0, 0); top: 0px; background: rgba(255, 255, 255, 0);" role="navigation" data-100="background:rgba(255,255,255,0.0); position:absolute; border-bottom:solid 0px rgb(0,0,0); top:0px;" data-121="background:rgba(255,255,255,1.0); border-bottom:solid 1px rgb(216,216,216); position:fixed; top:-100px;" data-150="top:0px;" data-1880="top:0px;" data-1901="top:-100px;">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand skrollable skrollable-between" data-0="color:rgba(255,255,255,1);" data-130="color:rgba(74,74,74,0);" data-131="color:rgba(74,74,74,1);" data-2170="color:rgba(74,74,74,1);" data-2200="color:rgba(0,0,0,0);" style="color: rgb(255, 255, 255);">
+                    <strong>LEED</strong><sup>®</sup> Dynamic Plaque<sup id="tm">TM</sup></a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <!-- <li><a class="sscroll" href="#about">VIDEO</a>
+                            </li> -->
+                        <li id="modal_trigger_trial"><a data-0="color:rgba(255,255,255,1);" data-130="color:rgba(74,74,74,0);" data-131="color:rgba(74,74,74,1);" data-2170="color:rgba(74,74,74,
+                            1);display:block;" data-2200="color:rgba(0,0,0,0); display:none;" class="sscroll skrollable skrollable-between" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" href="http://sbx.leedon.io/v3/#/login" style="color: rgb(255, 255, 255); display: block;">START TRIAL</a>
+                        </li>
+                        <li><a data-0="color:rgba(255,255,255,1);" data-130="color:rgba(74,74,74,0);" data-131="color:rgba(74,74,74,1);" data-2170="color:rgba(74,74,74,1); display:block;" data-2200="color:rgba(0,0,0,0); display:none;" class="sscroll skrollable skrollable-between" style="color: rgb(255, 255, 255); display: block;">LEARN MORE</a>
+                        </li>
+                        <li><a data-0="color:rgba(255,255,255,1);" data-130="color:rgba(74,74,74,0);" data-131="color:rgba(74,74,74,1);" data-2170="color:rgba(74,74,74,1); display:block;" data-2200="color:rgba(0,0,0,0); display:none;" class="sscroll skrollable skrollable-between" style="color: rgb(255, 255, 255); display: block;">FAQ</a>
+                        </li>
+                        <li id="modal_trigger" class="dashLogin"><a data-0="color:rgba(255,255,255,1);" data-130="color:rgba(74,74,74,0);" data-131="color:rgba(74,74,74,1);" data-2170="color:rgba(74,74,74,1);display:block;" data-2200="color:rgba(0,0,0,0); display:none;" class="sscroll skrollable skrollable-between" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" href="http://sbx.leedon.io/v3/#/login" style="color: rgb(255, 255, 255); display: block;">SIGN IN</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <!-- END NAVBAR -->
+        <!-- BEGIN VIDEO PAGE -->
+        <div class="home-wrapper">
+            <div class="content-home-wrapper text-center">
+                <div class="header-center" style="bottom: 40%;">
+                    <!--<h1>YOUR BUILDING IS<span>&nbsp;ALIVE<span></h1>-->
+                    <h1 data-200="color:rgba(255,255,255,1.0);" data-300="color:rgba(255,255,255,0);" class="skrollable skrollable-before" style="color: rgb(255, 255, 255);">YOUR BUILDING IS<span>&nbsp;ALIVE<span></span></span></h1>
+                    <div id="the-basics" style="display: block;">
+                        <div class="suggHolder">
+                            <input placeholder="Search for a building" id="id_building">
+                            <button id="building_search" class="btnGreen">Search</button>
+                        </div>
+                        <div id="searchRes">
+                        </div>
+                    </div>
+                    <!--<div id="the-basics">
+                        <input name="building" id="id_building" name="id_building[query]" type="search" placeholder="Search" autocomplete="off" class="ui-autocomplete-input ui-widget ui-widget-content ui-corner-all typeahead" role="textbox" aria-haspopup="true">
+                        <button id="building_search" class="btnGreen">Search</button>
+                        
+                        </div>
+                        <div class="list_cont">
+                        <ul id="list_name">
+                        </ul>
+                        </div> -->
+                    <!--<p><a class="sscroll slider-more pulse" href="#plaque"><i class="fa fa-angle-down"></i></a>-->
+                    <p><a data-200="background:rgba(255,255,255,0.4);" data-300="background:rgba(255,255,255,0);" class="sscroll slider-more pulse skrollable skrollable-before" style="background: rgba(255, 255, 255, 0.4);"><i data-200="color:rgba(139,138,128,1.0);" data-300="color:rgba(139,138,128,0);" class="fa fa-angle-down skrollable skrollable-before" style="color: rgb(139, 138, 128);"></i></a>
+                    </p>
+                </div>
+            </div>
+            <div class="fullfilter skrollable skrollable-before" data-700="opacity:1;" data-701="opacity:0;" style="opacity: 1;"></div>
+            <div class="home-video skrollable skrollable-before" data-700="opacity:1;" data-701="opacity:0;" style="opacity: 1;">
+                <video id="video_background" preload="auto" autoplay="autoplay" loop="loop" muted="" style="position: fixed; top: -80px; left: 0px; bottom: 0px; right: 0px; z-index: -100; width: 1349px; height: 758.813px;">
+                    <source src="../assets/videos/lobby.mp4" type="video/mp4">
+                    bgvideo
+                </video>
+            </div>
+        </div>
+        <!-- END VIDEO PAGE -->
+        <!-- BEGIN PLAQUE  -->
+        <section id="plaque_video">
+            <div id="sec2" class="section-wrapper">
+                <div class="section-inner">
+                    <div class="container video_wrapper">
+                        <div class="spacer medium"></div>
+                        <div class="plaquediv">
+                            <video class="plaquevideo js-background_video" autoplay="" muted="" loop="">
+                                <source src="../assets/videos/PlaqueVideo.mp4" type="video/mp4" media="screen" style="width: 80%; height: auto;">
+                                <source src="../assets/videos/PlaqueVideo.webm" type="video/webm" media="screen" style="width: 80%; height: auto;">
+                            </video>
+                            <div id="plaque_img" style="display:none">
+                                <img src="../assets/images/racetrack.png" style="width:100%">
+                            </div>
+                        </div>
+                        <div class="spacer medium"></div>
+                    </div>
+                    <div id="alive">
+                        <!--<h2 class="title" data-600="color:rgba(74,74,74,0);" data-700="color:rgba(74,74,74,1);" data-1000="color:rgba(74,74,74,1);" data-1100="color:rgba(74,74,74,0);" data-1000="color:rgba(0,0,0,0.0);">LEED DYNAMIC PLAQUE</h2> </div>-->
+                        <h2 class="title">LEED DYNAMIC PLAQUE</h2>
+                        <h4 class="subhead"> Measure, monitor and score your building’s performance. </h4>
+                    </div>
+                    <div class="spacer medium"></div>
+                </div>
+            </div>
+        </section>
+        <!-- END PLAQUE -->
+        <!-- BEGIN SLIDER ONE -->
+        <div id="slides" style="position: relative; overflow: hidden; width: 100%; height: 599px;">
+            <div class="slides-control" style="position: relative; height: 100%; width: 4047px; left: -1349px;">
+                <ul class="slides-container text-center" style="margin: 0px; padding: 0px; list-style: none; position: relative; height: 100%; display: block;">
+                    <li style="display: none; left: 1349px; position: absolute; overflow: hidden; height: 100%; width: 1349px; top: 0px; z-index: 0;">
+                        <div id="slide1">
+                            <div class="fullscreen-image"></div>
+                            <div class="description">
+                                <h4>Powerful software that measures five building performance categories</h4>
+                            </div>
+                        </div>
+                    </li>
+                    <li style="display: none; left: 1349px; position: absolute; overflow: hidden; height: 100%; width: 1349px; top: 0px; z-index: 0;">
+                        <div id="slide2">
+                            <div class="fullscreen-image"></div>
+                            <div class="description">
+                                <h4>Award-winning display unit to showcase your up-to-date performance score</h4>
+                            </div>
+                        </div>
+                    </li>
+                    <li style="display: block; left: 1349px; position: absolute; overflow: hidden; height: 100%; width: 1349px; top: 0px; z-index: 2;">
+                        <div id="slide3">
+                            <div class="fullscreen-image"></div>
+                            <div class="description">
+                                <h4>Gain insights to make meaningful improvements that save money and resources</h4>
+                            </div>
+                        </div>
+                    </li>
+                    <li style="display: none; left: 1349px; position: absolute; overflow: hidden; height: 100%; width: 1349px; top: 0px; z-index: 0;">
+                        <div id="slide4">
+                            <div class="fullscreen-image"></div>
+                            <div class="description">
+                                <h4> See how your building stacks up to your historic performance, and local and global buildings </h4>
+                            </div>
+                        </div>
+                    </li>
+                    <li style="display: none; left: 1349px; position: absolute; overflow: hidden; height: 100%; width: 1349px; top: 0px; z-index: 0;">
+                        <div id="slide5">
+                            <div class="fullscreen-image"></div>
+                            <div class="description">
+                                <h4> Utilize your data and tracking to help you achieve LEED certification or recertification </h4>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <nav class="slides-navigation">
+                <a href="javascript:;" class="prev"><i class="fa fa-angle-left"></i></a>
+                <a href="javascript:;" class="next"><i class="fa fa-angle-right"></i></a>
+            </nav>
+            <nav class="slides-pagination" id="thumbnails">
+                <a id="thumb1" class=""></a>
+                <a id="thumb2" class=""></a>
+                <a id="thumb3" class=""></a>
+                <a id="thumb4" class=""></a>
+                <a id="thumb5" class=""></a>
+            </nav>
+            <nav class="slides-pagination"><a class="">1</a><a class="">2</a><a class="current">3</a><a class="">4</a><a class="">5</a></nav>
+        </div>
+        <!-- END SLIDER ONE -->
+        <!-- BEGIN CONTENT SECTION -->
+        <div class="section-outter">
+            <!-- BEGIN ABOUT  -->
+            <section id="about">
+                <div id="sec1" class="section-wrapper">
+                    <div class="section-inner">
+                        <div id="responsive-container">
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END ABOUT -->
+            <!--<section>
+                <div id="invis">
+                </div>
+                </section>-->
+            <!-- BEGIN CONTACT -->
+            <section id="contact">
+                <div class="section-wrapper" id="sec3">
+                    <div class="section-title">
+                        <h2 class="title">WATCH THE DEMO</h2>
+                    </div>
+                    <div class="spacer medium"></div>
+                    <div id="marketo-form">
+                        <form id="mktoForm_1169" novalidate="novalidate" class="mktoForm mktoHasWidth mktoLayoutLeft" style="font-family: Helvetica, Arial, sans-serif; font-size: 13px; color: rgb(51, 51, 51); width: 324px;">
+                            <style type="text/css">.mktoForm .mktoButtonWrap.mktoShinyBlue .mktoButton {
+                                background-color: #759ae9;
+                                background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #759ae9), color-stop(50%, #376fe0), color-stop(50%, #1a5ad9), color-stop(100%, #2463de));
+                                background-image: -webkit-linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+                                background-image: -moz-linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+                                background-image: -ms-linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+                                background-image: -o-linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+                                background-image: linear-gradient(to bottom, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+                                border-top: 1px solid #1f58cc;
+                                border-right: 1px solid #1b4db3;
+                                border-bottom: 1px solid #174299;
+                                border-left: 1px solid #1b4db3;
+                                border-radius: 4px;
+                                -webkit-box-shadow: inset 0 0 2px 0 rgba(57, 140, 255, 0.8);
+                                box-shadow: inset 0 0 2px 0 rgba(57, 140, 255, 0.8);
+                                color: #fff;
+                                font: bold 12px/1 "helvetica neue", helvetica, arial, sans-serif;
+                                padding: 7px 0;
+                                text-shadow: 0 -1px 1px #1a5ad9;
+                                width: 150px;
+                                }
+                                .mktoForm .mktoButtonWrap.mktoShinyBlue .mktoButton:hover {
+                                background-color: #5d89e8;
+                                background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5d89e8), color-stop(50%, #2261e0), color-stop(50%, #044bd9), color-stop(100%, #0d53de));
+                                background-image: -webkit-linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
+                                background-image: -moz-linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
+                                background-image: -ms-linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
+                                background-image: -o-linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
+                                background-image: linear-gradient(to bottom, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
+                                cursor: pointer;
+                                }
+                                .mktoForm .mktoButtonWrap.mktoShinyBlue .mktoButton:active {
+                                border-top: 1px solid #1b4db3;
+                                border-right: 1px solid #174299;
+                                border-bottom: 1px solid #133780;
+                                border-left: 1px solid #174299;
+                                -webkit-box-shadow: inset 0 0 5px 2px #1a47a0, 0 1px 0 #eeeeee;
+                                box-shadow: inset 0 0 5px 2px #1a47a0, 0 1px 0 #eeeeee;
+                                }
+                            </style>
+                            <div class="cf_widgetLoader cf_w_b986ee753169490eb1c452bad417c645_SocialSignOn"></div>
+                            <div class="mktoFormRow">
+                                <div class="mktoFieldDescriptor mktoFormCol" style="margin-bottom: 10px;">
+                                    <div class="mktoOffset" style="width: 10px;"></div>
+                                    <div class="mktoFieldWrap mktoRequiredField">
+                                        <label for="FirstName" class="mktoLabel mktoHasWidth" style="width: 0px;">
+                                            <div class="mktoAsterix">*</div>
+                                        </label>
+                                        <div class="mktoGutter mktoHasWidth" style="width: 10px;"></div>
+                                        <input id="FirstName" name="FirstName" placeholder="First Name (Required)" maxlength="255" type="text" class="mktoField mktoTextField mktoHasWidth mktoRequired" style="width: 310px;">
+                                        <div class="mktoClear"></div>
+                                    </div>
+                                    <div class="mktoClear"></div>
+                                </div>
+                                <div class="mktoClear"></div>
+                            </div>
+                            <div class="mktoFormRow">
+                                <div class="mktoFieldDescriptor mktoFormCol" style="margin-bottom: 10px;">
+                                    <div class="mktoOffset" style="width: 10px;"></div>
+                                    <div class="mktoFieldWrap mktoRequiredField">
+                                        <label for="LastName" class="mktoLabel mktoHasWidth" style="width: 0px;">
+                                            <div class="mktoAsterix">*</div>
+                                        </label>
+                                        <div class="mktoGutter mktoHasWidth" style="width: 10px;"></div>
+                                        <input id="LastName" name="LastName" placeholder="Last Name (Required)" maxlength="255" type="text" class="mktoField mktoTextField mktoHasWidth mktoRequired" style="width: 310px;">
+                                        <div class="mktoClear"></div>
+                                    </div>
+                                    <div class="mktoClear"></div>
+                                </div>
+                                <div class="mktoClear"></div>
+                            </div>
+                            <div class="mktoFormRow">
+                                <div class="mktoFieldDescriptor mktoFormCol" style="margin-bottom: 10px;">
+                                    <div class="mktoOffset" style="width: 10px;"></div>
+                                    <div class="mktoFieldWrap mktoRequiredField">
+                                        <label for="Email" class="mktoLabel mktoHasWidth" style="width: 0px;">
+                                            <div class="mktoAsterix">*</div>
+                                        </label>
+                                        <div class="mktoGutter mktoHasWidth" style="width: 10px;"></div>
+                                        <input id="Email" name="Email" placeholder="Email Address (Required)" maxlength="255" type="email" class="mktoField mktoEmailField mktoHasWidth mktoRequired" style="width: 310px;">
+                                        <div class="mktoClear"></div>
+                                    </div>
+                                    <div class="mktoClear"></div>
+                                </div>
+                                <div class="mktoClear"></div>
+                            </div>
+                            <div class="mktoFormRow">
+                                <div class="mktoFieldDescriptor mktoFormCol" style="margin-bottom: 10px;">
+                                    <div class="mktoOffset" style="width: 10px;"></div>
+                                    <div class="mktoFieldWrap">
+                                        <label for="Company" class="mktoLabel mktoHasWidth" style="width: 0px;">
+                                            <div class="mktoAsterix">*</div>
+                                        </label>
+                                        <div class="mktoGutter mktoHasWidth" style="width: 10px;"></div>
+                                        <input id="Company" name="Company" placeholder="Company Name" maxlength="255" type="text" class="mktoField mktoTextField mktoHasWidth" style="width: 310px;">
+                                        <div class="mktoClear"></div>
+                                    </div>
+                                    <div class="mktoClear"></div>
+                                </div>
+                                <div class="mktoClear"></div>
+                            </div>
+                            <div class="mktoFormRow">
+                                <input type="hidden" name="LeadSource" class="mktoField mktoFieldDescriptor mktoFormCol" value="" style="margin-bottom: 10px;">
+                                <div class="mktoClear"></div>
+                            </div>
+                            <div class="mktoButtonRow"><span class="mktoButtonWrap mktoShinyBlue" style="margin-left: 120px;"><button type="submit" class="mktoButton">Get Demo</button></span></div>
+                            <input type="hidden" name="formid" class="mktoField mktoFieldDescriptor" value="1169"><input type="hidden" name="munchkinId" class="mktoField mktoFieldDescriptor" value="562-CSP-589">
+                        </form>
+                    </div>
+                    <div>
+                        <form class="demo-form">
+                            <input type="text" placeholder="First Name" class="demo-field firstname" required="">
+                            <input type="text" placeholder="Last Name" class="demo-field lastname" required="">
+                            <input type="email" placeholder="E-mail" class="email-field email" pattern="/^[a-zA-Z0-9.!#$%&amp;&#39;*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required="">
+                            <input type="text" placeholder="Company Name" class="demo-field company" required="">
+                            <input type="button" class="leed-btnWater leed-btn-lg demo-btn" value="ACCESS NOW">
+                        </form>
+                    </div>
+                    <div class="guidebook">
+                        <p>Or, view the <a href="http://dev.leedon.io/gettingstarted.html" target="_blank"><img src="../assets/images/guide.png" height="21px">Getting Started Guide</a> to learn more.</p>
+                        <p>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- END CONTACT -->
+        </div>
+        <!-- END CONTENT SECTION -->
+    </div>
+    <!-- END OUTTER -->
+    <!-- LOGIN POPUP -->
+    <div id="modal" class="popupContainer" style="display:none;">
+    </div>
+    <!-- END LOGIN POPUP -->
+    <div id="lean_overlay"></div>
+    <div id="lean_overlay"></div>
+    <div id="mktoStyleLoaded" style="display: none; border-top-color: rgb(18, 52, 86);"></div>
+    <form novalidate="novalidate" class="mktoForm mktoHasWidth mktoLayoutLeft" style="font-family: Helvetica, Arial, sans-serif; font-size: 13px; color: rgb(51, 51, 51); visibility: hidden; position: absolute; top: -500px; left: -1000px; width: 1349px;"></form>
+
+</body>
+</html>
