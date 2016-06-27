@@ -553,7 +553,7 @@
 </div>
 <div class="hideLabel" style="display: none;"></div>
 <div class="main_container">
-    <div id="srchStatus" class="mont">100 Projects</div>
+    <div id="srchStatus" class="mont">50 Projects</div>
     <div>
         <button id="addNew" class="btnGrey floatr gotham"><span class="floatl" style="margin-top: 6px;font-weight:bold;">Add New Project</span> <span style="margin-top: -3px;font-size: 26px;font-weight: bold;" class="floatr">+</span></button>
     </div>
@@ -565,7 +565,7 @@
             <div class="labelName">Certification</div>
         </div>
         <div>
-            <div id="search_private" class="mb60">
+            <div id="search_private" class="mb60" infinite-scroll='Load_more.nextPage()' infinite-scroll-disabled='Load_more.busy' infinite-scroll-distance='1'>
                 <div ng-repeat="building in buildings | filter:searchText">
                     <div ui-sref="dashboardState" leedon_activated="True" class="39065 list project_row mont" country="US" cert="" lid="1000004022" source="LEED" trial_expire_date="null" trial_status="false" building_status="activated">
                         <div class="listAttr" style="color: rgb(88, 150, 211);font-weight:bold;">{{building.name}}</div>
@@ -574,6 +574,7 @@
                         <div class="listAttr">{{building.certification}}</div>
                     </div>
                 </div>
+                <div ng-show='project.busy'>Loading data...</div>
             </div>
         </div>
     </div>
