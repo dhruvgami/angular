@@ -553,7 +553,7 @@
 </div>
 <div class="hideLabel" style="display: none;"></div>
 <div class="main_container">
-    <div id="srchStatus" class="mont" ng-bind="project_count"></div>
+    <div id="srchStatus" class="mont">{{searched_buildings.length == 1 ? searched_buildings.length + ' Project': searched_buildings.length + ' Projects'}}</div>
     <div>
         <button id="addNew" class="btnGrey floatr gotham"><span class="floatl" style="margin-top: 6px;font-weight:bold;">Add New Project</span> <span style="margin-top: -3px;font-size: 26px;font-weight: bold;" class="floatr">+</span></button>
     </div>
@@ -566,7 +566,7 @@
         </div>
         <div>
             <div id="search_private" class="mb60" infinite-scroll='loadMoreProjects()' infinite-scroll-disabled='loading_more_projects'>
-                <div ng-repeat="building in buildings | filter:searchText">
+                <div ng-repeat="building in buildings | filter:searchText as searched_buildings">
                     <div ui-sref="dashboardState" leedon_activated="True" class="39065 list project_row mont" country="US" cert="" lid="1000004022" source="LEED" trial_expire_date="null" trial_status="false" building_status="activated">
                         <div class="listAttr" style="color: rgb(88, 150, 211);font-weight:bold;">{{building.name}}</div>
                         <div class="listAttr">{{building.location}}</div>

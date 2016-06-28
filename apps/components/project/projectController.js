@@ -62,7 +62,6 @@ LEEDOnApp.controller('projectController', function($rootScope, $scope, $http) {
         if ($scope.buildings.length > 250){
             return;
         }
-        $scope.project_count = next + " Projects"
         $scope.loading_more_projects = true;
         var url  = 'assets/json/project_data_' + next + '.json'
         $http.get(url).success(function(data) {
