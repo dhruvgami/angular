@@ -7,23 +7,23 @@
     <meta name="author" content="USGBC">
 	<title ng-bind="header"></title>
 	<!-- =============================== Login CSS ==================================== -->
-	<link rel="stylesheet" type="text/css" href="assets/css/main.css?v-11.25">
-	<link rel="stylesheet" type="text/css" href="assets/libs/css/leedstrap.css?v-11.25">
-	<link rel="stylesheet" type="text/css" href="assets/css/login-style.css?v-11.25">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css?v-11.29">
+	<link rel="stylesheet" type="text/css" href="assets/libs/css/leedstrap.css?v-11.29">
+	<link rel="stylesheet" type="text/css" href="assets/css/login-style.css?v-11.29">
 	<!-- =============================== Dashboard CSS ==================================== -->
-	<link rel="stylesheet" type="text/css" href="assets/libs/css/bootstrap.min.css?v-11.25">
-	<link rel="stylesheet" type="text/css" href="assets/libs/css/font-awesome.min.css?v-11.25">
-	<link rel="stylesheet" type="text/css" href="assets/libs/css/jquery.timepicker.css?v-11.25">
-	<link rel="stylesheet" type="text/css" href="assets/css/dashboard-main.css?v-11.25">
-	<link rel="stylesheet" type="text/css" href="assets/libs/css/simplePagination.css?v-11.25">
-	<link rel="stylesheet" type="text/css" href="assets/libs/css/jquery-ui.css?v-11.25">
-	<link rel="stylesheet" type="text/css" href="assets/libs/css/dj.selectable.css?v-11.25">
-	<link rel="stylesheet" type="text/css" href="assets/libs/css/nprogress.css?v-11.25">
-	<link rel="stylesheet" type="text/css" href="assets/libs/css/foundation-datepicker.css?v-11.25">
-	<link rel="stylesheet" type="text/css" href="assets/libs/css/jquery.fullPage.css?v-11.25">
-	<link rel="stylesheet" type="text/css" href="assets/libs/css/multiple-select.css?v-11.25">
-	<link rel="stylesheet" type="text/css" href="assets/css/dashboard-elements.css?v-11.25">
-	<link rel="stylesheet" type="text/css" href="assets/libs/css/jquery.qtip.min.css?v-11.25">
+	<link rel="stylesheet" type="text/css" href="assets/libs/css/bootstrap.min.css?v-11.29">
+	<link rel="stylesheet" type="text/css" href="assets/libs/css/font-awesome.min.css?v-11.29">
+	<link rel="stylesheet" type="text/css" href="assets/libs/css/jquery.timepicker.css?v-11.29">
+	<link rel="stylesheet" type="text/css" href="assets/css/dashboard-main.css?v-11.29">
+	<link rel="stylesheet" type="text/css" href="assets/libs/css/simplePagination.css?v-11.29">
+	<link rel="stylesheet" type="text/css" href="assets/libs/css/jquery-ui.css?v-11.29">
+	<link rel="stylesheet" type="text/css" href="assets/libs/css/dj.selectable.css?v-11.29">
+	<link rel="stylesheet" type="text/css" href="assets/libs/css/nprogress.css?v-11.29">
+	<link rel="stylesheet" type="text/css" href="assets/libs/css/foundation-datepicker.css?v-11.29">
+	<link rel="stylesheet" type="text/css" href="assets/libs/css/jquery.fullPage.css?v-11.29">
+	<link rel="stylesheet" type="text/css" href="assets/libs/css/multiple-select.css?v-11.29">
+	<link rel="stylesheet" type="text/css" href="assets/css/dashboard-elements.css?v-11.29">
+	<link rel="stylesheet" type="text/css" href="assets/libs/css/jquery.qtip.min.css?v-11.29">
 </head>
 <body class="{{bodyLayout}}">
     <div id="main_app" ui-view class="{{main_appClass}}">
@@ -31,27 +31,28 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="assets/libs/js/ocLazyLoad.min.js"></script>
 	<script src="assets/libs/js/ng-infinite-scroll.min.js"></script>
-	<script src="app.route.js?v-11.25"></script>
-	<!-- <script src="apps/components/home/homeController.js?v-11.25"></script> -->
-	<script src="apps/components/login/loginController.js?v-11.25"></script>
-	<script src="apps/components/project/projectController.js?v-11.25"></script>
-	<script src="apps/components/dashboard/dashboardController.js?v-11.25"></script>
-	<script src="apps/components/dashboard/score/scoreController.js?v-11.25"></script>
-	<script src="apps/components/dashboard/data/dataController.js?v-11.25"></script>
-	<script src="apps/components/dashboard/data/input/inputController.js?v-11.25"></script>
-	<script src="apps/components/dashboard/data/survey/surveyController.js?v-11.25"></script>
-	<script src="apps/components/dashboard/strategies/strategiesController.js?v-11.25"></script>
-	<script src="apps/components/dashboard/analysis/analysisController.js?v-11.25"></script>
-	<script src="apps/components/dashboard/analysis/energy/energyController.js?v-11.25"></script>
-	<script src="apps/components/dashboard/analysis/water/waterController.js?v-11.25"></script>
-	<script src="apps/components/dashboard/analysis/waste/wasteController.js?v-11.25"></script>
-	<script src="apps/components/dashboard/analysis/transport/transportController.js?v-11.25"></script>
-	<script src="apps/components/dashboard/analysis/human/humanController.js?v-11.25"></script>
-	<script src="apps/components/dashboard/manage/manageController.js?v-11.25"></script>
-	<script src="apps/components/dashboard/manage/setup/setupController.js?v-11.25"></script>
-	<script src="apps/components/dashboard/manage/team/teamController.js?v-11.25"></script>
-	<script src="apps/components/dashboard/manage/account/accountController.js?v-11.25"></script>
-	<script src="apps/components/dashboard/manage/connectedapps/connectedappsController.js?v-11.25"></script>
+	<script src="app.route.js?v-11.29"></script>
+	<!-- <script src="apps/components/home/homeController.js?v-11.29"></script> -->
+	<script src="apps/components/login/loginController.js?v-11.29"></script>
+	<script src="apps/components/project/projectController.js?v-11.29"></script>
+	<script src="apps/components/dashboard/dashboardController.js?v-11.29"></script>
+	<script src="apps/components/dashboard/score/scoreController.js?v-11.29"></script>
+	<script src="apps/components/dashboard/data/dataController.js?v-11.29"></script>
+	<script src="apps/components/dashboard/data/input/inputController.js?v-11.29"></script>
+	<script src="apps/components/dashboard/data/survey/surveyController.js?v-11.29"></script>
+	<script src="apps/components/dashboard/strategies/strategiesController.js?v-11.29"></script>
+	<script src="apps/components/dashboard/analysis/analysisController.js?v-11.29"></script>
+	<script src="apps/components/dashboard/analysis/energy/energyController.js?v-11.29"></script>
+	<script src="apps/components/dashboard/analysis/water/waterController.js?v-11.29"></script>
+	<script src="apps/components/dashboard/analysis/waste/wasteController.js?v-11.29"></script>
+	<script src="apps/components/dashboard/analysis/transport/transportController.js?v-11.29"></script>
+	<script src="apps/components/dashboard/analysis/human/humanController.js?v-11.29"></script>
+	<script src="apps/components/dashboard/manage/manageController.js?v-11.29"></script>
+	<script src="apps/components/dashboard/manage/setup/setupController.js?v-11.29"></script>
+	<script src="apps/components/dashboard/manage/team/teamController.js?v-11.29"></script>
+	<script src="apps/components/dashboard/manage/account/accountController.js?v-11.29"></script>
+	<script src="apps/components/dashboard/manage/connectedapps/connectedappsController.js?v-11.29"></script>
 </body>
 </html>
