@@ -1,4 +1,4 @@
-LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $window) {
+LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $window, $ocLazyLoad) {
 	$rootScope.header = 'Dashboard';
 	$rootScope.main_appClass = '';
 	$rootScope.bodyLayout = '';
