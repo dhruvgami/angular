@@ -3,9 +3,9 @@ var LEEDOnApp = angular.module('LEEDOnApp', ['ui.router', 'oc.lazyLoad', 'infini
 // configure our routes
 LEEDOnApp.config(function($stateProvider, $compileProvider, $urlRouterProvider) {
     
-    $compileProvider.debugInfoEnabled(false);
+    // $compileProvider.debugInfoEnabled(false);
     $urlRouterProvider.otherwise("/login");
-    $urlRouterProvider.when('/dashboard','/dashboard/score');
+    $urlRouterProvider.when('/dashboard/{leed_id}','/dashboard/score/{leed_id}');
     $urlRouterProvider.when('/dashboard/data','/dashboard/data/input');
     $urlRouterProvider.when('/dashboard/analysis','/dashboard/analysis/energy');
     $urlRouterProvider.when('/dashboard/manage','/dashboard/manage/setup');
@@ -27,12 +27,12 @@ LEEDOnApp.config(function($stateProvider, $compileProvider, $urlRouterProvider) 
         controller : "projectController"
      })
     .state("dashboardState", {
-        url: "/dashboard",
+        url: "/dashboard/{leed_id}",
         templateUrl: "apps/components/dashboard/dashboardView.html",
         controller : "dashboardController"
      })
     .state("dashboardState.scoreState", {
-        url: "/score",
+        url: "/score/{leed_id}",
         templateUrl: "apps/components/dashboard/score/scoreView.html",
         controller : "scoreController"
     })
