@@ -1,14 +1,14 @@
-var LEEDOnApp = angular.module('LEEDOnApp', ['ui.router', 'oc.lazyLoad', 'infinite-scroll']);
+var LEEDOnApp = angular.module('LEEDOnApp', ['ui.router', 'infinite-scroll']);
 
 // configure our routes
 LEEDOnApp.config(function($stateProvider, $compileProvider, $urlRouterProvider) {
     
     // $compileProvider.debugInfoEnabled(false);
     $urlRouterProvider.otherwise("/login");
-    $urlRouterProvider.when('/dashboard/{leed_id}','/dashboard/score/{leed_id}');
-    $urlRouterProvider.when('/dashboard/data','/dashboard/data/input');
-    $urlRouterProvider.when('/dashboard/analysis','/dashboard/analysis/energy');
-    $urlRouterProvider.when('/dashboard/manage','/dashboard/manage/setup');
+    $urlRouterProvider.when('/dashboard/{leed_id}', ['$state', function ($state) {$state.go('dashboardState.scoreState');}]);
+    $urlRouterProvider.when('/dashboard/{leed_id}/data',['$state', function ($state) {$state.go('dashboardState.dataState.inputState');}]);
+    $urlRouterProvider.when('/dashboard/{leed_id}/analysis',['$state', function ($state) {$state.go('dashboardState.analysisState.energyAnalysisState');}]);
+    $urlRouterProvider.when('/dashboard/{leed_id}/manage',['$state', function ($state) {$state.go('dashboardState.manageState.setupState');}]);
 
     $stateProvider
     // .state("homeState", {
@@ -32,7 +32,7 @@ LEEDOnApp.config(function($stateProvider, $compileProvider, $urlRouterProvider) 
         controller : "dashboardController"
      })
     .state("dashboardState.scoreState", {
-        url: "/score/{leed_id}",
+        url: "/score",
         templateUrl: "apps/components/dashboard/score/scoreView.html",
         controller : "scoreController"
     })

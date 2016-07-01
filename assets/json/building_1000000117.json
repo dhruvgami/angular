@@ -1,7 +1,7 @@
 {
     "certification": "Platinum",
     "building_status": "activated",
-    "updated_at": "2016-06-20T10:22:54.631",
+    "updated_at": "2016-06-27T08:51:20.452",
     "county": "",
     "street": "2101 L Street NW",
     "trial_expire_date": "2016-02-23T12:40:36.206",
@@ -9,7 +9,7 @@
     "major_renovation": null,
     "city": "Washington",
     "occupancy": 23,
-    "state": "District of Columbia",
+    "state": "USDC",
     "transit": {
         "comment": "",
         "co2e": 13.17549531,
@@ -30,7 +30,7 @@
             }
         }
     ],
-    "survey_expire_date": "2016-06-04T09:24:30.784",
+    "survey_expire_date": "2016-06-23T09:22:04.633",
     "base_score": 50.0,
     "lobby_survey_status": false,
     "default_human_experience": 75.0,
@@ -70,7 +70,7 @@
         }
     ],
     "name": "USGBC Headquarters",
-    "country": "United States",
+    "country": "US",
     "gross_area": 73770,
     "month_owned": null,
     "building_type": null,

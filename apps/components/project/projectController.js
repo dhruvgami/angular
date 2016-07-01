@@ -5,10 +5,9 @@ LEEDOnApp.controller('projectController', function($rootScope, $scope, $http) {
 	$rootScope.htmlLayout = 'js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths';
 	$scope.loading_more_projects = false;
     angular.module('infinite-scroll').value('THROTTLE_MILLISECONDS', 1000)
-    var csJson;
     $scope.buildings = [];
     $http.get('assets/json/countriesstates.json').success(function(json_data) {
-        csJson = json_data;
+        $rootScope.csJson = json_data;
     });
 	
     function filterBuildingdata(data){
@@ -31,7 +30,7 @@ LEEDOnApp.controller('projectController', function($rootScope, $scope, $http) {
                 if(data[i].state != data[i].country) 
                 {
                     try {
-                        data[i].state = csJson['divisions'][data[i].country][data[i].state]
+                        data[i].state = $rootScope.csJson['divisions'][data[i].country][data[i].state]
                     }
                     catch(err) {
                         data[i].state = data[i].state

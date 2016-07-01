@@ -1,0 +1,22 @@
+{
+    "created_at": "2016-04-15T18:29:22.507",
+    "certification_level": "certified",
+    "version": 2,
+    "scores": {
+        "energy": 24,
+        "water": 15,
+        "base": null,
+        "human_experience": 2,
+        "waste": 6,
+        "transport": 11
+    },
+    "effective_at": "2016-04-15T00:00:00",
+    "maxima": {
+        "energy": 33,
+        "water": 15,
+        "base": 10,
+        "human_experience": 20,
+        "waste": 8,
+        "transport": 14
+    }
+}
