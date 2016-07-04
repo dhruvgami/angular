@@ -6,6 +6,9 @@ LEEDOnApp.controller('strategiesController', function($rootScope, $scope) {
 	$scope.isActive_mr = false;
 	$scope.isActive_iq = false;
 	$scope.isActive_lt = false;
+	$scope.isActive_pi = false;
+	$scope.isActive_ieq = false;
+	$scope.isActive_id = false;
 	$scope.activeButton_ea = function() {
 		$scope.isActive_ea = !$scope.isActive_ea;
 		if ($scope.isActive_ea){
@@ -54,6 +57,33 @@ LEEDOnApp.controller('strategiesController', function($rootScope, $scope) {
 	$scope.activeButton_lt = function() {
 		$scope.isActive_lt = !$scope.isActive_lt;
 		if ($scope.isActive_lt){
+			document.getElementById('parent-section-lt').style.display = "block";
+		}
+		else{
+			document.getElementById('parent-section-lt').style.display = "none";
+		}
+	}
+	$scope.activeButton_pi = function() {
+		$scope.isActive_pi = !$scope.isActive_pi;
+		if ($scope.isActive_pi){
+			document.getElementById('parent-section-pi').style.display = "block";
+		}
+		else{
+			document.getElementById('parent-section-pi').style.display = "none";
+		}
+	}
+	$scope.activeButton_ieq = function() {
+		$scope.isActive_ieq = !$scope.isActive_ieq;
+		if ($scope.isActive_ieq){
+			document.getElementById('parent-section-lt').style.display = "block";
+		}
+		else{
+			document.getElementById('parent-section-lt').style.display = "none";
+		}
+	}
+	$scope.activeButton_id = function() {
+		$scope.isActive_id = !$scope.isActive_id;
+		if ($scope.isActive_id){
 			document.getElementById('parent-section-lt').style.display = "block";
 		}
 		else{
