@@ -1,4 +1,4 @@
-var LEEDOnApp = angular.module('LEEDOnApp', ['ui.router', 'infinite-scroll']);
+var LEEDOnApp = angular.module('LEEDOnApp', ['ui.router', 'infinite-scroll', 'oc.lazyLoad']);
 
 // configure our routes
 LEEDOnApp.config(function($stateProvider, $compileProvider, $urlRouterProvider) {
