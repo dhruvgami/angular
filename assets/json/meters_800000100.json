@@ -1,0 +1,40 @@
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Electricity",
+    "id": 5182,
+    "updated_at": "2016-03-17T12:24:44.645",
+    "data_coverage_area": null,
+    "area_choice": null,
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": null,
+    "included": true,
+    "type": {
+        "subtype": "WECC Northwest",
+        "kind": "electricity",
+        "type": "NWPP",
+        "id": 25
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Water",
+    "id": 5183,
+    "updated_at": "2016-03-17T12:24:44.651",
+    "data_coverage_area": null,
+    "area_choice": null,
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": null,
+    "included": true,
+    "type": {
+        "subtype": "",
+        "kind": "water",
+        "type": "Municipality supplied potable water",
+        "id": 47
+    },
+    "native_unit": "gal"
+}

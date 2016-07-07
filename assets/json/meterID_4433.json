@@ -1,0 +1,96 @@
+{
+    "end_date": "2015-07-01T00:00:00",
+    "updated_at": "2016-07-04T06:11:48.960",
+    "partner_consumption_id": null,
+    "updated_by_id": 9,
+    "reading": 90.0,
+    "start_date": "2015-06-01T00:00:00"
+},
+{
+    "end_date": "2015-08-01T00:00:00",
+    "updated_at": "2016-06-02T09:45:39.834",
+    "partner_consumption_id": null,
+    "updated_by_id": 9,
+    "reading": 90.0,
+    "start_date": "2015-07-01T00:00:00"
+},
+{
+    "end_date": "2015-09-01T00:00:00",
+    "updated_at": "2016-06-02T09:45:40.243",
+    "partner_consumption_id": null,
+    "updated_by_id": 9,
+    "reading": 90.0,
+    "start_date": "2015-08-01T00:00:00"
+},
+{
+    "end_date": "2015-10-01T00:00:00",
+    "updated_at": "2016-06-02T09:45:40.557",
+    "partner_consumption_id": null,
+    "updated_by_id": 9,
+    "reading": 90.0,
+    "start_date": "2015-09-01T00:00:00"
+},
+{
+    "end_date": "2015-11-01T00:00:00",
+    "updated_at": "2016-06-02T09:45:41.026",
+    "partner_consumption_id": null,
+    "updated_by_id": 9,
+    "reading": 9.0,
+    "start_date": "2015-10-01T00:00:00"
+},
+{
+    "end_date": "2015-12-01T00:00:00",
+    "updated_at": "2016-06-02T09:45:41.935",
+    "partner_consumption_id": null,
+    "updated_by_id": 9,
+    "reading": 9.0,
+    "start_date": "2015-11-01T00:00:00"
+},
+{
+    "end_date": "2016-01-01T00:00:00",
+    "updated_at": "2016-06-02T09:45:43.508",
+    "partner_consumption_id": null,
+    "updated_by_id": 9,
+    "reading": 9.0,
+    "start_date": "2015-12-01T00:00:00"
+},
+{
+    "end_date": "2016-02-01T00:00:00",
+    "updated_at": "2016-06-02T09:45:44.050",
+    "partner_consumption_id": null,
+    "updated_by_id": 9,
+    "reading": 90.0,
+    "start_date": "2016-01-01T00:00:00"
+},
+{
+    "end_date": "2016-03-01T00:00:00",
+    "updated_at": "2016-06-02T09:45:44.152",
+    "partner_consumption_id": null,
+    "updated_by_id": 9,
+    "reading": 90.0,
+    "start_date": "2016-02-01T00:00:00"
+},
+{
+    "end_date": "2016-04-01T00:00:00",
+    "updated_at": "2016-06-02T09:45:44.459",
+    "partner_consumption_id": null,
+    "updated_by_id": 9,
+    "reading": 90.0,
+    "start_date": "2016-03-01T00:00:00"
+},
+{
+    "end_date": "2016-05-01T00:00:00",
+    "updated_at": "2016-06-02T09:45:44.947",
+    "partner_consumption_id": null,
+    "updated_by_id": 9,
+    "reading": 90.0,
+    "start_date": "2016-04-01T00:00:00"
+},
+{
+    "end_date": "2016-06-01T00:00:00",
+    "updated_at": "2016-06-02T09:45:46.129",
+    "partner_consumption_id": null,
+    "updated_by_id": 9,
+    "reading": 9.0,
+    "start_date": "2016-05-01T00:00:00"
+}

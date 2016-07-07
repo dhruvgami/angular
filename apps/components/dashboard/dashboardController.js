@@ -4,7 +4,9 @@ LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $http, 
 	$rootScope.bodyLayout    = '';
 	$rootScope.htmlLayout    = 'js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface no-generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths';
 	$scope.leed_id           = $stateParams.leed_id;
-    $ocLazyLoad.load('assets/js/manualMeterSetup.js?v-11.96');
+    window.leed_id           = $scope.leed_id;
+    window .section          = '';
+    $ocLazyLoad.load(['assets/js/manualMeterSetup.js?v-12.23']);
 
 	$http.get('assets/json/building_' + $scope.leed_id + '.json').success(function(data) {
 		$scope.building_name = data.name;
@@ -17,13 +19,13 @@ LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $http, 
                 $scope.building_address = $scope.building_data.city + ', ' + $scope.building_data.state.split($scope.building_data.country)[1] + ', ' + $scope.building_data.country;
             }
             else{
-                $.ajax({
-                  type: "GET",
-                  contentType: 'application/json',
-                  url: "/buildings/LEED:" + plaque.LEED + "/getencodedcountrystate/"
-                }).done(function(getencodedcountrystate_data) {
-                    $scope.building_address = $scope.building_data.city + ', ' + getencodedcountrystate.state + ', ' + $scope.building_data.country;
-                });
+                // $.ajax({
+                //   type: "GET",
+                //   contentType: 'application/json',
+                //   url: "/buildings/LEED:" + plaque.LEED + "/getencodedcountrystate/"
+                // }).done(function(getencodedcountrystate_data) {
+                //     $scope.building_address = $scope.building_data.city + ', ' + getencodedcountrystate.state + ', ' + $scope.building_data.country;
+                // });
             }
         }
 	});

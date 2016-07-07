@@ -1,0 +1,2277 @@
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "SERC Virginia/Carolina",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "SRVC",
+    "id": 39
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": true,
+    "scope": "2",
+    "type": "District Steam",
+    "id": 40
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": true,
+    "scope": "2",
+    "type": "District Hot Water",
+    "id": 41
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "Electric Driven Chiller",
+    "include_in_dropdown_list": true,
+    "scope": "2",
+    "type": "District Chilled Water",
+    "id": 42
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "Absorption Chiller using Natural Gas",
+    "include_in_dropdown_list": true,
+    "scope": "2",
+    "type": "District Chilled Water",
+    "id": 43
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "Engine-Driven Chiller using Natural Gas",
+    "include_in_dropdown_list": true,
+    "scope": "2",
+    "type": "District Chilled Water",
+    "id": 44
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "National Average",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "Electricity",
+    "id": 45
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": true,
+    "scope": "1",
+    "type": "Generated onsite - solar",
+    "id": 46
+},
+{
+    "kind": "water",
+    "resource": "Non-Reclaimed",
+    "subtype": "",
+    "include_in_dropdown_list": true,
+    "scope": null,
+    "type": "Municipality supplied potable water",
+    "id": 47
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "On-Site Turbine",
+    "include_in_dropdown_list": false,
+    "scope": "1",
+    "type": "Electricity",
+    "id": 48
+},
+{
+    "kind": "water",
+    "resource": "Non-Reclaimed",
+    "subtype": "Indoor",
+    "include_in_dropdown_list": false,
+    "scope": null,
+    "type": "Municipally Supplied Potable Water",
+    "id": 49
+},
+{
+    "kind": "water",
+    "resource": "Non-Reclaimed",
+    "subtype": "Outdoor",
+    "include_in_dropdown_list": false,
+    "scope": null,
+    "type": "Municipally Supplied Potable Water",
+    "id": 50
+},
+{
+    "kind": "water",
+    "resource": "Non-Reclaimed",
+    "subtype": "All",
+    "include_in_dropdown_list": false,
+    "scope": null,
+    "type": "Municipally Supplied Potable Water",
+    "id": 51
+},
+{
+    "kind": "water",
+    "resource": "Non-Reclaimed",
+    "subtype": "Indoor",
+    "include_in_dropdown_list": false,
+    "scope": null,
+    "type": "Municipally Supplied Reclaimed Water",
+    "id": 52
+},
+{
+    "kind": "water",
+    "resource": "Non-Reclaimed",
+    "subtype": "Outdoor",
+    "include_in_dropdown_list": false,
+    "scope": null,
+    "type": "Municipally Supplied Reclaimed Water",
+    "id": 53
+},
+{
+    "kind": "water",
+    "resource": "Reclaimed",
+    "subtype": "",
+    "include_in_dropdown_list": true,
+    "scope": null,
+    "type": "Municipality supplied reclaimed water",
+    "id": 54
+},
+{
+    "kind": "water",
+    "resource": "Non-Reclaimed",
+    "subtype": "Indoor",
+    "include_in_dropdown_list": false,
+    "scope": null,
+    "type": "Alternative Water Generated On-Site",
+    "id": 55
+},
+{
+    "kind": "water",
+    "resource": "Non-Reclaimed",
+    "subtype": "Outdoor",
+    "include_in_dropdown_list": false,
+    "scope": null,
+    "type": "Alternative Water Generated On-Site",
+    "id": 56
+},
+{
+    "kind": "water",
+    "resource": "Reclaimed",
+    "subtype": "",
+    "include_in_dropdown_list": true,
+    "scope": null,
+    "type": "Reclaimed onsite",
+    "id": 57
+},
+{
+    "kind": "water",
+    "resource": "Non-Reclaimed",
+    "subtype": "Indoor",
+    "include_in_dropdown_list": false,
+    "scope": null,
+    "type": "Other Water Sources",
+    "id": 58
+},
+{
+    "kind": "water",
+    "resource": "Non-Reclaimed",
+    "subtype": "Outdoor",
+    "include_in_dropdown_list": false,
+    "scope": null,
+    "type": "Other Water Sources",
+    "id": 59
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "BG",
+    "id": 86
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "KH",
+    "id": 87
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "CM",
+    "id": 88
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "CA",
+    "id": 89
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "CL",
+    "id": 90
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "CN",
+    "id": 91
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "TW",
+    "id": 92
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "CO",
+    "id": 93
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "CG",
+    "id": 94
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "CR",
+    "id": 95
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "CI",
+    "id": 96
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "HR",
+    "id": 97
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "CU",
+    "id": 98
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "CY",
+    "id": 99
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "CZ",
+    "id": 100
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "CD",
+    "id": 101
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "DK",
+    "id": 102
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "DO",
+    "id": 103
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "EC",
+    "id": 104
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "EG",
+    "id": 105
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "SY",
+    "id": 185
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "TJ",
+    "id": 186
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "TH",
+    "id": 187
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "TG",
+    "id": 188
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "TT",
+    "id": 189
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "TN",
+    "id": 190
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "TR",
+    "id": 191
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": true,
+    "scope": "1",
+    "type": "Natural Gas",
+    "id": 1
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "No. 2",
+    "include_in_dropdown_list": true,
+    "scope": "1",
+    "type": "Fuel Oil",
+    "id": 2
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": true,
+    "scope": "1",
+    "type": "Wood",
+    "id": 3
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": true,
+    "scope": "1",
+    "type": "Propane",
+    "id": 4
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": true,
+    "scope": "1",
+    "type": "Liquid Propane",
+    "id": 5
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": true,
+    "scope": "1",
+    "type": "Kerosene",
+    "id": 6
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "No. 1",
+    "include_in_dropdown_list": true,
+    "scope": "1",
+    "type": "Fuel Oil",
+    "id": 7
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "No. 5 & No. 6",
+    "include_in_dropdown_list": true,
+    "scope": "1",
+    "type": "Fuel Oil",
+    "id": 8
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "anthracite",
+    "include_in_dropdown_list": true,
+    "scope": "1",
+    "type": "Coal",
+    "id": 9
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "bituminous",
+    "include_in_dropdown_list": true,
+    "scope": "1",
+    "type": "Coal",
+    "id": 10
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": true,
+    "scope": "1",
+    "type": "Coke",
+    "id": 11
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "No. 4",
+    "include_in_dropdown_list": true,
+    "scope": "1",
+    "type": "Fuel Oil",
+    "id": 12
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": true,
+    "scope": "1",
+    "type": "Diesel",
+    "id": 13
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "ASCC Alaska Grid",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "AKGD",
+    "id": 14
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "ASCC Miscellaneous",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "AKMS",
+    "id": 15
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "WECC Southwest",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "AZNM",
+    "id": 16
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "WECC California",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "CAMX",
+    "id": 17
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "ERCOT All",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "ERCT",
+    "id": 18
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "FRCC All",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "FRCC",
+    "id": 19
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "HICC Miscellaneous",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "HIMS",
+    "id": 20
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "HICC Oahu",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "HIOA",
+    "id": 21
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "MRO East",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "MORE",
+    "id": 22
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "MRO West",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "MROW",
+    "id": 23
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "NPCC New England",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "NEWE",
+    "id": 24
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "WECC Northwest",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "NWPP",
+    "id": 25
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "NPCC NYC/Westchester",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "NYCW",
+    "id": 26
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "NPCC Long Island",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "NYLI",
+    "id": 27
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "NPCC Upstate NY",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "NYUP",
+    "id": 28
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "RFC East",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "RFCE",
+    "id": 29
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "RFC Michigan",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "RFCM",
+    "id": 30
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "RFC West",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "RFCW",
+    "id": 31
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "WECC Rockies",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "RMPA",
+    "id": 32
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "SPP North",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "SPNO",
+    "id": 33
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "SPP South",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "SPSO",
+    "id": 34
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "SERC Mississippi Valley",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "SRMV",
+    "id": 35
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "SERC Midwest",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "SRMW",
+    "id": 36
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "SERC South",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "SRSO",
+    "id": 37
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "SERC Tennessee Valley",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "SRTV",
+    "id": 38
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "SV",
+    "id": 106
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "ER",
+    "id": 107
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "EE",
+    "id": 108
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "ET",
+    "id": 109
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "FI",
+    "id": 110
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "FR",
+    "id": 111
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "MK",
+    "id": 112
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "GA",
+    "id": 113
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "TM",
+    "id": 192
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "UK",
+    "id": 193
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "UA",
+    "id": 194
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "AE",
+    "id": 195
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "TZ",
+    "id": 196
+},
+{
+    "kind": "water",
+    "resource": "Non-Reclaimed",
+    "subtype": "All",
+    "include_in_dropdown_list": false,
+    "scope": null,
+    "type": "Other Water Sources",
+    "id": 60
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "Other",
+    "include_in_dropdown_list": false,
+    "scope": null,
+    "type": "District Chilled Water",
+    "id": 61
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "Input Energy",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "Power Distribution Unit (PDU)",
+    "id": 62
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "Output Energy",
+    "include_in_dropdown_list": false,
+    "scope": "1",
+    "type": "Power Distribution Unit (PDU)",
+    "id": 63
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "Input Energy",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "Uninterruptible Power Supply (UPS)",
+    "id": 64
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "Output Energy",
+    "include_in_dropdown_list": false,
+    "scope": "1",
+    "type": "Uninterruptible Power Supply (UPS)",
+    "id": 65
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "Energy",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "Other",
+    "id": 66
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "On-Site Wind",
+    "include_in_dropdown_list": false,
+    "scope": "1",
+    "type": "Electricity",
+    "id": 67
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "AL",
+    "id": 68
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "DZ",
+    "id": 69
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "AO",
+    "id": 70
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "AR",
+    "id": 71
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "AM",
+    "id": 72
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "AU",
+    "id": 73
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "AT",
+    "id": 74
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "AZ",
+    "id": 75
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "BH",
+    "id": 76
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "BD",
+    "id": 77
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "BY",
+    "id": 78
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "BE",
+    "id": 79
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "BJ",
+    "id": 80
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "BO",
+    "id": 81
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "BA",
+    "id": 82
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "BW",
+    "id": 83
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "BR",
+    "id": 84
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "BN",
+    "id": 85
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "GE",
+    "id": 114
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "DE",
+    "id": 115
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "GH",
+    "id": 116
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "GI",
+    "id": 117
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "GR",
+    "id": 118
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "GT",
+    "id": 119
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "HT",
+    "id": 120
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "HN",
+    "id": 121
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "HK",
+    "id": 122
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "HU",
+    "id": 123
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "IS",
+    "id": 124
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "IN",
+    "id": 125
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "ID",
+    "id": 126
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "IQ",
+    "id": 127
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "IE",
+    "id": 128
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "LK",
+    "id": 181
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "SD",
+    "id": 182
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "SE",
+    "id": 183
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "CH",
+    "id": 184
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "Engine-Driven Chiller using Natural Gas",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "Canada District Chilled Water",
+    "id": 249
+},
+{
+    "kind": "water",
+    "resource": "Non-Reclaimed",
+    "subtype": "Mixed Indoor/Outdoor Use",
+    "include_in_dropdown_list": false,
+    "scope": null,
+    "type": "Municipally Supplied Potable Water",
+    "id": 250
+},
+{
+    "kind": "water",
+    "resource": "Non-Reclaimed",
+    "subtype": "Mixed Indoor/Outdoor Use",
+    "include_in_dropdown_list": false,
+    "scope": null,
+    "type": "Municipally Supplied Reclaimed Water",
+    "id": 251
+},
+{
+    "kind": "water",
+    "resource": "Non-Reclaimed",
+    "subtype": "Mixed Indoor/Outdoor Use",
+    "include_in_dropdown_list": false,
+    "scope": null,
+    "type": "Alternative Water Generated Onsite",
+    "id": 252
+},
+{
+    "kind": "water",
+    "resource": "Non-Reclaimed",
+    "subtype": "Mixed Indoor/Outdoor Use",
+    "include_in_dropdown_list": false,
+    "scope": null,
+    "type": "Other Water Sources",
+    "id": 253
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "IR",
+    "id": 129
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "IL",
+    "id": 130
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "IT",
+    "id": 131
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "JM",
+    "id": 132
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "JP",
+    "id": 133
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "JO",
+    "id": 134
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "KZ",
+    "id": 135
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "KE",
+    "id": 136
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "KR",
+    "id": 137
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "KS",
+    "id": 138
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "KW",
+    "id": 139
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "KG",
+    "id": 140
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "LV",
+    "id": 141
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "LB",
+    "id": 142
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "LY",
+    "id": 143
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "LT",
+    "id": 144
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "LU",
+    "id": 145
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "MY",
+    "id": 146
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "MT",
+    "id": 147
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "MX",
+    "id": 148
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "MN",
+    "id": 149
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "ME",
+    "id": 150
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "MA",
+    "id": 151
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "MZ",
+    "id": 152
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "MM",
+    "id": 153
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "NA",
+    "id": 154
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "NP",
+    "id": 155
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "NL",
+    "id": 156
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "AN",
+    "id": 157
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "NZ",
+    "id": 158
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "NI",
+    "id": 159
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "NG",
+    "id": 160
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "NO",
+    "id": 161
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "OM",
+    "id": 162
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "PK",
+    "id": 163
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "PA",
+    "id": 164
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "PE",
+    "id": 165
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "PH",
+    "id": 166
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "PL",
+    "id": 167
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "PT",
+    "id": 168
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "QA",
+    "id": 169
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "MD",
+    "id": 170
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "RO",
+    "id": 171
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "RU",
+    "id": 172
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "SA",
+    "id": 173
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "SN",
+    "id": 174
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "RS",
+    "id": 175
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "SG",
+    "id": 176
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "SK",
+    "id": 177
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "SI",
+    "id": 178
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "ZA",
+    "id": 179
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "ES",
+    "id": 180
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "UY",
+    "id": 197
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "UZ",
+    "id": 198
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "VE",
+    "id": 199
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "VN",
+    "id": 200
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "YE",
+    "id": 201
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "ZM",
+    "id": 202
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "ZW",
+    "id": 203
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "BM",
+    "id": 204
+},
+{
+    "kind": "voc",
+    "resource": null,
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": null,
+    "type": "Volitile Organic Compounds",
+    "id": 205
+},
+{
+    "kind": "co2",
+    "resource": null,
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": null,
+    "type": "Carbon Dioxide",
+    "id": 206
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "CAYT",
+    "id": 207
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "CAPE",
+    "id": 208
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "CAAB",
+    "id": 209
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "CANU",
+    "id": 210
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "CABC",
+    "id": 211
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "CAMB",
+    "id": 212
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "CANT",
+    "id": 213
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "CANB",
+    "id": 214
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "CANL",
+    "id": 215
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "CASK",
+    "id": 216
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "CANS",
+    "id": 217
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "CAON",
+    "id": 218
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "CAQC",
+    "id": 219
+},
+{
+    "kind": "electricity",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "Other Non-OECD",
+    "id": 220
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "CAAB",
+    "include_in_dropdown_list": false,
+    "scope": "1",
+    "type": "Natural Gas",
+    "id": 221
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "CABC",
+    "include_in_dropdown_list": false,
+    "scope": "1",
+    "type": "Natural Gas",
+    "id": 222
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "CAMB",
+    "include_in_dropdown_list": false,
+    "scope": "1",
+    "type": "Natural Gas",
+    "id": 223
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "CANB",
+    "include_in_dropdown_list": false,
+    "scope": "1",
+    "type": "Natural Gas",
+    "id": 224
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "CANL",
+    "include_in_dropdown_list": false,
+    "scope": "1",
+    "type": "Natural Gas",
+    "id": 225
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "CANT",
+    "include_in_dropdown_list": false,
+    "scope": "1",
+    "type": "Natural Gas",
+    "id": 226
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "CANS",
+    "include_in_dropdown_list": false,
+    "scope": "1",
+    "type": "Natural Gas",
+    "id": 227
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "CANU",
+    "include_in_dropdown_list": false,
+    "scope": "1",
+    "type": "Natural Gas",
+    "id": 228
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "CAON",
+    "include_in_dropdown_list": false,
+    "scope": "1",
+    "type": "Natural Gas",
+    "id": 229
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "CAPE",
+    "include_in_dropdown_list": false,
+    "scope": "1",
+    "type": "Natural Gas",
+    "id": 230
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "CAQC",
+    "include_in_dropdown_list": false,
+    "scope": "1",
+    "type": "Natural Gas",
+    "id": 231
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "CASK",
+    "include_in_dropdown_list": false,
+    "scope": "1",
+    "type": "Natural Gas",
+    "id": 232
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "CAYT",
+    "include_in_dropdown_list": false,
+    "scope": "1",
+    "type": "Natural Gas",
+    "id": 233
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "1",
+    "type": "Canada Propane",
+    "id": 234
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "No. 1",
+    "include_in_dropdown_list": false,
+    "scope": "1",
+    "type": "Canada Fuel Oil",
+    "id": 235
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "No. 2",
+    "include_in_dropdown_list": false,
+    "scope": "1",
+    "type": "Canada Fuel Oil",
+    "id": 236
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "No. 4",
+    "include_in_dropdown_list": false,
+    "scope": "1",
+    "type": "Canada Fuel Oil",
+    "id": 237
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "No. 5 & No. 6",
+    "include_in_dropdown_list": false,
+    "scope": "1",
+    "type": "Canada Fuel Oil",
+    "id": 238
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "1",
+    "type": "Canada Diesel",
+    "id": 239
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "1",
+    "type": "Canada Kerosene",
+    "id": 240
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "anthracite",
+    "include_in_dropdown_list": false,
+    "scope": "1",
+    "type": "Canada Coal",
+    "id": 241
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "bituminous",
+    "include_in_dropdown_list": false,
+    "scope": "1",
+    "type": "Canada Coal",
+    "id": 242
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "1",
+    "type": "Canada Coke",
+    "id": 243
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "1",
+    "type": "Canada Wood",
+    "id": 244
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "Canada District Steam",
+    "id": 245
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "Canada District Hot Water",
+    "id": 246
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "Electric Driven Chiller",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "Canada District Chilled Water",
+    "id": 247
+},
+{
+    "kind": "fuel",
+    "resource": "Non-Renewable",
+    "subtype": "Absorption Chiller using Natural Gas",
+    "include_in_dropdown_list": false,
+    "scope": "2",
+    "type": "Canada District Chilled Water",
+    "id": 248
+}

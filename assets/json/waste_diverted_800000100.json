@@ -1,0 +1,36 @@
+{
+    "end_date": "2015-03-02T00:00:00",
+    "updated_at": "2016-02-16T18:09:00.645",
+    "id": 1422,
+    "updated_by_id": 18,
+    "reading": 412.0,
+    "start_date": "2015-02-01T00:00:00",
+    "unit": "lbs"
+},
+{
+    "end_date": "2015-06-01T00:00:00",
+    "updated_at": "2016-02-16T18:09:15.236",
+    "id": 1424,
+    "updated_by_id": 18,
+    "reading": 312.0,
+    "start_date": "2015-05-01T00:00:00",
+    "unit": "lbs"
+},
+{
+    "end_date": "2015-09-01T00:00:00",
+    "updated_at": "2016-02-16T18:09:34.260",
+    "id": 1426,
+    "updated_by_id": 18,
+    "reading": 423.0,
+    "start_date": "2015-08-01T00:00:00",
+    "unit": "lbs"
+},
+{
+    "end_date": "2015-12-01T00:00:00",
+    "updated_at": "2016-02-16T18:09:47.437",
+    "id": 1428,
+    "updated_by_id": 18,
+    "reading": 420.0,
+    "start_date": "2015-11-01T00:00:00",
+    "unit": "lbs"
+}

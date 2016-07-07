@@ -1,0 +1,63 @@
+{
+    "end_date": "2015-07-01T00:00:00",
+    "updated_at": "2016-06-02T09:47:03.415",
+    "id": 1592,
+    "updated_by_id": 9,
+    "reading": 80.0,
+    "start_date": "2015-06-01T00:00:00",
+    "unit": "lbs"
+},
+{
+    "end_date": "2015-08-01T00:00:00",
+    "updated_at": "2016-06-02T09:47:11.904",
+    "id": 1594,
+    "updated_by_id": 9,
+    "reading": 10.0,
+    "start_date": "2015-07-01T00:00:00",
+    "unit": "lbs"
+},
+{
+    "end_date": "2015-09-01T00:00:00",
+    "updated_at": "2016-06-02T09:47:19.950",
+    "id": 1596,
+    "updated_by_id": 9,
+    "reading": 80.0,
+    "start_date": "2015-08-01T00:00:00",
+    "unit": "lbs"
+},
+{
+    "end_date": "2015-10-01T00:00:00",
+    "updated_at": "2016-06-23T05:53:48.880",
+    "id": 1599,
+    "updated_by_id": 9,
+    "reading": 7.0,
+    "start_date": "2015-09-01T00:00:00",
+    "unit": "lbs"
+},
+{
+    "end_date": "2016-11-11T00:00:00",
+    "updated_at": "2016-06-27T06:46:55.599",
+    "id": 1606,
+    "updated_by_id": 9,
+    "reading": 25.0,
+    "start_date": "2015-11-01T00:00:00",
+    "unit": "lbs"
+},
+{
+    "end_date": "2016-12-11T00:00:00",
+    "updated_at": "2016-06-27T07:10:01.336",
+    "id": 1610,
+    "updated_by_id": 9,
+    "reading": 40.0,
+    "start_date": "2016-11-11T00:00:00",
+    "unit": "lbs"
+},
+{
+    "end_date": "2017-01-13T00:00:00",
+    "updated_at": "2016-06-27T07:12:55.344",
+    "id": 1613,
+    "updated_by_id": 9,
+    "reading": 5.0,
+    "start_date": "2016-12-12T00:00:00",
+    "unit": "lbs"
+}

@@ -1,0 +1,1320 @@
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Pantry and Shower Water 2",
+    "id": 4430,
+    "updated_at": "2016-07-01T12:14:29.397",
+    "data_coverage_area": 123.0,
+    "area_choice": "LRA",
+    "max_coverage_area": 234.0,
+    "partner_details": null,
+    "responsibility": "DMA",
+    "included": true,
+    "type": {
+        "subtype": "",
+        "kind": "water",
+        "type": "Reclaimed onsite",
+        "id": 57
+    },
+    "native_unit": "gal"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "CRAC4-6th flr South",
+    "id": 4432,
+    "updated_at": "2016-05-19T13:40:19.753",
+    "data_coverage_area": 20000.0,
+    "area_choice": "TRA",
+    "max_coverage_area": 1234.0,
+    "partner_details": null,
+    "responsibility": "DMA",
+    "included": true,
+    "type": {
+        "subtype": "WECC Northwest",
+        "kind": "electricity",
+        "type": "NWPP",
+        "id": 25
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "CRAC5-5th flr North",
+    "id": 4433,
+    "updated_at": "2016-03-17T12:24:44.674",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "CRAC6-5th flr South",
+    "id": 4434,
+    "updated_at": "2016-03-17T12:24:44.680",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Furniture-5th flr North",
+    "id": 4435,
+    "updated_at": "2016-03-17T12:24:44.686",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Furniture-5th flr South",
+    "id": 4436,
+    "updated_at": "2016-07-01T06:19:53.351",
+    "data_coverage_area": 123.0,
+    "area_choice": "",
+    "max_coverage_area": 3456.0,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Furniture-6th flr North",
+    "id": 4437,
+    "updated_at": "2016-03-17T12:24:44.692",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Furniture-6th flr South",
+    "id": 4438,
+    "updated_at": "2016-03-17T12:24:44.704",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "HVAC-5th flr North",
+    "id": 4439,
+    "updated_at": "2016-03-17T12:24:44.710",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "HVAC-5th flr South",
+    "id": 4440,
+    "updated_at": "2016-03-17T12:24:44.716",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "HVAC-6th flr North",
+    "id": 4441,
+    "updated_at": "2016-03-17T12:24:44.722",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "HVAC-6th flr South",
+    "id": 4442,
+    "updated_at": "2016-03-17T12:24:44.728",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Lights HV-5th flr North",
+    "id": 4443,
+    "updated_at": "2016-03-17T12:24:44.734",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Lights HV-5th flr South",
+    "id": 4444,
+    "updated_at": "2016-03-17T12:24:44.741",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Lights HV-6th flr North",
+    "id": 4445,
+    "updated_at": "2016-03-17T12:24:44.747",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Lights HV-6th flr South",
+    "id": 4446,
+    "updated_at": "2016-03-17T12:24:44.753",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Lights LV-5th flr North",
+    "id": 4447,
+    "updated_at": "2016-03-17T12:24:44.759",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Lights LV-5th flr South",
+    "id": 4448,
+    "updated_at": "2016-03-17T12:24:44.765",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Lights LV-6th flr North",
+    "id": 4449,
+    "updated_at": "2016-03-17T12:24:44.771",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Lights LV-6th flr South",
+    "id": 4450,
+    "updated_at": "2016-03-17T12:24:44.777",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Power HV-5th flr North",
+    "id": 4451,
+    "updated_at": "2016-03-17T12:24:44.783",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Power HV-5th flr South",
+    "id": 4452,
+    "updated_at": "2016-03-17T12:24:44.789",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Power HV-6th flr North",
+    "id": 4453,
+    "updated_at": "2016-03-17T12:24:44.795",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Power HV-6th flr South",
+    "id": 4454,
+    "updated_at": "2016-03-17T12:24:44.801",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Power LV-5th flr North",
+    "id": 4455,
+    "updated_at": "2016-03-17T12:24:44.807",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Power LV-5th flr South",
+    "id": 4456,
+    "updated_at": "2016-03-17T12:24:44.812",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Power LV-6th flr North",
+    "id": 4457,
+    "updated_at": "2016-03-17T12:24:44.818",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Power LV-6th flr South",
+    "id": 4458,
+    "updated_at": "2016-03-17T12:24:44.824",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Meter 1",
+    "id": 4521,
+    "updated_at": "2016-05-19T18:05:48.062",
+    "data_coverage_area": 234.0,
+    "area_choice": "LRA",
+    "max_coverage_area": 456.0,
+    "partner_details": null,
+    "responsibility": "DMA",
+    "included": true,
+    "type": {
+        "subtype": "",
+        "kind": "water",
+        "type": "Municipality supplied potable water",
+        "id": 47
+    },
+    "native_unit": "gal"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "test_other_fuels",
+    "id": 4586,
+    "updated_at": "2016-03-17T12:24:44.847",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "Electric Driven Chiller",
+        "kind": "fuel",
+        "type": "District Chilled Water",
+        "id": 42
+    },
+    "native_unit": "kBtu"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "test3",
+    "id": 4818,
+    "updated_at": "2016-03-17T12:24:44.830",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "",
+        "kind": "fuel",
+        "type": "Wood",
+        "id": 3
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Default CO2 Meter",
+    "id": 5013,
+    "updated_at": "2016-03-17T12:24:44.836",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "",
+        "kind": "co2",
+        "type": "Carbon Dioxide",
+        "id": 206
+    },
+    "native_unit": "ppm"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Default VOC Meter",
+    "id": 5018,
+    "updated_at": "2016-03-17T12:24:44.842",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "",
+        "kind": "voc",
+        "type": "Volitile Organic Compounds",
+        "id": 205
+    },
+    "native_unit": "ppb"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Default VOC Meter",
+    "id": 5141,
+    "updated_at": "2016-03-17T12:24:44.853",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "",
+        "kind": "voc",
+        "type": "Volitile Organic Compounds",
+        "id": 205
+    },
+    "native_unit": "ug/m3"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Electricity",
+    "id": 5142,
+    "updated_at": "2016-03-17T12:24:44.860",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Water1",
+    "id": 5143,
+    "updated_at": "2016-05-19T18:10:37.564",
+    "data_coverage_area": 567.0,
+    "area_choice": "OTA",
+    "max_coverage_area": 678.0,
+    "partner_details": null,
+    "responsibility": "DMA",
+    "included": true,
+    "type": {
+        "subtype": "",
+        "kind": "water",
+        "type": "Municipality supplied potable water",
+        "id": 47
+    },
+    "native_unit": "gal"
+},
+{
+    "status": "deleted",
+    "partner_meter_id": null,
+    "name": "E1",
+    "id": 5160,
+    "updated_at": "2016-03-17T12:24:44.872",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "deleted",
+    "partner_meter_id": null,
+    "name": "w1",
+    "id": 5161,
+    "updated_at": "2016-03-17T12:24:44.878",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "",
+        "kind": "water",
+        "type": "Municipality supplied potable water",
+        "id": 47
+    },
+    "native_unit": "gal"
+},
+{
+    "status": "deleted",
+    "partner_meter_id": null,
+    "name": "ng1",
+    "id": 5162,
+    "updated_at": "2016-03-17T12:24:44.884",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "",
+        "kind": "fuel",
+        "type": "Natural Gas",
+        "id": 1
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "deleted",
+    "partner_meter_id": null,
+    "name": "w2",
+    "id": 5163,
+    "updated_at": "2016-03-17T12:24:44.890",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "",
+        "kind": "water",
+        "type": "Municipality supplied potable water",
+        "id": 47
+    },
+    "native_unit": "gal"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "e1",
+    "id": 5164,
+    "updated_at": "2016-03-17T12:24:44.895",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "e2",
+    "id": 5165,
+    "updated_at": "2016-03-17T12:24:44.902",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "w1",
+    "id": 5166,
+    "updated_at": "2016-03-17T12:24:44.907",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "",
+        "kind": "water",
+        "type": "Municipality supplied potable water",
+        "id": 47
+    },
+    "native_unit": "gal"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "w3",
+    "id": 5167,
+    "updated_at": "2016-04-28T14:56:58.292",
+    "data_coverage_area": 123.0,
+    "area_choice": "",
+    "max_coverage_area": 2345.0,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "",
+        "kind": "water",
+        "type": "Municipality supplied potable water",
+        "id": 47
+    },
+    "native_unit": "gal"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "TestEnergy1",
+    "id": 5168,
+    "updated_at": "2016-03-17T12:24:44.919",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "deleted",
+    "partner_meter_id": null,
+    "name": "TestWater1",
+    "id": 5169,
+    "updated_at": "2016-03-17T12:24:44.925",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "",
+        "kind": "water",
+        "type": "Municipality supplied potable water",
+        "id": 47
+    },
+    "native_unit": "gal"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "TestWater2",
+    "id": 5170,
+    "updated_at": "2016-03-17T12:24:44.931",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "",
+        "kind": "water",
+        "type": "Municipality supplied potable water",
+        "id": 47
+    },
+    "native_unit": "gal"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "newwater",
+    "id": 5171,
+    "updated_at": "2016-03-17T12:24:44.937",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "",
+        "kind": "water",
+        "type": "Municipality supplied potable water",
+        "id": 47
+    },
+    "native_unit": "gal"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "newenergy",
+    "id": 5172,
+    "updated_at": "2016-03-17T12:24:44.943",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "deleted",
+    "partner_meter_id": null,
+    "name": "Ellis Test Meter",
+    "id": 5514,
+    "updated_at": "2016-03-17T12:24:44.955",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "deleted",
+    "partner_meter_id": null,
+    "name": "Ellis Test Meter",
+    "id": 5515,
+    "updated_at": "2016-03-17T12:24:44.961",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Test meter",
+    "id": 5516,
+    "updated_at": "2016-03-17T12:24:44.966",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "test",
+    "id": 5517,
+    "updated_at": "2016-03-17T12:24:44.972",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "test 9",
+    "id": 5553,
+    "updated_at": "2016-04-28T15:32:31.124",
+    "data_coverage_area": 1233.0,
+    "area_choice": "",
+    "max_coverage_area": 1233.0,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "test9",
+    "id": 5554,
+    "updated_at": "2016-04-28T15:39:54.738",
+    "data_coverage_area": 234.0,
+    "area_choice": "",
+    "max_coverage_area": 234.0,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "meter 8",
+    "id": 5555,
+    "updated_at": "2016-04-28T16:04:57.007",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "meter 12",
+    "id": 5556,
+    "updated_at": "2016-04-28T16:05:41.387",
+    "data_coverage_area": 1287.0,
+    "area_choice": "",
+    "max_coverage_area": 23987.0,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "water test meter 1",
+    "id": 5557,
+    "updated_at": "2016-04-28T16:27:07.452",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "",
+        "kind": "water",
+        "type": "Municipality supplied potable water",
+        "id": 47
+    },
+    "native_unit": "gal"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "water test meter 2",
+    "id": 5558,
+    "updated_at": "2016-04-28T16:27:24.654",
+    "data_coverage_area": 234.0,
+    "area_choice": "",
+    "max_coverage_area": 4567.0,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "",
+        "kind": "water",
+        "type": "Municipality supplied potable water",
+        "id": 47
+    },
+    "native_unit": "gal"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "meter 5 test 5",
+    "id": 5559,
+    "updated_at": "2016-04-29T11:52:24.636",
+    "data_coverage_area": 123.0,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Main Electrical Meter",
+    "id": 5608,
+    "updated_at": "2016-05-15T08:41:06.281",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "RFC East",
+        "kind": "electricity",
+        "type": "RFCE",
+        "id": 29
+    },
+    "native_unit": "kWh"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Main Water Meter",
+    "id": 5609,
+    "updated_at": "2016-05-15T08:41:21.344",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "",
+        "kind": "water",
+        "type": "Municipality supplied potable water",
+        "id": 47
+    },
+    "native_unit": "cu m"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Main Gas Meter",
+    "id": 5610,
+    "updated_at": "2016-05-15T08:41:36.446",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "",
+        "kind": "fuel",
+        "type": "Natural Gas",
+        "id": 1
+    },
+    "native_unit": "GJ"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "Diesel Fuel Consumption",
+    "id": 5611,
+    "updated_at": "2016-05-15T08:41:51.485",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "No. 1",
+        "kind": "fuel",
+        "type": "Fuel Oil",
+        "id": 7
+    },
+    "native_unit": "l"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "water-23",
+    "id": 5612,
+    "updated_at": "2016-05-15T08:50:43.835",
+    "data_coverage_area": null,
+    "area_choice": "",
+    "max_coverage_area": null,
+    "partner_details": null,
+    "responsibility": "",
+    "included": true,
+    "type": {
+        "subtype": "",
+        "kind": "water",
+        "type": "Municipality supplied potable water",
+        "id": 47
+    },
+    "native_unit": "gal"
+},
+{
+    "status": "synced",
+    "partner_meter_id": null,
+    "name": "sample meter",
+    "id": 5637,
+    "updated_at": "2016-06-21T09:46:06.238",
+    "data_coverage_area": 123.0,
+    "area_choice": "SSA",
+    "max_coverage_area": 234.0,
+    "partner_details": null,
+    "responsibility": "DMA",
+    "included": true,
+    "type": {
+        "subtype": "",
+        "kind": "water",
+        "type": "Municipality supplied potable water",
+        "id": 47
+    },
+    "native_unit": "gal"
+}

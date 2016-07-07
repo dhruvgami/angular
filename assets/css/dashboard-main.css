@@ -2792,7 +2792,7 @@ input.cmn-toggle-round-flat+label:after {
     padding-top: 5px;
     padding-left: 10px;
     border-radius: 52px;
-    background-image: url(../assets/images/switch_off.svg);
+    background-image: url(../../assets/images/switch_off.svg);
     background-repeat: no-repeat;
     background-size: 20px
 }
@@ -2859,12 +2859,12 @@ input.cmn-toggle-round-flat4+label:after {
     padding-top: 5px !important;
     padding-left: 10px !important;
     border-radius: 52px !important;
-    background-image: url(../assets/images/switch_off.svg)
+    background-image: url(../../assets/images/switch_off.svg)
 }
 
 input.cmn-toggle-round-flat4:checked+label:after {
     margin-left: 20px !important;
-    background-image: url(../assets/images/energyon.svg)
+    background-image: url(../../assets/images/energyon.svg)
 }
 
 .cmn-toggle7 {
@@ -2908,7 +2908,7 @@ input.cmn-toggle-round-flat7+label:after {
     padding-top: 5px !important;
     padding-left: 10px !important;
     border-radius: 52px !important;
-    background-image: url(../assets/images/switch_off.svg)
+    background-image: url(../../assets/images/switch_off.svg)
 }
 
 input.cmn-toggle-round-flat7:checked+label:after {
@@ -2963,7 +2963,7 @@ input.cmn-toggle-round-flat8+label:after {
     padding-top: 5px !important;
     padding-left: 10px !important;
     border-radius: 52px !important;
-    background-image: url(../assets/images/switch_off.svg)
+    background-image: url(../../assets/images/switch_off.svg)
 }
 
 input.cmn-toggle-round-flat8:checked+label:after {
@@ -3158,7 +3158,7 @@ input.cmn-toggle-round-flat8:checked+label:after {
 }
 
 .energy_manual_meter {
-    background: url(../assets/images/Energy.png) 10% 50% no-repeat #d0dd3d !important;
+    background: url(../../assets/images/Energy.png) 10% 50% no-repeat #d0dd3d !important;
     background-size: 10px !important
 }
 
@@ -3303,7 +3303,7 @@ input[type=email] {
 }
 
 button.energy {
-    background: url(../assets/images/Energy.png) 7% 60% no-repeat #d0dd3d;
+    background: url(../../assets/images/Energy.png) 7% 60% no-repeat #d0dd3d;
     background-size: 10px;
     height: 36px
 }

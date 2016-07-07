@@ -1,0 +1,72 @@
+{
+    "end_date": "2015-07-01T00:00:00",
+    "updated_at": "2016-06-02T09:46:01.256",
+    "partner_consumption_id": null,
+    "updated_by_id": 9,
+    "reading": 89.0,
+    "start_date": "2015-06-01T00:00:00"
+},
+{
+    "end_date": "2015-08-01T00:00:00",
+    "updated_at": "2016-06-02T09:46:01.503",
+    "partner_consumption_id": null,
+    "updated_by_id": 9,
+    "reading": 89.0,
+    "start_date": "2015-07-01T00:00:00"
+},
+{
+    "end_date": "2015-09-01T00:00:00",
+    "updated_at": "2016-06-02T09:46:02.017",
+    "partner_consumption_id": null,
+    "updated_by_id": 9,
+    "reading": 89.0,
+    "start_date": "2015-08-01T00:00:00"
+},
+{
+    "end_date": "2015-10-01T00:00:00",
+    "updated_at": "2016-06-02T09:46:02.286",
+    "partner_consumption_id": null,
+    "updated_by_id": 9,
+    "reading": 89.0,
+    "start_date": "2015-09-01T00:00:00"
+},
+{
+    "end_date": "2015-11-01T00:00:00",
+    "updated_at": "2016-06-02T09:46:03.379",
+    "partner_consumption_id": null,
+    "updated_by_id": 9,
+    "reading": 98.0,
+    "start_date": "2015-10-01T00:00:00"
+},
+{
+    "end_date": "2016-01-01T00:00:00",
+    "updated_at": "2016-06-02T09:46:03.317",
+    "partner_consumption_id": null,
+    "updated_by_id": 9,
+    "reading": 98.0,
+    "start_date": "2015-12-01T00:00:00"
+},
+{
+    "end_date": "2016-02-01T00:00:00",
+    "updated_at": "2016-06-02T09:46:03.724",
+    "partner_consumption_id": null,
+    "updated_by_id": 9,
+    "reading": 98.0,
+    "start_date": "2016-01-01T00:00:00"
+},
+{
+    "end_date": "2016-03-01T00:00:00",
+    "updated_at": "2016-06-02T09:46:04.596",
+    "partner_consumption_id": null,
+    "updated_by_id": 9,
+    "reading": 9.0,
+    "start_date": "2016-02-01T00:00:00"
+},
+{
+    "end_date": "2016-04-01T00:00:00",
+    "updated_at": "2016-06-02T09:46:04.758",
+    "partner_consumption_id": null,
+    "updated_by_id": 9,
+    "reading": 98.0,
+    "start_date": "2016-03-01T00:00:00"
+}

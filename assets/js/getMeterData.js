@@ -30,6 +30,7 @@
         meterAdded: false,
         meterListAdded: [],
 		payment_mode: '',
+        meter_type_list: [],
         
         isScrolledIntoView: function(elem)
         {
@@ -49,16 +50,16 @@
             $electricity_meter_type = '<li class="other_fuel_unit"><a class="fuel_type_name" value="25">Purchased from grid</a></li>';
             $water_meter_type = '';
             $fuel_meter_type = '';
-            if ((plaqueNav.meter_type_list).length == 0)
+            if ((getMeterData.meter_type_list).length == 0)
             {
                 $.ajax(
                 {
-                    url: '/fuels/',
+                    url: 'assets/json/fuels.json',
                     type: 'GET',
                     contentType: 'application/json'
                 }).done(function(data_fuelType)
                 {
-                    plaqueNav.meter_type_list = data_fuelType;
+                    getMeterData.meter_type_list = data_fuelType;
                     for (var i = 0; i < (data_fuelType).length; i++)
                     {
                         if (data_fuelType[i].include_in_dropdown_list)
@@ -172,7 +173,7 @@
 //                
 //                if (document.URL.indexOf("section") > -1 )
 //                {
-//                    var section_page = plaqueNav.getParameterByName('section');
+//                    var section_page = section;
 //                    type = section_page;
 //                }
 //                else
@@ -234,20 +235,18 @@
         getMeters: function(page)
         {
             $.ajax({
-            url: '/buildings/LEED:' + plaque.LEED + '/waste/generated/?start=2012-01-01&end=2020-01-01&limit=12&order=recent',
+            url: 'assets/json/waste_generated_' + leed_id + '.json',
             type: "GET",
-            dataType: 'jsonp'
             }).done(function(waste_generated)
             {
                 $.ajax({
-                url: '/buildings/LEED:' + plaque.LEED + '/waste/diverted/?start=2012-01-01&end=2020-01-01&limit=12&order=recent',
+                url: 'assets/json/waste_diverted_' + leed_id + '.json',
                 type: "GET",
-                dataType: 'jsonp'
                 }).done(function(waste_diverted)
                 {
                     $.ajax(
                     {
-                        url: '/buildings/LEED:' + plaque.LEED + '/meters/',
+                        url: 'assets/json/meters_' + leed_id + '.json',
                         type: "GET",
                         dataType: 'jsonp'
                     }).done(function(data) 
@@ -322,7 +321,7 @@
 								label = plaque.assosiatedCategories[x].label;
 								if (document.URL.indexOf("section") > -1 )
 								{
-									if (type  == plaqueNav.getParameterByName("section"))
+									if (type  == section)
 									{
 										$('.meterList').append('<div class="meterType '+type+'_meter_label"><a href="#'+type+'_anchor">'+label+'</a></div>');
 									}
@@ -346,7 +345,7 @@
                                 label = plaque.assosiatedCategories[x].label;
 
                                 if (document.URL.indexOf("section") > -1 ){
-                                    if (type  == plaqueNav.getParameterByName("section")){
+                                    if (type  == section){
                                         $('.meterList').append('<div class="meterType '+type+'_meter_label"><a href="#'+type+'_anchor">'+label+'</a></div>');
                                     }
                                     else{
@@ -372,7 +371,7 @@
 								}
 
                                 if (document.URL.indexOf("section") > -1 ) {
-                                    if (type  == plaqueNav.getParameterByName("section")){
+                                    if (type  == section){
                                         html = '<div color1="'+color1+'" color2="'+color2+'" type="'+type+'" class="meterChart '+type+'_meter"><div class="meterHeader"><div class="meterName">Waste Stream</div><div class="meterSetting"></div></div><div id="'+chart_id+'" class="chartArea" unit="'+unit+'"></div>';
                                     }
                                     else{
@@ -404,7 +403,7 @@
                         
                         if (document.URL.indexOf("section") > -1 )
                         {
-                            var section_page = plaqueNav.getParameterByName('section');
+                            var section_page = section;
                             plaqueNav.dataInputNav($('.data_input_category[category-type=' + section_page + ']'));
                             plaqueNav.dataInputSection = section_page;
                         }
@@ -689,7 +688,7 @@ end_date = editMeterData.modifyDates(start_date, 'month', '+' , 1).year + '-' + 
                 
                 if (document.URL.indexOf("section") > -1 )
                 {
-                    if (type  == plaqueNav.getParameterByName("section"))
+                    if (type  == section)
                     {
                         $('.meterChart.waste_meter').after('<div class="meterType '+type+'_meter_label"><a href="#'+type+'_anchor">'+label+'</a></div>');
                     }
@@ -704,7 +703,7 @@ end_date = editMeterData.modifyDates(start_date, 'month', '+' , 1).year + '-' + 
                 }
                 if (document.URL.indexOf("section") > -1 ) 
                 {
-                    if (type  == plaqueNav.getParameterByName("section"))
+                    if (type  == section)
                     {
                         $('.'+type+'_meter_label').after('<div color="'+color+'" type="'+type+'" class="meterChart '+type+'_meter"><div class="meterHeader"><div class="meterName">Survey Response</div></div><div id="transport_chart" class="chartArea"></div>');
                     }
@@ -767,7 +766,7 @@ end_date = editMeterData.modifyDates(start_date, 'month', '+' , 1).year + '-' + 
 
                 if (document.URL.indexOf("section") > -1 ) 
                 {
-                    if (type1  == plaqueNav.getParameterByName("section"))
+                    if (type1  == section)
                     {
                         $('.'+type1+'_meter_label').after('<div color="#9E8FC4" type="'+type1+'" class="meterChart '+type1+'_meter"><div class="meterHeader"><div class="meterName">Dissatisfation Level</div></div><div id="dissatisfation_chart" class="chartArea"></div>');
                     }
@@ -785,7 +784,7 @@ end_date = editMeterData.modifyDates(start_date, 'month', '+' , 1).year + '-' + 
                 
                 if (document.URL.indexOf("section") > -1 ) 
                 {
-                    if (type1  == plaqueNav.getParameterByName("section"))
+                    if (type1  == section)
                     {
                         $('.'+type1+'_meter_label').after('<div color="#9E8FC4" type="'+type1+'" class="meterChart '+type1+'_meter"><div class="meterHeader"><div class="meterName">Satisfaction Rating</div></div><div id="survey_chart" class="chartArea"></div>');
                     }
@@ -801,7 +800,7 @@ end_date = editMeterData.modifyDates(start_date, 'month', '+' , 1).year + '-' + 
 
                 getMeterData.drawChart("survey_chart", getMeterData.satisData, category.color,  'column'); 
                 
-                plaqueNav.removeStrategiesLoadingMessage();
+                // plaqueNav.removeStrategiesLoadingMessage();
             });    
         },
         fetchMeterData: function(options)
@@ -868,7 +867,7 @@ end_date = editMeterData.modifyDates(start_date, 'month', '+' , 1).year + '-' + 
                 if (start == 0 && type != 'humanexperience')
                 {   
                     if (document.URL.indexOf("section") > -1 ){
-                        if (type  == plaqueNav.getParameterByName("section")){
+                        if (type  == section){
                             $('.meterList').append('<div class="meterType '+type+'_meter_label"><a href="#'+type+'_anchor">'+label+'</a></div>');
                         }
                         else{
@@ -891,7 +890,7 @@ end_date = editMeterData.modifyDates(start_date, 'month', '+' , 1).year + '-' + 
                         var chart_id = type + '_meter_' + id;
 
                         if (document.URL.indexOf("section") > -1 ) {
-                            if (type  == plaqueNav.getParameterByName("section")){
+                            if (type  == section){
                                 html = '<div color="'+color+'" type="'+type+'" class="meterChart '+type+'_meter" meter_id="'+ id +'"><div class="meterHeader"><div class="meterName">'+title+'</div><div class="meterSetting"></div></div><div id="'+chart_id+'" class="chartArea" unit="'+unit+'"></div>';
                             }
                             else{
@@ -944,7 +943,7 @@ end_date = editMeterData.modifyDates(start_date, 'month', '+' , 1).year + '-' + 
                 {
                     if (document.URL.indexOf("section") > -1 )
                     {
-                        if (type  == plaqueNav.getParameterByName("section"))
+                        if (type  == section)
                         {
                             $('.waste_meter_label').before('<div class="meterType '+type+'_meter_label"><a href="#'+type+'_anchor">'+label+'</a></div>');
                         }
@@ -962,7 +961,7 @@ end_date = editMeterData.modifyDates(start_date, 'month', '+' , 1).year + '-' + 
                 {
                     if (document.URL.indexOf("section") > -1 )
                     {
-                        if (type  == plaqueNav.getParameterByName("section"))
+                        if (type  == section)
                         {
                             $('.meterList').prepend('<div class="meterType '+type+'_meter_label"><a href="#'+type+'_anchor">'+label+'</a></div>');
                         }
@@ -980,7 +979,7 @@ end_date = editMeterData.modifyDates(start_date, 'month', '+' , 1).year + '-' + 
             
             if (document.URL.indexOf("section") > -1)
             {
-                if (type == plaqueNav.getParameterByName("section"))
+                if (type == section)
                 {
                     html = '<div color="' + color + '" type="' + type + '" class="meterChart ' + type + '_meter" meter_id="' + id + '"><div class="meterHeader"><div class="meterName">' + title + '</div><div class="meterSetting"></div></div><div id="' + chart_id + '" class="chartArea" unit="'+unit+'"></div>';
                 }
@@ -1099,7 +1098,9 @@ end_date = editMeterData.modifyDates(start_date, 'month', '+' , 1).year + '-' + 
     };
     $( document ).ready(function() 
     {
-        // getMeterData.setup();
+        getMeterData.setup();
+        getMeterData.getMeters();
+        getMeterData.get_meter_types();
     });
         
 }).call(this);
