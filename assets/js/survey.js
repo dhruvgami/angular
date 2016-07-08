@@ -1,6 +1,6 @@
 
 (function() {
-  plaque.survey = {
+  window.survey = {
     error_text : "Please provide valid input inside '",
     error_fields : [],
     error_fields_name : [],
@@ -14,7 +14,7 @@
           $('.smiley').css({
             'background-position': -(ui.value * 100) + 'px 0px'
           });
-          plaque.survey.checkSlider(ui.value);
+          window.survey.checkSlider(ui.value);
         }
       });
 
@@ -27,12 +27,12 @@
           }
       });
 
-      plaque.survey.instance = String(Math.random());
+      window.survey.instance = String(Math.random());
 
       return $('.survey_main').on('submit', 'form', function() {
           var $form, environment_json, transit_json, type;
           $('.submit_button button').css('background', 'linear-gradient(to bottom, #3bb34a 0%, #019146 100%)');
-          if (plaqueNav.getParameterByName('language') == 'fr') {
+          if (survey.getParameterByName('language') == 'fr') {
             $('#survey_submit_txt').text('Soumission...');
           } else {
             $('#survey_submit_txt').text('Submitting...');
@@ -42,14 +42,14 @@
           $form = $(this);
           type = $form.data('type');
           if (type === 'survey') {
-              if (plaqueNav.getParameterByName('language') == 'fr'){
+              if (survey.getParameterByName('language') == 'fr'){
                 lan = "French";
               }
               else{
                 lan = "English";
               }                  
             transit_json = {
-              "instance": plaque.survey.instance,
+              "instance": window.survey.instance,
               "response_method": "web",
               "routes": [],
               "tenant_name":$('#tenant_name').val(),
@@ -77,132 +77,22 @@
                 }
               });
             });
-            $.ajax({
-              url: '/buildings/LEED:' + plaque.LEED + '/survey/transit/?recompute_score=1',
-              type: 'POST',
-              contentType: 'application/json',
-              data: JSON.stringify(transit_json)
-            }).done(function(data_response) {
+            setTimeout(function(){ 
                 
               $('#survey_modal_window').modal('show');
+              $('#survey_submit_txt').text('Submit');
               $('.survey_main #survey_submit').prop('disabled','false');
               $('.survey_continue').removeClass('survey_faliure').addClass('survey_success');
-              if (data_response.result === "CONFLICT_ENTRY") {
-                if (plaqueNav.getParameterByName('language') == 'fr') {
-                  $('.survey_continue').text("D'accord");
-                  $('#survey_submit_txt').text('Soumettre');
-                  return $('.confirmation').addClass('error').text('Désolé, vous avez déjà pris cette enquête.').show();
-                }
-                else{
-                  $('.survey_continue').text("OK");
-                  $('#survey_submit_txt').text('Submit');
-                  return $('.confirmation').addClass('error').text('Sorry, You have already taken this survey.').show();
-                }
-              }
-              else {
-                if (plaqueNav.getParameterByName('language') == 'fr') {
-                  $('.survey_continue').text("D'accord");
-                  return $('.confirmation').removeClass('error').text("Merci d'avoir pris le temps de compléter ce sondage.").show();
-                }
-                else{
-                  $('.survey_continue').text("OK");
-                  return $('.confirmation').removeClass('error').text('Thank you for taking the time.').show();
-                }
-              }
-            }).fail(function() {
-              $('#survey_modal_window').modal('show');
-              $('.survey_main #survey_submit').prop('disabled','');
-              $('.survey_continue').removeClass('survey_success').addClass('survey_faliure');
-              if (plaqueNav.getParameterByName('language') == 'fr') {
+              
+              if (survey.getParameterByName('language') == 'fr') {
                 $('.survey_continue').text("D'accord");
-                $('#survey_submit_txt').text('Soumettre');
-                return $('.confirmation').addClass('error').text("Désolé , votre réponse n'a pas présenté pour une raison quelconque . Veuillez réessayer.").show();
+                return $('.confirmation').removeClass('error').text("Merci d'avoir pris le temps de compléter ce sondage.").show();
               }
               else{
                 $('.survey_continue').text("OK");
-                $('#survey_submit_txt').text('Submit');
-                return $('.confirmation').addClass('error').text('Sorry, your response has failed to submit for some reason. Please try again.').show();
+                return $('.confirmation').removeClass('error').text('Thank you for taking the time.').show();
               }
-            });
-            environment_json = {
-              "instance": plaque.survey.instance,
-              "response_method": "web",
-              "location": $('#location_field').val().trim(),
-              "complaints": [],
-              "tenant_name":$('#tenant_name').val(),
-              "language": lan
-            };
-            environment_json.satisfaction = parseInt($('#slider_jquery').slider("option", "value"), 10);
-            if (environment_json.satisfaction < 5) {
-              environment_json.other_complaint = $("#other").val();
-              $('.were_sorry input[type=checkbox]:checked').each(function(i) {
-                return environment_json.complaints.push($(this).attr('id'));
-              });
-            }
-            $.ajax({
-              url: '/buildings/LEED:' + plaque.LEED + '/survey/environment/?recompute_score=1',
-              type: 'POST',
-              username: '',
-              contentType: 'application/json',
-              data: JSON.stringify(environment_json)
-            }).done(function(data_response) {
-
-              $('#survey_modal_window').modal('show');
-              $('.survey_main #survey_submit').prop('disabled','false');
-              $('.survey_continue').removeClass('survey_faliure').addClass('survey_success');
-
-              $('body').on('click', '.survey_success', function() {
-                if(lobby_survey_backend=="True" || dashboard_access == 'False')
-                {
-                  location.reload();
-                }
-                else
-                {
-                  window.location.href = '/v3/dashboard/?page=score&LEED='+plaque.LEED;
-                }   
-              });
-
-              if (data_response.result === "CONFLICT_ENTRY") {
-                if (plaqueNav.getParameterByName('language') == 'fr') {
-                  $('.survey_continue').text("D'accord");
-                  $('#survey_submit_txt').text('Soumettre');
-                  return $('.confirmation').addClass('error').text('Désolé, vous avez déjà pris cette enquête.').show();
-                }
-                else{
-                  $('.survey_continue').text("OK");
-                  $('#survey_submit_txt').text('Submit');
-                  return $('.confirmation').addClass('error').text('Sorry, You have already taken this survey.').show();
-                }
-              }
-              else {
-                if (plaqueNav.getParameterByName('language') == 'fr') {
-                  $('.survey_continue').text("D'accord");
-                  return $('.confirmation').removeClass('error').text("Merci d'avoir pris le temps de compléter ce sondage.").show();
-                }
-                else{
-                  $('.survey_continue').text("OK");
-                  return $('.confirmation').removeClass('error').text('Thank you for taking the time.').show();
-                }
-              }
-            }).fail(function() {
-              $('#survey_modal_window').modal('show');
-              $('.survey_main #survey_submit').prop('disabled','');
-              $('.survey_continue').removeClass('survey_success').addClass('survey_faliure');
-
-              $('body').on('click', '.survey_continue.survey_faliure', function() {
-                  $('#survey_modal_window').modal('hide');
-              });
-
-              if (plaqueNav.getParameterByName('language') == 'fr') {
-                $('#survey_submit_txt').text('Soumettre');
-                return $('.confirmation').addClass('error').text("Désolé , votre réponse n'a pas présenté pour une raison quelconque . Veuillez réessayer.").show();
-              }
-              else{
-                $('#survey_submit_txt').text('Submit');
-                return $('.confirmation').addClass('error').text('Sorry, your response has failed to submit for some reason. Please try again.').show();
-              }
-
-            });
+            }, 1000);
           }
           return false;
       });
@@ -210,35 +100,35 @@
     },
     setup: function() {
       //Start changes for ldpf-159
-      $('.main_container').on('blur','.route-box input' , function () {
-        plaque.survey.checkTransportSurveyValue(this);
+      $('#main_app').on('blur','.route-box input' , function () {
+        window.survey.checkTransportSurveyValue(this);
       });
       //End changes for ldpf-159
-      $('.main_container').on('change', '.slider', function() {
+      $('#main_app').on('change', '.slider', function() {
         $('.smiley').css({
           'background-position': -(this.value * 100) + 'px 0px'
         });
-        plaque.survey.checkSlider(this.value);
+        window.survey.checkSlider(this.value);
       });
-      $('.main_container').on('input', '.slider', function() {
+      $('#main_app').on('input', '.slider', function() {
         $('.smiley').css({
           'background-position': -(this.value * 100) + 'px 0px'
         });
-        plaque.survey.checkSlider(this.value);
+        window.survey.checkSlider(this.value);
       });
-      $('.main_container').on('mouseup', '.slider', function() {
-        return plaque.survey.checkSlider(this.value);
+      $('#main_app').on('mouseup', '.slider', function() {
+        return window.survey.checkSlider(this.value);
       });
-      $('.main_container').on('touchend', '.slider', function() {
-        return plaque.survey.checkSlider(this.value);
+      $('#main_app').on('touchend', '.slider', function() {
+        return window.survey.checkSlider(this.value);
       });
-      $('.main_container').off('click', '.add_route');
-      return $('.main_container').on('click', '.add_route', function() {
-        if (plaqueNav.getParameterByName('language') == "fr"){
-          plaque.survey.alertTransportSurveyAddRoute("Si votre moyen de transport change d'un jour à l'autre, ajouter un autre trajet.");
+      $('#main_app').off('click', '.add_route');
+      return $('#main_app').on('click', '.add_route', function() {
+        if (survey.getParameterByName('language') == "fr"){
+          window.survey.alertTransportSurveyAddRoute("Si votre moyen de transport change d'un jour à l'autre, ajouter un autre trajet.");
         }
         else{
-          plaque.survey.alertTransportSurveyAddRoute("If your commute differs from day to day, add an additional route.");
+          window.survey.alertTransportSurveyAddRoute("If your commute differs from day to day, add an additional route.");
         }
       });
     },
@@ -281,21 +171,21 @@
       if (unit=="Miles"){
         if (index == 0){
           if (value > 3){
-            if (plaqueNav.getParameterByName('language') == "fr"){
-              plaque.survey.alertTransportSurveyValue("" + value + " miles semble supérieur à la moyenne pour un jour , d'une façon.<br/>S'il vous plaît vérifier si cela est correct.");
+            if (survey.getParameterByName('language') == "fr"){
+              window.survey.alertTransportSurveyValue("" + value + " miles semble supérieur à la moyenne pour un jour , d'une façon.<br/>S'il vous plaît vérifier si cela est correct.");
             }
             else{
-              plaque.survey.alertTransportSurveyValue("" + value + " miles seems above average for one day, one way.<br/>Please check if this is correct.");
+              window.survey.alertTransportSurveyValue("" + value + " miles seems above average for one day, one way.<br/>Please check if this is correct.");
             }
           }
         }
         else if(index>0){
           if (value > 30){
-            if (plaqueNav.getParameterByName('language') == "fr"){
-              plaque.survey.alertTransportSurveyValue("" + value + " miles semble supérieur à la moyenne pour un jour , d'une façon.<br/>S'il vous plaît vérifier si cela est correct.");
+            if (survey.getParameterByName('language') == "fr"){
+              window.survey.alertTransportSurveyValue("" + value + " miles semble supérieur à la moyenne pour un jour , d'une façon.<br/>S'il vous plaît vérifier si cela est correct.");
             }
             else{
-              plaque.survey.alertTransportSurveyValue("" + value + " miles seems above average for one day, one way.<br/>Please check if this is correct.");
+              window.survey.alertTransportSurveyValue("" + value + " miles seems above average for one day, one way.<br/>Please check if this is correct.");
             }
           }
         }
@@ -303,21 +193,21 @@
       else if (unit=="Kilometers"){
         if (index == 0){
           if (value > 4.82){
-            if (plaqueNav.getParameterByName('language') == "fr"){
-              plaque.survey.alertTransportSurveyValue("" + value + " kilomètres semble supérieur à la moyenne pour un jour , d'une façon.<br/>S'il vous plaît vérifier si cela est correct.");
+            if (survey.getParameterByName('language') == "fr"){
+              window.survey.alertTransportSurveyValue("" + value + " kilomètres semble supérieur à la moyenne pour un jour , d'une façon.<br/>S'il vous plaît vérifier si cela est correct.");
             }
             else{
-              plaque.survey.alertTransportSurveyValue("" + value + " kilometers seems above average for one day, one way.<br/>Please check if this is correct.");
+              window.survey.alertTransportSurveyValue("" + value + " kilometers seems above average for one day, one way.<br/>Please check if this is correct.");
             }
           }
         }
         else if(index>0){
           if (value > 48.28){
-            if (plaqueNav.getParameterByName('language') == "fr"){
-              plaque.survey.alertTransportSurveyValue("" + value + " kilomètres semble supérieur à la moyenne pour un jour , d'une façon.<br/>S'il vous plaît vérifier si cela est correct.");
+            if (survey.getParameterByName('language') == "fr"){
+              window.survey.alertTransportSurveyValue("" + value + " kilomètres semble supérieur à la moyenne pour un jour , d'une façon.<br/>S'il vous plaît vérifier si cela est correct.");
             }
             else{
-              plaque.survey.alertTransportSurveyValue("" + value + " kilometers seems above average for one day, one way.<br/>Please check if this is correct.");
+              window.survey.alertTransportSurveyValue("" + value + " kilometers seems above average for one day, one way.<br/>Please check if this is correct.");
             }
           }
         }
@@ -327,7 +217,7 @@
       var paragraph = document.getElementById("survey-text");
       paragraph.innerHTML = message;
       $('#survey_alerts').modal('show');
-      if (plaqueNav.getParameterByName('language') == "fr"){
+      if (survey.getParameterByName('language') == "fr"){
         $('#survey-button-ok').text("D'accord");
       }
       else{
@@ -339,15 +229,16 @@
       var paragraph = document.getElementById("survey-text");
       paragraph.innerHTML = message;
       $('#survey_alerts').modal('show');
-      if (plaqueNav.getParameterByName('language') == "fr"){
+      if (survey.getParameterByName('language') == "fr"){
         $('#survey-button-ok').text("D'accord");
       }
       else{
         $('#survey-button-ok').text("OK");
       }
 
+      $('#survey-button-ok').off("click");
       $('#survey-button-ok').on("click", function(){
-        plaque.survey.addAnotherRoute();
+        window.survey.addAnotherRoute();
       });
     },
     addAnotherRoute: function() {
@@ -356,7 +247,7 @@
       $('.survey-box').data('number-of-routes', num);
       obj = $('#route-original').clone();
       obj.attr('id', 'additional-route-' + num);
-      if (plaqueNav.getParameterByName('language') == "fr"){
+      if (survey.getParameterByName('language') == "fr"){
         obj.find('.route_label').text('Trajet ' + num);
       }
       else{
@@ -389,7 +280,7 @@
     popElementInArray: function(array, element){
       var clear_array = true;
       $('.small_dist').each(function( index ) {
-        if($(this).attr('name') != undefined && $(this).attr('name') == plaque.survey.error_fields_name[plaque.survey.error_fields.indexOf(element)]){
+        if($(this).attr('name') != undefined && $(this).attr('name') == window.survey.error_fields_name[window.survey.error_fields.indexOf(element)]){
           if($(this).hasClass("red_border_color")) {
             clear_array = false;
           }
@@ -401,9 +292,24 @@
         var i = array.indexOf(element);
         if(i != -1) {
           array.splice(i, 1);
-          plaque.survey.error_fields.splice(i, 1);
+          window.survey.error_fields.splice(i, 1);
         }
       }
+    },
+    getParameterByName: function(name) {
+        var regex, regexS, results;
+
+        name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+        regexS = "[\\?&]" + name + "=([^&#]*)";
+        regex = new RegExp(regexS);
+        results = regex.exec(window.location.search);
+        // console.log(results);
+        if (results === null) {
+            return "";
+        }
+        else {
+            return decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
     }
   };
     
@@ -412,11 +318,11 @@
   check1=check2=check3=check4=check5=false;
 
   $(document).ready(function() {
-    plaque.survey.setup();
-    $('.main_container').off('change', '.small_dist');
+    window.survey.setup();
+    $('#main_app').off('change', '.small_dist');
     $('body').on('click', '.survey_setup', function(){
-      page = plaqueNav.getParameterByName('page');
-      LEED = plaqueNav.getParameterByName('LEED');
+      page = survey.getParameterByName('page');
+      LEED = survey.getParameterByName('LEED');
       if ($(this).val() == 'fr') {
         url = '/static/dashboard/survey_french.html';
         query_param = "?page=" + page + "&LEED=" + LEED + "&language=fr";
@@ -435,7 +341,7 @@
         goto: page
       }, page.charAt(0).toUpperCase() + page.slice(1), query_param);
     });
-    $('.main_container').on('blur', '.small_dist', function() 
+    $('#main_app').on('blur', '.small_dist', function() 
     {
       $(this).val($(this).val().replace(/ /g,''));
       check1=check2=check3=check4=false;      
@@ -445,13 +351,13 @@
             if (($(this).val()).trim() == '.'){
               $(this).addClass('red_border_color');
               $(this).removeClass('grey_border_color');
-              plaque.survey.pushUniqueElementInArray(plaque.survey.error_fields_name, $(this).attr('name'));
-              plaque.survey.pushUniqueElementInArray(plaque.survey.error_fields, $('label[for=' + $(this).attr('name') + ']').html());
-              if (plaqueNav.getParameterByName('language') == "fr"){
-                plaque.survey.alertTransportSurveyValue("S'il vous plaît entrer un numéro valide à l'intérieur <span><b>" + $('label[for=' + $(this).attr('name') + ']').html() + "</b></span>");
+              window.survey.pushUniqueElementInArray(window.survey.error_fields_name, $(this).attr('name'));
+              window.survey.pushUniqueElementInArray(window.survey.error_fields, $('label[for=' + $(this).attr('name') + ']').html());
+              if (survey.getParameterByName('language') == "fr"){
+                window.survey.alertTransportSurveyValue("S'il vous plaît entrer un numéro valide à l'intérieur <span><b>" + $('label[for=' + $(this).attr('name') + ']').html() + "</b></span>");
               }
               else{
-                plaque.survey.alertTransportSurveyValue("Please enter a valid number inside <span><b>" + $('label[for=' + $(this).attr('name') + ']').html() + "</b></span>");
+                window.survey.alertTransportSurveyValue("Please enter a valid number inside <span><b>" + $('label[for=' + $(this).attr('name') + ']').html() + "</b></span>");
               }
               check3 = true;
               break;
@@ -463,7 +369,7 @@
                 {      
                   $(this).removeClass('red_border_color');
                   $(this).addClass('grey_border_color');
-                  plaque.survey.popElementInArray(plaque.survey.error_fields, $('label[for=' + $(this).attr('name') + ']').html());
+                  window.survey.popElementInArray(window.survey.error_fields, $('label[for=' + $(this).attr('name') + ']').html());
                   check3 = false;
                   count_dots++;  
                 }
@@ -472,13 +378,13 @@
                 {
                   $(this).addClass('red_border_color');
                   $(this).removeClass('grey_border_color');
-                  plaque.survey.pushUniqueElementInArray(plaque.survey.error_fields_name, $(this).attr('name'));
-                  plaque.survey.pushUniqueElementInArray(plaque.survey.error_fields, $('label[for=' + $(this).attr('name') + ']').html());
-                  if (plaqueNav.getParameterByName('language') == "fr"){
-                    plaque.survey.alertTransportSurveyValue("S'il vous plaît entrer un numéro valide à l'intérieur <span><b>" + $('label[for=' + $(this).attr('name') + ']').html() + "</b></span>");
+                  window.survey.pushUniqueElementInArray(window.survey.error_fields_name, $(this).attr('name'));
+                  window.survey.pushUniqueElementInArray(window.survey.error_fields, $('label[for=' + $(this).attr('name') + ']').html());
+                  if (survey.getParameterByName('language') == "fr"){
+                    window.survey.alertTransportSurveyValue("S'il vous plaît entrer un numéro valide à l'intérieur <span><b>" + $('label[for=' + $(this).attr('name') + ']').html() + "</b></span>");
                   }
                   else{
-                    plaque.survey.alertTransportSurveyValue("Please enter a valid number inside <span><b>" + $('label[for=' + $(this).attr('name') + ']').html() + "</b></span>");
+                    window.survey.alertTransportSurveyValue("Please enter a valid number inside <span><b>" + $('label[for=' + $(this).attr('name') + ']').html() + "</b></span>");
                   }
                   check3 = true;
                   count_dots = 1;
@@ -490,7 +396,7 @@
               {
                   $(this).removeClass('red_border_color');
                   $(this).addClass('grey_border_color');
-                  plaque.survey.popElementInArray(plaque.survey.error_fields, $('label[for=' + $(this).attr('name') + ']').html());
+                  window.survey.popElementInArray(window.survey.error_fields, $('label[for=' + $(this).attr('name') + ']').html());
                   check3 = false;
               }
             }
@@ -502,7 +408,7 @@
             check3 = false;
             $(this).removeClass('red_border_color');
             $(this).addClass('grey_border_color');
-            plaque.survey.popElementInArray(plaque.survey.error_fields, $('label[for=' + $(this).attr('name') + ']').html());
+            window.survey.popElementInArray(window.survey.error_fields, $('label[for=' + $(this).attr('name') + ']').html());
         }
 
        $(".small_dist").each(function( index ) {
@@ -518,7 +424,7 @@
     });
       
       
-    $('.main_container').on('keydown', '#location_field', function()
+    $('#main_app').on('keydown', '#location_field', function()
     {
         if($('#location_field').val().length == 128)
         {
@@ -526,7 +432,7 @@
         }
     });
       
-    $('.main_container').on('keydown', '#other', function()
+    $('#main_app').on('keydown', '#other', function()
     {
         if($('#other').val().length == 256)
         {
@@ -534,7 +440,7 @@
         }
     }); 
 
-    $('.main_container').on('keydown', '#tenant_name', function()
+    $('#main_app').on('keydown', '#tenant_name', function()
     {
         if($('#tenant_name').val().length == 64)
         {
@@ -542,7 +448,7 @@
         }
     }); 
       
-    $('.main_container').on('blur', '#location_field', function() 
+    $('#main_app').on('blur', '#location_field', function() 
     {
         if($(this).val().length > 128)
         {
@@ -558,7 +464,7 @@
         }
         check();
     }); 
-    $('.main_container').on('blur', '#other', function() 
+    $('#main_app').on('blur', '#other', function() 
     {
         if($(this).val().length > 256)
         {
@@ -575,7 +481,7 @@
         check();
     });
 
-    $('.main_container').on('blur', '#tenant_name', function() 
+    $('#main_app').on('blur', '#tenant_name', function() 
     {
         if($(this).val().length > 64)
         {
@@ -597,13 +503,13 @@
     {
         if(check1 == true || check2 == true || check3 == true || check4 == true || check5 == true)
         {
-            if (plaqueNav.getParameterByName('language') == "fr"){
-              plaque.survey.error_text = "S'il vous plaît apporter une contribution valable à l'intérieur '"
+            if (survey.getParameterByName('language') == "fr"){
+              window.survey.error_text = "S'il vous plaît apporter une contribution valable à l'intérieur '"
             }
             else{
-              plaque.survey.error_text = "Please provide valid input inside '";
+              window.survey.error_text = "Please provide valid input inside '";
             }
-            $('#complete_error').html(plaque.survey.error_text + plaque.survey.error_fields.join("', '") + "'");
+            $('#complete_error').html(window.survey.error_text + window.survey.error_fields.join("', '") + "'");
             $('#complete_error').show();
             $('#survey_submit').attr('disabled','disabled');
             $('#survey_submit').removeClass('mt40');  
@@ -616,8 +522,8 @@
         }      
     }
       
-    $('.main_container').off('change', '.date');
-    return $('.main_container').on('change', '.date', function() {
+    $('#main_app').off('change', '.date');
+    return $('#main_app').on('change', '.date', function() {
       if (this.value === $(this).attr('placeholder') || this.value === '') {
         return $(this).removeClass('edited');
       } else {

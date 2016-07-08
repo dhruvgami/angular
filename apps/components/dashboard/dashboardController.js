@@ -6,7 +6,7 @@ LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $http, 
 	$scope.leed_id           = $stateParams.leed_id;
     window.leed_id           = $scope.leed_id;
     window .section          = '';
-    $ocLazyLoad.load(['assets/js/manualMeterSetup.js?v-12.23']);
+    $ocLazyLoad.load(['assets/js/manualMeterSetup.js?v-12.23', 'assets/js/survey.js?v-12.31', 'assets/libs/js/jquery-ui.js']);
 
 	$http.get('assets/json/building_' + $scope.leed_id + '.json').success(function(data) {
 		$scope.building_name = data.name;

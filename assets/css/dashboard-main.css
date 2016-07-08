@@ -931,7 +931,7 @@ table input {
     position: relative;
     width: 164px;
     height: 164px;
-    top: -456px;
+    top: -464px;
     margin-left: -83px;
     text-align: center
 }
@@ -6921,4 +6921,8 @@ div.settingsStatuses .ms-drop ul li label input {
 
 .app_info {
     color: #a9a9a9
+}
+
+.mt110{
+    margin-top: 110px !important;
 }
