@@ -555,7 +555,7 @@
 <div class="main_container">
     <div id="srchStatus" class="mont">{{searched_buildings.length == 1 ? searched_buildings.length + ' Project': searched_buildings.length + ' Projects'}}</div>
     <div>
-        <button id="addNew" class="btnGrey floatr gotham"><span class="floatl" style="margin-top: 6px;font-weight:bold;">Add New Project</span> <span style="margin-top: -3px;font-size: 26px;font-weight: bold;" class="floatr">+</span></button>
+        <button id="addNew" ng-click="openNewProjectModal()" class="btnGrey floatr gotham"><span class="floatl" style="margin-top: 6px;font-weight:bold;">Add New Project</span> <span style="margin-top: -3px;font-size: 26px;font-weight: bold;" class="floatr">+</span></button>
     </div>
     <div class="search_results">
         <div class="searchLabels mont">
@@ -1229,7 +1229,7 @@
                         </tbody>
                     </table>
                     <div class="floatl" style="margin-right: 30px;">
-                        <button id="bSaveProject" class="btn action-button btnGreen mt40">ADD</button>
+                        <button id="bSaveProject" ng-click="createNewProject()" class="btn action-button btnGreen mt40">ADD</button>
                     </div>
                     <div>
                         <button data-dismiss="modal" class="btn action-button btnOutline mt40">CANCEL</button>

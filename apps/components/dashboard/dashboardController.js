@@ -38,5 +38,4 @@ LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $http, 
 	$scope.redirectToGBIG = function () {
         $window.open('http://www.gbig.org/activities/leed-' + $scope.leed_id, '_blank');
     };
-    // $ocLazyLoad.load('testModule.js');
 });

@@ -6926,3 +6926,7 @@ div.settingsStatuses .ms-drop ul li label input {
 .mt110{
     margin-top: 110px !important;
 }
+
+.loader_bg_add_new{
+    display: none;
+}

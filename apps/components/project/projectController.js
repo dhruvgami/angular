@@ -1,4 +1,4 @@
-LEEDOnApp.controller('projectController', function($rootScope, $scope, $http) {
+LEEDOnApp.controller('projectController', function($rootScope, $scope, $http, $ocLazyLoad) {
 	$rootScope.header = 'Projects';
 	$rootScope.main_appClass = 'overflow_y_scroll';
 	$rootScope.bodyLayout = '';
@@ -8,7 +8,23 @@ LEEDOnApp.controller('projectController', function($rootScope, $scope, $http) {
     $scope.buildings = [];
     $http.get('assets/json/countriesstates.json').success(function(json_data) {
         $rootScope.csJson = json_data;
+        window.countries_states = json_data;
+        $ocLazyLoad.load(['assets/libs/js/countries_states.js?v=1.2']);
     });
+
+    $scope.openNewProjectModal = function () {
+        $('.publicForm').each(function()
+        {
+            $(this).val("");
+        });
+        $('#bNameForm').val($('#id_building').val());
+        $('.addNewBuilding').modal('toggle');
+    };
+
+    $scope.createNewProject = function () {
+        $('.loader_bg_add_new').show();
+        setTimeout(function(){ $('.addNewBuilding').modal('toggle'); location.href = "#/dashboard/800000100/data/input"; }, 1000);
+    };
 	
     function filterBuildingdata(data){
         for (var i in data)
