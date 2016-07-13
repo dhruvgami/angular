@@ -1,0 +1,35 @@
+
+<div class="modal-header meter_select_header">
+    <button class="close meter_select_close manual_meter_close" id="close_teamManagement_modal" type="button">×</button>
+</div>
+
+<div id="building_teamManagement">
+  <div class="card_wrapper_3">
+    <div class="card main_3" id="building_owner_open">
+        <div id="teamManagement">
+            <div><h2 class="build_head align_left inline_block">ADD TEAM MEMBERS</h2></div>
+            <div class="num_teamManagement_header bold bottom_line pt30 pb40 display_pending_request">PENDING REQUESTS ( <span class="total_pending_requests">0</span> )</div>
+            <div class="no_pending_requests bottom_line display_pending_request"><span>No pending request.</span></div>
+            <div id="pending_requests_container_modal" class="display_pending_request">
+                
+            </div>
+
+            <div class="num_teamManagement_header bold bottom_line pt30 pb40">CURRENT MEMBERS ( <span class="total_teamMembers">0</span> )</div>
+            <div class="no_team_member bottom_line"><span>No team member found.</span></div>
+            <div id="team_member_main_container_modal">
+            </div>
+            <div class="add_teamManagement_header bold pt40 pb40">ADD MEMBER</div>
+            <div class="add_teamManagement_input">
+                <input class="mr10 mt10 mb10" type="text" id="new_username_TM_member" placeholder="Invite by E-mail">
+                <div class="ajax_loader_TM_member"></div>
+                <input class="btn btnBlue no_outline" id="add_new_member_TM_member" type="submit" value="ADD"></div>
+            </div>
+            <p class="multiple_id_member mt20 align_center">Username is already present in the system. Please check the usernames listed above.</p>
+
+            <div class="mt50 buttonWrapper align_center">
+                <input type="submit" class="btn btnGreen mb10 no_outline" value="Continue" id="continue5"></input>
+            </div>
+            <p class="light_color skip_for_now align_center">Skip for now</p>
+        </div>
+  </div>
+</div>

@@ -1,0 +1,79 @@
+<div class="modal-header meter_select_header">
+    <button class="close meter_select_close manual_meter_close" id="close_buildingInfo_modal" type="button">×</button>
+</div>
+
+<div class="row ml_0per" id="building_info">
+    <div class="card_wrapper_3">
+        <div class="card main_3">
+            <h2 class="mb25 build_head">REVIEW PROJECT INFO </h2>
+            <div class="mb25 fs16"> Before we move forward, please confirm that the following information is correct: </div>
+                <div class="building_info_fields">
+                    <div class="info_row">
+                        <div class="nonedit_head"><h4 class="h4_dash">PROJECT</h4></div>
+                        <div><input class="mb15_ni enable_edit disable_edit not-active width80p" id="building_name" type="text" value="" name="name" readonly tabindex="1"></div>
+                    </div>
+
+                    <div class="info_row">
+                        <div class="nonedit_head "><h4 class="h4_dash">PROJECT ID</h4></div>
+                        <div><input class="mb15_ni enable_edit disable_edit not-active width80p" id="building_id" type="text" value="" name="leed_id" readonly tabindex="2"></div>
+                    </div>
+
+                  <div class="info_row">
+                    <div class="nonedit_head "><h4 class="h4_dash">YEAR BUILT</h4></div>
+                    <div><input class="mb15_ni enable_edit disable_edit not-active width80p" id="building_year" type="text" value="" name="year_constructed" readonly tabindex="3"></div>
+                  </div>
+
+                  <div class="info_row">
+                    <div class="nonedit_head "><h4 class="h4_dash">STREET</h4></div>
+                    <div><input class="mb15_ni enable_edit disable_edit not-active width80p" id="building_street" type="text" value="" name="street" readonly tabindex="4"></div>
+                  </div>
+
+                  <div class="info_row display_country_select">
+                    <div class="nonedit_head "><h4 class="h4_dash">COUNTRY</h4></div>
+                    <div>
+                      <select id="building_country" class="account_country_dash mb15_ni enable_edit disable_edit not-active width80p pressEnter" name="country" readonly tabindex="5" required onchange="print_state('building_state', this.value);"></select>    
+                    </div>
+                  </div>
+                  
+                  <div class="info_row display_state_select">
+                    <div class="nonedit_head "><h4 class="h4_dash">STATE</h4></div>
+                    <div>
+                        <select id="building_state" class="account_state_dash mb15_ni enable_edit disable_edit not-active width80p" name="state" readonly tabindex="6" required></select>
+                      </div>
+                  </div>
+
+                  <div class="info_row">
+                    <div class="nonedit_head "><h4 class="h4_dash">CITY</h4></div>
+                    <div><input class="mb15_ni enable_edit disable_edit not-active width80p" id="building_city" type="text" value="" name="city" readonly tabindex="7"></div>
+                  </div>
+
+                  <div class="info_row">
+                    <div class="nonedit_head "><h4 class="h4_dash">ZIP CODE</h4></div>
+                    <div><input class="mb15_ni enable_edit disable_edit not-active width80p" id="building_zipcode" type="text" value="" name="zip_code" tabindex="8"></div>
+                  </div>
+
+                  <div class="info_row">
+                    <div class="nonedit_head "><h4 class="h4_dash">GROSS FLOOR AREA (FT)</h4></div>
+                    <div><input class="mb15_ni enable_edit disable_edit not-active width80p" id="gfa_input" type="text" name="gross_area" value="" readonly tabindex="9"></div>
+                  </div>
+
+                  <div class="info_row">
+                    <div class="nonedit_head "><h4 class="h4_dash">BUILDING OCCUPANCY</h4></div>
+                    <div><input class="mb15_ni enable_edit disable_edit not-active width80p" id="occ_input" type="text" value="" name="occupancy" readonly tabindex="10"></div>
+                  </div>
+
+                  <div class="info_row">
+                    <div class="nonedit_head "><h4 class="h4_dash">TYPICAL WEEKLY OPERATING HOURS</h4></div>
+                    <div><input class="mb15_ni enable_edit disable_edit not-active width80p flat-right" id="hours_input" type="text" value="" name="operating_hours" readonly tabindex="11">
+                    <img class="hours_input_2 modal_btn" height="20px" width="20px" src="assets/images/Calculator.png" title="Enter time manually">
+                    </div>
+                  </div>
+                </div>
+                <div class="build_confirm_btn build_confirm_btn1 mt10">
+                    <input type="submit" value="YES, ITS CORRECT" class="btn btnFixWidth mb10 btnGreen no_outline" id="correct_btn" tabindex="12"></input>
+                    <input type="submit" value="EDIT"  class="btn usgbcBtnRight btnBlue no_outline" id="edit_btn" tabindex="13"></input>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>

@@ -6,7 +6,9 @@ LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $http, 
 	$scope.leed_id           = $stateParams.leed_id;
     window.leed_id           = $scope.leed_id;
     window .section          = '';
-    $ocLazyLoad.load(['assets/js/manualMeterSetup.js?v-12.23', 'assets/js/survey.js?v-12.31', 'assets/libs/js/jquery-ui.js']);
+    window.PAYMENT_VERSION   = 'V1';
+    window.full_version_arr  = ["buildingInfo", "softwareSubscription", "hardwareSubscription", "orderSelection", "payment", "receipt", "buildingConfirmation", "teamManagement", "meterSetup"];
+    $ocLazyLoad.load(['assets/js/manualMeterSetup.js?v-12.23', 'assets/js/survey.js?v-12.31', 'assets/libs/js/jquery-ui.js', 'assets/libs/js/jquery.timepicker.js', 'assets/js/activationFlow-v1.js?v-12.34']);
 
 	$http.get('assets/json/building_' + $scope.leed_id + '.json').success(function(data) {
 		$scope.building_name = data.name;

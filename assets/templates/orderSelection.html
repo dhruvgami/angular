@@ -1,0 +1,62 @@
+<div class="modal-header meter_select_header">
+    <button class="close meter_select_close manual_meter_close" id="close_orderSelection_modal" type="button">×</button>
+</div>
+
+<div class="row ml_0per" id="confirm_order_open">
+  <div class="card_wrapper_3 main_3" >
+    <div class="card container_shadow w60p_plan right_line_plan" >
+        <div>
+            <h2 class="mb25 build_head">PAYMENT PLAN</h2>
+        </div>
+        <div class="color_ccc fontSize15">
+            <p class="light_color">
+                We provide the option of either paying for your services in full<span id="orderselection_discount" class="display_none"> (which will include a 5% discount)</span>, or choosing to pay in monthly or annual installments.
+            </p>
+        </div>
+        <div class="mt50 overflow_hidden">
+            <div class="subInfoDiv mt10">
+                <p class="fontSize15" id="subInfo">
+                    I want to pay for my plan:
+                </p>
+            </div>
+            <div class="">
+                <div class="form-control inblock pt0I pb0I" id="payment_plan_select"></div>
+				<div class="optionsCont" style="display:none;">
+					<div class="payment_option_1 pr40 options width_orderSelection_option"  value="1">Pay annually for both display and subscription  </div><p id='value_1' class="values"></p>
+					<div class="payment_option_2 pr40 options width_orderSelection_option" value="2">Pay up front for both display and subscription  </div><p id='value_2' class="values"></p>
+					<div class="payment_option_3 pr40 options width_orderSelection_option" value="3">Pay up front for display and annually for subscription  </div><p id='value_3' class="values"></p>
+				</div>
+            </div>
+        </div>
+
+        <div class="mt50 buttonWrapper align_center orderSelection_page_ctrl">
+            <input type="submit" class="btn btnGreen mb10 no_outline" value="Continue" id="continue4"></input>
+        </div>
+        <p class="light_color skip_for_now align_center">Skip for now</p>
+    </div>
+
+    <div class="sub_1 card w40p_plan pos_abs plan_summary_container">
+        <div class="col_head align_center">
+            <h2 class="nmb25 plan_summary bottom_line pb25">PLAN SUMMARY</h2>
+        </div>
+        <table class="mt25 order_sum_tbl">
+            <tbody>
+                <tr class="order_plan_selection">
+                    <td>Subscription <span class="pay_full_span">(3 Years)</span></td>
+                    <td class="border_none"><span class="subs_price"></span></td>
+                </tr>
+                <tr class="order_plan_selection needplaque_tbl">
+                    <td>LEED Dynamic Plaque Hardware <span class="purchase_plaque_span"></span></td>
+                    <td class="border_none"><span class="plaque_one_time_price"></span></td>
+                </tr>
+                <tr class="order_plan_selection top_line">
+                    <td><strong>Total due</strong></td>
+                    <td class="border_none text_color nopadding">
+                    <strong><span class="total_plaque_price order_sum_input"></span></strong> </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+  </div>
+</div>

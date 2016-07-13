@@ -2807,7 +2807,7 @@ input.cmn-toggle-round-flat4+label,input.cmn-toggle-round-flat4:checked+label,in
 
 input.cmn-toggle-round-flat:checked+label:after {
     margin-left: 20px;
-    background-image: url(../assets/images/Checkmark.svg);
+    background-image: url(../../assets/images/Checkmark.svg);
     background-repeat: no-repeat;
     background-size: 20px
 }
@@ -2913,7 +2913,7 @@ input.cmn-toggle-round-flat7+label:after {
 
 input.cmn-toggle-round-flat7:checked+label:after {
     margin-left: 20px !important;
-    background-image: url(../assets/images/wateron.svg)
+    background-image: url(../../assets/images/wateron.svg)
 }
 
 .cmn-toggle8 {
@@ -2968,7 +2968,7 @@ input.cmn-toggle-round-flat8+label:after {
 
 input.cmn-toggle-round-flat8:checked+label:after {
     margin-left: 20px !important;
-    background-image: url(../assets/images/co2on.svg)
+    background-image: url(../../assets/images/co2on.svg)
 }
 
 .manual_meters_list {
@@ -2976,7 +2976,7 @@ input.cmn-toggle-round-flat8:checked+label:after {
 }
 
 .meter_manual_ajax {
-    background: url(../assets/images/ajax_loader.gif) right no-repeat
+    background: url(../../assets/images/ajax_loader.gif) right no-repeat
 }
 
 .payment_ul {
@@ -3196,12 +3196,12 @@ input.cmn-toggle-round-flat8:checked+label:after {
 }
 
 .co2_manual_meter,.vocs_manual_meter {
-    background: url(../assets/images/Human.png) 15% 50% no-repeat #9e8fc4 !important;
+    background: url(../../assets/images/Human.png) 15% 50% no-repeat #9e8fc4 !important;
     background-size: 10px !important
 }
 
 .water_manual_meter {
-    background: url(../assets/images/Water.png) 15% 50% no-repeat #55caf5 !important;
+    background: url(../../assets/images/Water.png) 15% 50% no-repeat #55caf5 !important;
     background-size: 10px !important
 }
 
@@ -3210,12 +3210,12 @@ input.cmn-toggle-round-flat8:checked+label:after {
 }
 
 .waste_manual_meter {
-    background: url(../assets/images/Waste.png) 12% 50% no-repeat #84ccaf !important;
+    background: url(../../assets/images/Waste.png) 12% 50% no-repeat #84ccaf !important;
     background-size: 16px !important
 }
 
 .human_manual_meter {
-    background: url(../assets/images/Human.png) 25% 50% no-repeat #f2ac41 !important;
+    background: url(../../assets/images/Human.png) 25% 50% no-repeat #f2ac41 !important;
     background-size: 8px !important
 }
 
@@ -4082,7 +4082,7 @@ select.dist_select::-ms-expand {
 }
 
 .payment_loading_gif {
-    background: url(../assets/images/ajax_loader.gif) center center no-repeat;
+    background: url(../../assets/images/ajax_loader.gif) center center no-repeat;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -4108,7 +4108,7 @@ select.dist_select::-ms-expand {
 .end_date_manually,.start_date_manually {
     background-size: 18px;
     background-position: 90%;
-    background-image: url(../assets/images/calendar.png);
+    background-image: url(../../assets/images/calendar.png);
     background-repeat: no-repeat;
     width: 100%
 }
@@ -5355,7 +5355,7 @@ select.dist_select::-ms-expand {
 .scorecard_check_img {
     height: 16px;
     width: 3%;
-    background: url(../assets/images/check-gray.png) no-repeat;
+    background: url(../../assets/images/check-gray.png) no-repeat;
     text-indent: -9999px;
     vertical-align: middle
 }
@@ -5838,13 +5838,13 @@ div#incZoom {
     top: 0;
     z-index: 1;
     cursor: pointer;
-    background-image: url(../assets/images/zoom_in.png)
+    background-image: url(../../assets/images/zoom_in.png)
 }
 
 div#decZoom {
     bottom: 0;
     cursor: pointer;
-    background-image: url(../assets/images/zoom_out.png)
+    background-image: url(../../assets/images/zoom_out.png)
 }
 
 div.zoomBtn {
@@ -6929,4 +6929,41 @@ div.settingsStatuses .ms-drop ul li label input {
 
 .loader_bg_add_new{
     display: none;
+}
+
+.top_line {
+    border-top: 1px solid #e5e5e5 !important;
+}
+
+.next_steps_icons {
+    width: 20px;
+    margin-top: -3px;
+}
+
+.align_left {
+    text-align: left;
+}
+
+.pl0 {
+    padding-left: 0px !important;
+}
+
+.prj_active {
+    padding-left: 10px;
+    color: #95BF58;
+}
+
+@media (min-width: 751px){
+    .pOne, .pTwo {
+        font-size: 16px;
+        text-align: justify;
+    }
+}
+
+#add_team_span_md, #add_meter_span_md, #select_plan_span_md, #sign_agreement_span_md {
+    cursor: pointer;
+}
+.next_steps_check_plan, .next_steps_check_agreement, .next_steps_check_team, .next_steps_check_meter {
+    position: absolute;
+    right: 20%;
 }

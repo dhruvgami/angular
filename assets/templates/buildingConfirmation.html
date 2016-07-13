@@ -1,0 +1,38 @@
+
+<div class="modal-header meter_select_header">
+    <button class="close meter_select_close manual_meter_close" id="close_buildingConfirmation_modal" type="button">×</button>
+</div>
+
+<div class="building_confirmation">
+  <div class="card_wrapper_3">
+    <div class="card main_3" id="building_owner_open">
+      <div>
+        <div id="building_ownwer_headingbar">
+            <h2 class="mb25 build_head">PERMISSION CONFIRMATION</h2>
+        </div>
+        <div>
+          <p></p>
+          <div class="mb25 fs16">Please click SIGN button to begin the signing process. If you wish the Agreement to be signed by someone else, please click the second option.</div>
+          <p></p>
+          <div class="agreement_text_embedded mb2p5per agreement_active" id="agreement_self">
+            <div class="agreement_sign_head"><div class="align_left">I am signing</div></div>
+            <div class="agreement_sign_body">I am authorized to sign the agreement for this project.</div>
+            <div class="agreement_sign_btn"><input class="continue_building_owner continue_building_owner_sign btnGreen modal_btn" type="submit" value="SIGN" data-toggle="modal" data-target=".agreement_modal"></div>
+          </div>
+          <div class="agreement_text_embedded agreement_disable" id="agreement_other">
+            <div class="agreement_sign_head"><div class="align_left">Someone else is signing</div></div>
+            <div class="agreement_sign_body">The owner organization on the file is <span id="owner_name"></span>. We can send the agreement to the email address on the file, or you can enter an alternative email below. You may enter the name and email of an authorized person to sign this agreement.</div>
+            <div class="agreement_inputfields mt10">
+              <p class="saved_name_p"><span id="saved_name"></span></p>
+              <input class="inblock m10 form-control pressEnter" type="text" id="new_owner_name" placeholder="Owner on file">
+              <p class="saved_email_p"><span id="saved_email"></span></p>
+              <input class="inblock mr10 mt10 mb10 form-control pressEnter" type="text" id="new_owner_id" placeholder="Email on file">
+              <input class="continue_building_owner btn btnBlue" id="sendAgreement_buildConf" type="submit" value="SEND">
+            </div>
+          </div>
+        </div>
+      </div> 
+      <p class="light_color skip_for_now bld_conf_skip mb0">Skip for now</p>
+    </div>
+  </div>
+</div>

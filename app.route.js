@@ -42,7 +42,7 @@ LEEDOnApp.config(function($stateProvider, $compileProvider, $urlRouterProvider) 
         controller : "dataController"
     })
     .state("dashboardState.dataState.inputState", {
-        url: "/input",
+        url: "/input/",
         templateUrl: "apps/components/dashboard/data/input/inputView.html",
         controller : "inputController"
     })

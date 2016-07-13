@@ -23,7 +23,7 @@ LEEDOnApp.controller('projectController', function($rootScope, $scope, $http, $o
 
     $scope.createNewProject = function () {
         $('.loader_bg_add_new').show();
-        setTimeout(function(){ $('.addNewBuilding').modal('toggle'); location.href = "#/dashboard/800000100/data/input"; }, 1000);
+        setTimeout(function(){ $('.addNewBuilding').modal('toggle'); location.href = "#/dashboard/800000100/data/input/?page=activationFlow&modal=projectActive"; }, 1000);
     };
 	
     function filterBuildingdata(data){
