@@ -2004,8 +2004,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="build_confirm_btn build_confirm_btn1 mt10">
-                                <input type="submit" value="YES, ITS CORRECT" class="btn btnFixWidth mb10 btnGreen no_outline" id="correct_btn" tabindex="12">
+                            <div class="build_confirm_btn build_confirm_btn1 mt30">
+                                <input type="submit" value="YES, ITS CORRECT" class="btn btnFixWidth mb10 btnGreen no_outline flr" id="correct_btn" tabindex="12">
                                 <input type="submit" value="EDIT" class="btn usgbcBtnRight btnBlue no_outline" id="edit_btn" tabindex="13">
                             </div>
                         </div>
@@ -2031,4 +2031,121 @@
         </div>
     </div>
 </div>
+<div class="modal fade time_calc" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog modal-cust">
+        <div class="modal-content time_calc_modal">
+            <div class="modal-header align_center bottom_line">
+                <h4 class="modal-title h4_dash align_center">Typical Operating Hours<br>(24-hour format)</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row setup_row">
+                    <div class="form-group col-lg-5 col-md-5 col-sm-5 col-xs-5 mt8">
+                        <label class="mt7"><strong>Monday</strong></label>
+                    </div>
+                    <div class="form-group col-lg-2 col-md-2 nopadding col-sm-2 col-xs-3 timepicker_drp_div">
+                        <input class="btn height33 width100p start-time time from ui-timepicker-input" id="monday_from_btn" value="7:00" autocomplete="off">
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-1 nopadding dash mt8">—</div>
+                    <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-3 timepicker_drp_div nopadding">
+                        <input class="btn height33 width100p end-time time from ui-timepicker-input" id="monday_to_btn" value="18:00" autocomplete="off">
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1"></div>
+                </div>
+                <div class="row setup_row">
+                    <div class="form-group col-lg-5 col-md-5 col-sm-5 col-xs-5 mt8 mt8">
+                        <label class="mt7"><strong>Tuesday</strong></label>
+                    </div>
+                    <div class="form-group col-lg-2 col-md-2 nopadding col-sm-2 col-xs-3 timepicker_drp_div">
+                        <input class="btn height33 width100p start-time time from ui-timepicker-input" id="tuesday_from_btn" value="7:00" autocomplete="off">
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-1 nopadding dash mt8">—</div>
+                    <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-3 timepicker_drp_div nopadding">
+                        <input class="btn height33 width100p end-time time from ui-timepicker-input" id="tuesday_to_btn" value="18:00" autocomplete="off">
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1"></div>
+                </div>
+                <div class="row setup_row">
+                    <div class="form-group col-lg-5 col-md-5 col-sm-5 col-xs-5 mt8 mt8">
+                        <label class="mt7"><strong>Wednesday</strong></label>
+                    </div>
+                    <div class="form-group col-lg-2 col-md-2 nopadding col-sm-2 col-xs-3 timepicker_drp_div">
+                        <input class="btn height33 width100p start-time time from ui-timepicker-input" id="wednesday_from_btn" value="7:00" autocomplete="off">
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-1 nopadding dash mt8">—</div>
+                    <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-3 timepicker_drp_div nopadding">
+                        <input class="btn height33 width100p end-time time from ui-timepicker-input" id="wednesday_to_btn" value="18:00" autocomplete="off">
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1"></div>
+                </div>
+                <div class="row setup_row">
+                    <div class="form-group col-lg-5 col-md-5 col-sm-5 col-xs-5 mt8 mt8">
+                        <label class="mt7"><strong>Thursday</strong></label>
+                    </div>
+                    <div class="form-group col-lg-2 col-md-2 nopadding col-sm-2 col-xs-3 timepicker_drp_div">
+                        <input class="btn height33 width100p start-time time from ui-timepicker-input" id="thursday_from_btn" value="7:00" autocomplete="off">
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-1 nopadding dash mt8">—</div>
+                    <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-3 timepicker_drp_div nopadding">
+                        <input class="btn height33 width100p end-time time from ui-timepicker-input" id="thursday_to_btn" value="18:00" autocomplete="off">
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1"></div>
+                </div>
+                <div class="row setup_row">
+                    <div class="form-group col-lg-5 col-md-5 col-sm-5 col-xs-5 mt8 mt8">
+                        <label class="mt7"><strong>Friday</strong></label>
+                    </div>
+                    <div class="form-group col-lg-2 col-md-2 nopadding col-sm-2 col-xs-3 timepicker_drp_div">
+                        <input class="btn height33 width100p start-time time from ui-timepicker-input" id="friday_from_btn" data-toggle="dropdown" value="7:00" autocomplete="off">
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-1 nopadding dash mt8">—</div>
+                    <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-3 timepicker_drp_div nopadding">
+                        <input class="btn height33 width100p end-time time from ui-timepicker-input" id="friday_to_btn" value="18:00" autocomplete="off">
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1"></div>
+                </div>
+                <div class="row setup_row">
+                    <div class="form-group col-lg-5 col-md-5 col-sm-5 col-xs-5 mt8">
+                        <label class="mt7"><strong>Saturday</strong></label>
+                    </div>
+                    <div class="form-group col-lg-2 col-md-2 nopadding col-sm-2 col-xs-3 timepicker_drp_div">
+                        <input class="btn height33 width100p start-time time from ui-timepicker-input" id="saturday_from_btn" value="Closed" autocomplete="off">
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-1 nopadding dash mt8">—</div>
+                    <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-3 timepicker_drp_div nopadding">
+                        <input class="btn height33 width100p end-time time from ui-timepicker-input" id="saturday_to_btn" value="Closed" autocomplete="off">
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1"></div>
+                </div>
+                <div class="row setup_row">
+                    <div class="form-group col-lg-5 col-md-5 col-sm-5 col-xs-5 mt8">
+                        <label class="mt7"><strong>Sunday</strong></label>
+                    </div>
+                    <div class="form-group col-lg-2 col-md-2 nopadding col-sm-2 col-xs-3 timepicker_drp_div">
+                        <input class="btn height33 width100p start-time time from ui-timepicker-input" id="sunday_from_btn" value="Closed" autocomplete="off">
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-1 nopadding dash mt8">—</div>
+                    <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-3 timepicker_drp_div nopadding">
+                        <input class="btn height33 width100p end-time time from ui-timepicker-input" id="sunday_to_btn" value="Closed" autocomplete="off">
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1"></div>
+                </div>
+                <div class="row setup_row">
+                    <!-- <div class="col-lg-1 col-sm-1 col-xs-1"></div> -->
+                    <div class="form-group col-lg-5 col-xs-5 col-sm-5 pt7 row_pos mt8">
+                        <label class="week_tot_lbl">Week Total</label><!-- <span class="week_tot_lbl" id="totalHours">0</span> -->
+                    </div>
+                    <div class="col-lg-5 col-sm-5 col-xs-5 nopadding">
+                        <input class="hourscalc_tot" id="totalHours" type="text" readonly="">
+                    </div>
+                </div>
+                <div class="build_confirm_btn build_confirm_btn1_time mt10"> 
+                    <input type="submit" value="DONE" class="btn btnFixWidth ml10 btnGreen mb10 flr" id="week_total_btn" data-dismiss="modal">
+                    <input type="submit" value="CANCEL" class="btn btnBlue btnSkip" id="week_total_cancel" data-dismiss="modal">
+                </div>
+                <span id="alert_onDiff_opr">Operation close time cannot be less than operation open time.</span>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="hiddendiv common"></div>

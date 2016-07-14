@@ -2,7 +2,7 @@ LEEDOnApp.controller('projectController', function($rootScope, $scope, $http, $o
 	$rootScope.header = 'Projects';
 	$rootScope.main_appClass = 'overflow_y_scroll';
 	$rootScope.bodyLayout = '';
-	$rootScope.htmlLayout = 'js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths';
+	// $rootScope.htmlLayout = 'js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths';
 	$scope.loading_more_projects = false;
     angular.module('infinite-scroll').value('THROTTLE_MILLISECONDS', 1000)
     $scope.buildings = [];
@@ -23,7 +23,9 @@ LEEDOnApp.controller('projectController', function($rootScope, $scope, $http, $o
 
     $scope.createNewProject = function () {
         $('.loader_bg_add_new').show();
-        setTimeout(function(){ $('.addNewBuilding').modal('toggle'); location.href = "#/dashboard/800000100/data/input/?page=activationFlow&modal=projectActive"; }, 1000);
+        setTimeout(function(){
+            location.href = "#/dashboard/800000100/score/?page=overview&modal=projectActive"; 
+        }, 1000);
     };
 	
     function filterBuildingdata(data){

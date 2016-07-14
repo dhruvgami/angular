@@ -224,10 +224,6 @@
   margin-top: -38px;
 }
 
-.building_info_fields{
-  height: 480px;
-}
-
 .mb15_ni{
   margin-bottom: 15px !important;
 }
@@ -881,8 +877,8 @@ select#country1, select#country2, select#state1, select#state2 {
   background: #Fff;
   width: 300px;
   position: absolute;
-  right: -34px;
-  top: 46px;
+  right: 26px;
+  top: 109px;
   font-size: 13px;
   box-shadow: 1px 1px 12px #888;
   display: none;
@@ -1545,9 +1541,6 @@ select#country1, select#country2, select#state1, select#state2 {
     color: #4a4a4a;
     border: 1px solid #E1DEDE;
     padding-left: 15px;
-    -webkit-appearance: none;
-    appearance: none;
-    -moz-appearance: none;
     box-shadow: none;
   }
 

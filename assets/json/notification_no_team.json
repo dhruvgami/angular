@@ -1,0 +1,105 @@
+{
+    "duration": "14ms",
+    "results": [
+        {
+            "origin": null,
+            "target": null,
+            "object": "800000134",
+            "actor": "800000134",
+            "to": [],
+            "verb": "notification",
+            "time": "2016-07-14T06:02:18.916",
+            "foreign_id": "data_input_strategy_review",
+            "id": "85b79b86-4988-11e6-8080-8000283e0c08"
+        },
+        {
+            "origin": null,
+            "target": null,
+            "object": "800000134",
+            "actor": "800000134",
+            "to": [],
+            "verb": "notification",
+            "time": "2016-07-14T06:02:18.669",
+            "foreign_id": "data_input_strategy",
+            "id": "8591f69c-4988-11e6-8080-8001561c1b7e"
+        },
+        {
+            "origin": null,
+            "target": null,
+            "object": "800000134",
+            "actor": "800000134",
+            "to": [],
+            "verb": "notification",
+            "time": "2016-07-14T06:02:18.437",
+            "foreign_id": "data_input_human",
+            "id": "856e8e32-4988-11e6-8080-800179e3e5ea"
+        },
+        {
+            "origin": null,
+            "target": null,
+            "object": "800000134",
+            "actor": "800000134",
+            "to": [],
+            "verb": "notification",
+            "time": "2016-07-14T06:02:18.085",
+            "foreign_id": "data_input_transportation",
+            "id": "8538d102-4988-11e6-8080-80014df6c9d7"
+        },
+        {
+            "origin": null,
+            "target": null,
+            "object": "800000134",
+            "actor": "800000134",
+            "to": [],
+            "verb": "notification",
+            "time": "2016-07-14T06:02:17.833",
+            "foreign_id": "data_input_waste",
+            "id": "85126bb6-4988-11e6-8080-8000009d7f81"
+        },
+        {
+            "origin": null,
+            "target": null,
+            "object": "800000134",
+            "actor": "800000134",
+            "to": [],
+            "verb": "notification",
+            "time": "2016-07-14T06:02:17.517",
+            "foreign_id": "data_input_water",
+            "id": "84e21e20-4988-11e6-8080-8000607eefc0"
+        },
+        {
+            "origin": null,
+            "target": null,
+            "object": "800000134",
+            "actor": "800000134",
+            "to": [],
+            "verb": "notification",
+            "time": "2016-07-14T06:02:17.164",
+            "foreign_id": "data_input_energy",
+            "id": "84ac5ae2-4988-11e6-8080-80010982d23b"
+        },
+        {
+            "origin": null,
+            "target": null,
+            "object": "800000134",
+            "actor": "800000134",
+            "to": [],
+            "verb": "notification",
+            "time": "2016-07-14T06:02:02.655",
+            "foreign_id": "skipped_payment",
+            "id": "7c0675e4-4988-11e6-8080-80007ddd284e"
+        },
+        {
+            "origin": null,
+            "target": null,
+            "object": "800000134",
+            "actor": "800000134",
+            "to": [],
+            "verb": "notification",
+            "time": "2016-07-14T06:02:02.655",
+            "foreign_id": "skipped_buildingConfirmation",
+            "id": "7c066c84-4988-11e6-8080-800139fd965a"
+        }
+    ],
+    "next": ""
+}

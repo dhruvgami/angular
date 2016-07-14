@@ -30,128 +30,128 @@
             
             $('body').on('click', ".red_bell_notification", function()            
             {                
-                notification_selected = $(this).attr('id');
-                page_selected = plaqueNav.getParameterByName("page");
-                if(notification_selected == 'data_input_human_from_notification')
-                {
-                    page = 'data_input';
-                    History.pushState(
-                    {
-                        goto: page
-                    }, page.charAt(0).toUpperCase() + page.slice(1), "?page=" + page + "&section=humanexperience&LEED=" + plaque.LEED);    
-                }
-                else if(notification_selected == 'data_input_transportation_from_notification')
-                {
-                    page = 'data_input';
-                    $('#enterOccupancy').show();
-                    $('#enterOccupancy').on('click', function()
-                    {
-                        page = 'manage';
-                        History.pushState(
-                        {
-                            goto: page
-                        }, page.charAt(0).toUpperCase() + page.slice(1), "?page=" + page + "&section=project_plaque&LEED=" + plaque.LEED);
-                    });
+                // notification_selected = $(this).attr('id');
+                // page_selected = plaqueNav.getParameterByName("page");
+                // if(notification_selected == 'data_input_human_from_notification')
+                // {
+                //     page = 'data_input';
+                //     History.pushState(
+                //     {
+                //         goto: page
+                //     }, page.charAt(0).toUpperCase() + page.slice(1), "?page=" + page + "&section=humanexperience&LEED=" + window.leed_id);    
+                // }
+                // else if(notification_selected == 'data_input_transportation_from_notification')
+                // {
+                //     page = 'data_input';
+                //     $('#enterOccupancy').show();
+                //     $('#enterOccupancy').on('click', function()
+                //     {
+                //         page = 'manage';
+                //         History.pushState(
+                //         {
+                //             goto: page
+                //         }, page.charAt(0).toUpperCase() + page.slice(1), "?page=" + page + "&section=project_plaque&LEED=" + window.leed_id);
+                //     });
 
-                    if(plaque.buildingData.occupancy > 0)
-                    {
-                        if (building_status_backend != 'activated' && trial_version_backend != 'True')
-                        {
+                //     if(plaque.buildingData.occupancy > 0)
+                //     {
+                //         if (building_status_backend != 'activated' && trial_version_backend != 'True')
+                //         {
 
-                            var trial_text_for_modal = "It seems like your trial has expired";
-                            if (trial_expire_backend == "None"){
-                              $('.mandatory_step_header').html("ACTIVATE YOUR PROJECT");
-                              trial_text_for_modal = "It seems like your project is deactivated";
-                            }
-                            else{
-                              $('.mandatory_step_header').html("TRIAL EXPIRED");
-                              trial_text_for_modal = "It seems like your trial has expired";
-                            }
+                //             var trial_text_for_modal = "It seems like your trial has expired";
+                //             if (window.trial_expire_backend == "None"){
+                //               $('.mandatory_step_header').html("ACTIVATE YOUR PROJECT");
+                //               trial_text_for_modal = "It seems like your project is deactivated";
+                //             }
+                //             else{
+                //               $('.mandatory_step_header').html("TRIAL EXPIRED");
+                //               trial_text_for_modal = "It seems like your trial has expired";
+                //             }
                             
-                            if (is_agreement_required == 'True')
-                            {
-                                $('#mandatory_step_text').html(trial_text_for_modal + '. Please sign agreement and pay for your project to access the dashboard.');
-                                $('#sign_agreement_popup').modal('toggle');
-                            }
-                            else
-                            {
-                                $('#mandatory_step_text').html(trial_text_for_modal + '. Please pay for your project to access the dashboard.');
-                                $('#sign_agreement_popup').modal('toggle');
-                            }
-                        }
-                        else
-                        {
-                            var val = encodeURI(window.location.protocol + '//' + window.location.hostname + '/v3/dashboard/?page=survey&LEED=' + window.plaque.LEED + '&key=' + window.plaque.key);
-                            var url = val.replace(/&/g, "%26");
-                            var message = 'Hi there,%0A%0APlease fill out this quick survey to help us better understand our building performance and to make you as comfortable as possible. Click below to begin.%0A%0A'+url+' %0A%0AThank you for your important contributions to our LEED Dynamic Plaque data!%0A%0AWant to learn more about how we use the LEED Dynamic Plaque to track building performance? Visit leedon.io.';
-                            window.open('mailto:?subject=LEED Dynamic Plaque - Survey Link&body='+message, '_self');
-                        }
-                    }
-                    else
-                    {
-                        $('#noOccupancyModal').modal('toggle');
-                    }
-                }
-                else if(notification_selected == 'data_input_waste_from_notification')
-                {
-                    page = 'data_input';
-                    History.pushState(
-                    {
-                        goto: page
-                    }, page.charAt(0).toUpperCase() + page.slice(1), "?page=" + page + "&section=waste&LEED=" + plaque.LEED);    
-                }
-                else if(notification_selected == 'data_input_water_from_notification')
-                {
-                    page = 'data_input';
-                    History.pushState(
-                    {
-                        goto: page
-                    }, page.charAt(0).toUpperCase() + page.slice(1), "?page=" + page + "&section=water&LEED=" + plaque.LEED);    
-                                    }
-                else if(notification_selected == 'data_input_energy_from_notification')
-                {
-                    page = 'data_input';
-                    History.pushState(
-                    {
-                        goto: page
-                    }, page.charAt(0).toUpperCase() + page.slice(1), "?page=" + page + "&section=energy&LEED=" + plaque.LEED);    
-                }
-                else if(notification_selected == 'data_input_setup_from_notification')
-                {
-                    page = 'manage';
-                    History.pushState(
-                    {
-                        goto: page
-                    }, page.charAt(0).toUpperCase() + page.slice(1), "?page=" + page + "&section=project_plaque&LEED=" + plaque.LEED);
-                }
-                else if(notification_selected == 'add_team_from_notification')
-                {
-                    page = 'manage';
-                    History.pushState(
-                    {
-                        goto: page
-                    }, page.charAt(0).toUpperCase() + page.slice(1), "?page=" + page + "&section=team&LEED=" + plaque.LEED);
-                }
-                else if(notification_selected == 'select_plan_from_notification')
-                {
-                    var switch_url = document.URL.split('v3/').join('');
-                    if (switch_url[(switch_url.length)-1] == '/'){
-                        switch_url = switch_url.substring(0, (switch_url.length)-1);
-                    }
-                    window.location = plaqueNav.switchUIException('score', '', switch_url + '&trigger=' + notification_selected);
-                }
-                else if(notification_selected == 'sign_agreement_from_notification')
-                {
-                    var switch_url = document.URL.split('v3/').join('');
-                    if (switch_url[(switch_url.length)-1] == '/'){
-                        switch_url = switch_url.substring(0, (switch_url.length)-1);
-                    }
-                    window.location = plaqueNav.switchUIException('score', '', switch_url + '&trigger=' + notification_selected);
-                }
+                //             if (is_agreement_required == 'True')
+                //             {
+                //                 $('#mandatory_step_text').html(trial_text_for_modal + '. Please sign agreement and pay for your project to access the dashboard.');
+                //                 $('#sign_agreement_popup').modal('toggle');
+                //             }
+                //             else
+                //             {
+                //                 $('#mandatory_step_text').html(trial_text_for_modal + '. Please pay for your project to access the dashboard.');
+                //                 $('#sign_agreement_popup').modal('toggle');
+                //             }
+                //         }
+                //         else
+                //         {
+                //             var val = encodeURI(window.location.protocol + '//' + window.location.hostname + '/v3/dashboard/?page=survey&LEED=' + window.leed_id + '&key=' + window.plaque.key);
+                //             var url = val.replace(/&/g, "%26");
+                //             var message = 'Hi there,%0A%0APlease fill out this quick survey to help us better understand our building performance and to make you as comfortable as possible. Click below to begin.%0A%0A'+url+' %0A%0AThank you for your important contributions to our LEED Dynamic Plaque data!%0A%0AWant to learn more about how we use the LEED Dynamic Plaque to track building performance? Visit leedon.io.';
+                //             window.open('mailto:?subject=LEED Dynamic Plaque - Survey Link&body='+message, '_self');
+                //         }
+                //     }
+                //     else
+                //     {
+                //         $('#noOccupancyModal').modal('toggle');
+                //     }
+                // }
+                // else if(notification_selected == 'data_input_waste_from_notification')
+                // {
+                //     page = 'data_input';
+                //     History.pushState(
+                //     {
+                //         goto: page
+                //     }, page.charAt(0).toUpperCase() + page.slice(1), "?page=" + page + "&section=waste&LEED=" + window.leed_id);    
+                // }
+                // else if(notification_selected == 'data_input_water_from_notification')
+                // {
+                //     page = 'data_input';
+                //     History.pushState(
+                //     {
+                //         goto: page
+                //     }, page.charAt(0).toUpperCase() + page.slice(1), "?page=" + page + "&section=water&LEED=" + window.leed_id);    
+                //                     }
+                // else if(notification_selected == 'data_input_energy_from_notification')
+                // {
+                //     page = 'data_input';
+                //     History.pushState(
+                //     {
+                //         goto: page
+                //     }, page.charAt(0).toUpperCase() + page.slice(1), "?page=" + page + "&section=energy&LEED=" + window.leed_id);    
+                // }
+                // else if(notification_selected == 'data_input_setup_from_notification')
+                // {
+                //     page = 'manage';
+                //     History.pushState(
+                //     {
+                //         goto: page
+                //     }, page.charAt(0).toUpperCase() + page.slice(1), "?page=" + page + "&section=project_plaque&LEED=" + window.leed_id);
+                // }
+                // else if(notification_selected == 'add_team_from_notification')
+                // {
+                //     page = 'manage';
+                //     History.pushState(
+                //     {
+                //         goto: page
+                //     }, page.charAt(0).toUpperCase() + page.slice(1), "?page=" + page + "&section=team&LEED=" + window.leed_id);
+                // }
+                // else if(notification_selected == 'select_plan_from_notification')
+                // {
+                //     var switch_url = document.URL.split('v3/').join('');
+                //     if (switch_url[(switch_url.length)-1] == '/'){
+                //         switch_url = switch_url.substring(0, (switch_url.length)-1);
+                //     }
+                //     window.location = plaqueNav.switchUIException('score', '', switch_url + '&trigger=' + notification_selected);
+                // }
+                // else if(notification_selected == 'sign_agreement_from_notification')
+                // {
+                //     var switch_url = document.URL.split('v3/').join('');
+                //     if (switch_url[(switch_url.length)-1] == '/'){
+                //         switch_url = switch_url.substring(0, (switch_url.length)-1);
+                //     }
+                //     window.location = plaqueNav.switchUIException('score', '', switch_url + '&trigger=' + notification_selected);
+                // }
                 
             });
 
-            plaque.elements.getPerformanceScore();
+            // plaque.elements.getPerformanceScore();
 
             $('body').on('click', "#building_per_data_link", function(e){
                 $('#building_per_data_modal').toggle("complete", function(){
@@ -175,14 +175,14 @@
                 e.stopPropagation();
             });
 
-            $('#building_per_data_link_dashboard').circleProgress({
-                value: 1,
-                size: 46,
-                thickness: 5,
-                animation:false,
-                startAngle:-Math.PI / 4 * 2,
-                fill: { color: '#E6E6E6' }
-            }); 
+            // $('#building_per_data_link_dashboard').circleProgress({
+            //     value: 1,
+            //     size: 46,
+            //     thickness: 5,
+            //     animation:false,
+            //     startAngle:-Math.PI / 4 * 2,
+            //     fill: { color: '#E6E6E6' }
+            // }); 
 
         },
 
@@ -231,10 +231,11 @@
 
 
 
+            var url_new = "assets/json/notification_" + localStorage.getItem(window.leed_id + "_notification") + ".json";
             $.ajax(
             {
                 type: "GET",
-                url: "/buildings/LEED:" + plaque.LEED + "/notification/"
+                url: url_new
             }).done(function(data)
             {
                 var notification_arr = [];
@@ -258,11 +259,11 @@
 
                 if (notification.unique_notification_arr.length)
                 {
-                    page = plaqueNav.getParameterByName('page');
-                    if (page != 'explore') {
+                    // page = plaqueNav.getParameterByName('page');
+                    // if (page != 'explore') {
                         $('.meterInfo').show();
-                    }
-                    if (show_helptext == "True" && !(notification.one_time_tour_done) && (window.location.search.substring(1).split('&modal')).length == 1)
+                    // }
+                    if (window.show_helptext == "True" && !(notification.one_time_tour_done) && (window.location.search.substring(1).split('&modal')).length == 1)
                     {
                         $.prompt(tourStates);
                         notification.one_time_tour_done = true;
@@ -270,7 +271,7 @@
 
                     if (trial_version_backend == 'True')
                     {
-                        (notification.unique_notification_arr).unshift('trial_notification');
+                        // (notification.unique_notification_arr).unshift('trial_notification');
                     }
 
                     $('.meterInfoNumber').html(String(notification.unique_notification_arr.length));
@@ -278,17 +279,17 @@
 
                     if (!(notification.unique_notification_arr.indexOf("skipped_buildingConfirmation") > -1))
                     {
-                        $('.next_steps_check_agreement').attr('src', '/static/payment_v3/images/Checkmark.svg');
+                        $('.next_steps_check_agreement').attr('src', 'assets/images/Checkmark.svg');
                     }
 
                     if (!(notification.unique_notification_arr.indexOf("skipped_payment") > -1))
                     {
-                        $('.next_steps_check_plan').attr('src', '/static/payment_v3/images/Checkmark.svg');
+                        $('.next_steps_check_plan').attr('src', 'assets/images/Checkmark.svg');
                     }
 
                     if (!(notification.unique_notification_arr.indexOf("skipped_teamManagement") > -1))
                     {
-                        $('.next_steps_check_team').attr('src', '/static/payment_v3/images/Checkmark.svg');
+                        $('.next_steps_check_team').attr('src', 'assets/images/Checkmark.svg');
                     }
 
                     if (is_agreement_required == 'True')
@@ -353,7 +354,7 @@
                         {
                             var one_day = 1000 * 60 * 60 * 24;
                             var today_date_time = new Date();
-                            var expiry_date_time = notification.dateFromISO(trial_expire_backend);
+                            var expiry_date_time = notification.dateFromISO(window.trial_expire_backend);
                             var trial_time_left = expiry_date_time - today_date_time;
                             var trial_time_days = Math.round(trial_time_left / one_day);
                             var trial_time_days_string = "";
@@ -382,31 +383,31 @@
                         else if (notification.unique_notification_arr[i] == "skipped_buildingConfirmation")
                         {
                             $('#sign_agreement_span_md').removeClass('not-active');
-                            $.ajax(
-                            {
-                                type: "GET",
-                                url: "/buildings/LEED:" + plaque.LEED + "/sentagreementdetail/"
-                            }).done(function(sent_data)
-                            {
-                                if (sent_data.status == "Sent")
-                                {
-                                    var sent_datetime = ((sent_data.time).split('T')[0]).split('-');
-                                    var sent_time = ((sent_data.time).split('T')[1]).split('.')[0]
-                                    if (($('.red_bell_notification')).length)
-                                    {
-                                        $('.notification_module').append('<div class="notification_line"></div>');
-                                    }
-                                    $('.notification_module').append('<div class="pd20 cursor_pointer red_bell_notification" id="sign_agreement_from_notification"><i class="icon-info-sign fa-lg light_color mr15"></i><span>Re-sign user agreement</span><p class="agreement_sent_datetime">Sent at : ' + sent_datetime[1] + '-' + sent_datetime[2] + '-' + sent_datetime[0] + ' T ' + sent_time + '</p><i class="icon-angle-right flr fa-2x light_color "></i></div>');
-                                }
-                                else
-                                {
+                            // $.ajax(
+                            // {
+                            //     type: "GET",
+                            //     url: "/buildings/LEED:" + window.leed_id + "/sentagreementdetail/"
+                            // }).done(function(sent_data)
+                            // {
+                            //     if (sent_data.status == "Sent")
+                            //     {
+                            //         var sent_datetime = ((sent_data.time).split('T')[0]).split('-');
+                            //         var sent_time = ((sent_data.time).split('T')[1]).split('.')[0]
+                            //         if (($('.red_bell_notification')).length)
+                            //         {
+                            //             $('.notification_module').append('<div class="notification_line"></div>');
+                            //         }
+                            //         $('.notification_module').append('<div class="pd20 cursor_pointer red_bell_notification" id="sign_agreement_from_notification"><i class="icon-info-sign fa-lg light_color mr15"></i><span>Re-sign user agreement</span><p class="agreement_sent_datetime">Sent at : ' + sent_datetime[1] + '-' + sent_datetime[2] + '-' + sent_datetime[0] + ' T ' + sent_time + '</p><i class="icon-angle-right flr fa-2x light_color "></i></div>');
+                            //     }
+                            //     else
+                            //     {
                                     if (($('.red_bell_notification')).length)
                                     {
                                         $('.notification_module').append('<div class="notification_line"></div>');
                                     }
                                     $('.notification_module').append('<div class="pd20 cursor_pointer red_bell_notification" id="sign_agreement_from_notification"><i class="icon-info-sign fa-lg light_color mr15"></i><span>Sign user agreement</span><i class="icon-angle-right flr fa-2x light_color "></i></div>');
-                                }
-                            });
+                                // }
+                            // });
                         }
                         else if (notification.unique_notification_arr[i] == "skipped_payment")
                         {
@@ -516,7 +517,7 @@
                     }
                     else
                     {
-                        $('.next_steps_check_meter').attr('src', '/static/payment_v3/images/Checkmark.svg');
+                        $('.next_steps_check_meter').attr('src', 'assets/images/Checkmark.svg');
                     }
 
                     if (notification.unique_notification_arr.indexOf("data_input_setup") > -1)
@@ -684,7 +685,7 @@
                 }
                 else
                 {
-                    if (show_helptext == "True" && !(notification.one_time_tour_done) && (window.location.search.substring(1).split('&modal')).length == 1)
+                    if (window.show_helptext == "True" && !(notification.one_time_tour_done) && (window.location.search.substring(1).split('&modal')).length == 1)
                     {
                         $.prompt(tourStates_without_notification);
                         notification.one_time_tour_done = true;
@@ -693,14 +694,14 @@
                 $('#preloader_project_is_active').hide();
                 $('#status_project_is_active').hide();
 
-                if (ACTIVATE_ACP_ANALYSIS == "True"){
-                    $('#building_per_data_link').show();
-                    $('#building_per_data_link_dashboard').show();
-                }
-                else{
-                    $('#building_per_data_link').hide();
-                    $('#building_per_data_link_dashboard').hide();
-                }
+                // if (ACTIVATE_ACP_ANALYSIS == "True"){
+                //     $('#building_per_data_link').show();
+                //     $('#building_per_data_link_dashboard').show();
+                // }
+                // else{
+                //     $('#building_per_data_link').hide();
+                //     $('#building_per_data_link_dashboard').hide();
+                // }
 
             }).fail(function(data)
             {
@@ -711,7 +712,8 @@
     };
     $( document ).ready(function() 
     {
-    	notification.setup(); 
+    	notification.setup();
+        window.notification.checkNotification();
     });
 
 }).call(this);

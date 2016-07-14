@@ -32,7 +32,7 @@ LEEDOnApp.config(function($stateProvider, $compileProvider, $urlRouterProvider) 
         controller : "dashboardController"
      })
     .state("dashboardState.scoreState", {
-        url: "/score",
+        url: "/score/",
         templateUrl: "apps/components/dashboard/score/scoreView.html",
         controller : "scoreController"
     })

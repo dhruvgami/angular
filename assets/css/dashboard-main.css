@@ -6967,3 +6967,5 @@ div.settingsStatuses .ms-drop ul li label input {
     position: absolute;
     right: 20%;
 }
+
+button:focus {outline:0 !important;}

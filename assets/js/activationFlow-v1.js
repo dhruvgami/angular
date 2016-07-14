@@ -726,7 +726,7 @@ $( document ).ready(function() {
   function selectedOrderData(pageName) 
   {
     $.ajax({
-      url:'/payment/selectedorderdata/LEED:' + getUrlParameter('LEED') + '/',
+      url:'assets/json/selectedorderdata.json',
       contentType: 'application/json'
       }).done(function(data) 
       {
@@ -1652,25 +1652,19 @@ $( document ).ready(function() {
           if ((data.state).length > 2){
              final_state = (data.state).substring(2, (data.state).length);
           }
-          
-          $.ajax({
-            type: "GET",
-            url: "assets/json/countriesstates.json"
-          }).done(function(data_code) {
-            countries_states = data_code
-            print_country("building_country");
-            print_state('building_state', $("#building_country option:selected").val());
-            $("#building_country option").filter(function() {
 
-              return $(this).val() == data.country;
-            }).attr('selected', true);
-            print_state('building_state', data.country);
-            $('#building_state').val(final_state);
-          });
+          print_country("building_country");
+          print_state('building_state', $("#building_country option:selected").val());
+          $("#building_country option").filter(function() {
+
+            return $(this).val() == data.country;
+          }).attr('selected', true);
+          print_state('building_state', data.country);
+          $('#building_state').val(final_state);
 
           $('#building_country').prop('disabled',true);
           $('#building_state').prop('disabled',true);
-          $('#building_name').val(data.name);
+          $('#building_name_flow').val(data.name);
           $('#building_id').val(data.leed_id);
           $('#building_year').val(data.year_constructed);
           $('#building_street').val(data.street);
@@ -1868,19 +1862,19 @@ $( document ).ready(function() {
             newVal = null;
           }
           json[field] = newVal;
-          return $.ajax({
-            url: '/buildings/LEED:' + lid + '/',
-            type: 'PUT',
-            contentType: 'application/json',
-            data: JSON.stringify(json)
-          }).done(function(data) {
+          // return $.ajax({
+          //   url: '/buildings/LEED:' + lid + '/',
+          //   type: 'PUT',
+          //   contentType: 'application/json',
+          //   data: JSON.stringify(json)
+          // }).done(function(data) {
             $('#edit_btn').removeClass('disabled');
             return $self.removeClass('ajax_loader_dash');
-          }).fail(function(data) {
-            $('.form-control[name='+field+']').css('border-color', 'red');
-            $('#edit_btn').addClass('disabled');
-            return $self.removeClass('ajax_loader_dash');
-          });
+          // }).fail(function(data) {
+          //   $('.form-control[name='+field+']').css('border-color', 'red');
+          //   $('#edit_btn').addClass('disabled');
+          //   return $self.removeClass('ajax_loader_dash');
+          // });
       }
 
       $('#edit_btn').on('click', function() {
@@ -2171,19 +2165,19 @@ $( document ).ready(function() {
   $('#payment_plan_select').on('click', function()
   {
     
-    $(document).mouseup(function(e)
-    {
-        var container = $(".meterInfo");
+    // $(document).mouseup(function(e)
+    // {
+    //     var container = $(".meterInfo");
 
-        if (!container.is(e.target) // if the target of the click isn't the container...
-            && container.has(e.target).length === 0) // ... nor a descendant of the container
-        {
-            if ($(".notification_module").css("display") == "block")
-            {
-                $(".notification_module").toggle(300);
-            }
-        }
-    });
+    //     if (!container.is(e.target) // if the target of the click isn't the container...
+    //         && container.has(e.target).length === 0) // ... nor a descendant of the container
+    //     {
+    //         if ($(".notification_module").css("display") == "block")
+    //         {
+    //             $(".notification_module").toggle(300);
+    //         }
+    //     }
+    // });
 
     if($('.optionsCont').css('display') == 'none')
     {
@@ -2320,16 +2314,10 @@ $( document ).ready(function() {
   //payment starts
   function payment(){
 
-    $.ajax({
-      type: "GET",
-      url: "/getcountriesstates/"
-    }).done(function(data_code) {
-      countries_states = data_code
       print_country("country1");
       print_state("state1", "");
       print_country("country2");
       print_state("state2", "");
-    });
 
     $('#activation_modal_container').removeClass('activation_modal_w450').addClass('activation_modal_w875');
 
@@ -2366,8 +2354,8 @@ $( document ).ready(function() {
       {   
 		mode_check = false;
         paymode_flag = false;
-        $('#check').attr("src", "/static//payment/images/radioEmpty.png");
-        $('#card').attr("src", "/static//payment/images/radioFull.png");
+        $('#check').attr("src", "assets/images/radioEmpty.png");
+        $('#card').attr("src", "assets/images/radioFull.png");
         $("#DIeCommFrame_payment").show();
         if (pay_full_global == false) {
           $('#auto_renewal_com_box').show();
@@ -2457,8 +2445,8 @@ $( document ).ready(function() {
             }
         }
 
-        $('#check').attr("src", "/static//payment/images/radioFull.png");
-        $('#card').attr("src", "/static//payment/images/radioEmpty.png");
+        $('#check').attr("src", "assets/images/radioFull.png");
+        $('#card').attr("src", "assets/images/radioEmpty.png");
         $("#DIeCommFrame_payment").hide();
         $('#auto_renewal_com_box').hide();
         $(".instruction_section").show();
@@ -2929,7 +2917,7 @@ $( document ).ready(function() {
         $(this).removeClass('address_same').addClass('address_notsame');
         flag_ship = 0;
         $('#checkbox_card').attr('checked', false);
-        $('.checkbox_img').attr('src', '/static/payment/images/checkboxEmpty.png');
+        $('.checkbox_img').attr('src', 'assets/images//checkboxEmpty.png');
         $('.shipping_details_card').show();
 		  
 		if(mode_check == false)
@@ -2958,7 +2946,7 @@ $( document ).ready(function() {
       else {
         $('.checkbox_img').removeClass('address_notsame').addClass('address_same');
         $('#checkbox_card').attr('checked', true);
-        $('.checkbox_img').attr('src','/static/payment/images/checkboxFull.png');
+        $('.checkbox_img').attr('src','assets/images//checkboxFull.png');
         flag_ship = 1;
     
 		if(mode_check == false)
@@ -2991,11 +2979,11 @@ $( document ).ready(function() {
     $('.activationFlow_parent_container').on('click', '.auto_renewal_chk', function () {
       if($('#auto_renewal').attr('data-chk') == 'checked') {
         $('#auto_renewal').attr('data-chk','unchecked');
-        $('#auto_renewal').attr('src', '/static/payment/images/checkboxEmpty.png');
+        $('#auto_renewal').attr('src', 'assets/images//checkboxEmpty.png');
       }
       else {
         $('#auto_renewal').attr('data-chk','checked');
-        $('#auto_renewal').attr('src','/static/payment/images/checkboxFull.png');
+        $('#auto_renewal').attr('src','assets/images//checkboxFull.png');
       }
       
     });
@@ -4445,23 +4433,23 @@ $( document ).ready(function() {
 
 
 
-    $(document).mouseup(function (e)
-    {
-        var container = $(".meterInfo");
+    // $(document).mouseup(function (e)
+    // {
+    //     var container = $(".meterInfo");
 
-        if (!container.is(e.target) // if the target of the click isn't the container...
-            && container.has(e.target).length === 0) // ... nor a descendant of the container
-        {
-            if ($(".notification_module").css("display")=="block"){
-              $(".notification_module").toggle(300);
-            }
-        }
-    });
+    //     if (!container.is(e.target) // if the target of the click isn't the container...
+    //         && container.has(e.target).length === 0) // ... nor a descendant of the container
+    //     {
+    //         if ($(".notification_module").css("display")=="block"){
+    //           $(".notification_module").toggle(300);
+    //         }
+    //     }
+    // });
 
-    $(".meterInfo").on('click', function()
-    {
-      $(".notification_module").toggle(300);
-    });
+    // $(".meterInfo").on('click', function()
+    // {
+    //   $(".notification_module").toggle(300);
+    // });
 
     var data_input_required = 0;
     var trial_required      = 0;
