@@ -24,7 +24,7 @@ LEEDOnApp.controller('projectController', function($rootScope, $scope, $http, $o
     $scope.createNewProject = function () {
         $('.loader_bg_add_new').show();
         setTimeout(function(){
-            location.href = "#/dashboard/800000100/score/?page=overview&modal=projectActive"; 
+            location.href = "#/dashboard/800000100/score/?modal=projectActive"; 
         }, 1000);
     };
 	
