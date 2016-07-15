@@ -239,27 +239,31 @@ LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $http, 
         updated_full_version_arr = $scope.removeArr(updated_full_version_arr, 'orderSelection');
         updated_full_version_arr = $scope.removeArr(updated_full_version_arr, 'hardwareSubscription');
         $( ".progress_bar" ).each(function( index ) {
-          $(this).attr('data-div', window.progress_bar_details[updated_full_version_arr[index]]['data-div']);
-          $(this).attr('title', window.progress_bar_details[updated_full_version_arr[index]]['title']);
+          $(this).attr('data-div', $scope.progress_bar_details[updated_full_version_arr[index]]['data-div']);
+          $(this).attr('title', $scope.progress_bar_details[updated_full_version_arr[index]]['title']);
         });
 
         $('#add_team_span_md').on('click', function(){
           $('#project_is_active').modal('hide');
           $('#skipped_modal').modal('hide');
-          $('#activation_modal').modal('show');
-          $state.go('manageState.teamState');
+          $('#activation_modal').modal('hide');
+          window.location.href = window.location.protocol + '//' + window.location.host + "/v3/#/dashboard/" + $scope.leed_id + "/data/input/";
         });
 
         $('#add_meter_span_md').on('click', function(){
           $('#project_is_active').modal('hide');
           $('#skipped_modal').modal('hide');
-          $('#activation_modal').modal('show');
-          $state.go('dataState.inputState');
+          $('#activation_modal').modal('hide');
+          $('body').removeClass('modal-open');
+          $('.modal-backdrop').remove();
+          window.location.href = window.location.protocol + '//' + window.location.host + "/v3/#/dashboard/" + $scope.leed_id + "/manage/team";
         });
 
         $('#select_plan_span_md').on('click', function(){
           $('#project_is_active').modal('hide');
           $('#skipped_modal').modal('hide');
+          $('body').removeClass('modal-open');
+          $('.modal-backdrop').remove();
           $scope.activationFlow('buildingInfo');
         });
 
@@ -271,12 +275,13 @@ LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $http, 
       }
 
     if (document.URL.indexOf("?modal")>-1){
+        $('body').removeClass('modal-open');
+        $('.modal-backdrop').remove();
         if ($scope.getUrlParameter("modal").trim() == ""){
         }
         else if ($scope.getUrlParameter("modal").trim() == "projectActive"){
             $('#activation_modal').modal('hide');
             $('#skipped_modal').modal('hide');
-            $('#project_is_active').modal('hide');
             $('#project_is_active').modal('show');
             $scope.projectActive();
         }

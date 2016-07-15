@@ -825,14 +825,6 @@ select#country1, select#country2, select#state1, select#state2 {
   padding-left: 35px !important;
 }
 
-.edit_team_permission_TM {
-  margin-left: 40px;
-  background: url('../images/edit.svg') no-repeat;
-  padding-left: 30px;
-  padding-bottom: 15px;
-  padding-top: 8px;
-}
-
 .team_member_perm, .request_member_perm {
   float: right;
 }
@@ -1764,12 +1756,6 @@ select#country1, select#country2, select#state1, select#state2 {
 
   .permission_dropdown_TM {
     margin-top: 10px;
-  }
-
-  .edit_team_permission_TM{
-    padding-left: 67px;
-    padding-bottom: 15px;
-    padding-top: 3px;
   }
 }
 
