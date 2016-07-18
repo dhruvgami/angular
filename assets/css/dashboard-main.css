@@ -744,7 +744,7 @@ table input {
 }
 
 .form-control {
-    height: 39px !important;
+    height: 39px;
     background-color: #f2f1ef;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
@@ -5176,7 +5176,7 @@ select.dist_select::-ms-expand {
     color: #4a4a4a;
     display: inline-block;
     border: 1px solid #E1DEDE;
-    background-image: url(../css/images/dropdown-arrow.png);
+    background-image: url(../images/dropdown-arrow.png);
     background-repeat: no-repeat !important;
     background-position: 96% !important;
     background-size: 9px !important;

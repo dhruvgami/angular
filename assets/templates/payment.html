@@ -16,14 +16,14 @@
                 <div class="payby_payment">
                   <input class="rdio rdioInput" type="radio" value="card" id="pay_card">                
                   <label class="attribsRadioButton" for="rdio">
-                  <img class="pay_mode" value="card" id="card" src="/static//payment/images/radioFull.png" alt="" width="20" height="20">
+                  <img class="" value="card" id="card" src="assets/images/radioFull.png" alt="" width="20" height="20">
                   </label>
                   <span id="cc" class="radio_style">CREDIT CARD</span>
                 </div>
                 <div class="payby_payment">
                   <input class="rdio rdioInput" type="radio" value="check" id="pay_check">                
                   <label class="attribsRadioButton" for="rdio">
-                  <img class="pay_mode" value="check" id="check" src="/static//payment/images/radioEmpty.png" alt="" width="20" height="20">
+                  <img class="" value="check" id="check" src="assets/images/radioEmpty.png" alt="" width="20" height="20">
                   </label>
                   <span id="chq" class="radio_style">CHECK</span>
                 </div>
@@ -39,9 +39,55 @@
               </div>
 
         <div class="paynow_panel">
-          <iframe id="DIeCommFrame_payment" src="" style="border:0;" frameborder="0" scrolling="no">
-          </iframe>
-          <div><a id="hidden_cvv_help" rel="popover" data-toggle="popover" data-img="/static/dashboard/css/images/cvv_help.jpg" data-original-title=""></a></div>
+          <table class="DataIntercept" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+                <tr>
+                    <td class="DataInterceptCreditCardType" style="display: none;">Credit Card Type</td>
+                    <td class="DataInterceptCreditCardType"><select id="Paymetric_CreditCardType" onchange="xis0();" name="Paymetric_CreditCardType"><option value="3000">American Express</option><option value="4000">Visa</option><option value="5000">Mastercard</option><option value="6000">Discover</option><!-- ReSharper disable once Html.TagNotClosed --></select>
+                        <div class="mt25">
+                            <div class="col_head">
+                                <h4 class="h4_dash">CARD TYPES</h4></div>
+                            <div class="input-group ml2p5per card_tbl">
+                                <table class="table mb0" id="table1">
+                                    <tbody>
+                                        <tr>
+                                            <td class="card_type_tbl pt0"><img src="assets/images/mastercard.png" class="mastercard_img active" value="MASTERCARD" width="30px" style="opacity: 0.3;"></td>
+                                            <td class="card_type_tbl pt0"><img src="assets/images/visa.png" class="visa_img active" value="VISA" width="30px" style="opacity: 0.3;"></td>
+                                            <td class="card_type_tbl pt0"><img src="assets/images/discover.png" class="discover_img active" value="DISCOVER" width="30px" style="opacity: 0.3;"></td>
+                                            <td class="card_type_tbl pt0"><img src="assets/images/amex.png" class="amex_img active" value="AMERICAN EXPRESS" width="30px" style="opacity: 0.3;"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="DataInterceptCreditCardNumber" style="display: none;">Credit Card Number</td>
+                    <td valign="top" class="DataInterceptCreditCardNumber payment_ul mt5">
+                        <div class="col_head mt25">
+                            <h4 class="h4_dash">CARD DETAILS</h4></div><input id="Paymetric_CreditCardNumber" name="Paymetric_CreditCardNumber" class="card_number inblock form-control_payment pressEnter credit" tabindex="1" placeholder="Credit Card Number"></td>
+                </tr>
+                <tr id="Paymetric_StartDate" style="display: none;">
+                    <td id="Paymetric_StartDate_text" style="padding-right: 4px; white-space: nowrap;" class="DataInterceptStartDate">Start Date</td>
+                    <td id="Paymetric_StartDate_input" class="DataInterceptStartDate"><input id="Paymetric_Start_Month" name="Paymetric_Start_Month" size="2" maxlength="2" style="width: 19px;">&nbsp;/&nbsp;<input id="Paymetric_Start_Year" name="Paymetric_Start_Year" size="2" maxlength="2" style="width: 19px;"></td>
+                </tr>
+                <tr>
+                    <td valign="top" style="padding-right: 4px; white-space: nowrap; display: none;" class="DataInterceptExpirationDate">Exp Date</td>
+                    <td class="DataInterceptExpirationDate" style="display: none;"><input id="Paymetric_Exp_Month" name="Paymetric_Exp_Month" size="2" maxlength="2" style="width: 19px;">&nbsp;/&nbsp;<input id="Paymetric_Exp_Year" name="Paymetric_Exp_Year" size="2" maxlength="2" style="width: 19px;"></td>
+                    <ul class="payment_ul"><select id="month" name="month_paymetric" class="paynow_select paynow_month pressEnter form-control_payment credit" tabindex="2" style="width: 35%; margin-top: 16px;"><option value="" disabled="" selected="">Month</option><option>January</option><option>February</option><option>March</option><option>April</option><option>May</option><option>June</option><option>July</option><option>August</option><option>September</option><option>October</option><option>November</option><option>December</option></select><select id="year" name="year_paymetric" class=" paymetric_year paynow_select ml10 pressEnter form-control_payment credit" tabindex="3" style="width: 30%; margin-left: 5%; margin-top: 16px;"> <option value="" disabled="" selected="">Year</option><option value="10">2015</option><option value="9">2016</option><option value="8">2017</option><option value="7">2018</option><option value="6">2019</option><option value="5">2020</option><option value="4">2021</option><option value="3">2022</option><option value="2">2023</option><option value="1">2024</option></select></ul>
+                </tr>
+                <tr id="Paymetric_IN" style="display: none;">
+                    <td valign="top" style="padding-right: 4px; white-space: nowrap;" class="DataInterceptIssuerNumber" id="Paymetric_IssuerNumber_Text">Issuer Number</td>
+                    <td class="DataInterceptIssuerNumber"><input id="Paymetric_IssuerNumber" name="Paymetric_IssuerNumber" size="4"></td>
+                </tr>
+                <tr id="Paymetric_CVV_Row">
+                    <td valign="top" style="padding-right: 4px; white-space: nowrap; margin-top: 17px; position: initial;" class="DataInterceptCVV" id="Paymetric_CVV_Text">CVV</td>
+                    <td class="DataInterceptCVV" style="margin-top: 17px; position: initial;"><input id="Paymetric_CVV" name="Paymetric_CVV" size="4" class="paymetric_cvv ml10 border_cvv form-control_payment pressEnter credit" tabindex="4" placeholder="CVV" style="margin-top: -57px; margin-right: 10%; width: 15%;"><a class="inblock border_help" id="cvv_help" data-placement="right" rel="popover" data-img="assets/images/cvv_help.jpg" data-original-title="" title="">?</a></td>
+                </tr>
+            </tbody>
+        </table>
+          <div><a id="hidden_cvv_help" rel="popover" data-toggle="popover" data-img="assets/images/cvv_help.jpg" data-original-title=""></a></div>
           <div class="pt0">
             <div class="mt25 billing_details">
               <div class="paynow_validation_msg mb30">Please fill-in the required details correctly</div>
@@ -72,7 +118,7 @@
               </div>
             </div>
             <div>
-              <img src="/static/dashboard/css/images/checkboxFull.png" class="checkbox_img address_same">
+              <img src="assets/images/checkboxFull.png" class="checkbox_img address_same">
               <label class="billshipadd_lable" for="checkbox_card">My billing address and shipping address are same.</label>
             </div>
             <div class="shipping_details_card mt25">
@@ -131,7 +177,7 @@
             <div class="col_body"><div class="col_head"><h4 class="h4_dash">AUTO RENEWAL</h4></div><div class="mt20">Would you like to automatically renew your dues annually?</div>
               <div class="mt20 renewal_box">
                 <!-- <input type="checkbox" value="1" id="auto_renewal" checked="checked"> -->
-                <img src="/static/payment/images/checkboxFull.png" id="auto_renewal" class="auto_renewal_chk" data-chk="checked">
+                <img src="assets/images/checkboxFull.png" id="auto_renewal" class="auto_renewal_chk" data-chk="checked">
                 <label class="auto_renewal_lbl light_color" for="auto_renewal">Yes, please renew my LEED Dynamic Plaque subscription each year. I understand that USGBC will charge my credit card <strong id="auto_renewal_check"></strong> annually at the time of my subscription renewal.</label>
               </div>
             </div>

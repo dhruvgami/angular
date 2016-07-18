@@ -41,8 +41,23 @@ LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $http, 
           "title"    : "Meter Setup"
         }
     };
-    window.full_version_arr = ["buildingInfo", "softwareSubscription", "hardwareSubscription", "orderSelection", "payment", "receipt", "buildingConfirmation", "teamManagement", "meterSetup"];
-    
+    window.full_version_arr   = ["buildingInfo", "softwareSubscription", "hardwareSubscription", "orderSelection", "payment", "receipt", "buildingConfirmation", "teamManagement", "meterSetup"];
+    $scope.PAYMENT_VERSION    = 'V1';
+    $scope.want_plaque_global     = true;
+    $scope.purchase_plaque_global = false;
+    $scope.pay_full_global        = false;
+    $scope.term_of_com_global     = 3; 
+    $scope.paymode_flag           = false;
+    $scope.flag_ship              = 1;
+    $scope.ctr_ship               = 1;
+    $scope.global_version         = 'full';
+    $scope.only_agreement         = false;
+    $scope.only_payment_pages     = false;
+    $scope.only_teamMember        = false;
+    $scope.only_meterSetup        = false;
+    $scope.mode_check             = false;
+    $scope.plaque;
+    $scope.sub;
     $ocLazyLoad.load(['assets/js/survey.js?v-12.31', 'assets/libs/js/jquery-ui.js']);
 
     $http.get('assets/json/building_' + $scope.leed_id + '.json').success(function(data) {
@@ -98,6 +113,41 @@ LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $http, 
         });
     };
 
+    //Converts numeric value 600 to string value $600.00
+    $scope.numericToString = function(num) {
+        var str = (num + '').replace(/(\d)(?=(\d{3})+$)/g, '$1,');
+        if (str.indexOf('.') == -1)
+            str = '$' + str + '.00';
+        else
+            str = '$' + str
+        return str;
+    }
+    $scope.check_BackAndNextPage = function(pageName, direction, version) {
+        var next_arr_page = "";
+        var arr = [];
+
+        if (version == "full") {
+            arr = window.full_version_arr;
+        } else {
+            arr = window.full_version_arr;
+        }
+
+        if (direction == "next") {
+            if (arr[arr.indexOf(pageName) + 1] == undefined) {
+                next_arr_page = undefined;
+            } else {
+                next_arr_page = arr[arr.indexOf(pageName) + 1];
+            }
+        } else {
+            if (arr[arr.indexOf(pageName) - 1] == undefined) {
+                next_arr_page = undefined;
+            } else {
+                next_arr_page = arr[arr.indexOf(pageName) - 1];
+            }
+        }
+        return next_arr_page;
+    }
+
     $scope.removeArr = function (arr) {
         var what, a = arguments, L = a.length, ax;
         while (L > 1 && arr.length) {
@@ -109,6 +159,217 @@ LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $http, 
         return arr;
     }
 
+    //paynow order data starts
+    $scope.paynowSelectedData = function() {
+
+        if ($scope.pay_full_global) {
+            $('#auto_renewal_com_box').css('display', 'none');
+            $('#auto_renewal').attr('data-chk', 'unchecked');
+        } else {
+            $('#auto_renewal_com_box').css('display', 'block');
+        }
+
+        if ($scope.want_plaque_global) {
+            $('.needplaque_tbl').show();
+        } else {
+            $('.needplaque_tbl').hide();
+        }
+
+        if ($scope.want_plaque_global) {
+            if ($scope.purchase_plaque_global) {
+                $('.needplaque_tbl').show();
+                $('.rowHide').show();
+                if ($scope.pay_full_global) {
+                    $('.pay_full_span').hide();
+                } else {
+                    $('.pay_full_span').show();
+                }
+            } else {
+                $('.plaque_one_time_price').text($scope.plaque);
+                $('.subs_price').text($scope.sub);
+
+                if ($scope.pay_full_global) {
+                    $('.pay_full_span').hide();
+                } else {
+                    $('.pay_full_span').show();
+                }
+            }
+        } else {
+            if ($scope.pay_full_global) {
+                $('.pay_full_span').hide();
+            } else {
+                $('.pay_full_span').show();
+            }
+        }
+    }
+    //paynow order data ends
+
+    //Calculation starts
+    $scope.sendValuesTotal = function(pageName) {
+        if ($scope.PAYMENT_VERSION == 'V2' && $scope.want_plaque_global == true) {
+            $('.payment_option_2').hide();
+            $('#value_3').css('top', '149px');
+        } else {
+            $('.payment_option_2').show();
+        }
+        $.ajax({
+            type: "GET",
+            url: "assets/json/" + $scope.want_plaque_global + "_" + $scope.purchase_plaque_global + "_" + $scope.pay_full_global + "_" + $scope.term_of_com_global + "_" + pageName +  ".json",
+            success: function(data) {
+                if ($scope.term_of_com_global == 1) {
+                    $('.if_one_year').hide();
+                } else {
+                    $('.if_one_year').show();
+                }
+
+                if (pageName == 'softwareSubscription') {
+                    $('select>option:eq(' + (data.term_of_com_global - 1) + ')').attr('selected', true);
+                    if ($scope.PAYMENT_VERSION == 'V2') {
+                        $('.amount_in_full').hide()
+                        $('.amount_yearly').html($scope.numericToString(data.subs_price));
+                    } else {
+                        $('.amount_in_full').html($scope.numericToString(data.subs_price));
+                        $('.amount_yearly').html($scope.numericToString(data.subs_price_per_year));
+                    }
+                } else if (pageName == 'hardwareSubscription') {
+
+                    if ($scope.PAYMENT_VERSION == 'V2') {
+                        $('.amount_in_full').hide()
+                        $('.amount_yearly').html($scope.numericToString(data.subs_price));
+                        $('.plaque_one_type_price_hrd').html($scope.numericToString(data.plaque_cost));
+                        $('.plaque_anual_price_hrd').html($scope.numericToString(data.plaque_one_time_price));
+                    } else {
+                        $('.amount_in_full').html($scope.numericToString(data.subs_price));
+                        $('.amount_yearly').html($scope.numericToString(data.subs_price_per_year));
+                        $('.plaque_one_type_price_hrd').html($scope.numericToString(data.plaque_one_time_price));
+                        $('.plaque_anual_price_hrd').html($scope.numericToString(data.plaque_price_only));
+                    }
+                    var tem_selected_with_year = "";
+                    if ($scope.term_of_com_global > 1) {
+                        tem_selected_with_year = $scope.term_of_com_global + ' years';
+                    } else {
+                        tem_selected_with_year = $scope.term_of_com_global + ' year';
+                    }
+                    $('.tem_selected_with_year').html(tem_selected_with_year);
+                } else if (pageName == 'orderSelection') {
+                    if ($scope.PAYMENT_VERSION == 'V2') {
+                        $('#orderselection_discount').show();
+
+                        if ($scope.purchase_plaque_global == true) {
+                            $('#payment_plan_select').val('2');
+                        } else {
+                            $('#payment_plan_select').val('1');
+                        }
+
+                        $('.pay_full_span').text('(' + $scope.term_of_com_global + ' Years)');
+                        if ($('#payment_plan_select').val() == '1') {
+                            $('#payment_plan_select').html($('.payment_option_1').html());
+                            $('.subs_price').html($scope.numericToString(data.subs_price));
+                            $('.plaque_one_time_price').html($scope.numericToString(data.plaque_one_time_price));
+                        } else if ($('#payment_plan_select').val() == '2') {
+                            $('#payment_plan_select').html($('.payment_option_2').html());
+                            $('.subs_price').html($scope.numericToString(data.subs_price));
+                            $('.plaque_one_time_price').html($scope.numericToString(data.plaque_cost));
+                        }
+                    } else {
+                        $('#orderselection_discount').hide();
+
+                        if ($scope.pay_full_global == true) {
+                            $('.pay_full_span').text('(' + $scope.term_of_com_global + ' Years)');
+
+                            $('#payment_plan_select').val("2");
+                            $('#payment_plan_select').html($('.payment_option_2').html());
+
+                            if ($scope.purchase_plaque_global == true)
+                                $('.purchase_plaque_span').text('');
+                            else
+                                $('.purchase_plaque_span').text('(' + $scope.term_of_com_global + ' Years)');
+                        } else {
+                            if ($scope.purchase_plaque_global == true) {
+                                $('#payment_plan_select').val("3");
+                                $('#payment_plan_select').html($('.payment_option_3').html());
+                            } else {
+                                $('#payment_plan_select').val("1");
+                                $('#payment_plan_select').html($('.payment_option_1').html());
+                            }
+                            $('.pay_full_span').text('(1 Year)');
+                            $('.pay_full_span').text('(1 Year)');
+                            if ($scope.purchase_plaque_global == true)
+                                $('.purchase_plaque_span').text('');
+                            else
+                                $('.purchase_plaque_span').text('(1 Year)');
+                        }
+
+                        if ($scope.purchase_plaque_global == true) {
+                            $('.plaque_one_time_price').text($scope.numericToString(data.plaque_one_time_price));
+                        } else if ($scope.purchase_plaque_global == false) {
+                            $('.plaque_one_time_price').text($scope.numericToString(data.plaque_price_only));
+                        }
+                        $('.subs_price').html($scope.numericToString(data.subs_price_only));
+
+                    }
+                    $('.total_plaque_price').html($scope.numericToString(data.tot_cost));
+                    $scope.paynowSelectedData();
+                } else if (pageName == 'payment') {
+                    if ($scope.PAYMENT_VERSION == 'V2') {
+                        $('.pay_full_span').text('(' + $scope.term_of_com_global + ' Years)');
+                        if ($scope.purchase_plaque_global == false) {
+                            $('.subs_price').html($scope.numericToString(data.subs_price));
+                            $('.plaque_one_time_price').html($scope.numericToString(data.plaque_one_time_price));
+                        } else if ($scope.purchase_plaque_global == true) {
+                            $('.subs_price').html($scope.numericToString(data.subs_price));
+                            $('.plaque_one_time_price').html($scope.numericToString(data.plaque_cost));
+                        }
+                    } else {
+                        if ($scope.pay_full_global == true) {
+                            $('#auto_renewal_com_box').hide();
+                            $('#auto_renewal').attr('data-chk', 'unchecked');
+                        } else {
+                            $('#auto_renewal_com_box').show();
+                            if ($scope.pay_full_global == false && ($scope.want_plaque_global == true && $scope.purchase_plaque_global == false)) {
+                                $('#auto_renewal_check').html($scope.numericToString(parseInt(data.plaque_price_only) + parseInt(data.subs_price)));
+                            } else if ($scope.pay_full_global == false && ($scope.want_plaque_global == true && $scope.purchase_plaque_global == true)) {
+                                $('#auto_renewal_check').html($scope.numericToString(parseInt(data.subs_price)));
+                            } else if ($scope.pay_full_global == true && ($scope.want_plaque_global == true && $scope.purchase_plaque_global == false)) {
+                                $('#auto_renewal_check').html($scope.numericToString(parseInt(data.plaque_price_only)));
+                            } else if ($scope.pay_full_global == false && $scope.want_plaque_global == false) {
+                                $('#auto_renewal_check').html($scope.numericToString(parseInt(data.subs_price_only)));
+                            }
+                        }
+
+                        if ($scope.pay_full_global == true) {
+                            $('.pay_full_span').text('(' + $scope.term_of_com_global + ' Years)');
+                            $('#payment_plan_select').val("2");
+                            if ($scope.purchase_plaque_global == true)
+                                $('.purchase_plaque_span').text('');
+                            else
+                                $('.purchase_plaque_span').text('(' + $scope.term_of_com_global + ' Years)');
+                        } else {
+                            $('.pay_full_span').text('(1 Year)');
+                            $('#payment_plan_select').val("1");
+                            $('.pay_full_span').text('(1 Year)');
+                            if ($scope.purchase_plaque_global == true)
+                                $('.purchase_plaque_span').text('');
+                            else
+                                $('.purchase_plaque_span').text('(1 Year)');
+                        }
+
+                        if ($scope.purchase_plaque_global == true) {
+                            $('.plaque_one_time_price').text($scope.numericToString(data.plaque_one_time_price));
+                        } else if ($scope.purchase_plaque_global == false) {
+                            $('.plaque_one_time_price').text($scope.numericToString(data.plaque_price_only));
+                        }
+                        $('.subs_price').html($scope.numericToString(data.subs_price_only));
+                    }
+                    $('.total_plaque_price').html($scope.numericToString(data.tot_cost));
+
+                    $scope.paynowSelectedData();
+                }
+            }
+        });
+    }
+    //Calculation ends
+
     $scope.buildingSetup = function (){
         $('#activation_modal_container').removeClass('activation_modal_w450').addClass('activation_modal_w875');
         $('.back_btn_access').html('< CHECKLIST');
@@ -116,6 +377,9 @@ LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $http, 
         $('.back_btn_access, .back_btn').on('click', function(){
             $('#activation_modal').modal('hide');
             $('#project_is_active').modal('show');
+        });
+        $('#correct_btn').on('click', function() {
+            $scope.activationFlow($scope.check_BackAndNextPage('buildingInfo', 'next', $scope.global_version));
         });
         if (($scope.building_data.state).length > 2){
             final_state = ($scope.building_data.state).substring(2, ($scope.building_data.state).length);
@@ -175,15 +439,246 @@ LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $http, 
     };
 
     $scope.softwareSubscription = function (){
+        $('#activation_modal_container').removeClass('activation_modal_w450').addClass('activation_modal_w875');
+        if (!$scope.only_payment_pages) {
+            $('.back_btn_access').show();
+            $('.back_btn').show();
+        } else {
+            $('.back_btn_access').hide();
+            $('.back_btn').hide();
+        }
+
+        $('.back_btn_access').html('< REVIEW INFO');
+        $('.back_btn_access, .back_btn').attr('onclick', '').unbind('click');
+        $('.back_btn_access, .back_btn').on('click', function() {
+            $scope.activationFlow($scope.check_BackAndNextPage('softwareSubscription', 'back', 'full'));
+        });
+
+        $('.forward_btn_access').html('DISPLAY >');
+        $('.forward_btn_access, .forward_btn').attr('onclick', '').unbind('click');
+        $('.forward_btn_access, .forward_btn').on('click', function() {
+            $scope.activationFlow('hardwareSubscription');
+        });
+
+        for (var i = 1; i < 101; i++) {
+            if (i == 1)
+                $("#year").html($("#year").html() + '<option value="' + i + '">' + i + ' Year</option>');
+            else if (i == $scope.term_of_com_global)
+                $("#year").html($("#year").html() + '<option value="' + i + '" selected>' + i + ' Years</option>');
+            else
+                $("#year").html($("#year").html() + '<option value="' + i + '">' + i + ' Years</option>');
+        }
+
+        $scope.sendValuesTotal('softwareSubscription');
+        $('.sw_term_select_year').on('change', function() {
+            if ($('.sw_term_select_year :selected').text() == '100 Years')
+                $scope.term_of_com_global = 100;
+            else
+                $scope.term_of_com_global = parseInt($('.sw_term_select_year :selected').text().substring(0, 2).trim());
+
+            $scope.sendValuesTotal('softwareSubscription');
+        });
+
+        $("#continue2").on('click', function() {
+            $scope.activationFlow('hardwareSubscription');
+        });
+
+        if ($scope.PAYMENT_VERSION == 'V2') {
+            $('.summaryCost').html('Your subscription can be paid in <b>annual increments of <span class="amount_yearly"></span></b></span>.');
+        }
     };
 
-    $scope.hardwareSubscription = function (){
+    $scope.hardwareSubscription = function() {
+
+        $('#activation_modal_container').removeClass('activation_modal_w450').addClass('activation_modal_w875');
+
+        $('.back_btn_access').show();
+        $('.back_btn').show();
+
+        $('.back_btn_access').html('< SUBSCRIBE');
+        $('.back_btn_access, .back_btn').attr('onclick', '').unbind('click');
+        $('.back_btn_access, .back_btn').on('click', function() {
+            $scope.activationFlow('softwareSubscription');
+        });
+
+        $('.forward_btn_access').html('PAYMENT PLAN >');
+        $('.forward_btn_access, .forward_btn').attr('onclick', '').unbind('click');
+        $('.forward_btn_access, .forward_btn').on('click', function() {
+            $scope.activationFlow('orderSelection');
+        });
+
+        $scope.sendValuesTotal('hardwareSubscription');
+
+        $("#continue3, #previous3").on('click', function() {
+            if ($(this).attr('id') == "previous3") {
+                $scope.want_plaque_global = false;
+            } else {
+                $scope.want_plaque_global = true;
+            }
+            $('#preloader_activationFlow').show();
+            $('#status_activationFlow').show();
+
+            $.ajax({
+                type: "GET",
+                url: "assets/json/true_false_false_3_hardwareSubscription.json",
+            }).done(function(data) {
+                $scope.activationFlow('orderSelection');
+            }).error(function() {
+                $('#preloader_activationFlow').hide();
+                $('#status_activationFlow').hide();
+            });
+        });
+
+        if (window.PAYMENT_VERSION == 'V2') {
+            $('.summaryCost').html('Your subscription can be paid in <b>annual increments of <span class="amount_yearly"></span></b></span>.');
+        }
     };
 
-    $scope.orderSelection = function (){
+    $scope.orderSelection = function() {
+
+        if (window.PAYMENT_VERSION == 'V2') {
+            $scope.purchase_plaque_global = true;
+        }
+
+        $('#activation_modal_container').removeClass('activation_modal_w450').addClass('activation_modal_w875');
+
+        $('.back_btn_access').html('< DISPLAY');
+        $('.back_btn_access, .back_btn').attr('onclick', '').unbind('click');
+        $('.back_btn_access, .back_btn').on('click', function() {
+            $scope.activationFlow('hardwareSubscription');
+        });
+
+        $('.forward_btn_access').html('PAYMENT INFO >');
+        $('.forward_btn_access, .forward_btn').attr('onclick', '').unbind('click');
+        $('.forward_btn_access, .forward_btn').on('click', function() {
+            $scope.activationFlow('payment');
+        });
+
+        if ($scope.want_plaque_global == true) {
+            $('.payment_option_1').html('Pay annually for both display and subscription');
+            $('.payment_option_2').html('Pay up front for both display and subscription');
+            $('.payment_option_3').show();
+        } else {
+            $('.payment_option_1').html('Pay annually for subscription');
+            $('.payment_option_2').html('Pay up front for subscription');
+            $('.payment_option_3').hide();
+        }
+
+        $(document).on('click', function(e) {
+            var container = $("#payment_plan_select");
+
+            if (!container.is(e.target) // if the target of the click isn't the container...
+                &&
+                container.has(e.target).length === 0) // ... nor a descendant of the container
+            {
+                if ($('.optionsCont').css('display') != 'none') {
+                    $('.optionsCont').hide();
+                }
+            }
+        });
+
+        $('#payment_plan_select').on('click', function() {
+
+            if ($('.optionsCont').css('display') == 'none') {
+                $('.optionsCont').show();
+            } else {
+                $('.optionsCont').hide();
+            }
+
+            $.ajax({
+                type: "GET",
+                url: "assets/json/true_false_false_3_orderSelection.json",
+                success: function(data) {
+                    $('#value_1').html($scope.numericToString(data.tot_cost) + ' /year');
+                }
+            });
+            $.ajax({
+                type: "GET",
+                url: "assets/json/true_true_true_3_orderSelection.json",
+                success: function(data) {
+                    $('#value_2').html($scope.numericToString(data.tot_cost) + ' now ');
+                }
+            });
+            $.ajax({
+                type:"GET",
+                url: "assets/json/true_true_false_3_orderSelection.json",
+                success: function(data)
+                {
+                    $('#value_3').html($scope.numericToString(data.plaque_cost) + ' now + ' + $scope.numericToString(data.subs_price) + ' /year'); 
+                }
+            });
+        });
+
+        $('.options').on('click', function() {
+            if ($(this).attr('value') == '1') {
+                $('#payment_plan_select').val('1');
+                $scope.purchase_plaque_global = false;
+                $scope.pay_full_global = false;
+            } else if ($(this).attr('value') == '2') {
+                $('#payment_plan_select').val('2');
+                $scope.purchase_plaque_global = true;
+                $scope.pay_full_global = true;
+            } else if ($(this).attr('value') == '3') {
+                $('#payment_plan_select').val('3');
+                $scope.purchase_plaque_global = true;
+                $scope.pay_full_global = false;
+            }
+            $scope.sendValuesTotal('orderSelection');
+        });
+        $scope.sendValuesTotal('orderSelection');
+
+        $("#continue4").on('click', function() {
+            $scope.activationFlow('payment');
+        });
     };
 
     $scope.payment = function (){
+
+        $scope.sendValuesTotal('payment');
+
+        print_country("country1");
+        print_state("state1", "");
+        print_country("country2");
+        print_state("state2", "");
+
+        $('#activation_modal_container').removeClass('activation_modal_w450').addClass('activation_modal_w875');
+
+        $('.back_btn_access').html('< PAYMENT PLAN');
+        $('.back_btn_access, .back_btn').attr('onclick','').unbind('click');
+        $('.back_btn_access, .back_btn').on('click', function(){
+            $scope.activationFlow('hardwareSubscription');
+        });
+
+        $('.forward_btn_access').html('');
+        $('.forward_btn_access, .forward_btn').attr('onclick','').unbind('click');
+        $('.forward_btn_access, .forward_btn').on('click', function(){
+            $scope.activationFlow('receipt');
+        });
+
+        if($( '.container_shadow').width() <= 709) {
+            $('.paynow_month').css('width', '35%');
+            $('.paynow_month').css('margin-top', '16px');
+            $('.paymetric_year').css('width', '30%');
+            $('.paymetric_year').css('margin-left', '5%');
+            $('.paymetric_year').css('margin-top', '16px');
+            $('.DataInterceptCVV ').css('margin-top', '17px');
+            $('.paymetric_cvv').css('margin-top', '-57px');
+            $('.paymetric_cvv').css('margin-right', '10%');
+            $('.paymetric_cvv').css('width', '15%');
+            $('.DataInterceptCVV').css('position', 'initial');
+        }
+        else{
+            $('.paynow_month').css('width', '150px');
+            $('.paynow_month').css('margin-top', '0px');
+            $('.paymetric_year').css('width', '140px');
+            $('.paymetric_year').css('margin-left', '19px');
+            $('.paymetric_year').css('margin-top', '8px');
+            $('.DataInterceptCVV ').css('margin-top', '-52px');
+            $('.paymetric_cvv').css('margin-top', '0px');
+            $('.paymetric_cvv').css('margin-left', '4%');
+            $('.paymetric_cvv').css('width', '59%');
+            $('.DataInterceptCVV').css('position', 'absolute');
+        }
     };
 
     $scope.receipt = function (){
@@ -247,7 +742,9 @@ LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $http, 
           $('#project_is_active').modal('hide');
           $('#skipped_modal').modal('hide');
           $('#activation_modal').modal('hide');
-          window.location.href = window.location.protocol + '//' + window.location.host + "/v3/#/dashboard/" + $scope.leed_id + "/data/input/";
+          $('body').removeClass('modal-open');
+          $('.modal-backdrop').remove();
+          window.location.href = window.location.protocol + '//' + window.location.host + "/v3/#/dashboard/" + $scope.leed_id + "/manage/team";
         });
 
         $('#add_meter_span_md').on('click', function(){
@@ -256,7 +753,7 @@ LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $http, 
           $('#activation_modal').modal('hide');
           $('body').removeClass('modal-open');
           $('.modal-backdrop').remove();
-          window.location.href = window.location.protocol + '//' + window.location.host + "/v3/#/dashboard/" + $scope.leed_id + "/manage/team";
+          window.location.href = window.location.protocol + '//' + window.location.host + "/v3/#/dashboard/" + $scope.leed_id + "/data/input/";
         });
 
         $('#select_plan_span_md').on('click', function(){
@@ -270,6 +767,8 @@ LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $http, 
         $('#sign_agreement_span_md').on('click', function(){
           $('#project_is_active').modal('hide');
           $('#skipped_modal').modal('hide');
+          $('body').removeClass('modal-open');
+          $('.modal-backdrop').remove();
           $scope.activationFlow('buildingConfirmation');
         });
       }

@@ -1,0 +1,185 @@
+iframe, object, embed {
+    max-width: 100%;
+}
+
+form.DIeCommForm{
+	background: #fff !important;
+}
+
+.row {
+ margin-left: 0px; 
+ margin-right: 0px; 
+}
+
+body {
+	background: #fff;
+}
+
+.DataInterceptErrors {
+	display: none;
+}
+#Paymetric_CreditCardType{
+	display: none;
+}
+.PaymentPage_PayNowButton{
+	display: none;
+}
+#Paymetric_CVV_Text{
+	display: none;
+}
+#Paymetric_CVV_Row{
+	width: 100px !important;
+}
+/*#Paymetric_Exp_Month{
+	display: none;
+}
+#Paymetric_Exp_Year{
+	display: none;
+}*/
+#month, #year{
+	background: #F1F1F1;
+	cursor: pointer;
+}
+.DataInterceptCVV{
+	width: 107px;
+	margin-top: -52px;
+	left: 322px;
+	height: 45px;
+}
+.col_head{
+	margin-bottom: 8px;
+}
+.card_number {
+	width: 99% !important;
+}
+
+.form-control_payment {
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 18px;
+  /*color: #4a4a4a;*/
+  background-color: #F1F1F1;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.h4_dash {
+	text-align: left !important;
+	font-size: 13px !important;
+	color: #4a4a4a !important;
+	text-transform: uppercase !important;
+	font-weight: bold !important;
+}
+
+@media (max-width: 600px){
+	.paymetric_year {
+		width: 24%;
+		height: 45px;
+		margin-top: 8px;
+		margin-left: 11px;
+	}
+	#cvv_help {
+		vertical-align: initial;
+		margin-left: 90%;
+		top: -45px;
+		position: relative;
+	}
+	.paymetric_year {
+		width: 70px;
+		background: #F1F1F1;
+	}
+	.paymetric_cvv {
+		width: 58%;
+		height: 45px;
+		margin-left: 4%;
+		background: #F1F1F1;
+		float: right;
+	}
+}
+@media screen and (max-width: 325px){
+	h4 {
+		font-size: 12px !important;
+	}
+}
+@media (min-width: 601px){
+	.billing_details {
+		margin-top: 20px;
+	}
+	.paymetric_year {
+		width: 24%;
+		height: 45px;
+		margin-top: 8px;
+		margin-left: 11px;
+	}
+	#cvv_help {
+		vertical-align: initial;
+		margin-left: 90%;
+		top: -45px;
+		position: relative;
+	}
+	.paymetric_year {
+		width: 70px;
+	}
+	.paymetric_cvv {
+		width: 58%;
+		height: 45px;
+		margin-left: 4%;
+		background: #F1F1F1;
+		float: right;
+	}
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+	.card_number {
+		width: 97% !important;
+	}
+}
+
+
+@media  (max-width: 960px){
+		.card_number {
+	  width: 94% !important;
+	}
+}
+
+
+@media (min-width: 730px){
+
+  #DIeCommFrame_payment,#DIeCommFrame_certification_payment {
+    display: block;
+    height: 245px;
+    width: 100%;
+	float: left;
+  }
+
+  #hidden_cvv_help {
+    height: 45px;
+    width: 34px;
+    position: absolute;
+    right: 50px;
+    margin-top: -52px;
+  }
+
+}
+
+@media (max-width: 800px) {
+	
+	#DIeCommFrame_payment,#DIeCommFrame_certification_payment {
+    display: block;
+    height: 235px;
+    width: 100%;
+  }
+
+}
+
+#DIeCommFrame_certification_paymen .paymetric_cvv{
+	    margin-top: -57px !important;
+    margin-right: 10% !important;
+    width: 15% !important;
+}
+
+#DIeCommFrame_certification_paymen .DataInterceptCreditCardType .mt25{
+	margin-top:0px !important;
+}
