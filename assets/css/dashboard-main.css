@@ -6758,7 +6758,7 @@ div.settingsStatuses .ms-drop ul li label input {
     padding: 2px;
     margin-right: 10px;
     text-align: center;
-    border: 3px solid #ccc;
+    /*border: 3px solid #ccc;*/
     border-radius: 10px
 }
 
@@ -6969,3 +6969,7 @@ div.settingsStatuses .ms-drop ul li label input {
 }
 
 button:focus {outline:0 !important;}
+
+.bt0{
+    border-top: 0px !important;
+}

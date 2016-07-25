@@ -1,7 +1,7 @@
 LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $http, $window, $stateParams, $ocLazyLoad) {
 	$rootScope.header        = 'Dashboard';
 	$rootScope.main_appClass = '';
-	$rootScope.bodyLayout    = '';
+	// $rootScope.bodyLayout    = '';
 	// $rootScope.htmlLayout    = 'js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface no-generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths';
 	if ($stateParams.leed_id == "800000100"){
         localStorage.setItem($stateParams.leed_id + '_notification', 'full');
@@ -679,6 +679,58 @@ LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $http, 
             $('.paymetric_cvv').css('width', '59%');
             $('.DataInterceptCVV').css('position', 'absolute');
         }
+
+        $('.shipping_details_card').hide();
+
+        $('.activationFlow_parent_container').on('click', '.checkbox_img', function () {
+            if($('.checkbox_img').hasClass('address_same')) {
+                $(this).removeClass('address_same').addClass('address_notsame');
+                $('#checkbox_card').attr('checked', false);
+                $('.checkbox_img').attr('src', 'assets/images/checkboxEmpty.png');
+                $('.shipping_details_card').show();
+            }
+            else{
+                $('.checkbox_img').removeClass('address_notsame').addClass('address_same');
+                $('#checkbox_card').attr('checked', true);
+                $('.checkbox_img').attr('src','assets/images/checkboxFull.png');
+                $('.shipping_details_card').hide();
+            }
+        });
+
+        $('.activationFlow_parent_container').on('click', '.auto_renewal_chk', function () {
+            if($('#auto_renewal').attr('data-chk') == 'checked') {
+                $('#auto_renewal').attr('data-chk','unchecked');
+                $('#auto_renewal').attr('src', 'assets/images/checkboxEmpty.png');
+            }
+            else {
+                $('#auto_renewal').attr('data-chk','checked');
+                $('#auto_renewal').attr('src','assets/images/checkboxFull.png');
+            }
+        });
+
+        $('.activationFlow_parent_container').on('click', '.pay_mode', function () {
+            if ($(this).attr("value") == "card") {
+                $('#check').attr("src", "assets/images/radioEmpty.png");
+                $('#card').attr("src", "assets/images/radioFull.png");
+                $("#DIeCommFrame_payment").show();
+                $(".instruction_section").hide();
+                $('#cc').css("font-weight", "Bold");
+                $('#chq').css("font-weight", "normal");
+
+            } else if ($(this).attr("value") == "check") {
+
+                $('.card_number').css('cssText', 'border-color: rgba(204,204,204,1)');
+                $('.paynow_cvv').css('cssText', 'border-color: rgba(204,204,204,1)');
+
+                $('#check').attr("src", "assets/images/radioFull.png");
+                $('#card').attr("src", "assets/images/radioEmpty.png");
+                $("#DIeCommFrame_payment").hide();
+                $('#auto_renewal_com_box').hide();
+                $(".instruction_section").show();
+                $('#chq').css("font-weight", "Bold");
+                $('#cc').css("font-weight", "normal");
+            }
+        });
     };
 
     $scope.receipt = function (){
@@ -742,8 +794,6 @@ LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $http, 
           $('#project_is_active').modal('hide');
           $('#skipped_modal').modal('hide');
           $('#activation_modal').modal('hide');
-          $('body').removeClass('modal-open');
-          $('.modal-backdrop').remove();
           window.location.href = window.location.protocol + '//' + window.location.host + "/v3/#/dashboard/" + $scope.leed_id + "/manage/team";
         });
 
@@ -751,31 +801,23 @@ LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $http, 
           $('#project_is_active').modal('hide');
           $('#skipped_modal').modal('hide');
           $('#activation_modal').modal('hide');
-          $('body').removeClass('modal-open');
-          $('.modal-backdrop').remove();
           window.location.href = window.location.protocol + '//' + window.location.host + "/v3/#/dashboard/" + $scope.leed_id + "/data/input/";
         });
 
         $('#select_plan_span_md').on('click', function(){
           $('#project_is_active').modal('hide');
           $('#skipped_modal').modal('hide');
-          $('body').removeClass('modal-open');
-          $('.modal-backdrop').remove();
           $scope.activationFlow('buildingInfo');
         });
 
         $('#sign_agreement_span_md').on('click', function(){
           $('#project_is_active').modal('hide');
           $('#skipped_modal').modal('hide');
-          $('body').removeClass('modal-open');
-          $('.modal-backdrop').remove();
           $scope.activationFlow('buildingConfirmation');
         });
       }
 
     if (document.URL.indexOf("?modal")>-1){
-        $('body').removeClass('modal-open');
-        $('.modal-backdrop').remove();
         if ($scope.getUrlParameter("modal").trim() == ""){
         }
         else if ($scope.getUrlParameter("modal").trim() == "projectActive"){
