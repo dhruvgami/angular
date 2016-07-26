@@ -647,15 +647,11 @@ select#country1, select#country2, select#state1, select#state2 {
 }
 
 #sendAgreement_buildConf {
-  margin-top: -55px !important;
+  margin-top: 6px !important;
 }
 
 .agreement_active {
   opacity: 1;
-}
-
-#new_owner_name {
-  float: left;
 }
 
 #new_owner_name {

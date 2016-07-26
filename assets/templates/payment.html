@@ -28,159 +28,157 @@
                         <span id="chq" class="radio_style">CHECK</span>
                     </div>
                 </div>
-                <div class="instruction_section">
-                    <div class="col_head mb25">
-                        <h4 class="mt70 h4_dash"> INSTRUCTIONS </h4></div>
-                    <div class="mb20">
-                        <p>Upon completing the billing form below and clicking Submit Payment, an invoice will be generated and emailed to the bill-to-party email address listed below.</p>
-                    </div>
-                    <div class="mb20">
-                        <p>Mail the invoice and check the following address:</p> <br>
-                        <p>Green Building Certification Institute<br>P.O. Box 82964<br>Philadelphia, PA 19182-2964</p>
-                    </div>
-                    <div class="mb20">
-                        <p><b>To avoid delays inprocessing, please write the invoice number on the check.</b></p>
-                    </div>
-                    <div class="mb20">
-                        <p>Once GBCI receives the check, <b>please allow 2-3 business days for processing.</b></p>
-                    </div>
-                    <div class="mb20">
-                        <p>At any time, you may choose to pay this invoice by credit card by logging into your account at usgbc.org and accessing this order via your order history.</p>
-                    </div>
+            </div>
+            <div class="instruction_section">
+                <div class="col_head mb25">
+                    <h4 class="mt70 h4_dash"> INSTRUCTIONS </h4></div>
+                <div class="mb20">
+                    <p>Upon completing the billing form below and clicking Submit Payment, an invoice will be generated and emailed to the bill-to-party email address listed below.</p>
                 </div>
-
-                <div class="paynow_panel">
-                    <div>
-                        <div class="mt25 pt20">
+                <div class="mb20">
+                    <p>Mail the invoice and check the following address:</p> <br>
+                    <p>Green Building Certification Institute<br>P.O. Box 82964<br>Philadelphia, PA 19182-2964</p>
+                </div>
+                <div class="mb20">
+                    <p><b>To avoid delays inprocessing, please write the invoice number on the check.</b></p>
+                </div>
+                <div class="mb20">
+                    <p>Once GBCI receives the check, <b>please allow 2-3 business days for processing.</b></p>
+                </div>
+                <div class="mb20">
+                    <p>At any time, you may choose to pay this invoice by credit card by logging into your account at usgbc.org and accessing this order via your order history.</p>
+                </div>
+            </div>
+            <div class="paynow_panel">
+                <div class="">
+                    <div class="mt25 pt20 card_type">
+                        <div class="col_head">
+                            <h4 class="h4_dash">CARD TYPES</h4>
+                        </div>
+                        <div class="input-group ml2p5per card_tbl">
+                            <table class="table mb0" id="table1">
+                                <tbody>
+                                    <tr>
+                                        <td class="card_type_tbl pt0 bt0"><img src="assets/images/mastercard.png" class="mastercard_img active" value="MASTERCARD" width="30px" style="opacity: 0.3;"></td>
+                                        <td class="card_type_tbl pt0 bt0"><img src="assets/images/visa.png" class="visa_img active" value="VISA" width="30px" style="opacity: 0.3;"></td>
+                                        <td class="card_type_tbl pt0 bt0"><img src="assets/images/discover.png" class="discover_img active" value="DISCOVER" width="30px" style="opacity: 0.3;"></td>
+                                        <td class="card_type_tbl pt0 bt0"><img src="assets/images/amex.png" class="amex_img active" value="AMERICAN EXPRESS" width="30px" style="opacity: 0.3;"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <tr>
+                            <td class="DataInterceptCreditCardNumber" style="display: none;">Credit Card Number</td>
+                            <td valign="top" class="DataInterceptCreditCardNumber payment_ul mt5">
+                                <div class="col_head mt25">
+                                    <h4 class="h4_dash">CARD DETAILS</h4></div><input id="Paymetric_CreditCardNumber" name="Paymetric_CreditCardNumber" class="card_number inblock form-control_payment pressEnter credit" tabindex="1" placeholder="Credit Card Number" style="box-shadow: none;"></td>
+                        </tr>
+                        <tr>
+                            <ul class="payment_ul"><select id="month" name="month_paymetric" class="paynow_select paynow_month pressEnter form-control_payment credit" tabindex="2" style="width: 35%; margin-top: 16px; height:45px;"><option value="" disabled="" selected="">Month</option><option>January</option><option>February</option><option>March</option><option>April</option><option>May</option><option>June</option><option>July</option><option>August</option><option>September</option><option>October</option><option>November</option><option>December</option></select><select id="year" name="year_paymetric" class=" paymetric_year paynow_select ml10 pressEnter form-control_payment credit" tabindex="3" style="width: 30%; margin-left: 5%; margin-top: 16px;"> <option value="" disabled="" selected="">Year</option><option value="10">2015</option><option value="9">2016</option><option value="8">2017</option><option value="7">2018</option><option value="6">2019</option><option value="5">2020</option><option value="4">2021</option><option value="3">2022</option><option value="2">2023</option><option value="1">2024</option></select></ul>
+                        </tr>
+                        <td class="DataInterceptCVV" style="margin-top: 17px; position: initial;"><input id="Paymetric_CVV" name="Paymetric_CVV" size="4" class="paymetric_cvv ml10 border_cvv form-control_payment pressEnter credit" tabindex="4" placeholder="CVV" style="margin-top: -55px; margin-right: 6%; width: 19%;"><a class="inblock border_help" id="cvv_help" data-placement="right" rel="popover" data-img="assets/images/cvv_help.jpg" data-original-title="" title="">?</a></td>
+                    </div>
+                    <div class="pt0">
+                        <div class="billing_details">
+                            <div class="paynow_validation_msg mb30">Please fill-in the required details correctly</div>
                             <div class="col_head">
-                                <h4 class="h4_dash">CARD TYPES</h4>
+                                <h4 class="h4_dash">BILLING DETAILS</h4></div>
+                            <div class="mt10 mb25">
+                                <form id="billing_details_form">
+                                    <ul class="payment_ul">
+                                        <input id="paynow_f_name" class="check checkS inblock fixwidth_input billing form-control_payment valid paynow_f_name pressEnter" name="bill_to_party_firstname" placeholder="First Name" required tabindex="4">
+                                        <input id="paynow_l_name" class="check checkS inblock fixwidth_input billing form-control_payment valid paynow_l_name pressEnter" name="bill_to_party_lastname" placeholder="Last Name" required tabindex="5">
+                                    </ul>
+                                    <ul class="payment_ul">
+                                        <input id="paynow_add" class="billing check checkS inblock address_input form-control_payment valid paynow_add pressEnter" name="address" placeholder="Address" required tabindex="6">
+                                    </ul>
+                                    <ul class="payment_ul">
+                                        <input id="paynow_city" class="billing check checkS inblock valid paynow_city form-control_payment pressEnter fixwidth_input" name="city" placeholder="City" required tabindex="7">
+                                        <input id="paynow_po_code" class="billing check checkS inblock form-control_payment valid paynow_po_code ml10 pressEnter fixwidth_input" name="postal_code" placeholder="Postal Code" required tabindex="8">
+                                    </ul>
+
+                                    <ul class="payment_ul">
+                                        <select id="country1" class="billing inblock check checkS fixwidth_input form-control_payment valid country inblock_sel pressEnter" name="country" placeholder="Country" required tabindex="9" onchange="print_state('state1', this.value);"></select>
+                                        <select id="state1" class="billing inblock fixwidth_input check checkS form-control_payment valid state inblock_sel ml10 pressEnter" name="state" placeholder="State" tabindex="10" required></select>
+                                    </ul>
+
+                                    <ul class="payment_ul">
+                                        <input id="paynow_email" class="billing inblock fixwidth_input check checkS form-control_payment valid paynow_email pressEnter" name="bill_to_party_email" placeholder="Email" required tabindex="11"><input id="paynow_phone" class="billing inblock fixwidth_input form-control_payment check checkS valid paynow_phone ml10 pressEnter" name="bill_to_party_phone" placeholder="Phone" required tabindex="12">
+                                    </ul>
+                                </form>
                             </div>
-                            <div class="input-group ml2p5per card_tbl">
-                                <table class="table mb0" id="table1">
-                                    <tbody>
-                                        <tr>
-                                            <td class="card_type_tbl pt0 bt0"><img src="assets/images/mastercard.png" class="mastercard_img active" value="MASTERCARD" width="30px" style="opacity: 0.3;"></td>
-                                            <td class="card_type_tbl pt0 bt0"><img src="assets/images/visa.png" class="visa_img active" value="VISA" width="30px" style="opacity: 0.3;"></td>
-                                            <td class="card_type_tbl pt0 bt0"><img src="assets/images/discover.png" class="discover_img active" value="DISCOVER" width="30px" style="opacity: 0.3;"></td>
-                                            <td class="card_type_tbl pt0 bt0"><img src="assets/images/amex.png" class="amex_img active" value="AMERICAN EXPRESS" width="30px" style="opacity: 0.3;"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <tr>
-                                <td class="DataInterceptCreditCardNumber" style="display: none;">Credit Card Number</td>
-                                <td valign="top" class="DataInterceptCreditCardNumber payment_ul mt5">
-                                    <div class="col_head mt25">
-                                        <h4 class="h4_dash">CARD DETAILS</h4></div><input id="Paymetric_CreditCardNumber" name="Paymetric_CreditCardNumber" class="card_number inblock form-control_payment pressEnter credit" tabindex="1" placeholder="Credit Card Number" style="box-shadow: none; border-color: rgb(243, 54, 59);"></td>
-                            </tr>
-                            <tr>
-                                <ul class="payment_ul"><select id="month" name="month_paymetric" class="paynow_select paynow_month pressEnter form-control_payment credit" tabindex="2" style="width: 35%; margin-top: 16px; height:45px;"><option value="" disabled="" selected="">Month</option><option>January</option><option>February</option><option>March</option><option>April</option><option>May</option><option>June</option><option>July</option><option>August</option><option>September</option><option>October</option><option>November</option><option>December</option></select><select id="year" name="year_paymetric" class=" paymetric_year paynow_select ml10 pressEnter form-control_payment credit" tabindex="3" style="width: 30%; margin-left: 5%; margin-top: 16px;"> <option value="" disabled="" selected="">Year</option><option value="10">2015</option><option value="9">2016</option><option value="8">2017</option><option value="7">2018</option><option value="6">2019</option><option value="5">2020</option><option value="4">2021</option><option value="3">2022</option><option value="2">2023</option><option value="1">2024</option></select></ul>
-                            </tr>
-                            <td class="DataInterceptCVV" style="margin-top: 17px; position: initial;"><input id="Paymetric_CVV" name="Paymetric_CVV" size="4" class="paymetric_cvv ml10 border_cvv form-control_payment pressEnter credit" tabindex="4" placeholder="CVV" style="margin-top: -57px; margin-right: 10%; width: 15%;"><a class="inblock border_help" id="cvv_help" data-placement="right" rel="popover" data-img="assets/images/cvv_help.jpg" data-original-title="" title="">?</a></td>
                         </div>
                         <div>
-                            <a id="hidden_cvv_help" rel="popover" data-toggle="popover" data-img="assets/images/cvv_help.jpg" data-original-title=""></a>
+                            <img src="assets/images/checkboxFull.png" class="checkbox_img address_same">
+                            <label class="billshipadd_lable" for="checkbox_card">My billing address and shipping address are same.</label>
                         </div>
-                        <div class="pt0 mt40">
-                            <div class="mt25 billing_details">
-                                <div class="paynow_validation_msg mb30">Please fill-in the required details correctly</div>
-                                <div class="col_head">
-                                    <h4 class="h4_dash">BILLING DETAILS</h4></div>
-                                <div class="mt10 mb25">
-                                    <form id="billing_details_form">
-                                        <ul class="payment_ul">
-                                            <input id="paynow_f_name" class="check checkS inblock fixwidth_input billing form-control_payment valid paynow_f_name pressEnter" name="bill_to_party_firstname" placeholder="First Name" required tabindex="4">
-                                            <input id="paynow_l_name" class="check checkS inblock fixwidth_input billing form-control_payment valid paynow_l_name pressEnter" name="bill_to_party_lastname" placeholder="Last Name" required tabindex="5">
-                                        </ul>
-                                        <ul class="payment_ul">
-                                            <input id="paynow_add" class="billing check checkS inblock address_input form-control_payment valid paynow_add pressEnter" name="address" placeholder="Address" required tabindex="6">
-                                        </ul>
-                                        <ul class="payment_ul">
-                                            <input id="paynow_city" class="billing check checkS inblock valid paynow_city form-control_payment pressEnter fixwidth_input" name="city" placeholder="City" required tabindex="7">
-                                            <input id="paynow_po_code" class="billing check checkS inblock form-control_payment valid paynow_po_code ml10 pressEnter fixwidth_input" name="postal_code" placeholder="Postal Code" required tabindex="8">
-                                        </ul>
+                        <div class="shipping_details_card mt25">
+                            <div class="col_head">
+                                <h4 class="h4_dash">SHIPPING DETAILS</h4></div>
+                            <div class="col_body mt10">
+                                <ul class="payment_ul">
+                                    <input class="checkS inblock fixwidth_input paynow_ship_f_name form-control_payment pressEnter" name="bill_to_party_firstname" placeholder="First Name"><input class="checkS inblock fixwidth_input paynow_ship_l_name form-control_payment pressEnter" name="bill_to_party_lastname" placeholder="Last Name">
+                                </ul>
+                                <ul class="payment_ul">
+                                    <input class="checkS inblock address_input paynow_ship_add form-control_payment pressEnter" name="address" placeholder="Address">
+                                </ul>
+                                <ul class="payment_ul">
+                                    <input class="checkS inblock paynow_ship_city form-control_payment pressEnter fixwidth_input" name="city" placeholder="City"><input class="checkS inblock paynow_po_code pressEnter form-control_payment fixwidth_input" id="paynow_ship_po_code" name="postal_code" placeholder="Postal Code">
+                                </ul>
+                                <ul class="payment_ul">
 
-                                        <ul class="payment_ul">
-                                            <select id="country1" class="billing inblock check checkS fixwidth_input form-control_payment valid country inblock_sel pressEnter" name="country" placeholder="Country" required tabindex="9" onchange="print_state('state1', this.value);"></select>
-                                            <select id="state1" class="billing inblock fixwidth_input check checkS form-control_payment valid state inblock_sel ml10 pressEnter" name="state" placeholder="State" tabindex="10" required></select>
-                                        </ul>
-
-                                        <ul class="payment_ul">
-                                            <input id="paynow_email" class="billing inblock fixwidth_input check checkS form-control_payment valid paynow_email pressEnter" name="bill_to_party_email" placeholder="Email" required tabindex="11"><input id="paynow_phone" class="billing inblock fixwidth_input form-control_payment check checkS valid paynow_phone ml10 pressEnter" name="bill_to_party_phone" placeholder="Phone" required tabindex="12">
-                                        </ul>
-                                    </form>
-                                </div>
-                            </div>
-                            <div>
-                                <img src="assets/images/checkboxFull.png" class="checkbox_img address_same">
-                                <label class="billshipadd_lable" for="checkbox_card">My billing address and shipping address are same.</label>
-                            </div>
-                            <div class="shipping_details_card mt25">
-                                <div class="col_head">
-                                    <h4 class="h4_dash">SHIPPING DETAILS</h4></div>
-                                <div class="col_body mt10">
-                                    <ul class="payment_ul">
-                                        <input class="checkS inblock fixwidth_input paynow_ship_f_name form-control_payment pressEnter" name="bill_to_party_firstname" placeholder="First Name"><input class="checkS inblock fixwidth_input paynow_ship_l_name form-control_payment pressEnter" name="bill_to_party_lastname" placeholder="Last Name">
-                                    </ul>
-                                    <ul class="payment_ul">
-                                        <input class="checkS inblock address_input paynow_ship_add form-control_payment pressEnter" name="address" placeholder="Address">
-                                    </ul>
-                                    <ul class="payment_ul">
-                                        <input class="checkS inblock paynow_ship_city form-control_payment pressEnter fixwidth_input" name="city" placeholder="City"><input class="checkS inblock paynow_po_code pressEnter form-control_payment fixwidth_input" id="paynow_ship_po_code" name="postal_code" placeholder="Postal Code">
-                                    </ul>
-                                    <ul class="payment_ul">
-
-                                        <select id="country2" class="checkS inblock fixwidth_input ship_country form-control_payment pressEnter" name="country" placeholder="Country" required onchange="print_state('state2', this.value);"></select><select id="state2" class="checkS inblock fixwidth_input ship_state ml10 form-control_payment pressEnter" name="state" placeholder="State" required></select>
-                                    </ul>
-                                    <ul class="payment_ul">
-                                        <input class="checkS inblock fixwidth_input paynow_ship_email form-control_payment pressEnter" name="bill_to_party_email" placeholder="Email"><input class="checkS inblock fixwidth_input paynow_ship_phone ml10 form-control_payment pressEnter" name="bill_to_party_phone" placeholder="Phone">
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="set_confirm_payment">
-                        <div class="continuebtn_div_payment">
-                            <input id="confirm_payment" type="submit" value="CONFIRM & PAY" class="no_outline btn action-button btnGreen payment_card_btn floatr pt12 mb10">
-                        </div>
-                        <p class="light_color skip_for_now align_center mb0 w185">Skip for now</p>
-                    </div>
-                </div>
-                <div class="sub_1 card w40p_plan pos_abs plan_summary_container_payment">
-                    <div class="col_head align_center">
-                        <h2 class="nmb25 plan_summary bottom_line pb25">PLAN SUMMARY</h2>
-                    </div>
-                    <table class="mt25 order_sum_tbl">
-                        <tbody>
-                            <tr class="order_plan_selection">
-                                <td>Subscription <span class="pay_full_span">(3 Years)</span></td>
-                                <td class="border_none"><span class="subs_price"></span></td>
-                            </tr>
-                            <tr class="order_plan_selection needplaque_tbl">
-                                <td>LEED Dynamic Plaque Hardware <span class="purchase_plaque_span"></span></td>
-                                <td class="border_none"><span class="plaque_one_time_price"></span></td>
-                            </tr>
-                            <tr class="order_plan_selection top_line">
-                                <td><strong>Total due</strong></td>
-                                <td class="border_none text_color nopadding">
-                                    <strong><span class="total_plaque_price order_sum_input"></span></strong> </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="float_bottom float_bottom_close">
-                        <div class="mb25 col_body_parent" id="auto_renewal_com_box">
-                            <div class="col_body">
-                                <div class="col_head">
-                                    <h4 class="h4_dash">AUTO RENEWAL</h4></div>
-                                <div class="mt20">Would you like to automatically renew your dues annually?</div>
-                                <div class="mt20 renewal_box">
-                                    <!-- <input type="checkbox" value="1" id="auto_renewal" checked="checked"> -->
-                                    <img src="assets/images/checkboxFull.png" id="auto_renewal" class="auto_renewal_chk" data-chk="checked">
-                                    <label class="auto_renewal_lbl light_color" for="auto_renewal">Yes, please renew my LEED Dynamic Plaque subscription each year. I understand that USGBC will charge my credit card <strong id="auto_renewal_check"></strong> annually at the time of my subscription renewal.</label>
-                                </div>
+                                    <select id="country2" class="checkS inblock fixwidth_input ship_country form-control_payment pressEnter" name="country" placeholder="Country" required onchange="print_state('state2', this.value);"></select><select id="state2" class="checkS inblock fixwidth_input ship_state ml10 form-control_payment pressEnter" name="state" placeholder="State" required></select>
+                                </ul>
+                                <ul class="payment_ul">
+                                    <input class="checkS inblock fixwidth_input paynow_ship_email form-control_payment pressEnter" name="bill_to_party_email" placeholder="Email"><input class="checkS inblock fixwidth_input paynow_ship_phone ml10 form-control_payment pressEnter" name="bill_to_party_phone" placeholder="Phone">
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="set_confirm_payment">
+                <div class="continuebtn_div_payment">
+                    <input id="confirm_payment" type="submit" value="CONFIRM & PAY" class="no_outline btn action-button btnGreen payment_card_btn floatr pt12 mb10">
+                </div>
+                <p class="light_color skip_for_now align_center mb0 w185">Skip for now</p>
+            </div>
         </div>
+        <div class="sub_1 card w40p_plan pos_abs plan_summary_container_payment">
+            <div class="col_head align_center">
+                <h2 class="nmb25 plan_summary bottom_line pb25">PLAN SUMMARY</h2>
+            </div>
+            <table class="mt25 order_sum_tbl">
+                <tbody>
+                    <tr class="order_plan_selection">
+                        <td>Subscription <span class="pay_full_span">(3 Years)</span></td>
+                        <td class="border_none"><span class="subs_price"></span></td>
+                    </tr>
+                    <tr class="order_plan_selection needplaque_tbl">
+                        <td>LEED Dynamic Plaque Hardware <span class="purchase_plaque_span"></span></td>
+                        <td class="border_none"><span class="plaque_one_time_price"></span></td>
+                    </tr>
+                    <tr class="order_plan_selection top_line">
+                        <td><strong>Total due</strong></td>
+                        <td class="border_none text_color nopadding">
+                            <strong><span class="total_plaque_price order_sum_input"></span></strong> </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="float_bottom float_bottom_close">
+                <div class="mb25 col_body_parent" id="auto_renewal_com_box">
+                    <div class="col_body">
+                        <div class="col_head">
+                            <h4 class="h4_dash">AUTO RENEWAL</h4></div>
+                        <div class="mt20">Would you like to automatically renew your dues annually?</div>
+                        <div class="mt20 renewal_box">
+                            <!-- <input type="checkbox" value="1" id="auto_renewal" checked="checked"> -->
+                            <img src="assets/images/checkboxFull.png" id="auto_renewal" class="auto_renewal_chk" data-chk="checked">
+                            <label class="auto_renewal_lbl light_color" for="auto_renewal">Yes, please renew my LEED Dynamic Plaque subscription each year. I understand that USGBC will charge my credit card <strong id="auto_renewal_check"></strong> annually at the time of my subscription renewal.</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -47,7 +47,7 @@ LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $http, 
     $scope.purchase_plaque_global = false;
     $scope.pay_full_global        = false;
     $scope.term_of_com_global     = 3; 
-    $scope.paymode_flag           = false;
+    $scope.paymode_flag           = true;
     $scope.flag_ship              = 1;
     $scope.ctr_ship               = 1;
     $scope.global_version         = 'full';
@@ -58,6 +58,7 @@ LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $http, 
     $scope.mode_check             = false;
     $scope.plaque;
     $scope.sub;
+    $scope.payment_details        = {};
     $ocLazyLoad.load(['assets/js/survey.js?v-12.31', 'assets/libs/js/jquery-ui.js']);
 
     $http.get('assets/json/building_' + $scope.leed_id + '.json').success(function(data) {
@@ -655,32 +656,8 @@ LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $http, 
             $scope.activationFlow('receipt');
         });
 
-        if($( '.container_shadow').width() <= 709) {
-            $('.paynow_month').css('width', '35%');
-            $('.paynow_month').css('margin-top', '16px');
-            $('.paymetric_year').css('width', '30%');
-            $('.paymetric_year').css('margin-left', '5%');
-            $('.paymetric_year').css('margin-top', '16px');
-            $('.DataInterceptCVV ').css('margin-top', '17px');
-            $('.paymetric_cvv').css('margin-top', '-57px');
-            $('.paymetric_cvv').css('margin-right', '10%');
-            $('.paymetric_cvv').css('width', '15%');
-            $('.DataInterceptCVV').css('position', 'initial');
-        }
-        else{
-            $('.paynow_month').css('width', '150px');
-            $('.paynow_month').css('margin-top', '0px');
-            $('.paymetric_year').css('width', '140px');
-            $('.paymetric_year').css('margin-left', '19px');
-            $('.paymetric_year').css('margin-top', '8px');
-            $('.DataInterceptCVV ').css('margin-top', '-52px');
-            $('.paymetric_cvv').css('margin-top', '0px');
-            $('.paymetric_cvv').css('margin-left', '4%');
-            $('.paymetric_cvv').css('width', '59%');
-            $('.DataInterceptCVV').css('position', 'absolute');
-        }
-
         $('.shipping_details_card').hide();
+        $('.billing_details').css('margin-top', '-50px');
 
         $('.activationFlow_parent_container').on('click', '.checkbox_img', function () {
             if($('.checkbox_img').hasClass('address_same')) {
@@ -710,6 +687,8 @@ LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $http, 
 
         $('.activationFlow_parent_container').on('click', '.pay_mode', function () {
             if ($(this).attr("value") == "card") {
+                $('.billing_details').css('margin-top', '-50px');
+                $('.card_type').show();
                 $('#check').attr("src", "assets/images/radioEmpty.png");
                 $('#card').attr("src", "assets/images/radioFull.png");
                 $("#DIeCommFrame_payment").show();
@@ -718,7 +697,8 @@ LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $http, 
                 $('#chq').css("font-weight", "normal");
 
             } else if ($(this).attr("value") == "check") {
-
+                $('.billing_details').css('margin-top', '0px');
+                $('.card_type').hide();
                 $('.card_number').css('cssText', 'border-color: rgba(204,204,204,1)');
                 $('.paynow_cvv').css('cssText', 'border-color: rgba(204,204,204,1)');
 
@@ -731,12 +711,241 @@ LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $http, 
                 $('#cc').css("font-weight", "normal");
             }
         });
+
+        $("#confirm_payment").on('click', function() {
+            var auto_renewal = true;
+            var paymode_flag = "check";
+            if (($('#auto_renewal_com_box').css('display') == "block") && $('#auto_renewal').attr('data-chk') == "checked") {
+                auto_renewal = true;
+            } else {
+                auto_renewal = false;
+            }
+
+            //Billing details
+            var CC_first_name = $('#paynow_f_name').val();
+            var CC_last_name = $('#paynow_l_name').val();
+            var CC_address = $('#paynow_add').val();
+            var CC_city = $('#paynow_city').val();
+            var CC_po_code = $('#paynow_po_code').val();
+            var CC_country = $('#country1 option:selected').val().trim();
+            var CC_state = $('#state1 option:selected').val().trim();
+            var CC_email = $('#paynow_email').val();
+            var CC_phone = $('#paynow_phone').val();
+
+            //Shipping details
+            if ($('.address_same').is(':visible')) {
+                var CC_ship_first_name = CC_first_name;
+                var CC_ship_last_name = CC_last_name;
+                var CC_ship_address = CC_address;
+                var CC_ship_city = CC_city;
+                var CC_ship_po_code = CC_po_code;
+                var CC_ship_country = CC_country;
+                var CC_ship_state = CC_state;
+                var CC_ship_email = CC_email;
+                var CC_ship_phone = CC_phone;
+            } else {
+                var CC_ship_first_name = $('.paynow_ship_f_name').val();
+                var CC_ship_last_name = $('.paynow_ship_l_name').val();
+                var CC_ship_address = $('.paynow_ship_add').val();
+                var CC_ship_city = $('.paynow_ship_city').val();
+                var CC_ship_po_code = $('#paynow_ship_po_code').val();
+                var CC_ship_country = $('#country2 option:selected').val().trim();
+                var CC_ship_state = $('#state2 option:selected').val().trim();
+                var CC_ship_email = $('.paynow_ship_email').val();
+                var CC_ship_phone = $('.paynow_ship_phone').val();
+            }
+
+            if ($scope.paymode_flag) {
+                payment_mode = "check";
+                $scope.payment_details = {
+
+                    'CC_first_name': CC_first_name,
+                    'CC_last_name': CC_last_name,
+                    'CC_address': CC_address,
+                    'CC_city': CC_city,
+                    'CC_po_code': CC_po_code,
+                    'CC_country': CC_country,
+                    'CC_state': CC_state,
+                    'CC_email': CC_email,
+                    'CC_phone': CC_phone,
+                    'CC_ship_first_name': CC_ship_first_name,
+                    'CC_ship_last_name': CC_ship_last_name,
+                    'CC_ship_address': CC_ship_address,
+                    'CC_ship_city': CC_ship_city,
+                    'CC_ship_po_code': CC_ship_po_code,
+                    'CC_ship_country': CC_ship_country,
+                    'CC_ship_state': CC_ship_state,
+                    'CC_ship_email': CC_ship_email,
+                    'CC_ship_phone': CC_ship_phone,
+                    'paymetric_r': "",
+                    'paymetric_s': "",
+                    'auto_renewal': auto_renewal,
+                    'payment_mode': payment_mode
+                }
+
+            } else {
+                payment_mode = "credit";
+
+                $scope.payment_details = {
+
+                    'CC_first_name': CC_first_name,
+                    'CC_last_name': CC_last_name,
+                    'CC_address': CC_address,
+                    'CC_city': CC_city,
+                    'CC_po_code': CC_po_code,
+                    'CC_country': CC_country,
+                    'CC_state': CC_state,
+                    'CC_email': CC_email,
+                    'CC_phone': CC_phone,
+                    'CC_ship_first_name': CC_ship_first_name,
+                    'CC_ship_last_name': CC_ship_last_name,
+                    'CC_ship_address': CC_ship_address,
+                    'CC_ship_city': CC_ship_city,
+                    'CC_ship_po_code': CC_ship_po_code,
+                    'CC_ship_country': CC_ship_country,
+                    'CC_ship_state': CC_ship_state,
+                    'CC_ship_email': CC_ship_email,
+                    'CC_ship_phone': CC_ship_phone,
+                    'paymetric_r': token.split('&s=')[0],
+                    'paymetric_s': token.split('&s=')[1],
+                    'auto_renewal': auto_renewal,
+                    'payment_mode': payment_mode
+                }
+            }
+            $scope.activationFlow('receipt');
+        });
     };
 
     $scope.receipt = function (){
+        $('#activation_modal_container').removeClass('activation_modal_w875').addClass('activation_modal_w450');
+        $('.back_btn_access').hide();
+        $('.forward_btn_access').hide();
+        $('.back_btn').hide();
+        $('.forward_btn').hide();
+
+        $("#comp_btn").on('click', function() {
+            $scope.activationFlow('buildingConfirmation');
+        });
+
+        $.ajax({
+            url: 'assets/json/getpaymentdetail_800000169.json',
+            contentType: 'application/json'
+        }).done(function(response) {
+
+            var currentTime = new Date();
+
+            $('#preloader_activationFlow').hide();
+            $('#status_activationFlow').hide();
+
+            var need_plaque = response.leed_plaque;
+            var purchase_plaque = response.purchase_plaque;
+            var paid_full = response.paid_full;
+            var receipt_date = [currentTime.getFullYear(), currentTime.getMonth() + 1, currentTime.getDate()]
+
+            if (response.payment_mode == 'check') {
+                $('.build_head').html("INVOICE");
+            }
+
+            $('.receipt_sap_order_id').html(response.sap_order_id);
+            $('.building_address').html(response.address);
+            $('.receipt_payer_name').html($scope.payment_details.CC_first_name + " " + $scope.payment_details.CC_last_name);
+            $('.receipt_total_amount').html($scope.numericToString(parseInt(response.amount_paid)));
+            $('.receipt_building_name').html(response.building_name);
+            $('.receipt_building_ID').html(parseInt($scope.leed_id));
+            $('.receipt_date').html(receipt_date[1] + '/' + receipt_date[2] + '/' + receipt_date[0]);
+            $('.receipt_payer').html(response.payer_name);
+            $('.credit_card_number').html(response.credit_card_number);
+
+            var payment_mode = response.payment_mode;
+            if (payment_mode == "check") {
+                $('#ccrow_payment').css('display', 'none');
+            }
+
+            if (response.term_com == "1") {
+                $('.receipt_term').html(response.term_com + ' Year');
+            } else {
+                $('.receipt_term').html(response.term_com + ' Years');
+            }
+
+            if (need_plaque) {
+                $('.needpl_tbl').show();
+                if (purchase_plaque) {} else {
+                    if (paid_full) {
+                        if (response.term_com == "1") {
+                            $('.pay_full_span_hardware').html("(" + response.term_com + " Year)");
+                        } else {
+                            $('.pay_full_span_hardware').html("(" + response.term_com + " Years)");
+                        }
+                    } else {
+                        $('.pay_full_span_hardware').html("(1 Year)");
+                    }
+                }
+                $('.plaque_one_time_price').html($scope.numericToString(parseInt(response.plaque_cost)));
+            } else {
+                $('.needpl_tbl').hide();
+            }
+
+            if (paid_full) {
+                if (response.term_com == "1") {
+                    $('.pay_full_span_subs').html("(" + response.term_com + " Year)");
+                } else {
+                    $('.pay_full_span_subs').html("(" + response.term_com + " Years)");
+                }
+            } else {
+                $('.pay_full_span_subs').html("(1 Year)");
+            }
+
+            $('.subs_price').html($scope.numericToString((response.subs_price)));
+            $('.order_sum_input').html($scope.numericToString((response.amount_paid)));
+        });
     };
 
     $scope.agreement = function (){
+        $('#activation_modal_container').removeClass('activation_modal_w450').addClass('activation_modal_w875');
+        $("#agreement_other").click(function() {
+            $('input.continue_building_owner_sign.btnGreen').css('background', '#CCCCCC');
+            $('input.continue_building_owner_sign.btnGreen').css('border', 'solid 1px #CCCCCC');
+            $('input#sendAgreement_buildConf').css('background', '#3E93A9');
+            $('input#sendAgreement_buildConf').css('border', 'solid 1px #3E93A9');
+            $('#agreement_other').removeClass('agreement_disable').addClass('agreement_active');
+            $('#agreement_self').removeClass('agreement_active').addClass('agreement_disable');
+        });
+        $("#agreement_self").click(function() {
+            $('input.continue_building_owner_sign.btnGreen').css('background', '#95BF58');
+            $('input.continue_building_owner_sign.btnGreen').css('border', 'solid 1px #95BF58');
+            $('input#sendAgreement_buildConf').css('background', '#CCCCCC');
+            $('input#sendAgreement_buildConf').css('border', 'solid 1px #CCCCCC');
+            $('#agreement_self').removeClass('agreement_disable').addClass('agreement_active');
+            $('#agreement_other').removeClass('agreement_active').addClass('agreement_disable');
+        });
+
+        $("#agreement_other").hover(function() {
+            $('input.continue_building_owner_sign.btnGreen').css('background', '#CCCCCC');
+            $('input.continue_building_owner_sign.btnGreen').css('border', 'solid 1px #CCCCCC');
+            $('input#sendAgreement_buildConf').css('background', '#3E93A9');
+            $('input#sendAgreement_buildConf').css('border', 'solid 1px #3E93A9');
+            $('#agreement_other').removeClass('agreement_disable').addClass('agreement_active');
+            $('#agreement_self').removeClass('agreement_active').addClass('agreement_disable');
+        });
+        $("#agreement_self").hover(function() {
+            $('input.continue_building_owner_sign.btnGreen').css('background', '#95BF58');
+            $('input.continue_building_owner_sign.btnGreen').css('border', 'solid 1px #95BF58');
+            $('input#sendAgreement_buildConf').css('background', '#CCCCCC');
+            $('input#sendAgreement_buildConf').css('border', 'solid 1px #CCCCCC');
+            $('#agreement_self').removeClass('agreement_disable').addClass('agreement_active');
+            $('#agreement_other').removeClass('agreement_active').addClass('agreement_disable');
+        });
+
+        $(".continue_building_owner_sign").on('click', function() {
+            $scope.signAgreement();
+        });
+    };
+
+    $scope.signAgreement = function (){
+        $('#activation_modal').modal('hide');
+        $('#skipped_modal').modal('hide');
+        $('#project_is_active').modal('hide');
+        $('#agreement_embedded_modal').modal('show');
     };
 
     $scope.activationFlow = function (pageName) {
@@ -773,7 +982,6 @@ LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $http, 
                 $scope.receipt();
             }
             else if(pageName == 'buildingConfirmation'){
-                $('body').css('overflow', 'visible');
                 $scope.check_progressBar(pageName);
                 $scope.agreement();
             }
