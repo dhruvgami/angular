@@ -778,15 +778,9 @@ select#country1, select#country2, select#state1, select#state2 {
 }
 
 .team_name_perm, .request_name_perm{
-  width: 65%;
+  width: 50%;
   display: inline-block;
   margin-top: 20px;
-}
-
-.team_modified_edit, .request_edit {
-  width: 34%;
-  display: inline-block;
-  text-align: right;
 }
 
 .admin_button {
@@ -821,10 +815,6 @@ select#country1, select#country2, select#state1, select#state2 {
   padding-left: 35px !important;
 }
 
-.team_member_perm, .request_member_perm {
-  float: right;
-}
-
 .request_member_perm{
   margin-top: -8px;
 }
@@ -841,10 +831,6 @@ select#country1, select#country2, select#state1, select#state2 {
   background: transparent url(../images/ajax-loader.gif) no-repeat;
   float: right;
   display: none;
-}
-
-.team_member_modified, .request_member_modified{
-  margin-left: 6px;
 }
 
 .skipped_modal_buttons {

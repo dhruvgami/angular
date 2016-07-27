@@ -13,4 +13,19 @@ LEEDOnApp.controller('setupController', function($rootScope, $scope, $http) {
 		document.getElementById("totalHours").value     = data.operating_hours;
 		document.getElementById("occupancy").value      = data.occupancy;
 	});
+
+	$('body').on('click', '#plaque_link', function(e)
+    {
+        window.open($('#plaque_link').val(), '_blank'); 
+        e.stopPropagation();
+        e.preventDefault();
+        return false;
+    });
+    $('body').on('click', '#survey_link', function(e)
+    {
+        window.open('assets/files/LEED_Dynamic_Plaque_Manual.pdf');
+        e.stopPropagation();
+        e.preventDefault();
+        return false;
+    });
 });

@@ -1741,7 +1741,7 @@ input#code {
 .manage_category_nav {
     position: fixed;
     left: 100px;
-    z-index: 10;
+    z-index: 1;
     top: 200px;
     width: 90%;
     background-color: #fff;
@@ -5220,7 +5220,7 @@ select.dist_select::-ms-expand {
 
 .request_member_modified,.team_member_modified {
     float: left;
-    margin-right: 35px
+    margin-right: 35px;
 }
 
 .edit_team_permission_TM {

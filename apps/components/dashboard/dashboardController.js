@@ -824,6 +824,8 @@ LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $http, 
         $('.forward_btn').hide();
 
         $("#comp_btn").on('click', function() {
+            $('#project_is_active').modal('hide');
+            $('#skipped_modal').modal('hide');
             $scope.activationFlow('buildingConfirmation');
         });
 
@@ -1052,5 +1054,197 @@ LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $http, 
             $scope.activationFlow($scope.getUrlParameter("modal"));
         }
     }
+
+    $scope.dateFromISO = function(){
+        s = s.split(/\D/);
+        return new Date(Date.UTC(s[0], --s[1]||'', s[2]||'', s[3]||'', s[4]||'', s[5]||'', s[6]||''));
+    };
+
+    $scope.notificationSetup = function(){
+        $scope.stream_foreign_id = ['skipped_buildingConfirmation', 'skipped_payment', 'skipped_teamManagement', 'score_computation', 'request_access', 'data_input_setup', 'data_input_energy', 'data_input_water', 'data_input_waste', 'data_input_transportation', 'data_input_human', 'new_user_manual'];
+        $.ajax(
+        {
+            type: "GET",
+            url: "assets/json/notification_no_payment_agreement.json"
+        }).done(function(data)
+        {
+            var notification_arr = [];
+            if (data.results.length)
+            {
+                for (var i = 0; i < data.results.length; i++)
+                {
+                    if (data.results[i].foreign_id != "" && data.results[i].foreign_id != null && ($.inArray(data.results[i].foreign_id, $scope.stream_foreign_id) > -1))
+                    {
+                        notification_arr.push(data.results[i].foreign_id);
+                    }
+                };
+            }
+
+            // Remove duplicates
+            $scope.unique_notification_arr = [];
+            $.each(notification_arr, function(i, el)
+            {
+                if ($.inArray(el, $scope.unique_notification_arr) === -1) $scope.unique_notification_arr.push(el);
+            });
+
+            if ($scope.unique_notification_arr.length)
+            {
+                $('.meterInfoNumber').html(String($scope.unique_notification_arr.length));
+                $('.notification_module').html('<div class="notification_module_header">Just a couple more steps and you\'ll be all set up!</div>')
+                for (var i = 0; i < $scope.unique_notification_arr.length; i++){
+                    if ($scope.unique_notification_arr[i] == 'trial_notification')
+                    {
+                        var one_day = 1000 * 60 * 60 * 24;
+                        var today_date_time = new Date();
+                        var expiry_date_time = $scope.dateFromISO(trial_expire_backend);
+                        var trial_time_left = expiry_date_time - today_date_time;
+                        var trial_time_days = Math.round(trial_time_left / one_day);
+                        var trial_time_days_string = "";
+                        if (trial_time_days <= 1)
+                        {
+                            trial_time_days_string = String(trial_time_days) + " day trial left";
+                        }
+                        else
+                        {
+                            trial_time_days_string = String(trial_time_days) + " days trial left";
+                        }
+                        if (($('.red_bell_notification')).length)
+                        {
+                            $('.notification_module').append('<div class="notification_line"></div>');
+                        }
+                        $('.notification_module').append('<div class="pd20 red_bell_notification" id="trial_from_notification"><i class="icon-info-sign fa-lg light_color mr15"></i><span>' + trial_time_days_string + '</span></div>');
+                    }
+                    else if ($scope.unique_notification_arr[i] == "new_user_manual")
+                    {
+                        if (($('.red_bell_notification')).length)
+                        {
+                            $('.notification_module').append('<div class="notification_line"></div>');
+                        }
+                        $('.notification_module').append('<div class="pd20 cursor_pointer red_bell_notification" id="new_user_manual_from_notification"><i class="icon-info-sign fa-lg light_color mr15"></i><span>User manual has been updated</span><i class="icon-angle-right flr fa-2x light_color "></i></div>');
+                    }
+                    else if ($scope.unique_notification_arr[i] == "skipped_payment")
+                    {
+                        $('#select_plan_span_md').removeClass('not-active');
+                        if (($('.red_bell_notification')).length)
+                        {
+                            $('.notification_module').append('<div class="notification_line"></div>');
+                        }
+                        $('.notification_module').append('<div class="pd20 cursor_pointer red_bell_notification" id="select_plan_from_notification"><i class="icon-info-sign fa-lg light_color mr15"></i><span>Select a plan</span><i class="icon-angle-right flr fa-2x light_color "></i></div>');
+                    }
+                    else if ($scope.unique_notification_arr[i] == "score_computation")
+                    {
+                        if (($('.red_bell_notification')).length)
+                        {
+                            $('.notification_module').append('<div class="notification_line"></div>');
+                        }
+                        $('.notification_module').append('<div class="pd20 cursor_pointer red_bell_notification" id="score_computation_from_notification"><i class="icon-info-sign fa-lg light_color mr15"></i><span>Score computation is in progress</span></div>');
+                    }
+                    else if ($scope.unique_notification_arr[i] == "request_access")
+                    {
+                        if (plaqueNav.userBuilding_permission.role == 'Project Team Member')
+                        {
+                            $('#request_access_from_notification').hide();
+                            $('.meterInfoNumber').html(parseInt($('.meterInfoNumber').html()) - 1);
+                        }
+                        else if (plaqueNav.userBuilding_permission.role == 'Project Admin')
+                        {
+                            if (($('.red_bell_notification')).length)
+                            {
+                                $('.notification_module').append('<div class="notification_line"></div>');
+                            }
+                            $('.notification_module').append('<div class="pd20 cursor_pointer red_bell_notification" id="request_access_from_notification"><i class="icon-info-sign fa-lg light_color mr15"></i><span>Permission request</span><i class="icon-angle-right flr fa-2x light_color "></i></div>');
+                        }
+                    }
+                    else if ($scope.unique_notification_arr[i] == "data_input_setup")
+                    {
+                        if (($('.red_bell_notification')).length)
+                        {
+                            $('.notification_module').append('<div class="notification_line"></div>');
+                        }
+                        $('.notification_module').append('<div class="pd20 cursor_pointer red_bell_notification" id="data_input_setup_from_notification"><i class="icon-info-sign fa-lg light_color mr15"></i><span>Add basic info now</span><i class="icon-angle-right flr fa-2x light_color "></i></div>');
+                    }
+                    else if ($scope.unique_notification_arr[i] == "data_input_energy")
+                    {
+                        if (($('.red_bell_notification')).length)
+                        {
+                            $('.notification_module').append('<div class="notification_line"></div>');
+                        }
+                        $('.notification_module').append('<div class="pd20 cursor_pointer red_bell_notification" id="data_input_energy_from_notification"><i class="icon-info-sign fa-lg light_color mr15"></i><span>Add energy meter now</span><i class="icon-angle-right flr fa-2x light_color "></i></div>');
+                    }
+                    else if ($scope.unique_notification_arr[i] == "data_input_water")
+                    {
+                        if (($('.red_bell_notification')).length)
+                        {
+                            $('.notification_module').append('<div class="notification_line"></div>');
+                        }
+                        $('.notification_module').append('<div class="pd20 cursor_pointer red_bell_notification" id="data_input_water_from_notification"><i class="icon-info-sign fa-lg light_color mr15"></i><span>Add water meter now</span><i class="icon-angle-right flr fa-2x light_color "></i></div>');
+                    }
+                    else if ($scope.unique_notification_arr[i] == "data_input_waste")
+                    {
+                        if (($('.red_bell_notification')).length)
+                        {
+                            $('.notification_module').append('<div class="notification_line"></div>');
+                        }
+                        $('.notification_module').append('<div class="pd20 cursor_pointer red_bell_notification" id="data_input_waste_from_notification"><i class="icon-info-sign fa-lg light_color mr15"></i><span>Add waste meter now</span><i class="icon-angle-right flr fa-2x light_color "></i></div>');
+                    }
+                    else if ($scope.unique_notification_arr[i] == "data_input_transportation")
+                    {
+                        if (($('.red_bell_notification')).length)
+                        {
+                            $('.notification_module').append('<div class="notification_line"></div>');
+                        }
+                        $('.notification_module').append('<div class="pd20 cursor_pointer red_bell_notification" id="data_input_transportation_from_notification"><i class="icon-info-sign fa-lg light_color mr15"></i><span>Send survey now</span><i class="icon-angle-right flr fa-2x light_color "></i></div>');
+                    }
+                    else if ($scope.unique_notification_arr[i] == "data_input_human")
+                    {
+                        if (($('.red_bell_notification')).length)
+                        {
+                            $('.notification_module').append('<div class="notification_line"></div>');
+                        }
+                        $('.notification_module').append('<div class="pd20 cursor_pointer red_bell_notification" id="data_input_human_from_notification"><i class="icon-info-sign fa-lg light_color mr15"></i><span>Add co2/voc meter now</span><i class="icon-angle-right flr fa-2x light_color "></i></div>');
+                        meterStatus = true;
+                    }
+                };
+            }
+        });
+
+        
+
+        $(document).mouseup(function(e) {
+            var container = $(".meterInfo");
+
+            if (!container.is(e.target) // if the target of the click isn't the container...
+                &&
+                container.has(e.target).length === 0) // ... nor a descendant of the container
+            {
+                if ($(".notification_module").css("display") == "block") {
+                    $(".notification_module").toggle(300);
+                }
+            }
+        });
+
+        $(".meterInfo").on('click', function() {
+            $(".notification_module").toggle(300);
+        });
+
+        $('body').on('click', ".red_bell_notification", function() {
+            notification_selected = $(this).attr('id');
+            if (notification_selected == 'data_input_waste_from_notification') {
+                window.location.href = window.location.protocol + '//' + window.location.host + "/v3/#/dashboard/" + $scope.leed_id + "/data/input/";
+            } else if (notification_selected == 'data_input_water_from_notification') {
+                window.location.href = window.location.protocol + '//' + window.location.host + "/v3/#/dashboard/" + $scope.leed_id + "/data/input/";
+            } else if (notification_selected == 'data_input_energy_from_notification') {
+                window.location.href = window.location.protocol + '//' + window.location.host + "/v3/#/dashboard/" + $scope.leed_id + "/data/input/";
+            } else if (notification_selected == 'data_input_setup_from_notification') {
+                window.location.href = window.location.protocol + '//' + window.location.host + "/v3/#/dashboard/" + $scope.leed_id + "/manage/setup";
+            } else if (notification_selected == 'data_input_transportation_from_notification') {
+                window.location.href = window.location.protocol + '//' + window.location.host + "/v3/#/dashboard/" + $scope.leed_id + "/data/input/";
+            } else if (notification_selected == 'data_input_human_from_notification') {
+                window.location.href = window.location.protocol + '//' + window.location.host + "/v3/#/dashboard/" + $scope.leed_id + "/data/input/";
+            }
+        });
+    };
+
+    $scope.notificationSetup();
 
 });

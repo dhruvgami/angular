@@ -5139,4 +5139,175 @@
             </div>
         </div> 
     </div>
+    <div class="editMeter">
+        <div class="editMeter_header">
+            <div id="meterName"></div>
+            <div id="lastUpdated" class="gotham"></div>
+        </div>
+
+        <section>
+            <div class="tab_wrapper">
+                <div class="tabMenu">
+                    <div class="meter_tab tab_item tab_active pointer gotham" tab-data="meter">Meter</div>
+                    <div class="settings_tab tab_item pointer gotham" tab-data="settings">Settings</div>
+                </div>
+                <div class="mt40">
+                    <div class="meter_content tab_content" tab-data="meter">
+                        <div class="dates_header">
+                            <input type="text" class="date_start"> TO
+                            <input type="text" class="date_end">
+                        </div>
+                        <div id='meter_chart'>
+
+                        </div>
+                        <div class="reading_table">
+                            <div class="normal_meter" style="margin-top: 85px;float: left;width: 100%;">
+                                <div class="labels gotham normal_labels"><span class=""><span id="sortOrder">START<i class="fa fa-caret-up" aria-hidden="true"></i></span></span>
+                                </div>
+                                <div class="labels gotham normal_labels"><span class="">END</span></div>
+                                <div class="labels gotham normal_labels"><span class="">READING</span></div>
+                                <div class="mr0p pointer labels gotham normal_labels dateMod"></div>
+                            </div>
+                            <div class="waste_meter" style="margin-top: 85px;float: left;width: 100%;">
+                                <div class="labels gotham waste_labels start_label"><span id="sortOrder">START<i class="fa fa-caret-up" aria-hidden="true"></i></span></div>
+                                <div class="labels gotham waste_labels end_label">END</div>
+                                <div class="labels gotham waste_labels gen_label">GENERATED</div>
+                                <div class="labels gotham waste_labels div_label">DIVERTED</div>
+                                <div class="labels gotham waste_labels pointer dateMod"></div>
+                            </div>
+                            <div class="readings mont">
+
+                            </div>
+                        </div>
+                        <div class="upload_data desktop_version">
+                            <button id="upload_data" class="uploadButton relative"><paper-ripple fit></paper-ripple>Upload Data</button>
+                            <div class="processing_icon" id="upload_status" data-toggle="modal" data-target="#upload_status_modal" style="visibility: hidden;">
+                                <span class="details mont">Check Status </span>
+                                <img src="/static/dashboard/img/ajax-loader.gif" class="mb5 loader_gif" style="opacity: 0;">
+                            </div>
+                        </div>
+                        <div class="add_reading_wrapper desktop_version">
+                            <div>
+                                <div class="add_data_heading ">Add Data Manually</div>
+                                <div>
+                                    <div class="labels_two gotham">START</div>
+                                    <input class="start_date_manually" placeholder="mm/dd/yyyy">
+                                </div>
+                                <div>
+                                    <div class="labels_two gotham">END</div>
+                                    <input class="end_date_manually" placeholder="mm/dd/yyyy">
+                                </div>
+                                <div>
+                                    <div class="labels_two gotham normal_meter">USAGE</div>
+                                    <div>
+                                        <input class="usage_manually normal_meter"><span class="normal_meter selected_meter_unit"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="labels_two gotham waste_meter">GENERATED</div>
+                                    <input class="generated_manually waste_meter pr0"><span class="waste_meter selected_meter_unit"></span>
+                                </div>
+                                <div>
+                                    <div class="labels_two gotham waste_meter">DIVERTED</div>
+                                    <input class="diverted_manually waste_meter pr0"><span class="waste_meter selected_meter_unit"></span>
+                                </div>
+                            </div>
+                            <div style="margin-top: 19px;">
+                                <button id="add_reading_btn" class="relative btn action-button btnGreen"><paper-ripple fit></paper-ripple>ADD</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="settings_content tab_content mont" tab-data="settings">
+                        <div class="delete_meter normal_meter">
+                            <div class="delete_icon">x</div>
+                            <div class="display_inlineb pointer pointer_editData">Delete this Meter</div>
+                        </div>
+
+                        <div class="meterSettingFields normal_meter mb10">Meter Name</div>
+                        <div class="meter_nameEdit_container">
+                            <input class="meter_name_edit meterSettingFields normal_meter">
+                        </div>
+
+                        <div class="form-group normal_meter gresb-elem floatl width47p mr50 mb25">
+                            <h4 class="text-left fontSize14">Data Coverage Area <span class="colorDarkgrey">(optional)</span></h4>
+                            <input class="form-control custom-input-lg fontSize14" id="data_coverage_area" type="text" placeholder="Enter Data Coverage Area">
+                        </div>
+
+                        <div class="form-group normal_meter gresb-elem floatl width47p mb25">
+                            <h4 class="text-left fontSize14">Maximum Coverage Area <span class="colorDarkgrey">(optional)</span></h4>
+                            <input class="form-control custom-input-lg fontSize14" id="max_coverage_area" type="text" placeholder="Enter Maximum Coverage Area">
+                        </div>
+
+                        <div class="width47p mr50 floatl">
+                            <div class="meterSettingFields separator normal_meter fontSize14 mb10">Select Meter Type</div>
+                            <div class="dropdown meterSettingFields normal_meter mb25">
+                                <button id='selectCat' class="btn btn-primary dropdown-toggle fontSize14" type="button" data-toggle="dropdown" style="width: 100%;border-radius: 3px;">Select Category
+                                  <i class="fa fa-angle-down" style="float: right;margin-top: 3px;"></i></button>
+                                <ul class="dropdown-menu cat_menu">
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="form-group normal_meter gresb-elem floatl width47p">
+                            <h4 class="text-left fontSize14"> Meter Area Type <span class="colorDarkgrey">(optional)</span></h4>
+                            <div class="input-group block radius3 mb25">
+                                <div class="dropdown">
+                                    <button class="fontSize14 btn dropdown-toggle custom-select-lg" type="button" data-toggle="dropdown" id="area_type_energy_text">
+                                            <span class="area_type_txt" value="BSA">Base Common Area</span>
+                                            <i class="fa fa-angle-down" style="float: right;margin-top: 3px;"></i></span>
+                                        </button>
+                                    <ul class="dropdown-menu form_element fontSize14" id="area_type">
+                                        <li class="meter_area_type"><a value="BSA">Base Common Area</a></li>
+                                        <li class="meter_area_type"><a value="SSA">Shared Services Area</a></li>
+                                        <li class="meter_area_type"><a value="OTA">Outdoor Area</a></li>
+                                        <li class="meter_area_type"><a value="LRA">Landlord Responsible Area</a></li>
+                                        <li class="meter_area_type"><a value="TRA">Tenant Responsible Area</a></li>
+                                        <li class="meter_area_type"><a value="WBA">Whole building Area</a></li>
+                                        <li class="meter_area_type"><a value="RBA">Rational Building Area</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group normal_meter gresb-elem">
+                            <h4 class="text-left fontSize14">Asset Responsbility <span class="colorDarkgrey">(optional)</span></h4>
+                            <div class="input-group block radius3 mb25">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle custom-select-lg fontSize14" type="button" data-toggle="dropdown" id="responsibility_text"><span class="responsibility_txt" value="DMA">Directly Managed Assets</span><i class="fa fa-angle-down" style="float: right;margin-top: 3px;"></i></button>
+                                    <ul class="dropdown-menu form_element fontSize14" id="responsibility">
+                                        <li class="responsibility"><a value="DMA">Directly Managed Assets</a></li>
+                                        <li class="responsibility"><a value="IMA">Indirectely Managed Assets</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="meterSettingFields fontSize14 mb10">Select Units</div>
+
+                        <div class="dropdown meterSettingFields">
+                            <button id='selectUnit' class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="width: 100%;border-radius: 3px;">Select Category
+                              <i class="fa fa-angle-down" style="float: right;margin-top: 3px;"></i></button>
+                            <ul class="dropdown-menu unit_menu">
+                                <li><a>Kwh</a></li>
+                                <li><a>Watts</a></li>
+                            </ul>
+
+                        </div>
+
+                        <div class="meterSettingFields separator display_none">
+                            <div class="blue_circular_checkbox" style="float: left;margin-right: 10px;"></div>
+                            <div class="gotham bold">Inlcude this meter to total LEED Score.</div>
+                        </div>
+
+                        <div class="meterSettingFields separator separator_down">
+                            <button class="relative" id='updateMeterSetting' type="button"><paper-ripple fit></paper-ripple>UPDATE</button>
+                            <img src="/static/dashboard/img/ajax-loader.gif" class="mb5 loader_gif_editMeter_unit">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 </div>
