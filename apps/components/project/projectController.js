@@ -18,12 +18,14 @@ LEEDOnApp.controller('projectController', function($rootScope, $scope, $http, $o
             $(this).val("");
         });
         $('#bNameForm').val($('#id_building').val());
-        $('.addNewBuilding').modal('toggle');
+        $('.addNewBuilding').modal('show');
     };
 
     $scope.createNewProject = function () {
         $('.loader_bg_add_new').show();
         setTimeout(function(){
+            $('.loader_bg_add_new').hide();
+            $('.addNewBuilding').modal('hide');
             location.href = "#/dashboard/800000100/score/?modal=projectActive"; 
         }, 1000);
     };
