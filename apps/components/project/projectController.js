@@ -1,4 +1,7 @@
 LEEDOnApp.controller('projectController', function($rootScope, $scope, $http, $ocLazyLoad) {
+	window.Intercom("boot", {
+  app_id: "jexwrrdy"
+});
 	$rootScope.header = 'Projects';
 	$rootScope.main_appClass = 'overflow_y_scroll';
 	$rootScope.bodyLayout = '';
