@@ -2,13 +2,13 @@
     <div class="header_lobby pl25 pr25 pt25">
         <div class="heading6 gotham bold">Lobby Survey</div>
         <div class="floatr">
-            <button id="expand_lobby" class="btnExpand gotham outline_zero w83"><span style="font-weight:bold;">Expand</span></button>
+            <button id="expand_lobby" class="btnExpand gotham outline_zero w83" ng-click="show_lobby = !show_lobby"><span style="font-weight:bold;">Expand</span></button>
         </div>
     </div>
     <div class="header_content gotham bold pl25 pr25">
         <div><p>Conduct a Lobby Survey to gather Human Experience data from people in your building.</p></div>
     </div>
-    <div class="header_content gotham bold pl25 pr25 display_none expand_lobby_slide">
+    <div class="header_content gotham bold pl25 pr25 expand_lobby_slide" ng-show="show_lobby">
         <div class="display_inlineb">
             <div>
                 <input id="checkbox-lobbySurvey" class="checkbox-custom" name="lobbySurvey-1" type="checkbox" checked="checked">
@@ -29,13 +29,13 @@
     <div class="header_lobby pl25 pr25 pt25">
         <div class="heading6 gotham bold">Visibility of your LEED Dynamic Plaque</div>
         <div class="floatr">
-            <button id="expand_LDP_visibility" class="btnExpand gotham outline_zero w83"><span style="font-weight:bold;">Expand</span></button>
+            <button id="expand_LDP_visibility" class="btnExpand gotham outline_zero w83" ng-click="show_visibility = !show_visibility"><span style="font-weight:bold;">Expand</span></button>
         </div>
     </div>
     <div class="header_content gotham bold pl25 pr25">
         <div><p>Manage which parts of your LEED Dynamic Plaque people can see.</p></div>
     </div>
-    <div class="header_content gotham bold pl25 pr25 display_none LDP_slide">
+    <div class="header_content gotham bold pl25 pr25 LDP_slide" ng-show="show_visibility">
 
         <div>
             <div class="display_inlineb">
@@ -347,15 +347,15 @@
     <div class="heading6 gotham bold data_input required_section">Links</div><br><br>
     <div class="setupbtn_div">
         <div class="setupbtn_desc">View LEED Dynamic Plaque and access Dashboard</div>
-        <button id="plaque_link" class="btn_display relative" value="https://plaque.leedon.io/plaque/g10"><paper-ripple fit=""></paper-ripple>View Plaque</button>
+        <button id="plaque_link" class="btn_display relative" ng-click="plaqueLink()"><paper-ripple fit=""></paper-ripple>View Plaque</button>
     </div><br><br>
     <div class="setupbtn_div">
         <div class="setupbtn_desc">Access User Manual</div>
-        <button id="survey_link" class="btn_display relative" download=""><paper-ripple fit=""></paper-ripple>Download</button>
+        <button id="survey_link" class="btn_display relative" download="" ng-click="manualLink()"><paper-ripple fit=""></paper-ripple>Download</button>
     </div><br><br>
     <div class="setupbtn_div mt7p" style="margin-right: -1%">
         <div class="setupbtn_desc" style="padding-top: 7px;">Email survey to all building occupants</div>
-        <button id="survey_link_email" class="btn_display relative" value="/dashboard/?page=survey&LEED=1000000117&language=en&key=1960ea90d643eb54e19be82b"><paper-ripple fit=""></paper-ripple>Email Survey</button>
+        <button id="survey_link_email" class="btn_display relative" ng-click="emailLink()"><paper-ripple fit=""></paper-ripple>Email Survey</button>
     </div>
 </div>
 

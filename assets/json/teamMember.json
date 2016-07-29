@@ -1,0 +1,37 @@
+{
+    "0": {
+        "Roledescription": "Project Team Member",
+        "first_name": "Rajan",
+        "last_name": "Sohal",
+        "DateModified": "05/27/2016",
+        "Useralias": "rsohal@usgbc.org"
+    },
+    "1": {
+        "Roledescription": "Project Team Member",
+        "first_name": "Rajan",
+        "last_name": "Sohal",
+        "DateModified": "05/27/2016",
+        "Useralias": "roshan123@gmail.com"
+    },
+    "2": {
+        "Roledescription": "None",
+        "first_name": "Test",
+        "last_name": "User",
+        "DateModified": "05/27/2016",
+        "Useralias": "testuser@gmail.com"
+    },
+    "3": {
+        "Roledescription": "Project Team Manager",
+        "first_name": "Roshan",
+        "last_name": "Mishra",
+        "DateModified": "05/27/2016",
+        "Useralias": "roshanmishra@live.com"
+    },
+    "4": {
+        "Roledescription": "Project Team Member",
+        "first_name": "Tarun",
+        "last_name": "Bisht",
+        "DateModified": "05/30/2016",
+        "Useralias": "tbisht@usgbc.org"
+    }
+}

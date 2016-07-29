@@ -1449,9 +1449,11 @@ select#country1, select#country2, select#state1, select#state2 {
 @media (min-width: 601px){
   .build_confirm_btn1 {
     width: 310px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0px auto;
+  }
+  .build_confirm_btn2 {
+    width: 250px;
+    margin: 0px auto;
   }
   .build_confirm_btn1_time{
     width: 233px;

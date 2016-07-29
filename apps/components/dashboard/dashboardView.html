@@ -21,11 +21,11 @@
         <paper-ripple fit=""></paper-ripple>
         <span class="nav_text" style="margin-left:9px;">Projects</span>
     </div>
-    <div class="relative nav_item help_nav" data-page="help">
+    <div class="relative nav_item help_nav not-active" data-page="help">
         <paper-ripple fit=""></paper-ripple>
         <span class="nav_text" style="margin-left:19px;">Help</span>
     </div>
-    <div class="relative nav_item explore_nav display_none" data-page="explore" style="display: block;">
+    <div class="relative nav_item explore_nav not-active" data-page="explore" style="display: block;">
         <paper-ripple fit=""></paper-ripple>
         <span class="nav_text" style="margin-left:11px;">Explore</span>
     </div>
@@ -142,8 +142,8 @@
 </div>
 <div class="navigation-tab-header buildingInfo showOverview" style="display: block;">
     <div class="navigation-tab input_nav input_nav_active" ui-sref-active="active" ui-sref=".scoreState" data-page="score">Overview</div>
-    <div class="navigation-tab input_nav" data-page="data_input" ui-sref-active="active" ui-sref=".dataState">Data</div>
-    <div class="navigation-tab input_nav" data-page="strategy_input" ui-sref-active="active" ui-sref=".strategiesState">Strategies</div>
+    <div class="navigation-tab input_nav" data-page="data_input" ui-sref-active="active" ui-sref=".dataState">Inputs</div>
+    <!-- <div class="navigation-tab input_nav" data-page="strategy_input" ui-sref-active="active" ui-sref=".strategiesState">Strategies</div> -->
     <div class="navigation-tab input_nav" data-page="data_scorecard" style="display: none;" ui-sref-active="active" ui-sref=".scorecardState">Scorecard</div>
     <div class="navigation-tab input_nav" data-page="data_analysis" ui-sref-active="active" ui-sref=".analysisState">Analysis</div>
     <div class="navigation-tab input_nav" data-page="manage" ui-sref-active="active" ui-sref=".manageState">Manage</div>
@@ -543,6 +543,57 @@
             <div class="modal-body" style="height:100%;padding: 0px;">
                 <iframe id="agreement_embedded_iFrame" src="assets/files/LEED_Dynamic_Plaque_Agreement.pdf">
                 </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="add_team_members_modal">
+    <div class="modal-dialog modal-sm modal-team">
+        <div class="modal-content modal_radius mt_confirm">
+            <div class="pt30 pl30 pr30" style="overflow:hidden">
+                <div class="team_header mont">Add Team Members</div>
+
+                <div class="team_member_input_wrapper">
+                    <div class="team_member_input" status='false'>
+
+                        <div class="input_team">
+                            <div class="team_field_header">Email Address</div>
+                            <input class="input_team_field" type="text" id="team_email" tabindex="1" placeholder="name@domain.com">
+                        </div>
+
+                        <div class="input_team">
+                            <div class="team_field_header">First Name</div>
+                            <input class="input_team_field" type="text" id="team_first_name" tabindex="2" placeholder="(Optional)">
+                        </div>
+
+                        <div class="input_team">
+                            <div class="team_field_header">Last Name</div>
+                            <input class="input_team_field" type="text" id="team_last_name" tabindex="3" placeholder="(Optional)">
+                        </div>
+
+                        <div class="input_team mt20">
+                            <div class="team_field_header">Status</div>
+                            <select class="input_team_field" type="text" id="team_status" placeholder="Select">
+
+                                <option value="Project Admin">ADMIN</option>
+                                <option value="Project Team Manager">MANAGER</option>
+                                <option value="Project Team Member">MEMBER</option>
+                                <option value="None">NONE</option>
+
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="floatl">
+                    <button id="add_new_team_list" class="relative gotham" ng-click="addNewTeamList()"><span style="margin-top: 1px;font-size: 26px;font-weight: bold;" class="floatl">+</span><span class="floatr" style="margin-top: 10px;">Add another Member</span></button>
+                </div>
+
+                <div class="mt25 w90p floatl">
+                    <input type="button" class="mr15 btn btnGreen btn_top btnFixWidth submit gotham" data-dismiss="modal" value="Save" id="save_team"></input>
+                    <input type="button" class="btn btn-default btnOutline btn_bottom cancel gotham" data-dismiss="modal" value="Cancel"></input>
+                </div>
             </div>
         </div>
     </div>

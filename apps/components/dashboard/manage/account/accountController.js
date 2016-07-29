@@ -12,4 +12,14 @@ LEEDOnApp.controller('accountController', function($rootScope, $scope, $http) {
 		document.getElementById("email").value           = data.CC_email;
 		document.getElementById("phone").value           = data.CC_phone;
 	});
+
+	$scope.userAgreementDetails = function(){
+		var url = window.location.protocol + '//' + window.location.hostname + '/v3/assets/files/LEED_Dynamic_Plaque_Agreement.pdf';
+		var link = document.createElement('a');
+		var download = document.createAttribute("download");
+		link.href = url;
+		link.setAttributeNode(download);
+		document.body.appendChild(link);
+		link.click();
+	};
 });

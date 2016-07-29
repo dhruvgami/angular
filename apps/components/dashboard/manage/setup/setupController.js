@@ -14,18 +14,24 @@ LEEDOnApp.controller('setupController', function($rootScope, $scope, $http) {
 		document.getElementById("occupancy").value      = data.occupancy;
 	});
 
-	$('body').on('click', '#plaque_link', function(e)
-    {
-        window.open($('#plaque_link').val(), '_blank'); 
+	$scope.plaqueLink = function(){
+		window.open('http://plaque.dev.leedon.io/plaque/LEED:' + $scope.leed_id + '/?key=' + $scope.building_data.key, '_blank'); 
         e.stopPropagation();
         e.preventDefault();
         return false;
-    });
-    $('body').on('click', '#survey_link', function(e)
-    {
-        window.open('assets/files/LEED_Dynamic_Plaque_Manual.pdf');
+	};
+
+	$scope.manualLink = function(){
+		window.open('assets/files/LEED_Dynamic_Plaque_Manual.pdf');
         e.stopPropagation();
         e.preventDefault();
         return false;
-    });
+	};
+
+	$scope.emailLink = function(){
+		var val = encodeURI(window.location.protocol + '//' + window.location.hostname + "#/dashboard/" + $scope.leed_id + "/data/survey");
+        var url = val.replace(/&/g, "%26");
+        var message = 'Hi there,%0A%0APlease fill out this quick survey to help us better understand our building performance and to make you as comfortable as possible. Click below to begin.%0A%0A' + url + ' %0A%0AThank you for your important contributions to our LEED Dynamic Plaque data!%0A%0AWant to learn more about how we use the LEED Dynamic Plaque to track building performance? Visit leedon.io.';
+        window.open('mailto:?subject=LEED Dynamic Plaque - Survey Link&body=' + message, '_self');
+	};
 });

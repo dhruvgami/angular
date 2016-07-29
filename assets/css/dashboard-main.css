@@ -4173,8 +4173,9 @@ select.dist_select::-ms-expand {
 }
 
 .input_nav:hover,.navigation-tab.input_nav.active {
-    color: #000;
-    border-bottom: 3px solid #000
+    color: black;
+    border-bottom: 3px solid black;
+    height: 35px;
 }
 
 .scroll-on {
@@ -5618,10 +5619,6 @@ table.table-condensed.table-pos {
     text-align: right;
     font-size: 12px;
     cursor: pointer
-}
-
-.billing_history_details:hover {
-    color: #414141
 }
 
 .details_account_section {

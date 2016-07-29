@@ -1,6 +1,7 @@
 LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $http, $window, $stateParams, $ocLazyLoad) {
 	$rootScope.header        = 'Dashboard';
 	$rootScope.main_appClass = '';
+    $scope.receipt_direct    = false;
 	// $rootScope.bodyLayout    = '';
 	// $rootScope.htmlLayout    = 'js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface no-generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths';
 	if ($stateParams.leed_id == "800000100"){
@@ -823,11 +824,19 @@ LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $http, 
         $('.back_btn').hide();
         $('.forward_btn').hide();
 
-        $("#comp_btn").on('click', function() {
-            $('#project_is_active').modal('hide');
-            $('#skipped_modal').modal('hide');
-            $scope.activationFlow('buildingConfirmation');
-        });
+        if ($scope.receipt_direct){
+            $('#comp_btn').val("CLOSE");
+            $('.flow_footer').hide();
+        }
+        else{
+            $('#comp_btn').val("COMPLETE");
+            $('.flow_footer').show();
+            $("#comp_btn").on('click', function() {
+                $('#project_is_active').modal('hide');
+                $('#skipped_modal').modal('hide');
+                $scope.activationFlow('buildingConfirmation');
+            });
+        }
 
         $.ajax({
             url: 'assets/json/getpaymentdetail_800000169.json',
@@ -1245,6 +1254,13 @@ LEEDOnApp.controller('dashboardController', function($rootScope, $scope, $http, 
         });
     };
 
-    $scope.notificationSetup();
+    $scope.addNewTeamList = function(){
+        $('.team_member_input_wrapper').append('<div class="team_member_input" status="false"><div class="input_team"><div class="team_field_header">Email Address</div><input class="input_team_field" type="text" id="team_email" tabindex="1" placeholder="name@domain.com"></div><div class="input_team"><div class="team_field_header">First Name</div><input class="input_team_field" type="text" id="team_first_name" tabindex="2" placeholder="(Optional)"></div><div class="input_team"><div class="team_field_header">Last Name</div><input class="input_team_field" type="text" id="team_last_name" tabindex="3" placeholder="(Optional)"></div><div class="input_team  mt20"><div class="team_field_header">Status</div><select class="input_team_field" type="text" id="team_status" placeholder="Select"><option value="Project Admin">ADMIN</option><option value="Project Team Manager">MANAGER</option><option value="Project Team Member">MEMBER</option><option value="None">NONE</option></select></div></div>');
+    };
+
+    $('body').on('click', ".billing_history_details", function() {
+        $scope.activationFlow('receipt');
+        $scope.receipt_direct = true;
+    });
 
 });
